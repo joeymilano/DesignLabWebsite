@@ -903,24 +903,40 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
         }
 
-        .team-card-image {
+        .team-card-avatar {
             width: 100%;
-            height: 280px;
-            overflow: hidden;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(191, 90, 242, 0.15) 100%);
             position: relative;
+            overflow: hidden;
         }
 
-        .team-card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-            filter: grayscale(100%);
+        .team-card-avatar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(255, 107, 53, 0.2) 0%, transparent 50%);
         }
 
-        .team-card:hover .team-card-image img {
-            transform: scale(1.05);
-            filter: grayscale(0%);
+        .team-card-initials {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--text-primary);
+            opacity: 0.9;
+            z-index: 1;
+            transition: all 0.4s ease;
+        }
+
+        .team-card:hover .team-card-initials {
+            transform: scale(1.1);
+            color: var(--accent-orange);
         }
 
         .team-card-content {
@@ -1283,8 +1299,8 @@
         </div>
         <div class="team-grid">
             <div class="team-card fade-in">
-                <div class="team-card-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Joey">
+                <div class="team-card-avatar">
+                    <span class="team-card-initials">J</span>
                 </div>
                 <div class="team-card-content">
                     <h3 class="team-card-name">Joey</h3>
@@ -1295,15 +1311,15 @@
                         <span>NFT艺术家</span>
                         <span>独立摄影师</span>
                     </div>
-                    <p class="team-card-desc">资深互联网交互设计师，工作经历涉及手机/汽车/互联网/医疗/区块链等多个领域。</p>
+                    <p class="team-card-desc">资深互联网交互设计师，工作经历涉及手机/汽车/互联网/医疗/区块链等多个领域，辅导学生遍布RCA、米兰理工、伦艺、代尔夫特等全球顶尖院校。</p>
                 </div>
             </div>
             <div class="team-card fade-in">
-                <div class="team-card-image">
-                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop&crop=face" alt="学小高">
+                <div class="team-card-avatar">
+                    <span class="team-card-initials">嵩</span>
                 </div>
                 <div class="team-card-content">
-                    <h3 class="team-card-name">学小高</h3>
+                    <h3 class="team-card-name">学小嵩</h3>
                     <p class="team-card-title">系统设计策略 / 插画 / 3D建模</p>
                     <p class="team-card-edu">奥斯陆建筑与设计学院设计硕士</p>
                     <div class="team-card-skills">
@@ -1311,44 +1327,44 @@
                         <span>North Kitchen</span>
                         <span>Pavels Innovation</span>
                     </div>
-                    <p class="team-card-desc">目前工作主要负责十余个产品开发项目，设计项目经历包括手账类、电子产品、交通工具、日化家具及未来设计。</p>
+                    <p class="team-card-desc">以学科第一的成绩毕业，推崇注重研究方法和全局系统思维，教学风格注重学生独特性，注重细节，开放包容。</p>
                 </div>
             </div>
             <div class="team-card fade-in">
-                <div class="team-card-image">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face" alt="Jackie">
+                <div class="team-card-avatar">
+                    <span class="team-card-initials">J</span>
                 </div>
                 <div class="team-card-content">
                     <h3 class="team-card-name">Jackie</h3>
                     <p class="team-card-title">交互 / HCI / 工业设计 / 服务设计</p>
                     <p class="team-card-edu">格拉斯哥人机交互博士 / RMIT设计创新与技术硕士</p>
                     <div class="team-card-skills">
-                        <span>IF设计奖</span>
-                        <span>红点奖</span>
-                        <span>Good Design</span>
+                        <span>一只梨导师</span>
+                        <span>斯芬克导师</span>
+                        <span>ACG导师</span>
                     </div>
-                    <p class="team-card-desc">一只梨、斯芬克、ACG等机构导师；其所在团队曾获得IF/红点/Good Design等多项设计大奖。</p>
+                    <p class="team-card-desc">负责学生申请到MIT、CMU、RCA、伦艺、阿尔托、米兰理工、宾大等学校，并辅导博士申请港理工、哈佛、帝国理工等院校。</p>
                 </div>
             </div>
             <div class="team-card fade-in">
-                <div class="team-card-image">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face" alt="程越">
+                <div class="team-card-avatar">
+                    <span class="team-card-initials">越</span>
                 </div>
                 <div class="team-card-content">
                     <h3 class="team-card-name">程越</h3>
-                    <p class="team-card-title">3D模型 / MG动画 / 平面设计 / 插画</p>
-                    <p class="team-card-edu">马兰欧尼设计 / 英国皇家艺术学院</p>
+                    <p class="team-card-title">3D建模 / MG动画 / 平面设计 / VI设计</p>
+                    <p class="team-card-edu">马兰欧尼男装设计 / 英国皇家艺术学院</p>
                     <div class="team-card-skills">
                         <span>POP MART</span>
+                        <span>OOPS STUDIO</span>
                         <span>LVMH集团</span>
-                        <span>优衣库</span>
                     </div>
-                    <p class="team-card-desc">与多个时尚品牌有商务对接跨产品设计/动画制作经验：LVMH集团、MAKE UP FOREVER、Fresh、科颜氏、优衣库、CROCS等。</p>
+                    <p class="team-card-desc">学生成功申请到伦敦时装、帕森斯艺术学院、墨尔本皇家理工大学；与LVMH集团、优衣库、CROCS等时尚品牌有商务对接经验。</p>
                 </div>
             </div>
             <div class="team-card fade-in">
-                <div class="team-card-image">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face" alt="Jason">
+                <div class="team-card-avatar">
+                    <span class="team-card-initials">J</span>
                 </div>
                 <div class="team-card-content">
                     <h3 class="team-card-name">Jason</h3>
@@ -1359,7 +1375,7 @@
                         <span>分析图</span>
                         <span>技术图</span>
                     </div>
-                    <p class="team-card-desc">熟悉北美和欧洲风格的建筑景观设计，有着丰富的海外设计经验，提供建筑设计作品辅导与代做服务。</p>
+                    <p class="team-card-desc">熟悉北美和欧洲建筑景观设计申请流程，辅导成功学生案例包括：康奈尔大学、哥伦比亚大学、宾大、UCLA、UCL。</p>
                 </div>
             </div>
         </div>
