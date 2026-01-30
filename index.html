@@ -508,68 +508,37 @@
             background: var(--bg-secondary);
         }
 
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            max-width: 1200px;
+        .portfolio-showcase {
+            max-width: 900px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
         }
 
-        .portfolio-item {
-            aspect-ratio: 1;
-            border-radius: 20px;
+        .portfolio-item-full {
+            border-radius: 24px;
             overflow: hidden;
             position: relative;
-            cursor: pointer;
-            transition: transform 0.4s ease;
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
         }
 
-        .portfolio-item:hover {
-            transform: scale(1.03);
+        .portfolio-item-full:hover {
+            border-color: rgba(255, 107, 53, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
         }
 
-        .portfolio-item.large {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .portfolio-item img {
+        .portfolio-item-full img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            display: block;
             transition: transform 0.6s ease;
         }
 
-        .portfolio-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .portfolio-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.9) 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 24px;
-        }
-
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-
-        .portfolio-overlay h4 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .portfolio-overlay p {
-            font-size: 13px;
-            color: var(--text-secondary);
+        .portfolio-item-full:hover img {
+            transform: scale(1.01);
         }
 
         /* Stats Section */
@@ -1372,41 +1341,21 @@
             <h2 class="section-title">精选作品展示</h2>
             <p class="section-desc">每一件作品都是梦想的见证</p>
         </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-item large fade-in">
-                <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=800&fit=crop" alt="产品设计">
-                <div class="portfolio-overlay">
-                    <h4>产品设计作品集</h4>
-                    <p>港理工/RMIT 录取案例</p>
-                </div>
+        <div class="portfolio-showcase">
+            <div class="portfolio-item-full fade-in">
+                <img src="portfolio-1.png" alt="WHO WE ARE - 关于我们">
             </div>
-            <div class="portfolio-item fade-in">
-                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=400&fit=crop" alt="品牌设计">
-                <div class="portfolio-overlay">
-                    <h4>品牌VI设计</h4>
-                    <p>企业形象升级</p>
-                </div>
+            <div class="portfolio-item-full fade-in">
+                <img src="portfolio-2.png" alt="SHOW WORK - 作品展示">
             </div>
-            <div class="portfolio-item fade-in">
-                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=400&fit=crop" alt="交互设计">
-                <div class="portfolio-overlay">
-                    <h4>交互设计</h4>
-                    <p>HCI方向作品集</p>
-                </div>
+            <div class="portfolio-item-full fade-in">
+                <img src="portfolio-3.png" alt="SHOWCASE - 产品设计作品">
             </div>
-            <div class="portfolio-item fade-in">
-                <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=400&h=400&fit=crop" alt="工业设计">
-                <div class="portfolio-overlay">
-                    <h4>工业设计建模</h4>
-                    <p>3D渲染效果图</p>
-                </div>
+            <div class="portfolio-item-full fade-in">
+                <img src="portfolio-4.png" alt="UI/UX设计作品">
             </div>
-            <div class="portfolio-item fade-in">
-                <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=400&h=400&fit=crop" alt="建筑设计">
-                <div class="portfolio-overlay">
-                    <h4>建筑设计</h4>
-                    <p>景观规划方案</p>
-                </div>
+            <div class="portfolio-item-full fade-in">
+                <img src="portfolio-5.png" alt="3D设计与品牌设计">
             </div>
         </div>
     </section>
