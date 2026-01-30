@@ -1069,6 +1069,107 @@
             width: 20px;
             height: 20px;
         }
+
+        /* Office Section */
+        .office {
+            padding: 140px 24px;
+            background: var(--bg-primary);
+        }
+
+        .office-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .office-info {
+            padding-right: 40px;
+        }
+
+        .office-info h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .office-info .address {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .office-info .address-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .office-info .address-icon {
+            color: var(--accent-orange);
+            font-size: 20px;
+            margin-top: 2px;
+        }
+
+        .office-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 140px);
+            gap: 12px;
+        }
+
+        .office-gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .office-gallery-item:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .office-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .office-gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 1024px) {
+            .office-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .office-info {
+                padding-right: 0;
+                text-align: center;
+            }
+            .office-info .address-detail {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .office-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 120px);
+            }
+            .office-gallery-item:first-child {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1420,6 +1521,49 @@
                 <div class="process-content">
                     <h4>交付验收</h4>
                     <p>交付完整源文件，提供后续支持，确保项目顺利落地</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="office" id="office">
+        <div class="section-header fade-in">
+            <p class="section-eyebrow">Our Office</p>
+            <h2 class="section-title">上海办公室</h2>
+        </div>
+        <div class="office-content">
+            <div class="office-info fade-in">
+                <h3>欢迎来访</h3>
+                <div class="address">
+                    <div class="address-detail">
+                        <span class="address-icon">📍</span>
+                        <div>
+                            <strong>上海市黄浦区</strong><br>
+                            黄浦汇数智心城<br>
+                            北京东路668号裙楼
+                        </div>
+                    </div>
+                </div>
+                <p style="color: var(--text-tertiary); font-size: 14px;">
+                    位于上海市中心，毗邻外滩，交通便利<br>
+                    欢迎预约到访，面对面沟通您的设计需求
+                </p>
+            </div>
+            <div class="office-gallery fade-in">
+                <div class="office-gallery-item">
+                    <img src="office-1.jpg" alt="办公环境">
+                </div>
+                <div class="office-gallery-item">
+                    <img src="office-2.jpg" alt="上海外滩">
+                </div>
+                <div class="office-gallery-item">
+                    <img src="office-3.jpg" alt="办公室">
+                </div>
+                <div class="office-gallery-item">
+                    <img src="office-4.jpg" alt="工作区">
+                </div>
+                <div class="office-gallery-item">
+                    <img src="office-5.jpg" alt="会议室">
                 </div>
             </div>
         </div>
