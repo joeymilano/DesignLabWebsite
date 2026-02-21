@@ -113,6 +113,52 @@
             transform: scale(1.02);
         }
 
+        /* Language Toggle */
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            margin-left: 16px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 980px;
+            padding: 4px;
+        }
+
+        .lang-switch button {
+            background: none;
+            border: none;
+            color: var(--text-tertiary);
+            font-size: 13px;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 980px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .lang-switch button:hover {
+            color: var(--text-secondary);
+        }
+
+        .lang-switch button.active {
+            background: var(--accent-orange);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .lang-switch {
+                position: fixed;
+                top: 12px;
+                right: 16px;
+                z-index: 1001;
+                background: rgba(0, 0, 0, 0.8);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -1139,45 +1185,49 @@
                 <img src="logo.jpg" alt="1% Design Lab">
             </div>
             <div class="nav-links">
-                <a href="#services">服务</a>
-                <a href="#team">团队</a>
-                <a href="#portfolio">作品</a>
-                <a href="#process">流程</a>
-                <a href="#contact">联系</a>
+                <a href="#services" data-i18n="nav.services">服务</a>
+                <a href="#team" data-i18n="nav.team">团队</a>
+                <a href="#portfolio" data-i18n="nav.portfolio">作品</a>
+                <a href="#process" data-i18n="nav.process">流程</a>
+                <a href="#contact" data-i18n="nav.contact">联系</a>
             </div>
-            <a href="https://m.tb.cn/h.7JpsJZMWJLsNTwq" class="nav-cta" target="_blank">进入店铺</a>
+            <a href="https://m.tb.cn/h.7JpsJZMWJLsNTwq" class="nav-cta" target="_blank" data-i18n="nav.shop">进入店铺</a>
+            <div class="lang-switch">
+                <button id="lang-zh" class="active" onclick="switchLang('zh')">中</button>
+                <button id="lang-en" onclick="switchLang('en')">EN</button>
+            </div>
         </div>
     </nav>
 
     <section class="hero">
         <div class="hero-badge">
-            <span>6年专注设计 · QS100名校团队 · 一线大厂资历</span>
+            <span data-i18n="hero.badge">6年专注设计 · QS100名校团队 · 一线大厂资历</span>
         </div>
         <h1 class="hero-title">
-            <span class="line1">梦想管理局</span>
-            <span class="line2">只做1%的设计</span>
+            <span class="line1" data-i18n="hero.line1">梦想管理局</span>
+            <span class="line2" data-i18n="hero.line2">只做1%的设计</span>
         </h1>
-        <p class="hero-subtitle">
+        <p class="hero-subtitle" data-i18n="hero.subtitle" data-i18n-html="true">
             专注作品集、LOGO设计、工业设计、留学申请<br>
             用专业的力量，管理你的每一个梦想
         </p>
         <div class="hero-stats">
             <div class="hero-stat">
                 <div class="hero-stat-value">6000<span class="highlight">+</span></div>
-                <div class="hero-stat-label">成功案例</div>
+                <div class="hero-stat-label" data-i18n="hero.stat1">成功案例</div>
             </div>
             <div class="hero-stat">
                 <div class="hero-stat-value">100<span class="highlight">%</span></div>
-                <div class="hero-stat-label">好评率</div>
+                <div class="hero-stat-label" data-i18n="hero.stat2">好评率</div>
             </div>
             <div class="hero-stat">
                 <div class="hero-stat-value">10000<span class="highlight">+</span></div>
-                <div class="hero-stat-label">年销量</div>
+                <div class="hero-stat-label" data-i18n="hero.stat3">年销量</div>
             </div>
         </div>
         <div class="hero-cta">
-            <button class="btn-primary" onclick="openWechatModal()">立即咨询 →</button>
-            <a href="#services" class="btn-secondary">了解服务</a>
+            <button class="btn-primary" onclick="openWechatModal()" data-i18n="hero.cta1">立即咨询 →</button>
+            <a href="#services" class="btn-secondary" data-i18n="hero.cta2">了解服务</a>
         </div>
     </section>
 
@@ -1185,23 +1235,23 @@
         <div class="trust-content">
             <div class="trust-item">
                 <div class="trust-icon">✓</div>
-                <span>综合体验 5.0+</span>
+                <span data-i18n="trust.1">综合体验 5.0+</span>
             </div>
             <div class="trust-item">
                 <div class="trust-icon">✓</div>
-                <span>宝贝质量 5.0+</span>
+                <span data-i18n="trust.2">宝贝质量 5.0+</span>
             </div>
             <div class="trust-item">
                 <div class="trust-icon">✓</div>
-                <span>服务保障 5.0+</span>
+                <span data-i18n="trust.3">服务保障 5.0+</span>
             </div>
             <div class="trust-item">
                 <div class="trust-icon">✓</div>
-                <span>服务速度很快</span>
+                <span data-i18n="trust.4">服务速度很快</span>
             </div>
             <div class="trust-item">
                 <div class="trust-icon">✓</div>
-                <span>支持信用卡支付</span>
+                <span data-i18n="trust.5">支持信用卡支付</span>
             </div>
         </div>
     </section>
@@ -1209,8 +1259,8 @@
     <section class="services" id="services">
         <div class="section-header fade-in">
             <p class="section-eyebrow">Our Services</p>
-            <h2 class="section-title">专业设计服务</h2>
-            <p class="section-desc">从作品集到品牌设计，从留学申请到个人展览，一站式解决方案</p>
+            <h2 class="section-title" data-i18n="services.title">专业设计服务</h2>
+            <p class="section-desc" data-i18n="services.desc">从作品集到品牌设计，从留学申请到个人展览，一站式解决方案</p>
         </div>
         <div class="services-grid">
             <a href="https://item.taobao.com/item.htm?id=803744173646" target="_blank" class="service-card featured fade-in">
@@ -1218,86 +1268,86 @@
                     <img src="https://gw.alicdn.com/imgextra/O1CN017hrJTH1Q1ZyMOJB8h_!!1794791916.png" alt="作品集原创设计">
                 </div>
                 <div class="service-content-area">
-                    <h3>作品集原创设计</h3>
-                    <p>产品设计 / 交互设计 / 建筑设计 / 景观设计 / 环艺设计 / 服装设计，覆盖海外及国内顶尖院校申请</p>
+                    <h3 data-i18n="svc1.title">作品集原创设计</h3>
+                    <p data-i18n="svc1.desc">产品设计 / 交互设计 / 建筑设计 / 景观设计 / 环艺设计 / 服装设计，覆盖海外及国内顶尖院校申请</p>
                     <div class="service-tags">
-                        <span class="service-tag">海外申请</span>
-                        <span class="service-tag">国内考研</span>
-                        <span class="service-tag">定制服务</span>
-                        <span class="service-tag">1对1咨询</span>
+                        <span class="service-tag" data-i18n="svc1.tag1">海外申请</span>
+                        <span class="service-tag" data-i18n="svc1.tag2">国内考研</span>
+                        <span class="service-tag" data-i18n="svc1.tag3">定制服务</span>
+                        <span class="service-tag" data-i18n="svc1.tag4">1对1咨询</span>
                     </div>
                 </div>
-                <div class="service-price">¥100<span>起</span></div>
+                <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
             </a>
             <a href="https://item.taobao.com/item.htm?id=615300225900" target="_blank" class="service-card fade-in">
                 <div class="service-image">
                     <img src="https://gw.alicdn.com/imgextra/O1CN01e3RDba1Q1ZYHAJtns_!!1794791916.png" alt="LOGO平面设计">
                 </div>
                 <div class="service-content-area">
-                    <h3>LOGO平面设计</h3>
-                    <p>商标设计 / 画册设计 / VI设计，企业公司原创包装平面设计</p>
+                    <h3 data-i18n="svc2.title">LOGO平面设计</h3>
+                    <p data-i18n="svc2.desc">商标设计 / 画册设计 / VI设计，企业公司原创包装平面设计</p>
                     <div class="service-tags">
-                        <span class="service-tag">原创设计</span>
-                        <span class="service-tag">商标注册</span>
+                        <span class="service-tag" data-i18n="svc2.tag1">原创设计</span>
+                        <span class="service-tag" data-i18n="svc2.tag2">商标注册</span>
                     </div>
                 </div>
-                <div class="service-price">¥100<span>起</span></div>
+                <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
             </a>
             <a href="https://item.taobao.com/item.htm?id=641877726592" target="_blank" class="service-card fade-in">
                 <div class="service-image">
                     <img src="https://gw.alicdn.com/imgextra/O1CN016ujpw51Q1ZYPdnXzi_!!1794791916.png" alt="设计师招聘">
                 </div>
                 <div class="service-content-area">
-                    <h3>设计师招聘</h3>
-                    <p>985/211/八大美院/QS排名前300，专业招聘一对一辅导</p>
+                    <h3 data-i18n="svc3.title">设计师招聘</h3>
+                    <p data-i18n="svc3.desc">985/211/八大美院/QS排名前300，专业招聘一对一辅导</p>
                     <div class="service-tags">
-                        <span class="service-tag">名校资源</span>
-                        <span class="service-tag">面试辅导</span>
+                        <span class="service-tag" data-i18n="svc3.tag1">名校资源</span>
+                        <span class="service-tag" data-i18n="svc3.tag2">面试辅导</span>
                     </div>
                 </div>
-                <div class="service-price">¥100<span>起</span></div>
+                <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
             </a>
             <a href="https://item.taobao.com/item.htm?id=762456555696" target="_blank" class="service-card fade-in">
                 <div class="service-image">
                     <img src="https://gw.alicdn.com/imgextra/O1CN01Chq9hq1Q1ZYP7SSHZ_!!1794791916.png" alt="工业设计代做">
                 </div>
                 <div class="service-content-area">
-                    <h3>工业设计代做</h3>
-                    <p>建模 / 手绘 / 渲染 / 效果图排版，Blender犀牛3D建模效果图渲染</p>
+                    <h3 data-i18n="svc4.title">工业设计代做</h3>
+                    <p data-i18n="svc4.desc">建模 / 手绘 / 渲染 / 效果图排版，Blender犀牛3D建模效果图渲染</p>
                     <div class="service-tags">
-                        <span class="service-tag">3D建模</span>
-                        <span class="service-tag">效果图</span>
+                        <span class="service-tag" data-i18n="svc4.tag1">3D建模</span>
+                        <span class="service-tag" data-i18n="svc4.tag2">效果图</span>
                     </div>
                 </div>
-                <div class="service-price">¥50<span>起</span></div>
+                <div class="service-price">¥50<span data-i18n="price.from">起</span></div>
             </a>
             <a href="https://item.taobao.com/item.htm?id=859327120560" target="_blank" class="service-card fade-in">
                 <div class="service-image">
                     <img src="https://gw.alicdn.com/imgextra/O1CN01SkHZUd1Q1ZsUjc1w4_!!1794791916.jpg" alt="博士研究计划">
                 </div>
                 <div class="service-content-area">
-                    <h3>博士研究计划</h3>
-                    <p>海外欧美名校博士选校网申 / RP写作 / 面试辅导 / 顶会期刊辅导</p>
+                    <h3 data-i18n="svc5.title">博士研究计划</h3>
+                    <p data-i18n="svc5.desc">海外欧美名校博士选校网申 / RP写作 / 面试辅导 / 顶会期刊辅导</p>
                     <div class="service-tags">
-                        <span class="service-tag">欧美名校</span>
-                        <span class="service-tag">RP写作</span>
+                        <span class="service-tag" data-i18n="svc5.tag1">欧美名校</span>
+                        <span class="service-tag" data-i18n="svc5.tag2">RP写作</span>
                     </div>
                 </div>
-                <div class="service-price">¥100<span>起</span></div>
+                <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
             </a>
             <a href="https://item.taobao.com/item.htm?id=999259878379" target="_blank" class="service-card fade-in">
                 <div class="service-image">
                     <img src="https://gw.alicdn.com/imgextra/O1CN01Kha6BD1Q1ZyF6xGiB_!!1794791916.png" alt="线下个人艺术展">
                 </div>
                 <div class="service-content-area">
-                    <h3>线下个人艺术展</h3>
-                    <p>上海线下空间，艺术设计专业策展、快速落地、作品展示</p>
+                    <h3 data-i18n="svc6.title">线下个人艺术展</h3>
+                    <p data-i18n="svc6.desc">上海线下空间，艺术设计专业策展、快速落地、作品展示</p>
                     <div class="service-tags">
-                        <span class="service-tag">上海</span>
-                        <span class="service-tag">策展服务</span>
+                        <span class="service-tag" data-i18n="svc6.tag1">上海</span>
+                        <span class="service-tag" data-i18n="svc6.tag2">策展服务</span>
                     </div>
                 </div>
-                <div class="service-price">¥99.69<span>起</span></div>
+                <div class="service-price">¥99.69<span data-i18n="price.from">起</span></div>
             </a>
         </div>
     </section>
@@ -1305,11 +1355,11 @@
     <section class="team" id="team">
         <div class="section-header fade-in">
             <p class="section-eyebrow">Our Team</p>
-            <h2 class="section-title">专业团队</h2>
+            <h2 class="section-title" data-i18n="team.title">专业团队</h2>
         </div>
         <div class="team-intro fade-in">
-            <p>1% Design Lab是一家专注于设计类业务的专业机构，涉及业务包括工业设计、交互设计、建筑设计、环艺设计、服装设计等设计门类。</p>
-            <p>团队成员均来自QS排名Top300院校的设计专业，为客户提供专业且具备国际水准的设计服务。</p>
+            <p data-i18n="team.intro1">1% Design Lab是一家专注于设计类业务的专业机构，涉及业务包括工业设计、交互设计、建筑设计、环艺设计、服装设计等设计门类。</p>
+            <p data-i18n="team.intro2">团队成员均来自QS排名Top300院校的设计专业，为客户提供专业且具备国际水准的设计服务。</p>
         </div>
         <div class="team-grid">
             <div class="team-card fade-in">
@@ -1318,14 +1368,14 @@
                 </div>
                 <div class="team-card-content">
                     <h3 class="team-card-name">Joey</h3>
-                    <p class="team-card-title">UX / 产品 / 游戏 / 服务设计</p>
-                    <p class="team-card-edu">米兰理工大学产品设计硕士</p>
+                    <p class="team-card-title" data-i18n="joey.title">UX / 产品 / 游戏 / 服务设计</p>
+                    <p class="team-card-edu" data-i18n="joey.edu">米兰理工大学产品设计硕士</p>
                     <div class="team-card-skills">
-                        <span>外企高级UX设计师</span>
-                        <span>NFT艺术家</span>
-                        <span>独立摄影师</span>
+                        <span data-i18n="joey.skill1">外企高级UX设计师</span>
+                        <span data-i18n="joey.skill2">NFT艺术家</span>
+                        <span data-i18n="joey.skill3">独立摄影师</span>
                     </div>
-                    <p class="team-card-desc">资深互联网交互设计师，工作经历涉及手机/汽车/互联网/医疗/区块链等多个领域，辅导学生遍布RCA、米兰理工、伦艺、代尔夫特等全球顶尖院校。</p>
+                    <p class="team-card-desc" data-i18n="joey.desc">资深互联网交互设计师，工作经历涉及手机/汽车/互联网/医疗/区块链等多个领域，辅导学生遍布RCA、米兰理工、伦艺、代尔夫特等全球顶尖院校。</p>
                 </div>
             </div>
             <div class="team-card fade-in">
@@ -1334,14 +1384,14 @@
                 </div>
                 <div class="team-card-content">
                     <h3 class="team-card-name">学小嵩</h3>
-                    <p class="team-card-title">系统设计策略 / 插画 / 3D建模</p>
-                    <p class="team-card-edu">奥斯陆建筑与设计学院设计硕士</p>
+                    <p class="team-card-title" data-i18n="xue.title">系统设计策略 / 插画 / 3D建模</p>
+                    <p class="team-card-edu" data-i18n="xue.edu">奥斯陆建筑与设计学院设计硕士</p>
                     <div class="team-card-skills">
                         <span>Normann Copenhagen</span>
                         <span>North Kitchen</span>
                         <span>Pavels Innovation</span>
                     </div>
-                    <p class="team-card-desc">以学科第一的成绩毕业，推崇注重研究方法和全局系统思维，教学风格注重学生独特性，注重细节，开放包容。</p>
+                    <p class="team-card-desc" data-i18n="xue.desc">以学科第一的成绩毕业，推崇注重研究方法和全局系统思维，教学风格注重学生独特性，注重细节，开放包容。</p>
                 </div>
             </div>
             <div class="team-card fade-in">
@@ -1350,14 +1400,14 @@
                 </div>
                 <div class="team-card-content">
                     <h3 class="team-card-name">Jackie</h3>
-                    <p class="team-card-title">交互 / HCI / 工业设计 / 服务设计</p>
-                    <p class="team-card-edu">格拉斯哥人机交互博士 / RMIT设计创新与技术硕士</p>
+                    <p class="team-card-title" data-i18n="jackie.title">交互 / HCI / 工业设计 / 服务设计</p>
+                    <p class="team-card-edu" data-i18n="jackie.edu">格拉斯哥人机交互博士 / RMIT设计创新与技术硕士</p>
                     <div class="team-card-skills">
-                        <span>一只梨导师</span>
-                        <span>斯芬克导师</span>
-                        <span>ACG导师</span>
+                        <span data-i18n="jackie.skill1">一只梨导师</span>
+                        <span data-i18n="jackie.skill2">斯芬克导师</span>
+                        <span data-i18n="jackie.skill3">ACG导师</span>
                     </div>
-                    <p class="team-card-desc">负责学生申请到MIT、CMU、RCA、伦艺、阿尔托、米兰理工、宾大等学校，并辅导博士申请港理工、哈佛、帝国理工等院校。</p>
+                    <p class="team-card-desc" data-i18n="jackie.desc">负责学生申请到MIT、CMU、RCA、伦艺、阿尔托、米兰理工、宾大等学校，并辅导博士申请港理工、哈佛、帝国理工等院校。</p>
                 </div>
             </div>
             <div class="team-card fade-in">
@@ -1366,14 +1416,14 @@
                 </div>
                 <div class="team-card-content">
                     <h3 class="team-card-name">程越</h3>
-                    <p class="team-card-title">3D建模 / MG动画 / 平面设计 / VI设计</p>
-                    <p class="team-card-edu">马兰欧尼男装设计 / 英国皇家艺术学院</p>
+                    <p class="team-card-title" data-i18n="cheng.title">3D建模 / MG动画 / 平面设计 / VI设计</p>
+                    <p class="team-card-edu" data-i18n="cheng.edu">马兰欧尼男装设计 / 英国皇家艺术学院</p>
                     <div class="team-card-skills">
                         <span>POP MART</span>
                         <span>OOPS STUDIO</span>
                         <span>LVMH集团</span>
                     </div>
-                    <p class="team-card-desc">学生成功申请到伦敦时装、帕森斯艺术学院、墨尔本皇家理工大学；与LVMH集团、优衣库、CROCS等时尚品牌有商务对接经验。</p>
+                    <p class="team-card-desc" data-i18n="cheng.desc">学生成功申请到伦敦时装、帕森斯艺术学院、墨尔本皇家理工大学；与LVMH集团、优衣库、CROCS等时尚品牌有商务对接经验。</p>
                 </div>
             </div>
             <div class="team-card fade-in">
@@ -1382,14 +1432,14 @@
                 </div>
                 <div class="team-card-content">
                     <h3 class="team-card-name">Jason</h3>
-                    <p class="team-card-title">建筑 / 景观 / 城市设计</p>
-                    <p class="team-card-edu">加州大学伯克利分校建筑设计硕士</p>
+                    <p class="team-card-title" data-i18n="jason.title">建筑 / 景观 / 城市设计</p>
+                    <p class="team-card-edu" data-i18n="jason.edu">加州大学伯克利分校建筑设计硕士</p>
                     <div class="team-card-skills">
-                        <span>建筑效果图</span>
-                        <span>分析图</span>
-                        <span>技术图</span>
+                        <span data-i18n="jason.skill1">建筑效果图</span>
+                        <span data-i18n="jason.skill2">分析图</span>
+                        <span data-i18n="jason.skill3">技术图</span>
                     </div>
-                    <p class="team-card-desc">熟悉北美和欧洲建筑景观设计申请流程，辅导成功学生案例包括：康奈尔大学、哥伦比亚大学、宾大、UCLA、UCL。</p>
+                    <p class="team-card-desc" data-i18n="jason.desc">熟悉北美和欧洲建筑景观设计申请流程，辅导成功学生案例包括：康奈尔大学、哥伦比亚大学、宾大、UCLA、UCL。</p>
                 </div>
             </div>
         </div>
@@ -1398,8 +1448,8 @@
     <section class="portfolio" id="portfolio">
         <div class="section-header fade-in">
             <p class="section-eyebrow">Portfolio</p>
-            <h2 class="section-title">精选作品展示</h2>
-            <p class="section-desc">每一件作品都是梦想的见证</p>
+            <h2 class="section-title" data-i18n="portfolio.title">精选作品展示</h2>
+            <p class="section-desc" data-i18n="portfolio.desc">每一件作品都是梦想的见证</p>
         </div>
         <div class="portfolio-showcase">
             <div class="portfolio-item-full fade-in">
@@ -1424,19 +1474,19 @@
         <div class="stats-grid fade-in">
             <div class="stat-item">
                 <div class="stat-number">6+</div>
-                <div class="stat-label">年行业经验</div>
+                <div class="stat-label" data-i18n="stat.exp">年行业经验</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">6K+</div>
-                <div class="stat-label">成功案例</div>
+                <div class="stat-label" data-i18n="stat.cases">成功案例</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">100%</div>
-                <div class="stat-label">好评率</div>
+                <div class="stat-label" data-i18n="stat.rate">好评率</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">30天</div>
-                <div class="stat-label">定制交付</div>
+                <div class="stat-number" data-i18n="stat.days.num">30天</div>
+                <div class="stat-label" data-i18n="stat.delivery">定制交付</div>
             </div>
         </div>
     </section>
@@ -1444,42 +1494,42 @@
     <section class="process" id="process">
         <div class="section-header fade-in">
             <p class="section-eyebrow">How It Works</p>
-            <h2 class="section-title">服务流程</h2>
+            <h2 class="section-title" data-i18n="process.title">服务流程</h2>
         </div>
         <div class="process-list">
             <div class="process-item fade-in">
                 <div class="process-number">01</div>
                 <div class="process-content">
-                    <h4>需求咨询</h4>
-                    <p>通过淘宝旺旺或店铺客服，详细沟通您的设计需求和目标</p>
+                    <h4 data-i18n="proc1.title">需求咨询</h4>
+                    <p data-i18n="proc1.desc">通过淘宝旺旺或店铺客服，详细沟通您的设计需求和目标</p>
                 </div>
             </div>
             <div class="process-item fade-in">
                 <div class="process-number">02</div>
                 <div class="process-content">
-                    <h4>方案定制</h4>
-                    <p>根据需求制定个性化设计方案，确认报价和交付时间</p>
+                    <h4 data-i18n="proc2.title">方案定制</h4>
+                    <p data-i18n="proc2.desc">根据需求制定个性化设计方案，确认报价和交付时间</p>
                 </div>
             </div>
             <div class="process-item fade-in">
                 <div class="process-number">03</div>
                 <div class="process-content">
-                    <h4>设计执行</h4>
-                    <p>专业设计师一对一服务，定期汇报进度，随时沟通调整</p>
+                    <h4 data-i18n="proc3.title">设计执行</h4>
+                    <p data-i18n="proc3.desc">专业设计师一对一服务，定期汇报进度，随时沟通调整</p>
                 </div>
             </div>
             <div class="process-item fade-in">
                 <div class="process-number">04</div>
                 <div class="process-content">
-                    <h4>修改完善</h4>
-                    <p>无限次修改直到满意，确保每个细节都达到您的预期</p>
+                    <h4 data-i18n="proc4.title">修改完善</h4>
+                    <p data-i18n="proc4.desc">无限次修改直到满意，确保每个细节都达到您的预期</p>
                 </div>
             </div>
             <div class="process-item fade-in">
                 <div class="process-number">05</div>
                 <div class="process-content">
-                    <h4>交付验收</h4>
-                    <p>交付完整源文件，提供后续支持，确保项目顺利落地</p>
+                    <h4 data-i18n="proc5.title">交付验收</h4>
+                    <p data-i18n="proc5.desc">交付完整源文件，提供后续支持，确保项目顺利落地</p>
                 </div>
             </div>
         </div>
@@ -1488,22 +1538,22 @@
     <section class="office" id="office">
         <div class="section-header fade-in">
             <p class="section-eyebrow">Our Office</p>
-            <h2 class="section-title">上海办公室</h2>
+            <h2 class="section-title" data-i18n="office.title">上海办公室</h2>
         </div>
         <div class="office-content">
             <div class="office-info fade-in">
-                <h3>欢迎来访</h3>
+                <h3 data-i18n="office.welcome">欢迎来访</h3>
                 <div class="address">
                     <div class="address-detail">
                         <span class="address-icon">📍</span>
-                        <div>
+                        <div data-i18n="office.address" data-i18n-html="true">
                             <strong>上海市黄浦区</strong><br>
                             黄浦汇数智心城<br>
                             北京东路668号裙楼
                         </div>
                     </div>
                 </div>
-                <p style="color: var(--text-tertiary); font-size: 14px;">
+                <p style="color: var(--text-tertiary); font-size: 14px;" data-i18n="office.note" data-i18n-html="true">
                     位于上海市中心，毗邻外滩，交通便利<br>
                     欢迎预约到访，面对面沟通您的设计需求
                 </p>
@@ -1529,11 +1579,11 @@
     </section>
 
     <section class="cta" id="contact">
-        <h2 class="cta-title fade-in">让我们开始吧</h2>
-        <p class="cta-subtitle fade-in">无论是作品集、品牌设计还是留学申请<br>我们都将用1%的标准来管理你的梦想</p>
+        <h2 class="cta-title fade-in" data-i18n="cta.title">让我们开始吧</h2>
+        <p class="cta-subtitle fade-in" data-i18n="cta.subtitle" data-i18n-html="true">无论是作品集、品牌设计还是留学申请<br>我们都将用1%的标准来管理你的梦想</p>
         <button class="wechat-btn fade-in" onclick="openWechatModal()">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.269-.03-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg>
-            微信联系 →
+            <span data-i18n="cta.wechat">微信联系 →</span>
         </button>
     </section>
 
@@ -1543,38 +1593,38 @@
                 <div class="footer-logo">
                     <img src="logo.jpg" alt="1% Design Lab">
                 </div>
-                <p>梦想管理局 - 专注设计服务6年，累计服务6000+客户，100%好评率。我们相信，真正优秀的设计只有1%，而我们只做那1%。</p>
+                <p data-i18n="footer.brand">梦想管理局 - 专注设计服务6年，累计服务6000+客户，100%好评率。我们相信，真正优秀的设计只有1%，而我们只做那1%。</p>
             </div>
             <div class="footer-column">
-                <h5>服务</h5>
+                <h5 data-i18n="footer.services">服务</h5>
                 <ul>
-                    <li><a href="#">作品集设计</a></li>
-                    <li><a href="#">LOGO设计</a></li>
-                    <li><a href="#">工业设计</a></li>
-                    <li><a href="#">博士申请</a></li>
+                    <li><a href="#" data-i18n="footer.svc1">作品集设计</a></li>
+                    <li><a href="#" data-i18n="footer.svc2">LOGO设计</a></li>
+                    <li><a href="#" data-i18n="footer.svc3">工业设计</a></li>
+                    <li><a href="#" data-i18n="footer.svc4">博士申请</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h5>专业领域</h5>
+                <h5 data-i18n="footer.fields">专业领域</h5>
                 <ul>
-                    <li><a href="#">产品/交互</a></li>
-                    <li><a href="#">建筑/景观</a></li>
-                    <li><a href="#">环艺/服装</a></li>
-                    <li><a href="#">3D建模</a></li>
+                    <li><a href="#" data-i18n="footer.f1">产品/交互</a></li>
+                    <li><a href="#" data-i18n="footer.f2">建筑/景观</a></li>
+                    <li><a href="#" data-i18n="footer.f3">环艺/服装</a></li>
+                    <li><a href="#" data-i18n="footer.f4">3D建模</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h5>联系我们</h5>
+                <h5 data-i18n="footer.contact">联系我们</h5>
                 <ul>
-                    <li><a href="https://m.tb.cn/h.7JpsJZMWJLsNTwq" target="_blank">淘宝店铺</a></li>
-                    <li><a href="#">旺旺客服</a></li>
-                    <li><a href="javascript:void(0)" onclick="openWechatModal()">微信咨询</a></li>
+                    <li><a href="https://m.tb.cn/h.7JpsJZMWJLsNTwq" target="_blank" data-i18n="footer.c1">淘宝店铺</a></li>
+                    <li><a href="#" data-i18n="footer.c2">旺旺客服</a></li>
+                    <li><a href="javascript:void(0)" onclick="openWechatModal()" data-i18n="footer.c3">微信咨询</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© 2025 1%DesignLab 梦想管理局. All rights reserved.</span>
-            <span>6年专注设计 · QS100名校团队 · 一线大厂资历</span>
+            <span data-i18n="footer.copy">© 2025 1%DesignLab 梦想管理局. All rights reserved.</span>
+            <span data-i18n="footer.tagline">6年专注设计 · QS100名校团队 · 一线大厂资历</span>
         </div>
     </footer>
 
@@ -1582,14 +1632,217 @@
     <div class="wechat-modal" id="wechatModal" onclick="closeWechatModal(event)">
         <div class="wechat-modal-content" onclick="event.stopPropagation()">
             <button class="wechat-modal-close" onclick="closeWechatModal()">&times;</button>
-            <h3>微信联系</h3>
-            <p>扫描二维码添加微信，获取专业设计咨询</p>
+            <h3 data-i18n="wechat.title">微信联系</h3>
+            <p data-i18n="wechat.desc">扫描二维码添加微信，获取专业设计咨询</p>
             <img src="wechat-qr.png" alt="微信二维码">
         </div>
     </div>
 
     <script>
-        // WeChat Modal Functions
+        // ==================== i18n Language System ====================
+        const translations = {
+            en: {
+                // Nav
+                'nav.services': 'Services',
+                'nav.team': 'Team',
+                'nav.portfolio': 'Portfolio',
+                'nav.process': 'Process',
+                'nav.contact': 'Contact',
+                'nav.shop': 'Shop',
+
+                // Hero
+                'hero.badge': '6 Years of Design · QS100 University Team · Top Industry Experience',
+                'hero.line1': 'Dream Bureau',
+                'hero.line2': 'Only the Top 1% Design',
+                'hero.subtitle': 'Portfolio Design, Logo Design, Industrial Design, Study Abroad Applications<br>Professional expertise to manage every dream of yours',
+                'hero.stat1': 'Successful Cases',
+                'hero.stat2': 'Positive Reviews',
+                'hero.stat3': 'Annual Sales',
+                'hero.cta1': 'Consult Now →',
+                'hero.cta2': 'Our Services',
+
+                // Trust
+                'trust.1': 'Overall Rating 5.0+',
+                'trust.2': 'Product Quality 5.0+',
+                'trust.3': 'Service Guarantee 5.0+',
+                'trust.4': 'Fast Service',
+                'trust.5': 'Credit Card Accepted',
+
+                // Services
+                'services.title': 'Professional Design Services',
+                'services.desc': 'From portfolio to branding, from study abroad applications to personal exhibitions — one-stop solutions',
+                'svc1.title': 'Portfolio Design',
+                'svc1.desc': 'Product Design / Interaction Design / Architecture / Landscape / Interior / Fashion Design — covering top universities worldwide',
+                'svc1.tag1': 'Overseas',
+                'svc1.tag2': 'Domestic',
+                'svc1.tag3': 'Custom',
+                'svc1.tag4': '1-on-1',
+                'svc2.title': 'Logo & Graphic Design',
+                'svc2.desc': 'Logo / Brochure / VI Design — original packaging and graphic design for enterprises',
+                'svc2.tag1': 'Original Design',
+                'svc2.tag2': 'Trademark Registration',
+                'svc3.title': 'Designer Recruitment',
+                'svc3.desc': '985/211/Top Art Schools/QS Top 300 — professional 1-on-1 recruitment coaching',
+                'svc3.tag1': 'Top School Resources',
+                'svc3.tag2': 'Interview Coaching',
+                'svc4.title': 'Industrial Design',
+                'svc4.desc': 'Modeling / Sketching / Rendering / Layout — Blender & Rhino 3D modeling and rendering',
+                'svc4.tag1': '3D Modeling',
+                'svc4.tag2': 'Rendering',
+                'svc5.title': 'PhD Research Proposal',
+                'svc5.desc': 'PhD applications to top Western universities / RP writing / Interview coaching / Publication support',
+                'svc5.tag1': 'Top Universities',
+                'svc5.tag2': 'RP Writing',
+                'svc6.title': 'Personal Art Exhibition',
+                'svc6.desc': 'Shanghai offline space — professional art curation, rapid setup, portfolio showcase',
+                'svc6.tag1': 'Shanghai',
+                'svc6.tag2': 'Curation',
+                'price.from': '+',
+
+                // Team
+                'team.title': 'Our Team',
+                'team.intro1': '1% Design Lab is a professional agency focused on design services, covering industrial design, interaction design, architecture, interior design, fashion design and more.',
+                'team.intro2': 'All team members graduated from QS Top 300 design programs, providing clients with professional, world-class design services.',
+                'joey.title': 'UX / Product / Game / Service Design',
+                'joey.edu': 'MSc Product Design, Politecnico di Milano',
+                'joey.skill1': 'Sr. UX Designer',
+                'joey.skill2': 'NFT Artist',
+                'joey.skill3': 'Photographer',
+                'joey.desc': 'Experienced interaction designer with expertise across mobile, automotive, internet, healthcare, and blockchain. Has mentored students admitted to RCA, Politecnico di Milano, UAL, TU Delft and other world-leading institutions.',
+                'xue.title': 'System Design Strategy / Illustration / 3D',
+                'xue.edu': 'MDes, Oslo School of Architecture and Design',
+                'xue.desc': 'Graduated top of class. Advocates research methodology and holistic systems thinking. Teaching focuses on student individuality, attention to detail, and open-mindedness.',
+                'jackie.title': 'Interaction / HCI / Industrial / Service Design',
+                'jackie.edu': 'PhD HCI, University of Glasgow / MDes, RMIT',
+                'jackie.skill1': 'Yizhili Mentor',
+                'jackie.skill2': 'SFK Mentor',
+                'jackie.skill3': 'ACG Mentor',
+                'jackie.desc': 'Helped students gain admission to MIT, CMU, RCA, UAL, Aalto, Politecnico di Milano, UPenn, and guided PhD applications to PolyU, Harvard, Imperial College London.',
+                'cheng.title': '3D Modeling / Motion Graphics / Graphic / VI Design',
+                'cheng.edu': 'Menswear Design, Istituto Marangoni / RCA',
+                'cheng.desc': 'Students admitted to London College of Fashion, Parsons, RMIT. Business experience with LVMH, Uniqlo, CROCS and other fashion brands.',
+                'jason.title': 'Architecture / Landscape / Urban Design',
+                'jason.edu': 'MArch, UC Berkeley',
+                'jason.skill1': 'Arch Rendering',
+                'jason.skill2': 'Diagrams',
+                'jason.skill3': 'Technical Drawing',
+                'jason.desc': 'Familiar with North American and European architecture application processes. Students admitted to Cornell, Columbia, UPenn, UCLA, UCL.',
+
+                // Portfolio
+                'portfolio.title': 'Selected Work',
+                'portfolio.desc': 'Every piece is a testament to a dream',
+
+                // Stats
+                'stat.exp': 'Years of Experience',
+                'stat.cases': 'Successful Cases',
+                'stat.rate': 'Positive Reviews',
+                'stat.days.num': '30 Days',
+                'stat.delivery': 'Custom Delivery',
+
+                // Process
+                'process.title': 'Our Process',
+                'proc1.title': 'Consultation',
+                'proc1.desc': 'Connect via our online store or customer service to discuss your design needs and goals in detail',
+                'proc2.title': 'Custom Proposal',
+                'proc2.desc': 'Create a personalized design plan based on your needs, confirm pricing and delivery timeline',
+                'proc3.title': 'Design Execution',
+                'proc3.desc': 'Dedicated 1-on-1 designer service with regular progress updates and ongoing communication',
+                'proc4.title': 'Revisions',
+                'proc4.desc': 'Unlimited revisions until you are satisfied — every detail meets your expectations',
+                'proc5.title': 'Final Delivery',
+                'proc5.desc': 'Deliver complete source files with ongoing support to ensure a smooth launch',
+
+                // Office
+                'office.title': 'Shanghai Office',
+                'office.welcome': 'Welcome to Visit',
+                'office.address': '<strong>Huangpu District, Shanghai</strong><br>Huangpu Hui Digital Smart City<br>No. 668 East Beijing Road',
+                'office.note': 'Located in downtown Shanghai, near the Bund, easily accessible<br>Book a visit to discuss your design needs in person',
+
+                // CTA
+                'cta.title': "Let's Get Started",
+                'cta.subtitle': 'Whether it\'s portfolios, branding, or study abroad applications<br>We manage your dreams with the standard of the top 1%',
+                'cta.wechat': 'WeChat Contact →',
+
+                // Footer
+                'footer.brand': 'Dream Bureau — 6 years of design excellence, 6000+ clients served, 100% positive reviews. We believe truly outstanding design is only 1%, and we only do that 1%.',
+                'footer.services': 'Services',
+                'footer.svc1': 'Portfolio Design',
+                'footer.svc2': 'Logo Design',
+                'footer.svc3': 'Industrial Design',
+                'footer.svc4': 'PhD Application',
+                'footer.fields': 'Specialties',
+                'footer.f1': 'Product / Interaction',
+                'footer.f2': 'Architecture / Landscape',
+                'footer.f3': 'Interior / Fashion',
+                'footer.f4': '3D Modeling',
+                'footer.contact': 'Contact Us',
+                'footer.c1': 'Online Shop',
+                'footer.c2': 'Customer Service',
+                'footer.c3': 'WeChat',
+                'footer.copy': '© 2025 1%DesignLab Dream Bureau. All rights reserved.',
+                'footer.tagline': '6 Years of Design · QS100 Team · Top Industry Experience',
+
+                // WeChat Modal
+                'wechat.title': 'WeChat Contact',
+                'wechat.desc': 'Scan the QR code to add us on WeChat for professional design consultation'
+            }
+        };
+
+        // Store original Chinese text
+        const zhTexts = {};
+        let currentLang = localStorage.getItem('lang') || 'zh';
+
+        // Initialize: save all original Chinese text
+        function initI18n() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const isHtml = el.getAttribute('data-i18n-html') === 'true';
+                zhTexts[key] = isHtml ? el.innerHTML : el.textContent;
+            });
+            // Apply saved language on load
+            if (currentLang === 'en') {
+                applyLang('en');
+            }
+            updateLangButtons();
+        }
+
+        function applyLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const isHtml = el.getAttribute('data-i18n-html') === 'true';
+                if (lang === 'en' && translations.en[key]) {
+                    if (isHtml) {
+                        el.innerHTML = translations.en[key];
+                    } else {
+                        el.textContent = translations.en[key];
+                    }
+                } else if (lang === 'zh' && zhTexts[key]) {
+                    if (isHtml) {
+                        el.innerHTML = zhTexts[key];
+                    } else {
+                        el.textContent = zhTexts[key];
+                    }
+                }
+            });
+            document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+        }
+
+        function updateLangButtons() {
+            document.getElementById('lang-zh').classList.toggle('active', currentLang === 'zh');
+            document.getElementById('lang-en').classList.toggle('active', currentLang === 'en');
+        }
+
+        function switchLang(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            applyLang(lang);
+            updateLangButtons();
+        }
+
+        // Initialize i18n after DOM is ready
+        document.addEventListener('DOMContentLoaded', initI18n);
+
+        // ==================== WeChat Modal Functions ====================
         function openWechatModal() {
             document.getElementById('wechatModal').classList.add('active');
             document.body.style.overflow = 'hidden';
