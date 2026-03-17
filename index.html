@@ -1211,6 +1211,121 @@
                 grid-row: span 1;
             }
         }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 140px 24px;
+            background: var(--bg-primary);
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 36px 32px;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,0.12);
+        }
+
+        .testimonial-stars {
+            color: #ffb800;
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            flex: 1;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .testimonial-author-info h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+
+        .testimonial-author-info p {
+            font-size: 12px;
+            color: var(--text-tertiary);
+            line-height: 1.4;
+        }
+
+        .testimonial-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-offer {
+            background: rgba(48, 209, 88, 0.12);
+            color: #30d158;
+        }
+
+        .tag-phd {
+            background: rgba(191, 90, 242, 0.12);
+            color: #bf5af2;
+        }
+
+        .tag-brand {
+            background: rgba(0, 113, 227, 0.12);
+            color: #64b5f6;
+        }
+
+        @media (max-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1223,6 +1338,7 @@
                 <a href="#services" data-i18n="nav.services">服务</a>
                 <a href="#team" data-i18n="nav.team">团队</a>
                 <a href="#portfolio" data-i18n="nav.portfolio">作品</a>
+                <a href="#testimonials" data-i18n="nav.testimonials">好评</a>
                 <a href="#process" data-i18n="nav.process">流程</a>
                 <a href="#contact" data-i18n="nav.contact">联系</a>
             </div>
@@ -1526,6 +1642,88 @@
         </div>
     </section>
 
+    <section class="testimonials" id="testimonials">
+        <div class="section-header fade-in">
+            <p class="section-eyebrow">Testimonials</p>
+            <h2 class="section-title" data-i18n="testimonials.title">学员好评</h2>
+            <p class="section-desc" data-i18n="testimonials.desc">来自真实学员的声音，每一个offer都是最好的证明</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <span class="testimonial-tag tag-offer">OFFER</span>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text" data-i18n="review1.text">真的非常感谢Joey老师！！当时找了好几家机构对比，最后选了1%完全没后悔。老师对交互设计的理解真的很深，帮我从选题到最终排版一步步打磨，特别是用户研究那部分，老师给的框架让我的项目逻辑清晰了很多。最后同时拿到了米兰理工和代尔夫特的offer，真的做梦都没想到！</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">L</div>
+                    <div class="testimonial-author-info">
+                        <h4 data-i18n="review1.name">L同学</h4>
+                        <p data-i18n="review1.school">录取：米兰理工大学 · 代尔夫特理工大学<br>交互设计硕士</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <span class="testimonial-tag tag-offer">OFFER</span>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text" data-i18n="review2.text">本科是普通二本环艺专业，一开始完全不敢想能申到QS前100的学校。Jackie老师超级耐心，帮我重新梳理了作品集的逻辑线，还教我怎么把国内的项目用国际化的方式呈现。从九月开始准备到一月递交，整个过程虽然很紧张但老师一直在，有问必答。收到UCL的offer那天哭了好久，谢谢1%让我相信自己也可以！</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">W</div>
+                    <div class="testimonial-author-info">
+                        <h4 data-i18n="review2.name">W同学</h4>
+                        <p data-i18n="review2.school">录取：UCL 伦敦大学学院<br>建筑设计硕士</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <span class="testimonial-tag tag-phd">PhD</span>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text" data-i18n="review3.text">博士申请和硕士完全不一样，RP写作真的让我头秃。幸好遇到了Jackie老师，从选校、联系导师、到Research Proposal的打磨都给了非常专业的建议。老师自己就是HCI方向的博士，所以给的方向特别精准，不会让你走弯路。最终拿到了港理工的全奖offer，感恩！</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background: linear-gradient(135deg, #a78bfa, #7c3aed);">Z</div>
+                    <div class="testimonial-author-info">
+                        <h4 data-i18n="review3.name">Z同学</h4>
+                        <p data-i18n="review3.school">录取：香港理工大学（全奖）<br>设计学博士</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <span class="testimonial-tag tag-offer">OFFER</span>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text" data-i18n="review4.text">作为一个跨专业申请工业设计的人，压力真的非常大。学小嵩老师帮我从零开始搭建作品集，每次meeting都准备得特别充分，还会提前帮我看好参考案例。最让我感动的是老师会关注到很多细节，配色、字体、间距都帮我反复调整。拿到RCA的offer那一刻，觉得这半年的熬夜都值了。强烈推荐！</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">C</div>
+                    <div class="testimonial-author-info">
+                        <h4 data-i18n="review4.name">C同学</h4>
+                        <p data-i18n="review4.school">录取：皇家艺术学院 RCA<br>工业设计硕士</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <span class="testimonial-tag tag-offer">OFFER</span>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text" data-i18n="review5.text">国内考研失败之后决定出国，时间特别赶只有三个月。Jason老师效率超高，第一次沟通就帮我列好了时间表和作品集框架。建筑方向的老师真的很难找到既懂设计又懂申请的，Jason老师两边都很专业。最后拿到了哥大和宾大两个offer，时间紧但结果超出预期！</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f97316, #eab308);">H</div>
+                    <div class="testimonial-author-info">
+                        <h4 data-i18n="review5.name">H同学</h4>
+                        <p data-i18n="review5.school">录取：哥伦比亚大学 · 宾夕法尼亚大学<br>建筑设计硕士</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <span class="testimonial-tag tag-brand">BRAND</span>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text" data-i18n="review6.text">找1%做的品牌LOGO设计，从前期沟通到最终交付整个体验都很好。程越老师对时尚行业理解很深，给出的设计方案每一稿都很有质感，不是那种烂大街的模板风。最后选定的方案客户和合伙人都超满意，后续又追加了整套VI设计。价格比4A公司便宜太多，但质量一点不差，甚至更有创意！</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">M</div>
+                    <div class="testimonial-author-info">
+                        <h4 data-i18n="review6.name">M女士</h4>
+                        <p data-i18n="review6.school">服务：品牌LOGO + VI全套设计<br>时尚买手店创业项目</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="process" id="process">
         <div class="section-header fade-in">
             <p class="section-eyebrow">How It Works</p>
@@ -1768,6 +1966,31 @@
                 'jason.skill2': 'Diagrams',
                 'jason.skill3': 'Technical Drawing',
                 'jason.desc': 'Familiar with North American and European architecture application processes. Students admitted to Cornell, Columbia, UPenn, UCLA, UCL.',
+
+                // Nav - Testimonials
+                'nav.testimonials': 'Reviews',
+
+                // Testimonials
+                'testimonials.title': 'Student Reviews',
+                'testimonials.desc': 'Real voices from our students — every offer is the best proof',
+                'review1.text': 'Huge thanks to Joey! I compared several agencies and choosing 1% was the best decision. His understanding of interaction design is incredibly deep — he guided me from topic selection to final layout. The user research framework he suggested made my project logic so much clearer. I ended up getting offers from both Politecnico di Milano and TU Delft — beyond my wildest dreams!',
+                'review1.name': 'Student L',
+                'review1.school': 'Admitted: Politecnico di Milano · TU Delft<br>MSc Interaction Design',
+                'review2.text': "I came from a lesser-known university in China studying interior design, and never imagined getting into a QS Top 100 school. Jackie was incredibly patient, helping me restructure my portfolio narrative and present my domestic projects in an international way. From September prep to January submission, it was intense but she was always there. I cried when I got UCL's offer — thank you 1% for making me believe in myself!",
+                'review2.name': 'Student W',
+                'review2.school': 'Admitted: UCL<br>MArch Architecture Design',
+                'review3.text': "PhD applications are completely different from master's — the research proposal writing was overwhelming. Fortunately, Jackie guided me through school selection, contacting supervisors, and refining my RP with extremely professional advice. As an HCI PhD herself, her direction was spot-on and saved me from many detours. I got a fully-funded offer from PolyU — truly grateful!",
+                'review3.name': 'Student Z',
+                'review3.school': 'Admitted: Hong Kong PolyU (Full Scholarship)<br>PhD in Design',
+                'review4.text': "As a career-switcher applying to industrial design, the pressure was immense. Xiaosong helped me build my portfolio from scratch, always coming to meetings well-prepared with reference cases. What touched me most was her attention to detail — she refined colors, typography, and spacing over and over. Getting the RCA offer made all those late nights worth it. Highly recommend!",
+                'review4.name': 'Student C',
+                'review4.school': 'Admitted: Royal College of Art (RCA)<br>MA Industrial Design',
+                'review5.text': "After failing China's postgrad exam, I decided to go abroad with only 3 months to prepare. Jason was super efficient — he mapped out my timeline and portfolio framework in our first meeting. It's rare to find an architecture mentor who understands both design and applications, and Jason excels at both. I got offers from Columbia and UPenn — tight timeline but results exceeded expectations!",
+                'review5.name': 'Student H',
+                'review5.school': 'Admitted: Columbia University · UPenn<br>MArch Architecture Design',
+                'review6.text': "We hired 1% for brand logo design and the entire experience was fantastic. Cheng Yue has deep fashion industry insight — every draft was polished and tasteful, never generic templates. The final design thrilled both my client and business partner, and we added a full VI package afterward. Way more affordable than big agencies but equal or better quality — and more creative!",
+                'review6.name': 'Ms. M',
+                'review6.school': 'Service: Brand Logo + Full VI Design<br>Fashion Boutique Startup',
 
                 // Portfolio
                 'portfolio.title': 'Selected Work',
