@@ -1185,53 +1185,34 @@
             nav { top: 10px; }
             .nav-content {
                 width: calc(100% - 16px);
-                gap: 10px;
-                padding: 8px 10px;
+                gap: 6px;
+                padding: 6px 8px;
                 justify-content: space-between;
-                backdrop-filter: none;
-                -webkit-backdrop-filter: none;
-                background: rgba(24, 24, 24, 0.98);
-            }
-            nav.scrolled .nav-content {
-                background: rgba(30, 30, 30, 0.98);
             }
             .nav-right { gap: 6px; }
             .nav-cta { display: none; }
             .nav-links {
-                display: flex;
-                position: fixed;
-                left: 50%;
-                bottom: 10px;
-                transform: translateX(-50%);
-                width: calc(100% - 16px);
+                flex: 1;
                 justify-content: flex-start;
                 overflow-x: auto;
                 flex-wrap: nowrap;
-                gap: 4px;
-                padding: 6px;
-                border-radius: var(--radius-pill);
-                border: 1px solid var(--border-subtle);
-                background: rgba(24, 24, 24, 0.94);
-                backdrop-filter: blur(8px);
-                -webkit-backdrop-filter: blur(8px);
+                gap: 2px;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
             }
             .nav-links::-webkit-scrollbar { display: none; }
             .nav-links a {
-                font-size: 12px;
-                padding: 7px 11px;
+                font-size: 11px;
+                padding: 6px 8px;
                 white-space: nowrap;
                 flex-shrink: 0;
             }
             .nav-logo img { height: 28px; }
-            .lang-switch {
-                position: fixed;
-                right: 10px;
-                top: 62px;
-                z-index: 1001;
-                background: rgba(24, 24, 24, 0.92);
+            .lang-switch button {
+                padding: 5px 8px;
+                font-size: 10px;
             }
             .hero { padding: 130px 20px 96px; }
-            .hero-video { display: none; }
             .hero-overlay {
                 background:
                     radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.5) 100%),
@@ -1269,7 +1250,6 @@
                 flex-direction: column;
                 gap: 10px;
                 text-align: center;
-                padding-bottom: 54px;
             }
         }
 
@@ -2152,11 +2132,10 @@
                 return;
             }
 
-            const isMobile = window.innerWidth < 768;
             const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
             const isSlow = conn && (conn.saveData || conn.effectiveType === '2g' || conn.effectiveType === 'slow-2g');
 
-            if (isMobile || isSlow) {
+            if (isSlow) {
                 heroVideo.remove();
                 return;
             }
