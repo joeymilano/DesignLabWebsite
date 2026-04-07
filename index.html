@@ -152,6 +152,81 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+        .cursor-orb,
+        .cursor-dot {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            opacity: 0;
+            transform: translate3d(-120px, -120px, 0) scale(1);
+            transition: opacity 0.2s ease, transform 0.22s ease, width 0.22s ease, height 0.22s ease;
+            z-index: 3000;
+            will-change: transform, opacity;
+        }
+        .cursor-orb {
+            --cursor-rgb: 87, 255, 195;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1px solid rgba(var(--cursor-rgb), 0.72);
+            box-shadow: 0 0 0 1px rgba(var(--cursor-rgb), 0.24), 0 0 28px rgba(var(--cursor-rgb), 0.2);
+            background: radial-gradient(circle at 30% 30%, rgba(var(--cursor-rgb), 0.2), rgba(var(--cursor-rgb), 0.02) 64%, transparent 100%);
+            mix-blend-mode: screen;
+        }
+        .cursor-dot {
+            --cursor-rgb: 87, 255, 195;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgb(var(--cursor-rgb));
+            box-shadow: 0 0 14px rgba(var(--cursor-rgb), 0.82);
+        }
+        .cursor-orb.is-visible,
+        .cursor-dot.is-visible {
+            opacity: 1;
+        }
+        .cursor-orb.is-active {
+            width: 52px;
+            height: 52px;
+            border-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3), 0 0 34px rgba(87, 255, 195, 0.28);
+        }
+        .cursor-orb.is-pressed {
+            transform: translate3d(-120px, -120px, 0) scale(0.88);
+        }
+        .cursor-dot.is-pressed {
+            transform: translate3d(-120px, -120px, 0) scale(1.55);
+        }
+        .cursor-orb.is-theme-transition {
+            animation: cursorThemePulse 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        @keyframes cursorThemePulse {
+            0% { transform: translate3d(-120px, -120px, 0) scale(0.9); }
+            55% { transform: translate3d(-120px, -120px, 0) scale(1.16); }
+            100% { transform: translate3d(-120px, -120px, 0) scale(1); }
+        }
+        .cursor-orb.shape-squircle {
+            border-radius: 34%;
+        }
+        .cursor-orb.shape-soft-square {
+            border-radius: 14px;
+        }
+        .cursor-dot.shape-soft-square {
+            border-radius: 3px;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            body.custom-cursor-enabled,
+            body.custom-cursor-enabled a,
+            body.custom-cursor-enabled button,
+            body.custom-cursor-enabled [role='button'],
+            body.custom-cursor-enabled .service-card,
+            body.custom-cursor-enabled .team-card,
+            body.custom-cursor-enabled .process-item,
+            body.custom-cursor-enabled .office-gallery-item {
+                cursor: none !important;
+            }
+        }
         html[lang='en'] body {
             --sans: var(--sans-en);
             letter-spacing: 0.002em;
@@ -1264,6 +1339,10 @@
                 transition: none !important;
                 scroll-behavior: auto !important;
             }
+            .cursor-orb,
+            .cursor-dot {
+                display: none !important;
+            }
             .hero-video {
                 display: none !important;
             }
@@ -2215,6 +2294,135 @@
 
         updateActiveNav();
         window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+        // Custom cursor (desktop only)
+        (function initCustomCursor() {
+            const desktopPointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+            if (!desktopPointer.matches || reducedMotion.matches) return;
+
+            const orb = document.createElement('div');
+            const dot = document.createElement('div');
+            orb.className = 'cursor-orb';
+            dot.className = 'cursor-dot';
+            document.body.appendChild(orb);
+            document.body.appendChild(dot);
+            document.body.classList.add('custom-cursor-enabled');
+
+            let targetX = window.innerWidth / 2;
+            let targetY = window.innerHeight / 2;
+            let orbX = targetX;
+            let orbY = targetY;
+            let dotX = targetX;
+            let dotY = targetY;
+            let lastThemeKey = '';
+
+            const sectionCursorThemes = {
+                nav: { rgb: '255, 255, 255', shape: 'shape-soft-square' },
+                services: { rgb: '87, 255, 195', shape: '' },
+                team: { rgb: '125, 188, 255', shape: 'shape-squircle' },
+                portfolio: { rgb: '255, 169, 112', shape: 'shape-soft-square' },
+                testimonials: { rgb: '190, 154, 255', shape: 'shape-squircle' },
+                process: { rgb: '255, 214, 120', shape: '' },
+                office: { rgb: '136, 228, 255', shape: 'shape-squircle' },
+                contact: { rgb: '255, 255, 255', shape: 'shape-soft-square' },
+                footer: { rgb: '217, 217, 217', shape: '' }
+            };
+
+            function applyCursorTheme(themeKey) {
+                const nextTheme = sectionCursorThemes[themeKey] || sectionCursorThemes.services;
+                const nextKey = `${themeKey}|${nextTheme.shape}|${nextTheme.rgb}`;
+
+                if (nextKey === lastThemeKey) return;
+                const hadPreviousTheme = lastThemeKey !== '';
+                lastThemeKey = nextKey;
+
+                orb.style.setProperty('--cursor-rgb', nextTheme.rgb);
+                dot.style.setProperty('--cursor-rgb', nextTheme.rgb);
+
+                orb.classList.remove('shape-squircle', 'shape-soft-square');
+                dot.classList.remove('shape-soft-square');
+
+                if (nextTheme.shape) {
+                    orb.classList.add(nextTheme.shape);
+                    if (nextTheme.shape === 'shape-soft-square') {
+                        dot.classList.add('shape-soft-square');
+                    }
+                }
+
+                if (hadPreviousTheme) {
+                    orb.classList.remove('is-theme-transition');
+                    // Force reflow so repeated section transitions can retrigger the pulse animation.
+                    void orb.offsetWidth;
+                    orb.classList.add('is-theme-transition');
+                }
+            }
+
+            function getThemeKeyFromTarget(rawTarget) {
+                const target = rawTarget && rawTarget.nodeType === 1 ? rawTarget : rawTarget && rawTarget.parentElement;
+                if (!target || !target.closest) return 'services';
+                const region = target.closest('nav, section, footer');
+                if (!region) return 'services';
+                if (region.tagName === 'NAV') return 'nav';
+                if (region.tagName === 'FOOTER') return 'footer';
+                return region.id || 'services';
+            }
+
+            function setVisible(show) {
+                orb.classList.toggle('is-visible', show);
+                dot.classList.toggle('is-visible', show);
+            }
+
+            function pointerMove(event) {
+                targetX = event.clientX;
+                targetY = event.clientY;
+                applyCursorTheme(getThemeKeyFromTarget(event.target));
+                setVisible(true);
+            }
+
+            function animate() {
+                orbX += (targetX - orbX) * 0.16;
+                orbY += (targetY - orbY) * 0.16;
+                dotX += (targetX - dotX) * 0.34;
+                dotY += (targetY - dotY) * 0.34;
+
+                orb.style.transform = `translate3d(${orbX}px, ${orbY}px, 0) translate(-50%, -50%)`;
+                dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
+
+                requestAnimationFrame(animate);
+            }
+
+            const interactiveSelectors = 'a, button, .service-card, .team-card, .testimonial-card, .process-item, .office-gallery-item, .nav-links a, .nav-cta, .lang-switch button';
+
+            document.querySelectorAll(interactiveSelectors).forEach(function(el) {
+                el.addEventListener('mouseenter', function() {
+                    orb.classList.add('is-active');
+                });
+                el.addEventListener('mouseleave', function() {
+                    orb.classList.remove('is-active');
+                });
+            });
+
+            document.addEventListener('mousemove', pointerMove, { passive: true });
+            document.addEventListener('mousedown', function() {
+                orb.classList.add('is-pressed');
+                dot.classList.add('is-pressed');
+            });
+            document.addEventListener('mouseup', function() {
+                orb.classList.remove('is-pressed');
+                dot.classList.remove('is-pressed');
+            });
+            document.addEventListener('mouseleave', function() {
+                setVisible(false);
+            });
+            document.addEventListener('mouseenter', function() {
+                setVisible(true);
+            });
+
+            applyCursorTheme('services');
+            requestAnimationFrame(animate);
+        })();
     </script>
 
     <!-- Baidu auto-push for faster indexing -->
