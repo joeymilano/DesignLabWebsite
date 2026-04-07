@@ -160,7 +160,7 @@
             pointer-events: none;
             opacity: 0;
             transform: translate3d(-120px, -120px, 0) scale(1);
-            transition: opacity 0.2s ease, transform 0.22s ease, width 0.22s ease, height 0.22s ease;
+            transition: opacity 0.2s ease, width 0.18s ease, height 0.18s ease, border-radius 0.16s ease, border-color 0.16s ease, box-shadow 0.2s ease;
             z-index: 3000;
             will-change: transform, opacity;
         }
@@ -192,19 +192,10 @@
             border-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3), 0 0 34px rgba(87, 255, 195, 0.28);
         }
-        .cursor-orb.is-pressed {
-            transform: translate3d(-120px, -120px, 0) scale(0.88);
-        }
+        .cursor-orb.is-pressed { opacity: 0.92; }
         .cursor-dot.is-pressed {
-            transform: translate3d(-120px, -120px, 0) scale(1.55);
-        }
-        .cursor-orb.is-theme-transition {
-            animation: cursorThemePulse 0.18s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        @keyframes cursorThemePulse {
-            0% { transform: translate3d(-120px, -120px, 0) scale(0.9); }
-            55% { transform: translate3d(-120px, -120px, 0) scale(1.16); }
-            100% { transform: translate3d(-120px, -120px, 0) scale(1); }
+            width: 12px;
+            height: 12px;
         }
         .cursor-orb.shape-squircle {
             border-radius: 34%;
@@ -2317,6 +2308,10 @@
             let dotX = targetX;
             let dotY = targetY;
             let lastThemeKey = '';
+            let isPressed = false;
+            let orbScale = 1;
+            let dotScale = 1;
+            let rafId = null;
 
             const sectionCursorThemes = {
                 nav: { rgb: '255, 255, 255', shape: 'shape-soft-square' },
@@ -2352,10 +2347,16 @@
                 }
 
                 if (hadPreviousTheme) {
-                    orb.classList.remove('is-theme-transition');
-                    // Force reflow so repeated section transitions can retrigger the pulse animation.
-                    void orb.offsetWidth;
-                    orb.classList.add('is-theme-transition');
+                    if (typeof orb.animate === 'function') {
+                        orb.animate(
+                            [
+                                { opacity: 0.84, boxShadow: '0 0 0 1px rgba(var(--cursor-rgb), 0.22), 0 0 10px rgba(var(--cursor-rgb), 0.18)' },
+                                { opacity: 1, boxShadow: '0 0 0 1px rgba(var(--cursor-rgb), 0.36), 0 0 38px rgba(var(--cursor-rgb), 0.36)' },
+                                { opacity: 1, boxShadow: '0 0 0 1px rgba(var(--cursor-rgb), 0.24), 0 0 28px rgba(var(--cursor-rgb), 0.2)' }
+                            ],
+                            { duration: 160, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }
+                        );
+                    }
                 }
             }
 
@@ -2379,6 +2380,9 @@
                 targetY = event.clientY;
                 applyCursorTheme(getThemeKeyFromTarget(event.target));
                 setVisible(true);
+                if (rafId === null) {
+                    rafId = requestAnimationFrame(animate);
+                }
             }
 
             function animate() {
@@ -2387,10 +2391,27 @@
                 dotX += (targetX - dotX) * 0.34;
                 dotY += (targetY - dotY) * 0.34;
 
-                orb.style.transform = `translate3d(${orbX}px, ${orbY}px, 0) translate(-50%, -50%)`;
-                dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
+                const targetOrbScale = isPressed ? 0.9 : 1;
+                const targetDotScale = isPressed ? 1.2 : 1;
+                orbScale += (targetOrbScale - orbScale) * 0.26;
+                dotScale += (targetDotScale - dotScale) * 0.34;
 
-                requestAnimationFrame(animate);
+                orb.style.transform = `translate3d(${orbX}px, ${orbY}px, 0) translate(-50%, -50%) scale(${orbScale})`;
+                dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%) scale(${dotScale})`;
+
+                const motionStillActive =
+                    Math.abs(targetX - orbX) > 0.12 ||
+                    Math.abs(targetY - orbY) > 0.12 ||
+                    Math.abs(targetX - dotX) > 0.12 ||
+                    Math.abs(targetY - dotY) > 0.12 ||
+                    Math.abs(orbScale - targetOrbScale) > 0.02 ||
+                    Math.abs(dotScale - targetDotScale) > 0.02;
+
+                if (motionStillActive) {
+                    rafId = requestAnimationFrame(animate);
+                } else {
+                    rafId = null;
+                }
             }
 
             const interactiveSelectors = 'a, button, .service-card, .team-card, .testimonial-card, .process-item, .office-gallery-item, .nav-links a, .nav-cta, .lang-switch button';
@@ -2404,14 +2425,22 @@
                 });
             });
 
-            document.addEventListener('mousemove', pointerMove, { passive: true });
+            document.addEventListener('pointermove', pointerMove, { passive: true });
             document.addEventListener('mousedown', function() {
+                isPressed = true;
                 orb.classList.add('is-pressed');
                 dot.classList.add('is-pressed');
+                if (rafId === null) {
+                    rafId = requestAnimationFrame(animate);
+                }
             });
             document.addEventListener('mouseup', function() {
+                isPressed = false;
                 orb.classList.remove('is-pressed');
                 dot.classList.remove('is-pressed');
+                if (rafId === null) {
+                    rafId = requestAnimationFrame(animate);
+                }
             });
             document.addEventListener('mouseleave', function() {
                 setVisible(false);
@@ -2419,9 +2448,14 @@
             document.addEventListener('mouseenter', function() {
                 setVisible(true);
             });
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    setVisible(false);
+                }
+            });
 
             applyCursorTheme('services');
-            requestAnimationFrame(animate);
+            rafId = requestAnimationFrame(animate);
         })();
     </script>
 
