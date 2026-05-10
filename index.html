@@ -601,6 +601,31 @@
             border-color: var(--border-strong);
             background: rgba(255, 255, 255, 0.08);
         }
+        .xhs-btn {
+            border-radius: var(--radius-pill);
+            border: 1px solid rgba(255, 36, 66, 0.4);
+            background: rgba(255, 36, 66, 0.12);
+            color: #FF2442;
+            padding: 14px 26px;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.24s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--sans);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+        .xhs-btn:hover {
+            transform: translateY(-2px);
+            background: #FF2442;
+            color: #fff;
+            border-color: #FF2442;
+            box-shadow: 0 10px 24px rgba(255, 36, 66, 0.32);
+        }
 
         .trust-section {
             padding: 24px;
@@ -1178,6 +1203,7 @@
         .hero-cta .btn-primary,
         .hero-cta .btn-secondary,
         .cta-buttons .wechat-btn,
+        .cta-buttons .xhs-btn,
         .cta-buttons .email-btn {
             min-height: 46px;
         }
@@ -1244,7 +1270,100 @@
             border: 1px solid var(--border-subtle);
             margin-bottom: 8px;
         }
-        .wechat-btn svg, .email-btn svg { width: 18px; height: 18px; }
+        .wechat-btn svg, .email-btn svg, .xhs-btn svg { width: 18px; height: 18px; }
+
+        /* ==================== Xiaohongshu Modal ==================== */
+        .xhs-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            background: rgba(11, 11, 11, 0.78);
+            backdrop-filter: blur(12px);
+        }
+        .xhs-modal.active { display: flex; }
+        .xhs-modal-content {
+            width: min(380px, 90%);
+            border-radius: 22px;
+            border: 1px solid rgba(255, 36, 66, 0.35);
+            background: linear-gradient(180deg, rgba(255,36,66,0.06) 0%, var(--bg-elev-3) 60%);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 30px rgba(255,36,66,0.12);
+            padding: 34px 26px 28px;
+            text-align: center;
+            position: relative;
+            animation: modalFadeIn 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .xhs-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid var(--border-subtle);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-muted);
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .xhs-modal-close:hover { color: var(--text-primary); background: rgba(255, 255, 255, 0.1); }
+        .xhs-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .xhs-icon { font-size: 28px; }
+        .xhs-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: #FF2442;
+            letter-spacing: -0.01em;
+        }
+        .xhs-desc {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            line-height: 1.7;
+        }
+        .xhs-qr {
+            width: 220px;
+            height: 220px;
+            border-radius: 14px;
+            background: #fff;
+            padding: 10px;
+            margin: 0 auto 18px;
+            display: block;
+            box-sizing: content-box;
+        }
+        .xhs-jump-btn {
+            display: block;
+            width: 100%;
+            padding: 13px 20px;
+            background: #FF2442;
+            color: #fff !important;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+            font-size: 14.5px;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+            box-sizing: border-box;
+        }
+        .xhs-jump-btn:hover {
+            transform: translateY(-2px);
+            background: #E61E3A;
+            box-shadow: 0 10px 24px rgba(255, 36, 66, 0.35);
+        }
+        .xhs-hint {
+            color: var(--text-muted);
+            font-size: 12px;
+            margin-top: 12px;
+            line-height: 1.6;
+        }
 
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(24px); }
@@ -1580,14 +1699,14 @@
                 </div>
                 <div class="team-card-content">
                     <h3 class="team-card-name">Joey</h3>
-                    <p class="team-card-title" data-i18n="joey.title">UX / 产品 / 游戏 / 服务设计</p>
+                    <p class="team-card-title" data-i18n="joey.title">AI产品设计 / 交互设计 / 数字多媒体 / 视觉设计</p>
                     <p class="team-card-edu" data-i18n="joey.edu">米兰理工大学产品设计硕士</p>
                     <div class="team-card-skills">
-                        <span data-i18n="joey.skill1">外企高级UX设计师</span>
-                        <span data-i18n="joey.skill2">NFT艺术家</span>
-                        <span data-i18n="joey.skill3">独立摄影师</span>
+                        <span data-i18n="joey.skill1">硅谷高级产品设计师</span>
+                        <span data-i18n="joey.skill2">$100M+ 级业务操盘</span>
+                        <span data-i18n="joey.skill3">4亿+ 用户级产品经验</span>
                     </div>
-                    <p class="team-card-desc" data-i18n="joey.desc">资深互联网交互设计师，工作经历涉及手机/汽车/互联网/医疗/区块链等多个领域，辅导学生遍布RCA、米兰理工、伦艺、代尔夫特等全球顶尖院校。</p>
+                    <p class="team-card-desc" data-i18n="joey.desc">5年+ B2B SaaS 与 AI 产品设计经验，主导过制药巨头 LIMS 系统（Signals Notebook）、AI 室内设计平台（CollovGPT）、携程酒店（4亿+用户）等多条线产品。辅导学生遍布 RCA、米兰理工、伦艺、代尔夫特等全球顶尖院校。</p>
                 </div>
             </div>
             <div class="team-card fade-in">
@@ -1880,6 +1999,10 @@
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.269-.03-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg>
                 <span data-i18n="cta.wechat">微信联系 →</span>
             </button>
+            <button class="xhs-btn" onclick="openXhsModal()">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.5 3h17a1.5 1.5 0 0 1 1.5 1.5v15a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 19.5v-15A1.5 1.5 0 0 1 3.5 3zm3.2 6.1v.9h-.95v1h.95v3a1 1 0 0 0 1 1h.85v-1h-.7v-3h.9v-1h-.9v-.9h-1.15zm5.6 0c-1.4 0-2.4 1-2.4 2.5v1c0 1.5 1 2.5 2.4 2.5s2.4-1 2.4-2.5v-1c0-1.5-1-2.5-2.4-2.5zm0 1c.75 0 1.2.55 1.2 1.5v1c0 .95-.45 1.5-1.2 1.5s-1.2-.55-1.2-1.5v-1c0-.95.45-1.5 1.2-1.5zm4.4-1v5.9h1.15v-2.5h.95a1.7 1.7 0 0 0 0-3.4h-2.1zm1.15 1h.85a.7.7 0 0 1 0 1.4h-.85v-1.4z"/></svg>
+                <span data-i18n="cta.xhs">小红书 →</span>
+            </button>
             <a href="mailto:super666joey@gmail.com" class="email-btn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                 <span data-i18n="cta.email">邮件联系 →</span>
@@ -1919,6 +2042,7 @@
                     <li><a href="https://m.tb.cn/h.7JpsJZMWJLsNTwq" target="_blank" data-i18n="footer.c1">淘宝店铺</a></li>
                     <li><a href="#" data-i18n="footer.c2">旺旺客服</a></li>
                     <li><a href="javascript:void(0)" onclick="openWechatModal()" data-i18n="footer.c3">微信咨询</a></li>
+                    <li><a href="javascript:void(0)" onclick="openXhsModal()" data-i18n="footer.c4">小红书</a></li>
                 </ul>
             </div>
         </div>
@@ -1935,6 +2059,21 @@
             <h3 data-i18n="wechat.title">微信联系</h3>
             <p data-i18n="wechat.desc">扫描二维码添加微信，获取专业设计咨询</p>
             <img src="wechat-qr.png" alt="微信二维码">
+        </div>
+    </div>
+
+    <!-- Xiaohongshu Modal -->
+    <div class="xhs-modal" id="xhsModal" onclick="closeXhsModal(event)">
+        <div class="xhs-modal-content" onclick="event.stopPropagation()">
+            <button class="xhs-modal-close" onclick="closeXhsModal()">&times;</button>
+            <div class="xhs-brand">
+                <span class="xhs-icon">📕</span>
+                <span class="xhs-name" data-i18n="xhs.title">小红书</span>
+            </div>
+            <p class="xhs-desc" data-i18n="xhs.desc">扫码关注我，查看更多设计案例和设计故事</p>
+            <img class="xhs-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Fxhslink.com%2Fm%2F3SgVLnRsIGw&margin=10&color=FF2442" alt="小红书二维码">
+            <a class="xhs-jump-btn" href="https://xhslink.com/m/3SgVLnRsIGw" target="_blank" rel="noopener" data-i18n="xhs.jump">在浏览器打开 →</a>
+            <div class="xhs-hint" data-i18n="xhs.hint">手机点跳转即可拉起APP · 电脑请用手机扫码</div>
         </div>
     </div>
 
@@ -2007,12 +2146,12 @@
                 'team.title': 'Our Team',
                 'team.intro1': '1% Design Lab is a professional agency focused on design services, covering industrial design, interaction design, architecture, interior design, fashion design and more.',
                 'team.intro2': 'All team members graduated from QS Top 300 design programs, providing clients with professional, world-class design services.',
-                'joey.title': 'UX / Product / Game / Service Design',
+                'joey.title': 'AI Product / Interaction / Digital Media / Visual Design',
                 'joey.edu': 'MSc Product Design, Politecnico di Milano',
-                'joey.skill1': 'Sr. UX Designer',
-                'joey.skill2': 'NFT Artist',
-                'joey.skill3': 'Photographer',
-                'joey.desc': 'Experienced interaction designer with expertise across mobile, automotive, internet, healthcare, and blockchain. Has mentored students admitted to RCA, Politecnico di Milano, UAL, TU Delft and other world-leading institutions.',
+                'joey.skill1': 'Sr. Product Designer · Silicon Valley',
+                'joey.skill2': '$100M+ Business Impact',
+                'joey.skill3': '400M+ Users Product Experience',
+                'joey.desc': '5+ years in B2B SaaS and AI product design. Led design on pharma giant LIMS (Signals Notebook), AI interior design platform (CollovGPT), and Ctrip Hotel (400M+ users). Has mentored students admitted to RCA, Politecnico di Milano, UAL, TU Delft and other world-leading institutions.',
                 'xue.title': 'System Design Strategy / Illustration / 3D',
                 'xue.edu': 'MDes, Oslo School of Architecture and Design',
                 'xue.desc': 'Graduated top of class. Advocates research methodology and holistic systems thinking. Teaching focuses on student individuality, attention to detail, and open-mindedness.',
@@ -2109,12 +2248,20 @@
                 'footer.c1': 'Online Shop',
                 'footer.c2': 'Customer Service',
                 'footer.c3': 'WeChat',
+                'footer.c4': 'Xiaohongshu',
                 'footer.copy': '© 2025 1%DesignLab Dream Bureau. All rights reserved.',
                 'footer.tagline': '6 Years of Design · QS100 Team · Top Industry Experience',
 
                 // WeChat Modal
                 'wechat.title': 'WeChat Contact',
-                'wechat.desc': 'Scan the QR code to add us on WeChat for professional design consultation'
+                'wechat.desc': 'Scan the QR code to add us on WeChat for professional design consultation',
+
+                // Xiaohongshu Modal
+                'xhs.title': 'Xiaohongshu',
+                'xhs.desc': 'Follow me on Xiaohongshu for more design case studies and stories',
+                'xhs.jump': 'Open in Browser →',
+                'xhs.hint': 'Tap to launch the app on mobile · Scan with phone on desktop',
+                'cta.xhs': 'Xiaohongshu →'
             }
         };
 
@@ -2185,10 +2332,24 @@
             }
         }
 
-        // Close modal on Escape key
+        // ==================== Xiaohongshu Modal Functions ====================
+        function openXhsModal() {
+            document.getElementById('xhsModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeXhsModal(event) {
+            if (!event || event.target === document.getElementById('xhsModal')) {
+                document.getElementById('xhsModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Close modals on Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeWechatModal();
+                closeXhsModal();
             }
         });
 
