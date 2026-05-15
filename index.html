@@ -906,6 +906,32 @@
         }
         .service-price span { color: var(--text-muted); }
 
+        .service-detail-links {
+            display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+            margin-top: 40px; padding: 0 24px;
+        }
+        .service-detail-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 14px; font-weight: 600;
+            color: #111;
+            background: var(--mint);
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(87, 255, 195, 0.2);
+        }
+        .service-detail-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(87, 255, 195, 0.35);
+        }
+        .service-detail-btn span {
+            transition: transform 0.2s;
+        }
+        .service-detail-btn:hover span {
+            transform: translateX(4px);
+        }
+
         .team-intro { max-width: 760px; margin: 0 auto 62px; text-align: center; }
         .team-intro p { color: var(--text-muted); font-size: 15.5px; line-height: 1.82; margin-bottom: 10px; }
         .team-grid {
@@ -1735,11 +1761,11 @@
                 <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
             </a>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px;padding:0 24px">
-            <a href="services/portfolio-design.html" style="display:inline-block;padding:10px 20px;border-radius:999px;font-size:13px;font-weight:500;color:var(--mint);background:rgba(87,255,195,0.08);border:1px solid rgba(87,255,195,0.3);text-decoration:none;transition:transform .2s">作品集设计 · 详情</a>
-            <a href="services/logo-branding.html" style="display:inline-block;padding:10px 20px;border-radius:999px;font-size:13px;font-weight:500;color:var(--mint);background:rgba(87,255,195,0.08);border:1px solid rgba(87,255,195,0.3);text-decoration:none;transition:transform .2s">LOGO/品牌设计 · 详情</a>
-            <a href="services/industrial-design.html" style="display:inline-block;padding:10px 20px;border-radius:999px;font-size:13px;font-weight:500;color:var(--mint);background:rgba(87,255,195,0.08);border:1px solid rgba(87,255,195,0.3);text-decoration:none;transition:transform .2s">工业设计/3D建模 · 详情</a>
-            <a href="services/phd-research-proposal.html" style="display:inline-block;padding:10px 20px;border-radius:999px;font-size:13px;font-weight:500;color:var(--mint);background:rgba(87,255,195,0.08);border:1px solid rgba(87,255,195,0.3);text-decoration:none;transition:transform .2s">博士申请/RP写作 · 详情</a>
+        <div class="service-detail-links">
+            <a href="services/portfolio-design.html" class="service-detail-btn">作品集设计 <span>→</span></a>
+            <a href="services/logo-branding.html" class="service-detail-btn">LOGO/品牌设计 <span>→</span></a>
+            <a href="services/industrial-design.html" class="service-detail-btn">工业设计/3D建模 <span>→</span></a>
+            <a href="services/phd-research-proposal.html" class="service-detail-btn">博士申请/RP写作 <span>→</span></a>
         </div>
     </section>
 
