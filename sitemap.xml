@@ -42,4 +42,52 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://1-design-lab.com/services/portfolio-design.html</loc>
+    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/services/logo-branding.html</loc>
+    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/services/industrial-design.html</loc>
+    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/services/phd-research-proposal.html</loc>
+    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/blog/portfolio-cost-guide.html</loc>
+    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/blog/design-study-abroad-guide.html</loc>
+    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/blog/portfolio-timeline.html</loc>
+    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/blog/design-agency-how-to-choose.html</loc>
+    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
