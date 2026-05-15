@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="baidu-site-verification" content="codeva-Ko5wEj732h" />
+    <meta name="renderer" content="webkit">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0742RTMPL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K0742RTMPL');
+    </script>
     <meta name="robots" content="index, follow">
     <meta name="applicable-device" content="pc,mobile">
     <meta http-equiv="Cache-Control" content="no-transform">
@@ -110,8 +120,52 @@
     }
     </script>
 
+    <!-- FAQ Structured Data for Baidu/Google rich results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "作品集设计多少钱？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1%DesignLab作品集设计服务价格从¥100起，根据专业方向（产品设计、交互设计、建筑设计、工业设计等）、院校目标和项目复杂度定制报价。我们提供从基础排版到全程原创设计的多种套餐，QS100名校导师团队1对1指导，6000+成功案例。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "留学作品集要做多久？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一般留学作品集制作周期为1-3个月，具体取决于项目数量和申请院校要求。建议在申请截止前4-6个月开始准备。我们有加急通道可在1个月内完成，曾帮助多位同学在短时间内拿到米兰理工、皇艺RCA、UCL等名校offer。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "设计代做靠谱吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "选择正规设计工作室非常关键。1%DesignLab拥有6年设计服务经验，团队成员均来自QS100名校（米兰理工、皇艺、UCL、伯克利等），累计6000+成功案例，98.6%好评率。提供全程1对1沟通，作品原创保证，支持无限修改直到满意。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "工业设计留学哪些学校好？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "工业设计留学热门院校包括：英国皇家艺术学院(RCA)、中央圣马丁(CSM)、意大利米兰理工大学、荷兰代尔夫特理工、美国罗德岛设计学院(RISD)、艺术中心设计学院(ACCD)等。1%DesignLab已帮助学生成功申请以上所有院校，可根据你的背景推荐最合适的目标。"
+          }
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+    <link href="https://fonts.loli.net/css2?family=Fragment+Mono:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -2323,6 +2377,7 @@
         function openWechatModal() {
             document.getElementById('wechatModal').classList.add('active');
             document.body.style.overflow = 'hidden';
+            if (typeof gtag === 'function') gtag('event', 'wechat_modal_open', { event_category: 'engagement' });
         }
 
         function closeWechatModal(event) {
@@ -2336,6 +2391,7 @@
         function openXhsModal() {
             document.getElementById('xhsModal').classList.add('active');
             document.body.style.overflow = 'hidden';
+            if (typeof gtag === 'function') gtag('event', 'xiaohongshu_modal_open', { event_category: 'engagement' });
         }
 
         function closeXhsModal(event) {
@@ -2663,6 +2719,35 @@
             applyCursorTheme('services');
             rafId = requestAnimationFrame(animate);
         })();
+    </script>
+
+    <!-- GA4 Event Tracking: Taobao clicks + scroll depth -->
+    <script>
+    (function(){
+        document.querySelectorAll('a[href*="taobao.com"], a[href*="tb.cn"]').forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (typeof gtag === 'function') {
+                    var label = this.querySelector('.service-title, .card-title');
+                    gtag('event', 'taobao_click', {
+                        event_category: 'conversion',
+                        event_label: label ? label.textContent.trim() : this.href
+                    });
+                }
+            });
+        });
+
+        var scrollThresholds = [25, 50, 75, 100];
+        var scrollFired = {};
+        window.addEventListener('scroll', function() {
+            var pct = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+            scrollThresholds.forEach(function(t) {
+                if (pct >= t && !scrollFired[t]) {
+                    scrollFired[t] = true;
+                    if (typeof gtag === 'function') gtag('event', 'scroll_depth', { event_category: 'engagement', event_label: t + '%' });
+                }
+            });
+        }, { passive: true });
+    })();
     </script>
 
     <!-- Baidu auto-push for faster indexing -->
