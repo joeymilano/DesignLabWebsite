@@ -18,4 +18,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://1-design-lab.com/cases/architecture-ucl.html</loc>
+    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/cases/phd-polyu.html</loc>
+    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/cases/architecture-columbia-upenn.html</loc>
+    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/cases/branding-fashion.html</loc>
+    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
