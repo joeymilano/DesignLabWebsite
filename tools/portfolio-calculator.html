@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="renderer" content="webkit">
+    <link rel="canonical" href="https://1-design-lab.com/tools/portfolio-calculator.html">
+    <link rel="icon" href="../favicon.ico" sizes="48x48">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../favicon-180x180.png" sizes="180x180">
+
+    <title>作品集设计费用计算器 — 30秒估算你的预算和时间 | 1%DesignLab</title>
+    <meta name="description" content="免费作品集费用计算器：输入目标院校、专业方向、当前基础，30秒获得费用估算、时间规划和项目建议。基于6000+真实案例数据。">
+    <meta name="keywords" content="作品集设计多少钱,留学作品集费用,作品集预算,作品集价格计算,艺术留学费用">
+
+    <meta property="og:title" content="作品集设计费用计算器 — 30秒估算预算">
+    <meta property="og:description" content="输入条件，即时获得费用估算和时间规划">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://1-design-lab.com/tools/portfolio-calculator.html">
+    <meta property="og:image" content="https://1-design-lab.com/logo.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "作品集设计费用计算器",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+      "description": "免费在线计算器，帮助设计留学生估算作品集设计费用和时间规划"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "作品集设计一般多少钱？",
+          "acceptedAnswer": { "@type": "Answer", "text": "根据服务类型不同，作品集设计费用差异较大：纯指导（导师辅导你自己做）通常3000-15000元；辅导+部分代做通常8000-30000元；全包（从零到成品）通常15000-50000元。费用还取决于目标院校层级、专业方向和时间紧迫程度。大型机构通常5-15万，小工作室通常是大机构的1/3-1/5。" }
+        },
+        {
+          "@type": "Question",
+          "name": "作品集设计费用受什么因素影响？",
+          "acceptedAnswer": { "@type": "Answer", "text": "主要影响因素有5个：1）目标院校层级（QS Top 50要求更高，费用相应更高）；2）专业方向（建筑出图量大费用高，视觉/平面相对低）；3）当前基础（零基础转专业工作量更大）；4）时间紧迫度（加急需要密集排期，费用上浮）；5）服务模式（纯辅导vs全包差异3-5倍）。" }
+        },
+        {
+          "@type": "Question",
+          "name": "怎么判断作品集报价是否合理？",
+          "acceptedAnswer": { "@type": "Answer", "text": "核心看三个指标：1）导师1对1小时数÷总费用=每小时实际费用（合理范围200-600元/小时）；2）总费用中是否包含隐藏费用（材料费、修改费、加急费）；3）同等服务在市场上的价格区间。本计算器基于6000+案例数据给出市场均价参考。" }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://1-design-lab.com/" },
+        { "@type": "ListItem", "position": 2, "name": "工具", "item": "https://1-design-lab.com/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "费用计算器", "item": "https://1-design-lab.com/tools/portfolio-calculator.html" }
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0742RTMPL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K0742RTMPL');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg-base:#151515;--bg-elev-1:#1c1c1c;--bg-elev-2:#232323;--mint:hsl(159,100%,67%);--mint-soft:rgba(87,255,195,0.15);--text-primary:rgb(250,250,250);--text-muted:rgb(166,166,176);--text-body:rgb(218,218,222);--border-subtle:rgba(82,82,91,0.55);--sans:'Noto Sans SC','Inter',-apple-system,BlinkMacSystemFont,sans-serif}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:var(--sans);color:var(--text-primary);line-height:1.7;background:var(--bg-base);-webkit-font-smoothing:antialiased;min-height:100vh}
+        .container{max-width:640px;margin:0 auto;padding:0 20px}
+
+        /* Header */
+        .tool-header{padding:100px 0 32px;text-align:center}
+        .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);font-size:13px;text-decoration:none;margin-bottom:24px;transition:color .2s}
+        .back-link:hover{color:var(--mint)}
+        .tool-header h1{font-size:clamp(22px,4vw,32px);font-weight:700;letter-spacing:-0.03em;line-height:1.3;margin-bottom:10px}
+        .tool-header p{color:var(--text-muted);font-size:14px}
+
+        /* Progress */
+        .progress-bar{display:flex;gap:6px;margin-bottom:32px}
+        .progress-step{flex:1;height:4px;border-radius:2px;background:var(--bg-elev-2);transition:background .3s}
+        .progress-step.active{background:var(--mint)}
+        .progress-step.done{background:rgba(87,255,195,0.5)}
+
+        /* Steps */
+        .step{display:none;animation:fadeIn .3s ease}
+        .step.active{display:block}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+        .step-label{font-size:12px;font-weight:500;color:var(--mint);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+        .step-question{font-size:18px;font-weight:600;margin-bottom:20px}
+
+        /* Options */
+        .options{display:flex;flex-direction:column;gap:10px}
+        .option{padding:16px 20px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:12px;cursor:pointer;transition:all .2s;font-size:14px;color:var(--text-body)}
+        .option:hover{border-color:var(--mint);background:var(--bg-elev-2)}
+        .option.selected{border-color:var(--mint);background:var(--mint-soft);color:var(--text-primary)}
+        .option-title{font-weight:600;color:var(--text-primary);margin-bottom:2px}
+        .option-desc{font-size:12px;color:var(--text-muted)}
+
+        /* Result */
+        .result-card{background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:16px;padding:28px;margin-bottom:20px}
+        .result-label{font-size:12px;color:var(--text-muted);margin-bottom:4px;font-weight:500}
+        .result-value{font-size:28px;font-weight:700;color:var(--mint)}
+        .result-value small{font-size:14px;color:var(--text-muted);font-weight:400}
+        .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+        .result-item{padding:16px;background:var(--bg-elev-2);border-radius:10px}
+        .result-item .result-label{margin-bottom:2px}
+        .result-item .result-value{font-size:18px}
+        .result-note{font-size:13px;color:var(--text-muted);margin-top:16px;padding-top:16px;border-top:1px solid var(--border-subtle)}
+
+        .timeline-list{margin-top:20px}
+        .timeline-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border-subtle)}
+        .timeline-item:last-child{border:none}
+        .timeline-month{font-size:12px;font-weight:600;color:var(--mint);min-width:50px}
+        .timeline-task{font-size:13px;color:var(--text-body)}
+
+        .case-links{margin-top:24px}
+        .case-links h4{font-size:14px;font-weight:600;margin-bottom:10px}
+        .case-link{display:block;padding:10px 14px;background:var(--bg-elev-2);border-radius:8px;margin-bottom:8px;text-decoration:none;color:var(--mint);font-size:13px;transition:background .2s}
+        .case-link:hover{background:var(--bg-elev-1)}
+
+        /* Buttons */
+        .btn-next{display:block;width:100%;padding:14px;border:none;border-radius:12px;background:var(--mint);color:#111;font-size:15px;font-weight:600;cursor:pointer;transition:transform .2s,box-shadow .2s;margin-top:20px}
+        .btn-next:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(87,255,195,0.25)}
+        .btn-next:disabled{opacity:0.4;cursor:not-allowed;transform:none;box-shadow:none}
+
+        .btn-reset{display:inline-block;padding:10px 20px;border:1px solid var(--border-subtle);border-radius:8px;background:transparent;color:var(--text-muted);font-size:13px;cursor:pointer;transition:color .2s;margin-top:12px}
+        .btn-reset:hover{color:var(--text-primary);border-color:var(--text-muted)}
+
+        .cta-box{background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:16px;padding:28px;text-align:center;margin-top:28px}
+        .cta-box h3{font-size:18px;margin-bottom:8px}
+        .cta-box p{color:var(--text-muted);font-size:13px;margin-bottom:16px}
+        .cta-btn{display:inline-block;padding:12px 28px;border-radius:999px;background:var(--mint);color:#111;font-weight:600;font-size:14px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(87,255,195,0.25)}
+
+        /* Footer */
+        .tool-footer{border-top:1px solid var(--border-subtle);padding:24px 0;text-align:center;color:var(--text-muted);font-size:12px;margin-top:48px}
+        .tool-footer a{color:var(--mint);text-decoration:none}
+
+        @media(max-width:480px){
+            .tool-header{padding:72px 0 24px}
+            .result-grid{grid-template-columns:1fr}
+            .result-card{padding:20px}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="tool-header">
+            <a href="../" class="back-link">&larr; 返回首页</a>
+            <h1>作品集费用计算器</h1>
+            <p>30秒估算你的预算和时间 · 基于6000+案例数据</p>
+        </header>
+
+        <div class="progress-bar" id="progressBar">
+            <div class="progress-step active"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+        </div>
+
+        <!-- Step 1: Target School Tier -->
+        <div class="step active" id="step1">
+            <p class="step-label">Step 1 / 5</p>
+            <h2 class="step-question">你的目标院校层级？</h2>
+            <div class="options" data-step="1">
+                <div class="option" data-value="top50">
+                    <div class="option-title">QS Top 50 / 顶尖名校</div>
+                    <div class="option-desc">RCA、CSM、MIT、CMU、米兰理工、哥大、UCL等</div>
+                </div>
+                <div class="option" data-value="top100">
+                    <div class="option-title">QS Top 100</div>
+                    <div class="option-desc">格拉斯哥、爱丁堡、代尔夫特、宾大、UCLA等</div>
+                </div>
+                <div class="option" data-value="top200">
+                    <div class="option-title">QS Top 200 / 保底校</div>
+                    <div class="option-desc">金斯顿、考文垂、布莱顿、都灵理工等</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Major -->
+        <div class="step" id="step2">
+            <p class="step-label">Step 2 / 5</p>
+            <h2 class="step-question">你的专业方向？</h2>
+            <div class="options" data-step="2">
+                <div class="option" data-value="interaction">
+                    <div class="option-title">交互设计 / UX / 服务设计</div>
+                </div>
+                <div class="option" data-value="industrial">
+                    <div class="option-title">工业设计 / 产品设计</div>
+                </div>
+                <div class="option" data-value="architecture">
+                    <div class="option-title">建筑设计 / 景观 / 城市设计</div>
+                </div>
+                <div class="option" data-value="fashion">
+                    <div class="option-title">服装设计 / 时尚管理</div>
+                </div>
+                <div class="option" data-value="visual">
+                    <div class="option-title">视觉传达 / 平面设计 / 插画</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Current Level -->
+        <div class="step" id="step3">
+            <p class="step-label">Step 3 / 5</p>
+            <h2 class="step-question">你的当前基础？</h2>
+            <div class="options" data-step="3">
+                <div class="option" data-value="strong">
+                    <div class="option-title">本专业，有课程作业可用</div>
+                    <div class="option-desc">有2-3个现成项目可以打磨</div>
+                </div>
+                <div class="option" data-value="some">
+                    <div class="option-title">相关专业，有一些基础</div>
+                    <div class="option-desc">有1-2个素材，需要新做2-3个项目</div>
+                </div>
+                <div class="option" data-value="zero">
+                    <div class="option-title">零基础 / 完全转专业</div>
+                    <div class="option-desc">所有项目从零开始</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: Timeline -->
+        <div class="step" id="step4">
+            <p class="step-label">Step 4 / 5</p>
+            <h2 class="step-question">距离申请Deadline还有多久？</h2>
+            <div class="options" data-step="4">
+                <div class="option" data-value="urgent">
+                    <div class="option-title">3个月以内（极限冲刺）</div>
+                </div>
+                <div class="option" data-value="normal">
+                    <div class="option-title">4-6个月（标准周期）</div>
+                </div>
+                <div class="option" data-value="relaxed">
+                    <div class="option-title">7个月以上（从容准备）</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 5: Service Type -->
+        <div class="step" id="step5">
+            <p class="step-label">Step 5 / 5</p>
+            <h2 class="step-question">你需要什么类型的服务？</h2>
+            <div class="options" data-step="5">
+                <div class="option" data-value="guidance">
+                    <div class="option-title">纯辅导（导师指导，自己执行）</div>
+                    <div class="option-desc">适合有执行力、只需方向把控的学生</div>
+                </div>
+                <div class="option" data-value="hybrid">
+                    <div class="option-title">辅导 + 部分代做</div>
+                    <div class="option-desc">核心思路自己做，技术执行（排版/建模/渲染）导师帮忙</div>
+                </div>
+                <div class="option" data-value="full">
+                    <div class="option-title">全包（从策略到成品）</div>
+                    <div class="option-desc">适合时间极紧或跨专业较大的情况</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result -->
+        <div class="step" id="stepResult">
+            <p class="step-label">计算结果</p>
+            <h2 class="step-question">你的作品集预算估算</h2>
+
+            <div class="result-card">
+                <div class="result-label">预估费用范围（市场均价）</div>
+                <div class="result-value" id="resultMarketPrice">-</div>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <div class="result-label">1%DesignLab 价格</div>
+                        <div class="result-value" id="resultOurPrice">-</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">推荐项目数量</div>
+                        <div class="result-value" id="resultProjects">-</div>
+                    </div>
+                </div>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <div class="result-label">建议准备时间</div>
+                        <div class="result-value" id="resultTime">-</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">难度评估</div>
+                        <div class="result-value" id="resultDifficulty">-</div>
+                    </div>
+                </div>
+                <p class="result-note" id="resultNote"></p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-label">推荐时间规划</div>
+                <div class="timeline-list" id="resultTimeline"></div>
+            </div>
+
+            <div class="case-links" id="resultCases"></div>
+
+            <div class="cta-box">
+                <h3>想要更精确的方案？</h3>
+                <p>15分钟免费通话，导师本人评估你的情况——不是销售</p>
+                <a href="../" class="cta-btn">免费咨询 &rarr;</a>
+            </div>
+
+            <button class="btn-reset" onclick="resetCalculator()">重新计算</button>
+        </div>
+
+        <footer class="tool-footer">
+            <p>&copy; 2026 <a href="../">1%DesignLab 梦想管理局</a> &middot; 数据基于6000+案例统计，仅供参考</p>
+        </footer>
+    </div>
+
+    <script>
+    const state = { step: 1, answers: {} };
+    const totalSteps = 5;
+
+    document.querySelectorAll('.options').forEach(container => {
+        container.addEventListener('click', e => {
+            const option = e.target.closest('.option');
+            if (!option) return;
+            const step = container.dataset.step;
+            container.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+            option.classList.add('selected');
+            state.answers[step] = option.dataset.value;
+
+            gtag('event', 'calculator_step_complete', {
+                step_number: step,
+                step_value: option.dataset.value
+            });
+
+            setTimeout(() => nextStep(), 300);
+        });
+    });
+
+    function nextStep() {
+        if (state.step >= totalSteps) {
+            showResult();
+            return;
+        }
+        document.getElementById('step' + state.step).classList.remove('active');
+        state.step++;
+        document.getElementById('step' + state.step).classList.add('active');
+        updateProgress();
+    }
+
+    function updateProgress() {
+        document.querySelectorAll('.progress-step').forEach((el, i) => {
+            el.classList.remove('active', 'done');
+            if (i < state.step - 1) el.classList.add('done');
+            else if (i === state.step - 1) el.classList.add('active');
+        });
+    }
+
+    function showResult() {
+        document.getElementById('step' + state.step).classList.remove('active');
+        document.getElementById('stepResult').classList.add('active');
+        document.querySelectorAll('.progress-step').forEach(el => el.classList.add('done'));
+
+        const { 1: tier, 2: major, 3: level, 4: timeline, 5: service } = state.answers;
+
+        const calc = calculateEstimate(tier, major, level, timeline, service);
+
+        document.getElementById('resultMarketPrice').innerHTML = calc.marketPrice;
+        document.getElementById('resultOurPrice').innerHTML = calc.ourPrice;
+        document.getElementById('resultProjects').innerHTML = calc.projects + ' <small>个</small>';
+        document.getElementById('resultTime').innerHTML = calc.time;
+        document.getElementById('resultDifficulty').innerHTML = calc.difficulty;
+        document.getElementById('resultNote').textContent = calc.note;
+        document.getElementById('resultTimeline').innerHTML = calc.timeline.map(t =>
+            `<div class="timeline-item"><span class="timeline-month">${t.month}</span><span class="timeline-task">${t.task}</span></div>`
+        ).join('');
+
+        const casesHtml = calc.cases.length > 0 ? `<h4>同类成功案例</h4>${calc.cases.map(c =>
+            `<a href="${c.url}" class="case-link">${c.title}</a>`
+        ).join('')}` : '';
+        document.getElementById('resultCases').innerHTML = casesHtml;
+
+        // Update URL hash for shareability
+        const params = Object.values(state.answers).join('-');
+        history.replaceState(null, '', '#' + params);
+
+        gtag('event', 'calculator_result_shown', {
+            tier, major, level, timeline, service,
+            market_price: calc.marketPriceRaw,
+            our_price: calc.ourPriceRaw
+        });
+    }
+
+    function calculateEstimate(tier, major, level, timeline, service) {
+        // Base price matrix (market average, in RMB thousands)
+        let baseMin = 8, baseMax = 20;
+
+        // Tier multiplier
+        const tierMult = { top50: 1.4, top100: 1.0, top200: 0.7 };
+        // Major multiplier
+        const majorMult = { interaction: 1.0, industrial: 1.15, architecture: 1.3, fashion: 1.1, visual: 0.85 };
+        // Level multiplier
+        const levelMult = { strong: 0.7, some: 1.0, zero: 1.3 };
+        // Service multiplier
+        const serviceMult = { guidance: 0.6, hybrid: 1.0, full: 1.6 };
+        // Timeline urgency
+        const timelineMult = { urgent: 1.2, normal: 1.0, relaxed: 0.9 };
+
+        const mult = tierMult[tier] * majorMult[major] * levelMult[level] * serviceMult[service] * timelineMult[timeline];
+        let marketMin = Math.round(baseMin * mult);
+        let marketMax = Math.round(baseMax * mult);
+
+        // Our price is roughly 1/3 to 1/2 of market average for big agencies
+        let ourMin = Math.round(marketMin * 0.35);
+        let ourMax = Math.round(marketMax * 0.45);
+
+        // Project count
+        let projects = 4;
+        if (tier === 'top50') projects = 5;
+        if (tier === 'top200') projects = 3;
+        if (level === 'zero') projects = Math.min(projects, 4);
+        if (timeline === 'urgent') projects = Math.max(3, projects - 1);
+
+        // Time estimate
+        let timeMonths;
+        if (level === 'strong') timeMonths = timeline === 'urgent' ? 3 : 4;
+        else if (level === 'some') timeMonths = timeline === 'urgent' ? 3 : 5;
+        else timeMonths = timeline === 'urgent' ? 3 : 7;
+
+        // Difficulty
+        let diffScore = 0;
+        if (tier === 'top50') diffScore += 2;
+        else if (tier === 'top100') diffScore += 1;
+        if (level === 'zero') diffScore += 2;
+        else if (level === 'some') diffScore += 1;
+        if (timeline === 'urgent') diffScore += 1;
+        if (major === 'architecture') diffScore += 1;
+
+        let difficulty, diffColor;
+        if (diffScore <= 2) { difficulty = '适中'; diffColor = '#57ffc3'; }
+        else if (diffScore <= 4) { difficulty = '较高'; diffColor = '#ffd700'; }
+        else { difficulty = '很高'; diffColor = '#ff6b6b'; }
+
+        // Note
+        let note = '';
+        if (timeline === 'urgent' && level === 'zero') {
+            note = '时间非常紧 + 零基础组合难度极高，强烈建议找有经验的导师带。做取舍（3个项目打磨到极致优于5个平庸的）。';
+        } else if (tier === 'top50' && service === 'guidance') {
+            note = '冲刺Top 50院校仅靠纯辅导也可以成功，前提是你有足够的执行力和每周20+小时投入。';
+        } else if (service === 'full') {
+            note = '全包服务适合时间紧迫的情况，但注意：好的作品集需要你的个人思考融入，完全代做在面试环节可能暴露。';
+        } else {
+            note = '费用仅供参考，实际取决于你选择的具体机构/导师。核心判断标准：导师1对1小时数 ÷ 总费用 = 每小时实际费用。';
+        }
+
+        // Timeline plan
+        let timelinePlan = [];
+        if (timeMonths <= 3) {
+            timelinePlan = [
+                { month: '第1周', task: '选校确定 + 项目方向规划 + 开始第1个项目' },
+                { month: '第2-4周', task: '完成核心项目1' },
+                { month: '第5-7周', task: '完成核心项目2 + 启动项目3' },
+                { month: '第8-10周', task: '完成项目3 + 可选快项目4' },
+                { month: '第11-12周', task: '统一排版 + 定稿 + 提交' }
+            ];
+        } else if (timeMonths <= 5) {
+            timelinePlan = [
+                { month: '第1月', task: '选校分析 + 项目规划 + 盘点素材' },
+                { month: '第2月', task: '完成核心项目1' },
+                { month: '第3月', task: '完成核心项目2' },
+                { month: '第4月', task: '补充项目3-4 + 开始排版' },
+                { month: '第5月', task: '排版定稿 + 提交（留buffer）' }
+            ];
+        } else {
+            timelinePlan = [
+                { month: '第1月', task: '选校研究 + 方向确定 + 项目规划' },
+                { month: '第2-3月', task: '完成2个核心大项目' },
+                { month: '第4-5月', task: '补充2-3个项目 + 打磨' },
+                { month: '第6月', task: '统一排版风格 + 导出' },
+                { month: '第7月', task: '终稿检查 + 准备不同版本 + 提交' }
+            ];
+        }
+
+        // Related cases
+        let cases = [];
+        if (major === 'interaction') {
+            cases = [{ title: 'L同学：二本→米兰理工+代尔夫特 交互设计', url: '../cases/interaction-design-milano.html' }];
+        } else if (major === 'industrial') {
+            cases = [{ title: 'C同学：零基础→皇艺RCA 工业设计', url: '../cases/industrial-design-rca.html' }];
+        } else if (major === 'architecture') {
+            cases = [
+                { title: 'W同学：二本→UCL 建筑设计', url: '../cases/architecture-ucl.html' },
+                { title: 'H同学：考研转留学3个月→哥大+宾大', url: '../cases/architecture-columbia-upenn.html' }
+            ];
+        } else if (major === 'fashion') {
+            cases = [{ title: '品牌LOGO+VI设计案例', url: '../cases/branding-fashion.html' }];
+        }
+
+        return {
+            marketPrice: `¥${marketMin},000 - ${marketMax},000`,
+            marketPriceRaw: `${marketMin}k-${marketMax}k`,
+            ourPrice: `¥${ourMin},000 - ${ourMax},000`,
+            ourPriceRaw: `${ourMin}k-${ourMax}k`,
+            projects,
+            time: `${timeMonths}个月`,
+            difficulty: `<span style="color:${diffColor}">${difficulty}</span>`,
+            note,
+            timeline: timelinePlan,
+            cases
+        };
+    }
+
+    function resetCalculator() {
+        state.step = 1;
+        state.answers = {};
+        document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+        document.getElementById('step1').classList.add('active');
+        document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+        updateProgress();
+        history.replaceState(null, '', window.location.pathname);
+        gtag('event', 'calculator_reset');
+    }
+
+    // Load from hash if present
+    (function() {
+        const hash = window.location.hash.slice(1);
+        if (hash && hash.split('-').length === 5) {
+            const [tier, major, level, timeline, service] = hash.split('-');
+            const valid = ['top50','top100','top200'].includes(tier) &&
+                          ['interaction','industrial','architecture','fashion','visual'].includes(major) &&
+                          ['strong','some','zero'].includes(level) &&
+                          ['urgent','normal','relaxed'].includes(timeline) &&
+                          ['guidance','hybrid','full'].includes(service);
+            if (valid) {
+                state.answers = { 1: tier, 2: major, 3: level, 4: timeline, 5: service };
+                state.step = 5;
+                document.getElementById('step1').classList.remove('active');
+                showResult();
+            }
+        }
+    })();
+    </script>
+</body>
+</html>

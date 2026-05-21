@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="renderer" content="webkit">
+    <link rel="canonical" href="https://1-design-lab.com/tools/portfolio-reviewer.html">
+    <link rel="icon" href="../favicon.ico" sizes="48x48">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../favicon-180x180.png" sizes="180x180">
+
+    <title>作品集自测评估工具 — 快速诊断你的作品集竞争力 | 1%DesignLab</title>
+    <meta name="description" content="免费作品集诊断工具：输入你的项目情况和目标院校，即时获得多维度评估、改进建议和时间规划。基于6000+录取案例经验。">
+    <meta name="keywords" content="作品集评估,作品集诊断,作品集怎么看好不好,留学作品集自测,作品集竞争力">
+
+    <meta property="og:title" content="作品集自测评估 — 快速诊断竞争力">
+    <meta property="og:description" content="输入情况，即时获得多维度评估和改进建议">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://1-design-lab.com/tools/portfolio-reviewer.html">
+    <meta property="og:image" content="https://1-design-lab.com/logo.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "作品集自测评估工具",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+      "description": "免费作品集诊断工具，多维度评估竞争力并给出改进建议"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "怎么判断自己的作品集够不够好？",
+          "acceptedAnswer": { "@type": "Answer", "text": "好的作品集需要满足5个维度：1）概念深度——每个项目有清晰的设计问题和创新点；2）调研质量——用户研究/背景分析扎实且有洞察；3）过程展示——展示设计思维过程而非只有最终结果；4）技术表现——出图质量、建模渲染、排版都达到专业水准；5）多样性——4-5个项目覆盖不同尺度/方法/主题，展示设计广度。" }
+        },
+        {
+          "@type": "Question",
+          "name": "作品集最常见的问题是什么？",
+          "acceptedAnswer": { "@type": "Answer", "text": "根据我们审核6000+作品集的经验，最常见的5个问题：1）只展示结果不展示过程（考官看不到思维）；2）项目之间太相似（缺乏多样性）；3）调研流于形式（没有真正的洞察驱动设计）；4）排版不统一（视觉系统混乱）；5）项目数量贪多但质量不够（4个好项目 > 6个平庸项目）。" }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://1-design-lab.com/" },
+        { "@type": "ListItem", "position": 2, "name": "工具", "item": "https://1-design-lab.com/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "作品集评估", "item": "https://1-design-lab.com/tools/portfolio-reviewer.html" }
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0742RTMPL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K0742RTMPL');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg-base:#151515;--bg-elev-1:#1c1c1c;--bg-elev-2:#232323;--mint:hsl(159,100%,67%);--mint-soft:rgba(87,255,195,0.15);--text-primary:rgb(250,250,250);--text-muted:rgb(166,166,176);--text-body:rgb(218,218,222);--border-subtle:rgba(82,82,91,0.55);--sans:'Noto Sans SC','Inter',-apple-system,BlinkMacSystemFont,sans-serif;--red:#ff6b6b;--yellow:#ffd700;--green:#57ffc3}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:var(--sans);color:var(--text-primary);line-height:1.7;background:var(--bg-base);-webkit-font-smoothing:antialiased;min-height:100vh}
+        .container{max-width:640px;margin:0 auto;padding:0 20px}
+        .tool-header{padding:100px 0 32px;text-align:center}
+        .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);font-size:13px;text-decoration:none;margin-bottom:24px;transition:color .2s}
+        .back-link:hover{color:var(--mint)}
+        .tool-header h1{font-size:clamp(22px,4vw,32px);font-weight:700;letter-spacing:-0.03em;line-height:1.3;margin-bottom:10px}
+        .tool-header p{color:var(--text-muted);font-size:14px}
+        .progress-bar{display:flex;gap:6px;margin-bottom:32px}
+        .progress-step{flex:1;height:4px;border-radius:2px;background:var(--bg-elev-2);transition:background .3s}
+        .progress-step.active{background:var(--mint)}
+        .progress-step.done{background:rgba(87,255,195,0.5)}
+        .step{display:none;animation:fadeIn .3s ease}
+        .step.active{display:block}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+        .step-label{font-size:12px;font-weight:500;color:var(--mint);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+        .step-question{font-size:18px;font-weight:600;margin-bottom:20px}
+        .options{display:flex;flex-direction:column;gap:10px}
+        .option{padding:16px 20px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:12px;cursor:pointer;transition:all .2s;font-size:14px;color:var(--text-body)}
+        .option:hover{border-color:var(--mint);background:var(--bg-elev-2)}
+        .option.selected{border-color:var(--mint);background:var(--mint-soft);color:var(--text-primary)}
+        .option-title{font-weight:600;color:var(--text-primary)}
+        .option-desc{font-size:12px;color:var(--text-muted);margin-top:2px}
+
+        /* Multi-select */
+        .multi-options .option.selected{border-color:var(--mint);background:var(--mint-soft)}
+        .btn-next{display:block;width:100%;padding:14px;border:none;border-radius:12px;background:var(--mint);color:#111;font-size:15px;font-weight:600;cursor:pointer;transition:transform .2s,box-shadow .2s;margin-top:20px}
+        .btn-next:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(87,255,195,0.25)}
+        .btn-next:disabled{opacity:0.4;cursor:not-allowed;transform:none;box-shadow:none}
+
+        /* Result */
+        .diagnosis-card{background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:16px;padding:24px;margin-bottom:16px}
+        .diagnosis-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+        .diagnosis-title{font-size:16px;font-weight:600}
+        .diagnosis-score{font-size:24px;font-weight:700}
+
+        .dimension{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(82,82,91,0.25)}
+        .dimension:last-child{border:none}
+        .dim-label{font-size:13px;color:var(--text-body);min-width:70px}
+        .dim-bar{flex:1;height:8px;background:var(--bg-elev-2);border-radius:4px;overflow:hidden}
+        .dim-fill{height:100%;border-radius:4px;transition:width .6s ease}
+        .dim-status{font-size:12px;font-weight:600;min-width:40px;text-align:right}
+
+        .advice-card{background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:16px;padding:24px;margin-bottom:16px}
+        .advice-card h3{font-size:15px;font-weight:600;margin-bottom:12px;color:var(--mint)}
+        .advice-item{padding:10px 0;border-bottom:1px solid rgba(82,82,91,0.25);font-size:13px;color:var(--text-body);line-height:1.6}
+        .advice-item:last-child{border:none}
+        .advice-item strong{color:var(--text-primary)}
+        .priority-tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;margin-right:6px}
+        .priority-high{background:rgba(255,107,107,0.15);color:var(--red)}
+        .priority-mid{background:rgba(255,215,0,0.15);color:var(--yellow)}
+        .priority-low{background:rgba(87,255,195,0.15);color:var(--green)}
+
+        .cta-box{background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:16px;padding:28px;text-align:center;margin-top:28px}
+        .cta-box h3{font-size:18px;margin-bottom:8px}
+        .cta-box p{color:var(--text-muted);font-size:13px;margin-bottom:16px}
+        .cta-btn{display:inline-block;padding:12px 28px;border-radius:999px;background:var(--mint);color:#111;font-weight:600;font-size:14px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(87,255,195,0.25)}
+        .btn-reset{display:inline-block;padding:10px 20px;border:1px solid var(--border-subtle);border-radius:8px;background:transparent;color:var(--text-muted);font-size:13px;cursor:pointer;margin-top:12px}
+        .btn-reset:hover{color:var(--text-primary);border-color:var(--text-muted)}
+        .tool-footer{border-top:1px solid var(--border-subtle);padding:24px 0;text-align:center;color:var(--text-muted);font-size:12px;margin-top:48px}
+        .tool-footer a{color:var(--mint);text-decoration:none}
+        @media(max-width:480px){.tool-header{padding:72px 0 24px}.diagnosis-card,.advice-card{padding:18px}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="tool-header">
+            <a href="../" class="back-link">&larr; 返回首页</a>
+            <h1>作品集自测评估</h1>
+            <p>3步快速诊断你的作品集竞争力 · 获得改进建议</p>
+        </header>
+
+        <div class="progress-bar" id="progressBar">
+            <div class="progress-step active"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+        </div>
+
+        <!-- Step 1: Target + Major -->
+        <div class="step active" id="step1">
+            <p class="step-label">Step 1 / 3</p>
+            <h2 class="step-question">你的目标院校和专业？</h2>
+            <div class="options" data-step="1">
+                <div class="option" data-value="top50-interaction"><span class="option-title">Top 50 · 交互/UX/服务设计</span></div>
+                <div class="option" data-value="top50-industrial"><span class="option-title">Top 50 · 工业/产品设计</span></div>
+                <div class="option" data-value="top50-architecture"><span class="option-title">Top 50 · 建筑/景观设计</span></div>
+                <div class="option" data-value="top50-fashion"><span class="option-title">Top 50 · 服装/时尚设计</span></div>
+                <div class="option" data-value="top50-visual"><span class="option-title">Top 50 · 视觉/平面/插画</span></div>
+                <div class="option" data-value="top100-any"><span class="option-title">Top 100 · 任何方向</span></div>
+                <div class="option" data-value="top200-any"><span class="option-title">Top 200 / 保底 · 任何方向</span></div>
+            </div>
+        </div>
+
+        <!-- Step 2: Current Status -->
+        <div class="step" id="step2">
+            <p class="step-label">Step 2 / 3</p>
+            <h2 class="step-question">你目前的项目情况？</h2>
+            <div class="options" data-step="2">
+                <div class="option" data-value="5plus">
+                    <span class="option-title">5个+ 完整项目</span>
+                    <div class="option-desc">多数有调研过程和完整出图</div>
+                </div>
+                <div class="option" data-value="3to4">
+                    <span class="option-title">3-4个项目</span>
+                    <div class="option-desc">部分完整，部分只有结果没有过程</div>
+                </div>
+                <div class="option" data-value="1to2">
+                    <span class="option-title">1-2个项目</span>
+                    <div class="option-desc">或只有课程作业原始状态</div>
+                </div>
+                <div class="option" data-value="zero">
+                    <span class="option-title">还没开始 / 零基础</span>
+                    <div class="option-desc">需要从零开始所有项目</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Self-identified Weaknesses (multi-select) -->
+        <div class="step" id="step3">
+            <p class="step-label">Step 3 / 3</p>
+            <h2 class="step-question">你觉得自己哪些方面比较薄弱？（可多选）</h2>
+            <div class="options multi-options" data-step="3">
+                <div class="option" data-value="concept"><span class="option-title">概念深度 — 项目缺乏创新点</span></div>
+                <div class="option" data-value="research"><span class="option-title">调研质量 — 用户研究/背景分析不够扎实</span></div>
+                <div class="option" data-value="process"><span class="option-title">过程展示 — 只有结果，缺少思维过程</span></div>
+                <div class="option" data-value="technical"><span class="option-title">技术表现 — 出图/建模/排版质量不够</span></div>
+                <div class="option" data-value="diversity"><span class="option-title">多样性 — 项目太相似，类型单一</span></div>
+                <div class="option" data-value="layout"><span class="option-title">排版 — 整体视觉系统不统一</span></div>
+            </div>
+            <button class="btn-next" id="submitBtn" onclick="submitReview()" disabled>生成评估结果</button>
+        </div>
+
+        <!-- Result -->
+        <div class="step" id="stepResult">
+            <p class="step-label">评估结果</p>
+            <h2 class="step-question">你的作品集诊断报告</h2>
+
+            <div class="diagnosis-card">
+                <div class="diagnosis-header">
+                    <span class="diagnosis-title">综合竞争力</span>
+                    <span class="diagnosis-score" id="overallScore"></span>
+                </div>
+                <div id="dimensions"></div>
+            </div>
+
+            <div class="advice-card">
+                <h3>改进建议（按优先级排序）</h3>
+                <div id="adviceList"></div>
+            </div>
+
+            <div class="advice-card">
+                <h3>推荐行动计划</h3>
+                <div id="actionPlan"></div>
+            </div>
+
+            <div class="cta-box">
+                <h3>想要导师1对1深度评估？</h3>
+                <p>自测只是起点——导师看过你的实际作品后，才能给出真正精准的策略</p>
+                <a href="../" class="cta-btn">免费深度评估 &rarr;</a>
+            </div>
+            <button class="btn-reset" onclick="resetReviewer()">重新评估</button>
+        </div>
+
+        <footer class="tool-footer">
+            <p>&copy; 2026 <a href="../">1%DesignLab 梦想管理局</a> &middot; 评估基于规则引擎，仅供参考，不替代导师判断</p>
+        </footer>
+    </div>
+
+    <script>
+    const state = { step: 1, answers: {}, weaknesses: [] };
+
+    // Step 1 & 2: single select
+    document.querySelectorAll('.options:not(.multi-options)').forEach(container => {
+        container.addEventListener('click', e => {
+            const option = e.target.closest('.option');
+            if (!option) return;
+            const step = container.dataset.step;
+            container.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+            option.classList.add('selected');
+            state.answers[step] = option.dataset.value;
+            gtag('event', 'reviewer_step_complete', { step_number: step, step_value: option.dataset.value });
+            setTimeout(() => nextStep(), 300);
+        });
+    });
+
+    // Step 3: multi select
+    document.querySelector('.multi-options').addEventListener('click', e => {
+        const option = e.target.closest('.option');
+        if (!option) return;
+        option.classList.toggle('selected');
+        state.weaknesses = Array.from(document.querySelectorAll('.multi-options .option.selected')).map(o => o.dataset.value);
+        document.getElementById('submitBtn').disabled = state.weaknesses.length === 0;
+    });
+
+    function nextStep() {
+        if (state.step >= 3) return;
+        document.getElementById('step' + state.step).classList.remove('active');
+        state.step++;
+        document.getElementById('step' + state.step).classList.add('active');
+        updateProgress();
+    }
+
+    function updateProgress() {
+        document.querySelectorAll('.progress-step').forEach((el, i) => {
+            el.classList.remove('active', 'done');
+            if (i < state.step - 1) el.classList.add('done');
+            else if (i === state.step - 1) el.classList.add('active');
+        });
+    }
+
+    function submitReview() {
+        document.getElementById('step3').classList.remove('active');
+        document.getElementById('stepResult').classList.add('active');
+        document.querySelectorAll('.progress-step').forEach(el => el.classList.add('done'));
+
+        const [tier, major] = (state.answers['1'] || 'top100-any').split('-');
+        const projectCount = state.answers['2'] || '1to2';
+        const weaknesses = state.weaknesses;
+
+        const result = generateDiagnosis(tier, major, projectCount, weaknesses);
+        renderResult(result);
+
+        gtag('event', 'reviewer_result_shown', {
+            tier, major, project_count: projectCount,
+            weaknesses: weaknesses.join(','),
+            overall_score: result.overall
+        });
+    }
+
+    function generateDiagnosis(tier, major, projectCount, weaknesses) {
+        // Dimension scores (0-100)
+        let dims = {
+            concept: 60,
+            research: 60,
+            process: 60,
+            technical: 60,
+            diversity: 60,
+            layout: 60
+        };
+
+        // Project count impact
+        if (projectCount === '5plus') { dims.diversity += 20; dims.process += 10; }
+        else if (projectCount === '3to4') { dims.diversity += 5; }
+        else if (projectCount === '1to2') { dims.diversity -= 20; dims.concept -= 10; }
+        else { Object.keys(dims).forEach(k => dims[k] -= 30); }
+
+        // Weakness impact
+        weaknesses.forEach(w => { if (dims[w] !== undefined) dims[w] -= 25; });
+
+        // Tier expectations
+        if (tier === 'top50') {
+            Object.keys(dims).forEach(k => dims[k] -= 10);
+        } else if (tier === 'top200') {
+            Object.keys(dims).forEach(k => dims[k] += 10);
+        }
+
+        // Clamp
+        Object.keys(dims).forEach(k => { dims[k] = Math.max(10, Math.min(95, dims[k])); });
+
+        const overall = Math.round(Object.values(dims).reduce((a, b) => a + b, 0) / 6);
+
+        // Generate advice
+        const advice = generateAdvice(dims, weaknesses, tier, major, projectCount);
+        const actionPlan = generateActionPlan(projectCount, weaknesses, tier);
+
+        return { dims, overall, advice, actionPlan };
+    }
+
+    function generateAdvice(dims, weaknesses, tier, major, projectCount) {
+        const advice = [];
+
+        const sorted = Object.entries(dims).sort((a, b) => a[1] - b[1]);
+
+        sorted.forEach(([dim, score]) => {
+            if (score >= 70) return;
+            const priority = score < 40 ? 'high' : score < 55 ? 'mid' : 'low';
+            const tips = {
+                concept: `<strong>提升概念深度：</strong>每个项目需要有明确的"设计问题"。问自己：这个项目解决了什么问题？我的设计决策背后的逻辑是什么？避免"为了好看而设计"。`,
+                research: `<strong>强化调研质量：</strong>不要只做问卷和竞品分析。加入用户访谈、田野调查、数据洞察。关键是：调研结论要直接驱动设计决策，而不是走形式。`,
+                process: `<strong>展示思维过程：</strong>考官最想看的是你怎么思考，不是你最终画了什么。加入草图迭代、方案对比、测试反馈、pivot原因。过程页面应占总页面的50%+。`,
+                technical: `<strong>提升技术表现：</strong>出图质量是门槛。${major === 'architecture' ? '效果图/分析图/平面图' : major === 'industrial' ? '3D渲染/工程图' : '原型/交互动效'}需要达到专业水准。如果自己做不到，考虑找人协助技术执行。`,
+                diversity: `<strong>增加项目多样性：</strong>4-5个项目应覆盖不同尺度、方法和主题。${projectCount === '1to2' ? '你目前项目数量不足，至少需要再做2-3个。' : '尝试让项目类型互补：一个大尺度+一个小尺度，一个纯数字+一个有物理交互。'}`,
+                layout: `<strong>统一排版系统：</strong>从第一个项目就建立统一的视觉语言——字体层级、色彩系统、网格、留白。排版不是最后一步贴图，而是贯穿始终的设计决策。`
+            };
+            advice.push({ dim, priority, text: tips[dim] });
+        });
+
+        return advice.slice(0, 5);
+    }
+
+    function generateActionPlan(projectCount, weaknesses, tier) {
+        const plans = [];
+
+        if (projectCount === 'zero') {
+            plans.push({ text: '<strong>第1-2周：</strong>确定项目方向。先不动手做，花时间研究目标院校的作品集要求和审美偏好。确定4-5个项目主题。', priority: 'high' });
+            plans.push({ text: '<strong>第3-8周：</strong>集中完成2个核心项目。每个项目完整走一遍：调研→概念→设计→出图。', priority: 'high' });
+            plans.push({ text: '<strong>第9-12周：</strong>补充2-3个快项目 + 统一排版 + 定稿。', priority: 'mid' });
+        } else if (projectCount === '1to2') {
+            plans.push({ text: '<strong>立即开始：</strong>评估现有项目能否打磨用——如果逻辑通顺只是表现不够，就优化；如果方向有问题，不如新做。', priority: 'high' });
+            plans.push({ text: '<strong>补充项目：</strong>至少再做2-3个新项目。优先做和现有项目"类型互补"的方向。', priority: 'high' });
+            plans.push({ text: '<strong>排版系统：</strong>在做新项目的同时，尽早定下整体排版风格，后面就是填内容。', priority: 'mid' });
+        } else if (projectCount === '3to4') {
+            plans.push({ text: '<strong>诊断现有项目：</strong>按"概念-调研-过程-技术"四个维度打分，找到最弱的维度集中补强。', priority: 'mid' });
+            if (weaknesses.includes('process')) plans.push({ text: '<strong>补充过程页面：</strong>每个项目增加3-5页过程图（草图迭代/方案对比/测试反馈），这是最容易提升的维度。', priority: 'high' });
+            if (weaknesses.includes('diversity')) plans.push({ text: '<strong>增加一个差异化项目：</strong>新做1个和现有项目"风格/尺度/方法"完全不同的快项目，展示设计广度。', priority: 'mid' });
+            plans.push({ text: '<strong>排版定稿：</strong>统一视觉系统后导出不同学校要求的版本（页数/尺寸可能不同）。', priority: 'low' });
+        } else {
+            plans.push({ text: '<strong>做减法：</strong>5个项目不一定都用。选最强的4个深度打磨，弱的项目果断砍掉，质量>数量。', priority: 'mid' });
+            if (weaknesses.includes('layout')) plans.push({ text: '<strong>排版重做：</strong>你有足够内容，现在的重点是呈现方式。花1-2周重新设计排版系统。', priority: 'high' });
+            plans.push({ text: '<strong>精细打磨：</strong>逐页检查每个项目的叙事逻辑——删掉无意义的过渡页，确保每页都有信息密度。', priority: 'mid' });
+        }
+
+        if (tier === 'top50' && !weaknesses.includes('concept')) {
+            plans.push({ text: '<strong>差异化策略：</strong>Top 50竞争激烈，你需要至少1个项目有"独特性"——不是方法论独特，而是"切入角度/问题定义"让人眼前一亮。', priority: 'mid' });
+        }
+
+        return plans.slice(0, 4);
+    }
+
+    function renderResult(result) {
+        // Overall score
+        const scoreEl = document.getElementById('overallScore');
+        let scoreColor = result.overall >= 65 ? 'var(--green)' : result.overall >= 45 ? 'var(--yellow)' : 'var(--red)';
+        let scoreLabel = result.overall >= 65 ? '竞争力较强' : result.overall >= 45 ? '需要提升' : '差距较大';
+        scoreEl.innerHTML = `<span style="color:${scoreColor}">${result.overall}</span><small style="font-size:12px;color:var(--text-muted);font-weight:400"> /100 · ${scoreLabel}</small>`;
+
+        // Dimensions
+        const dimLabels = { concept:'概念', research:'调研', process:'过程', technical:'技术', diversity:'多样性', layout:'排版' };
+        let dimsHtml = '';
+        Object.entries(result.dims).forEach(([key, score]) => {
+            const color = score >= 65 ? 'var(--green)' : score >= 45 ? 'var(--yellow)' : 'var(--red)';
+            const status = score >= 65 ? '良好' : score >= 45 ? '待提升' : '薄弱';
+            dimsHtml += `
+            <div class="dimension">
+                <span class="dim-label">${dimLabels[key]}</span>
+                <div class="dim-bar"><div class="dim-fill" style="width:${score}%;background:${color}"></div></div>
+                <span class="dim-status" style="color:${color}">${status}</span>
+            </div>`;
+        });
+        document.getElementById('dimensions').innerHTML = dimsHtml;
+
+        // Advice
+        let adviceHtml = '';
+        result.advice.forEach(a => {
+            const cls = a.priority === 'high' ? 'priority-high' : a.priority === 'mid' ? 'priority-mid' : 'priority-low';
+            const label = a.priority === 'high' ? '优先' : a.priority === 'mid' ? '建议' : '可选';
+            adviceHtml += `<div class="advice-item"><span class="priority-tag ${cls}">${label}</span>${a.text}</div>`;
+        });
+        document.getElementById('adviceList').innerHTML = adviceHtml;
+
+        // Action plan
+        let planHtml = '';
+        result.actionPlan.forEach(p => {
+            const cls = p.priority === 'high' ? 'priority-high' : p.priority === 'mid' ? 'priority-mid' : 'priority-low';
+            const label = p.priority === 'high' ? '关键' : p.priority === 'mid' ? '重要' : '次要';
+            planHtml += `<div class="advice-item"><span class="priority-tag ${cls}">${label}</span>${p.text}</div>`;
+        });
+        document.getElementById('actionPlan').innerHTML = planHtml;
+    }
+
+    function resetReviewer() {
+        state.step = 1;
+        state.answers = {};
+        state.weaknesses = [];
+        document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+        document.getElementById('step1').classList.add('active');
+        document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+        document.getElementById('submitBtn').disabled = true;
+        updateProgress();
+        gtag('event', 'reviewer_reset');
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="renderer" content="webkit">
+    <link rel="canonical" href="https://1-design-lab.com/tools/school-matcher.html">
+    <link rel="icon" href="../favicon.ico" sizes="48x48">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../favicon-180x180.png" sizes="180x180">
+
+    <title>设计留学选校匹配器 — 6个问题找到最适合你的学校 | 1%DesignLab</title>
+    <meta name="description" content="免费设计留学选校工具：回答6个问题，基于你的专业、预算、就业偏好，智能匹配最适合的3所院校。含QS排名、学费、申请DDL。">
+    <meta name="keywords" content="设计留学选什么学校,交互设计留学推荐,建筑留学哪个国家好,工业设计留学院校,艺术留学选校">
+
+    <meta property="og:title" content="设计留学选校匹配器 — 6个问题找到最适合的学校">
+    <meta property="og:description" content="输入你的条件，智能推荐Top 3院校">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://1-design-lab.com/tools/school-matcher.html">
+    <meta property="og:image" content="https://1-design-lab.com/logo.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "设计留学选校匹配器",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+      "description": "免费选校工具，回答6个问题匹配最适合的设计院校"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "设计留学选什么学校好？",
+          "acceptedAnswer": { "@type": "Answer", "text": "取决于4个核心因素：1）专业方向（交互选CMU/米理，工业选RCA/代尔夫特，建筑选哥大/UCL）；2）预算（意大利公立最便宜，美国最贵）；3）毕业后就业地（想留美选美国，想回国看QS排名）；4）学制偏好（英国1年快毕业，其他2年）。没有最好的学校，只有最适合你的选择。" }
+        },
+        {
+          "@type": "Question",
+          "name": "设计留学怎么选国家？",
+          "acceptedAnswer": { "@type": "Answer", "text": "快速决策：预算30万以下→意大利/荷兰；想留海外工作→美国（OPT）/荷兰（Orientation Year）；想回国看排名→米兰理工/RCA/CMU；时间紧→英国1年制；想做学术→荷兰代尔夫特。多国混申（如英国+意大利）是最保险策略。" }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://1-design-lab.com/" },
+        { "@type": "ListItem", "position": 2, "name": "工具", "item": "https://1-design-lab.com/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "选校匹配器", "item": "https://1-design-lab.com/tools/school-matcher.html" }
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0742RTMPL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K0742RTMPL');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg-base:#151515;--bg-elev-1:#1c1c1c;--bg-elev-2:#232323;--mint:hsl(159,100%,67%);--mint-soft:rgba(87,255,195,0.15);--text-primary:rgb(250,250,250);--text-muted:rgb(166,166,176);--text-body:rgb(218,218,222);--border-subtle:rgba(82,82,91,0.55);--sans:'Noto Sans SC','Inter',-apple-system,BlinkMacSystemFont,sans-serif}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:var(--sans);color:var(--text-primary);line-height:1.7;background:var(--bg-base);-webkit-font-smoothing:antialiased;min-height:100vh}
+        .container{max-width:640px;margin:0 auto;padding:0 20px}
+        .tool-header{padding:100px 0 32px;text-align:center}
+        .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);font-size:13px;text-decoration:none;margin-bottom:24px;transition:color .2s}
+        .back-link:hover{color:var(--mint)}
+        .tool-header h1{font-size:clamp(22px,4vw,32px);font-weight:700;letter-spacing:-0.03em;line-height:1.3;margin-bottom:10px}
+        .tool-header p{color:var(--text-muted);font-size:14px}
+        .progress-bar{display:flex;gap:6px;margin-bottom:32px}
+        .progress-step{flex:1;height:4px;border-radius:2px;background:var(--bg-elev-2);transition:background .3s}
+        .progress-step.active{background:var(--mint)}
+        .progress-step.done{background:rgba(87,255,195,0.5)}
+        .step{display:none;animation:fadeIn .3s ease}
+        .step.active{display:block}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+        .step-label{font-size:12px;font-weight:500;color:var(--mint);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+        .step-question{font-size:18px;font-weight:600;margin-bottom:20px}
+        .options{display:flex;flex-direction:column;gap:10px}
+        .option{padding:16px 20px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:12px;cursor:pointer;transition:all .2s;font-size:14px;color:var(--text-body)}
+        .option:hover{border-color:var(--mint);background:var(--bg-elev-2)}
+        .option.selected{border-color:var(--mint);background:var(--mint-soft);color:var(--text-primary)}
+        .option-title{font-weight:600;color:var(--text-primary)}
+
+        /* Result */
+        .school-card{background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:16px;padding:24px;margin-bottom:16px;position:relative;overflow:hidden}
+        .school-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--mint)}
+        .school-rank{font-size:11px;font-weight:600;color:var(--mint);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+        .school-name{font-size:20px;font-weight:700;margin-bottom:4px}
+        .school-program{font-size:13px;color:var(--text-muted);margin-bottom:12px}
+        .school-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px}
+        .school-meta-item{font-size:12px;color:var(--text-body)}
+        .school-meta-item strong{color:var(--text-primary);display:block;font-size:14px}
+        .school-match{font-size:13px;color:var(--text-body);padding-top:12px;border-top:1px solid var(--border-subtle)}
+        .match-bar{height:6px;background:var(--bg-elev-2);border-radius:3px;margin-top:6px;overflow:hidden}
+        .match-fill{height:100%;background:var(--mint);border-radius:3px;transition:width .6s ease}
+
+        .compare-table{background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:16px;padding:20px;margin-top:20px;overflow-x:auto}
+        .compare-table table{width:100%;border-collapse:collapse;font-size:12px}
+        .compare-table th{text-align:left;padding:8px 6px;color:var(--text-muted);font-weight:500;border-bottom:1px solid var(--border-subtle)}
+        .compare-table td{padding:8px 6px;color:var(--text-body);border-bottom:1px solid rgba(82,82,91,0.25)}
+        .compare-table tr:last-child td{border:none}
+
+        .cta-box{background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:16px;padding:28px;text-align:center;margin-top:28px}
+        .cta-box h3{font-size:18px;margin-bottom:8px}
+        .cta-box p{color:var(--text-muted);font-size:13px;margin-bottom:16px}
+        .cta-btn{display:inline-block;padding:12px 28px;border-radius:999px;background:var(--mint);color:#111;font-weight:600;font-size:14px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(87,255,195,0.25)}
+        .btn-reset{display:inline-block;padding:10px 20px;border:1px solid var(--border-subtle);border-radius:8px;background:transparent;color:var(--text-muted);font-size:13px;cursor:pointer;margin-top:12px}
+        .btn-reset:hover{color:var(--text-primary);border-color:var(--text-muted)}
+        .tool-footer{border-top:1px solid var(--border-subtle);padding:24px 0;text-align:center;color:var(--text-muted);font-size:12px;margin-top:48px}
+        .tool-footer a{color:var(--mint);text-decoration:none}
+        @media(max-width:480px){.tool-header{padding:72px 0 24px}.school-meta{grid-template-columns:1fr}.school-card{padding:18px}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="tool-header">
+            <a href="../" class="back-link">&larr; 返回首页</a>
+            <h1>设计留学选校匹配器</h1>
+            <p>6个问题，帮你找到最适合的目标院校</p>
+        </header>
+
+        <div class="progress-bar" id="progressBar">
+            <div class="progress-step active"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+        </div>
+
+        <div class="step active" id="step1">
+            <p class="step-label">Step 1 / 6</p>
+            <h2 class="step-question">你的专业方向？</h2>
+            <div class="options" data-step="1">
+                <div class="option" data-value="interaction"><span class="option-title">交互设计 / UX / 服务设计</span></div>
+                <div class="option" data-value="industrial"><span class="option-title">工业设计 / 产品设计</span></div>
+                <div class="option" data-value="architecture"><span class="option-title">建筑设计 / 景观 / 城市设计</span></div>
+                <div class="option" data-value="fashion"><span class="option-title">服装设计 / 时尚管理</span></div>
+                <div class="option" data-value="visual"><span class="option-title">视觉传达 / 平面 / 插画</span></div>
+            </div>
+        </div>
+
+        <div class="step" id="step2">
+            <p class="step-label">Step 2 / 6</p>
+            <h2 class="step-question">你的总预算（学费+生活费）？</h2>
+            <div class="options" data-step="2">
+                <div class="option" data-value="low"><span class="option-title">30万以下</span></div>
+                <div class="option" data-value="mid"><span class="option-title">30-60万</span></div>
+                <div class="option" data-value="high"><span class="option-title">60万以上</span></div>
+                <div class="option" data-value="any"><span class="option-title">无限制</span></div>
+            </div>
+        </div>
+
+        <div class="step" id="step3">
+            <p class="step-label">Step 3 / 6</p>
+            <h2 class="step-question">毕业后想在哪工作？</h2>
+            <div class="options" data-step="3">
+                <div class="option" data-value="china"><span class="option-title">回国（看重学校排名）</span></div>
+                <div class="option" data-value="europe"><span class="option-title">留欧洲</span></div>
+                <div class="option" data-value="us"><span class="option-title">留美国</span></div>
+                <div class="option" data-value="flexible"><span class="option-title">都可以 / 还没想好</span></div>
+            </div>
+        </div>
+
+        <div class="step" id="step4">
+            <p class="step-label">Step 4 / 6</p>
+            <h2 class="step-question">你偏好什么风格？</h2>
+            <div class="options" data-step="4">
+                <div class="option" data-value="academic"><span class="option-title">学术研究型（重方法论和理论）</span></div>
+                <div class="option" data-value="commercial"><span class="option-title">商业实践型（重就业和项目实战）</span></div>
+                <div class="option" data-value="experimental"><span class="option-title">实验探索型（重概念和前沿探索）</span></div>
+            </div>
+        </div>
+
+        <div class="step" id="step5">
+            <p class="step-label">Step 5 / 6</p>
+            <h2 class="step-question">学制偏好？</h2>
+            <div class="options" data-step="5">
+                <div class="option" data-value="short"><span class="option-title">1年（快速拿学位）</span></div>
+                <div class="option" data-value="long"><span class="option-title">2年（从容学习+实习机会）</span></div>
+                <div class="option" data-value="either"><span class="option-title">都可以</span></div>
+            </div>
+        </div>
+
+        <div class="step" id="step6">
+            <p class="step-label">Step 6 / 6</p>
+            <h2 class="step-question">语言能力？</h2>
+            <div class="options" data-step="6">
+                <div class="option" data-value="english"><span class="option-title">英语OK（雅思6.5+）</span></div>
+                <div class="option" data-value="italian"><span class="option-title">会意大利语（或愿意学）</span></div>
+                <div class="option" data-value="any_lang"><span class="option-title">只考虑英语授课</span></div>
+            </div>
+        </div>
+
+        <div class="step" id="stepResult">
+            <p class="step-label">匹配结果</p>
+            <h2 class="step-question">为你推荐的 Top 3 院校</h2>
+            <div id="schoolCards"></div>
+            <div class="compare-table" id="compareTable"></div>
+            <div class="cta-box">
+                <h3>想要更详细的选校方案？</h3>
+                <p>导师本人15分钟免费通话，分析你的具体情况和最优选校策略</p>
+                <a href="../" class="cta-btn">免费咨询 &rarr;</a>
+            </div>
+            <button class="btn-reset" onclick="resetMatcher()">重新匹配</button>
+        </div>
+
+        <footer class="tool-footer">
+            <p>&copy; 2026 <a href="../">1%DesignLab 梦想管理局</a> &middot; 数据基于公开信息整理，建议以院校官网为准</p>
+        </footer>
+    </div>
+
+    <script>
+    const state = { step: 1, answers: {} };
+    const totalSteps = 6;
+
+    // School database
+    const schools = [
+        { id:'rca', name:'Royal College of Art (RCA)', country:'UK', city:'London', qs:'#1 Art & Design', fee:'£29,000/yr', duration:'1-2yr', deadline:'1月', majors:['industrial','interaction','fashion','visual'], budget:['mid','high','any'], work:['china','europe','flexible'], style:['experimental','academic'], length:['short','either'], lang:['english','any_lang'] },
+        { id:'csm', name:'Central Saint Martins (UAL)', country:'UK', city:'London', qs:'#2 Art & Design', fee:'£23,000/yr', duration:'1-2yr', deadline:'1月', majors:['fashion','visual','industrial'], budget:['mid','high','any'], work:['china','europe','flexible'], style:['experimental'], length:['short','either'], lang:['english','any_lang'] },
+        { id:'polimi', name:'Politecnico di Milano', country:'Italy', city:'Milan', qs:'#5 Art & Design', fee:'€3,800/yr', duration:'2yr', deadline:'3月', majors:['interaction','industrial','architecture','visual'], budget:['low','mid','high','any'], work:['china','europe','flexible'], style:['commercial','academic'], length:['long','either'], lang:['english','italian','any_lang'] },
+        { id:'cmu', name:'Carnegie Mellon University', country:'US', city:'Pittsburgh', qs:'Top 10 HCI', fee:'$55,000/yr', duration:'2-3yr', deadline:'1月', majors:['interaction'], budget:['high','any'], work:['us','china','flexible'], style:['academic','commercial'], length:['long','either'], lang:['english','any_lang'] },
+        { id:'delft', name:'TU Delft', country:'Netherlands', city:'Delft', qs:'#2 Design (NL)', fee:'€18,000/yr', duration:'2yr', deadline:'1月', majors:['interaction','industrial','architecture'], budget:['mid','high','any'], work:['europe','china','flexible'], style:['academic','commercial'], length:['long','either'], lang:['english','any_lang'] },
+        { id:'ucl', name:'UCL Bartlett', country:'UK', city:'London', qs:'#22 Architecture', fee:'£32,000/yr', duration:'1yr', deadline:'1月', majors:['architecture'], budget:['mid','high','any'], work:['china','europe','flexible'], style:['experimental','academic'], length:['short','either'], lang:['english','any_lang'] },
+        { id:'columbia', name:'Columbia University GSAPP', country:'US', city:'New York', qs:'Top 10 Arch', fee:'$60,000/yr', duration:'3yr', deadline:'1月', majors:['architecture'], budget:['high','any'], work:['us','china','flexible'], style:['academic','experimental'], length:['long','either'], lang:['english','any_lang'] },
+        { id:'upenn', name:'UPenn Weitzman', country:'US', city:'Philadelphia', qs:'Top 15 Arch', fee:'$55,000/yr', duration:'2-3yr', deadline:'1月', majors:['architecture'], budget:['high','any'], work:['us','china','flexible'], style:['academic','commercial'], length:['long','either'], lang:['english','any_lang'] },
+        { id:'parsons', name:'Parsons School of Design', country:'US', city:'New York', qs:'Top 5 Art & Design', fee:'$52,000/yr', duration:'2yr', deadline:'1月', majors:['fashion','visual','interaction'], budget:['high','any'], work:['us','china','flexible'], style:['commercial','experimental'], length:['long','either'], lang:['english','any_lang'] },
+        { id:'risd', name:'Rhode Island School of Design', country:'US', city:'Providence', qs:'Top 5 Art & Design', fee:'$55,000/yr', duration:'2yr', deadline:'1月', majors:['industrial','visual'], budget:['high','any'], work:['us','china','flexible'], style:['experimental','academic'], length:['long','either'], lang:['english','any_lang'] },
+        { id:'gsa', name:'Glasgow School of Art', country:'UK', city:'Glasgow', qs:'Top 100 Art', fee:'£19,000/yr', duration:'1yr', deadline:'2月', majors:['interaction','visual','industrial'], budget:['mid','high','any'], work:['china','europe','flexible'], style:['academic','experimental'], length:['short','either'], lang:['english','any_lang'] },
+        { id:'tue', name:'TU Eindhoven', country:'Netherlands', city:'Eindhoven', qs:'Top 100 Design', fee:'€16,000/yr', duration:'2yr', deadline:'4月', majors:['interaction','industrial'], budget:['mid','high','any'], work:['europe','china','flexible'], style:['academic'], length:['long','either'], lang:['english','any_lang'] },
+        { id:'aalto', name:'Aalto University', country:'Finland', city:'Helsinki', qs:'Top 10 Art & Design', fee:'€15,000/yr', duration:'2yr', deadline:'1月', majors:['interaction','industrial','architecture','visual'], budget:['mid','high','any'], work:['europe','china','flexible'], style:['academic','commercial'], length:['long','either'], lang:['english','any_lang'] },
+        { id:'polito', name:'Politecnico di Torino', country:'Italy', city:'Turin', qs:'Top 50 Arch', fee:'€2,800/yr', duration:'2yr', deadline:'3月', majors:['architecture','industrial'], budget:['low','mid','high','any'], work:['china','europe','flexible'], style:['academic','commercial'], length:['long','either'], lang:['english','italian','any_lang'] },
+        { id:'artcenter', name:'ArtCenter College of Design', country:'US', city:'Los Angeles', qs:'Top 10 ID', fee:'$50,000/yr', duration:'2yr', deadline:'1月', majors:['industrial','visual'], budget:['high','any'], work:['us','china','flexible'], style:['commercial'], length:['long','either'], lang:['english','any_lang'] }
+    ];
+
+    document.querySelectorAll('.options').forEach(container => {
+        container.addEventListener('click', e => {
+            const option = e.target.closest('.option');
+            if (!option) return;
+            const step = container.dataset.step;
+            container.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+            option.classList.add('selected');
+            state.answers[step] = option.dataset.value;
+            gtag('event', 'matcher_step_complete', { step_number: step, step_value: option.dataset.value });
+            setTimeout(() => nextStep(), 300);
+        });
+    });
+
+    function nextStep() {
+        if (state.step >= totalSteps) { showResult(); return; }
+        document.getElementById('step' + state.step).classList.remove('active');
+        state.step++;
+        document.getElementById('step' + state.step).classList.add('active');
+        updateProgress();
+    }
+
+    function updateProgress() {
+        document.querySelectorAll('.progress-step').forEach((el, i) => {
+            el.classList.remove('active', 'done');
+            if (i < state.step - 1) el.classList.add('done');
+            else if (i === state.step - 1) el.classList.add('active');
+        });
+    }
+
+    function showResult() {
+        document.getElementById('step' + state.step).classList.remove('active');
+        document.getElementById('stepResult').classList.add('active');
+        document.querySelectorAll('.progress-step').forEach(el => el.classList.add('done'));
+
+        const { 1: major, 2: budget, 3: work, 4: style, 5: length, 6: lang } = state.answers;
+
+        const scored = schools.map(s => {
+            let score = 0;
+            if (s.majors.includes(major)) score += 30; else return { ...s, score: 0 };
+            if (s.budget.includes(budget)) score += 20; else score -= 10;
+            if (s.work.includes(work)) score += 15;
+            if (s.style.includes(style)) score += 15;
+            if (s.length.includes(length)) score += 10;
+            if (s.lang.includes(lang)) score += 10;
+            return { ...s, score };
+        }).filter(s => s.score > 0).sort((a, b) => b.score - a.score).slice(0, 3);
+
+        const maxScore = scored.length > 0 ? scored[0].score : 100;
+
+        let cardsHtml = '';
+        scored.forEach((s, i) => {
+            const pct = Math.round((s.score / maxScore) * 100);
+            const reasons = getMatchReasons(s, major, budget, work, style);
+            cardsHtml += `
+            <div class="school-card">
+                <div class="school-rank">#${i + 1} MATCH · ${pct}% 匹配</div>
+                <div class="school-name">${s.name}</div>
+                <div class="school-program">${s.country} · ${s.city}</div>
+                <div class="school-meta">
+                    <div class="school-meta-item"><strong>${s.qs}</strong>QS排名</div>
+                    <div class="school-meta-item"><strong>${s.fee}</strong>学费</div>
+                    <div class="school-meta-item"><strong>${s.duration}</strong>学制</div>
+                    <div class="school-meta-item"><strong>${s.deadline}</strong>截止</div>
+                </div>
+                <div class="school-match">${reasons}
+                    <div class="match-bar"><div class="match-fill" style="width:${pct}%"></div></div>
+                </div>
+            </div>`;
+        });
+        document.getElementById('schoolCards').innerHTML = cardsHtml;
+
+        // Comparison table
+        if (scored.length >= 2) {
+            let tableHtml = '<table><tr><th></th>';
+            scored.forEach(s => { tableHtml += `<th>${s.name.split('(')[0].trim().split(' ').slice(0,2).join(' ')}</th>`; });
+            tableHtml += '</tr>';
+            const rows = [['国家', s => s.country], ['学费', s => s.fee], ['学制', s => s.duration], ['申请截止', s => s.deadline], ['QS排名', s => s.qs]];
+            rows.forEach(([label, fn]) => {
+                tableHtml += `<tr><td style="color:var(--text-muted)">${label}</td>`;
+                scored.forEach(s => { tableHtml += `<td>${fn(s)}</td>`; });
+                tableHtml += '</tr>';
+            });
+            tableHtml += '</table>';
+            document.getElementById('compareTable').innerHTML = tableHtml;
+        }
+
+        gtag('event', 'matcher_result_shown', { major, budget, work, style, top_school: scored[0]?.id || 'none' });
+    }
+
+    function getMatchReasons(school, major, budget, work, style) {
+        const reasons = [];
+        if (school.budget.includes('low') && budget === 'low') reasons.push('性价比极高');
+        if (school.work.includes('us') && work === 'us') reasons.push('美国就业资源丰富');
+        if (school.work.includes('europe') && work === 'europe') reasons.push('欧洲就业友好');
+        if (school.style.includes('experimental') && style === 'experimental') reasons.push('实验探索氛围强');
+        if (school.style.includes('commercial') && style === 'commercial') reasons.push('商业实践导向');
+        if (school.style.includes('academic') && style === 'academic') reasons.push('学术研究扎实');
+        if (school.country === 'UK') reasons.push('1年制快速毕业');
+        if (school.country === 'Italy') reasons.push('学费极低');
+        return reasons.length > 0 ? reasons.slice(0, 2).join(' · ') : '综合匹配度高';
+    }
+
+    function resetMatcher() {
+        state.step = 1;
+        state.answers = {};
+        document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+        document.getElementById('step1').classList.add('active');
+        document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+        updateProgress();
+        gtag('event', 'matcher_reset');
+    }
+    </script>
+</body>
+</html>
