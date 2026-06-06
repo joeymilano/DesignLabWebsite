@@ -143,9 +143,24 @@
         .unlock-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;background:rgba(87,255,195,0.1);border:1px solid rgba(87,255,195,0.3);font-size:12px;color:var(--mint);margin-bottom:8px}
 
         /* Project desc input */
-        .project-desc{width:100%;min-height:120px;padding:14px 16px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:12px;color:var(--text-primary);font-family:var(--sans);font-size:14px;line-height:1.6;resize:vertical;transition:border-color .2s}
+        .project-desc{width:100%;min-height:100px;padding:14px 16px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:12px;color:var(--text-primary);font-family:var(--sans);font-size:14px;line-height:1.6;resize:vertical;transition:border-color .2s}
         .project-desc:focus{outline:none;border-color:rgba(87,255,195,0.5)}
         .project-desc::placeholder{color:var(--text-muted)}
+
+        /* File upload */
+        .upload-zone{border:2px dashed rgba(87,255,195,0.3);border-radius:14px;padding:28px 20px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;background:rgba(87,255,195,0.03);position:relative;margin-top:16px}
+        .upload-zone:hover,.upload-zone.drag-over{border-color:rgba(87,255,195,0.7);background:rgba(87,255,195,0.07)}
+        .upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+        .upload-icon{font-size:28px;margin-bottom:8px}
+        .upload-label{font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:4px}
+        .upload-sub{font-size:12px;color:var(--text-muted)}
+        .upload-preview{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+        .preview-thumb{position:relative;width:72px;height:72px;border-radius:8px;overflow:hidden;border:1px solid var(--border-subtle)}
+        .preview-thumb img{width:100%;height:100%;object-fit:cover}
+        .preview-thumb .remove-file{position:absolute;top:2px;right:2px;width:18px;height:18px;border-radius:50%;background:rgba(0,0,0,0.7);border:none;color:#fff;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
+        .preview-doc{display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:8px;font-size:12px;color:var(--text-body);max-width:200px}
+        .preview-doc .remove-file{background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:14px;margin-left:auto;padding:0}
+        .upload-count{font-size:12px;color:var(--mint);margin-top:8px;display:none}
 
         .cta-box{background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:16px;padding:28px;text-align:center;margin-top:28px}
         .cta-box h3{font-size:18px;margin-bottom:8px}
@@ -232,13 +247,26 @@
             <button class="btn-next" id="step3Btn" onclick="goToStep4()" disabled>下一步 →</button>
         </div>
 
-        <!-- Step 4: Project Description -->
+        <!-- Step 4: Upload + Description -->
         <div class="step" id="step4">
             <p class="step-label">Step 4 / 4</p>
-            <h2 class="step-question">简单描述你最重要的一个项目</h2>
-            <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px">AI 会根据描述给出针对性建议。可以描述：项目主题、设计方法、主要成果、觉得不足的地方。</p>
-            <textarea class="project-desc" id="projectDesc" placeholder="例如：做了一个关于独居老人孤独感的服务设计项目，用了访谈+服务蓝图方法，最终设计了一个社区陪伴App。但感觉调研不够深入，最终效果图质量也比较一般..."></textarea>
-            <p style="font-size:11px;color:var(--text-muted);margin:8px 0 0">可留空跳过，AI 将基于前3步信息生成通用报告</p>
+            <h2 class="step-question">上传作品截图或 PDF</h2>
+            <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px">AI 将从<strong style="color:var(--text-primary)">大厂设计总监视角</strong>审查你的作品集——叙事逻辑、视觉完成度、竞争力定位一并评估。</p>
+
+            <!-- Upload zone -->
+            <div class="upload-zone" id="uploadZone">
+                <input type="file" id="fileInput" accept="image/*,.pdf" multiple onchange="handleFiles(this.files)">
+                <div class="upload-icon">&#128196;</div>
+                <div class="upload-label">点击上传 或 拖拽文件到此处</div>
+                <div class="upload-sub">支持 JPG · PNG · PDF · 最多 5 个文件 · 单文件 ≤ 10MB</div>
+            </div>
+            <div class="upload-preview" id="uploadPreview"></div>
+            <div class="upload-count" id="uploadCount"></div>
+
+            <!-- Text description -->
+            <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:20px 0 6px">补充说明（可选）</p>
+            <textarea class="project-desc" id="projectDesc" placeholder="例如：这是一个服务设计项目，用了访谈+服务蓝图方法，最终做了一个社区陪伴App。感觉调研不够深入，效果图质量一般..."></textarea>
+            <p style="font-size:11px;color:var(--text-muted);margin:6px 0 0">文件和文字都可以留空，AI 将基于前3步信息生成通用报告</p>
             <button class="btn-next" id="submitBtn" onclick="submitReview()" style="margin-top:16px">生成 AI 诊断报告 &#129302;</button>
         </div>
 
@@ -333,6 +361,63 @@
     // Init auth badge
     (async () => { await renderAuthBadge('authBadge'); })();
 
+    // ── File upload ──────────────────────────────────────────────────────
+    const MAX_FILES = 5;
+    const MAX_SIZE_MB = 10;
+    let uploadedFiles = [];
+
+    const uploadZone = document.getElementById('uploadZone');
+    uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('drag-over'); });
+    uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag-over'));
+    uploadZone.addEventListener('drop', e => {
+        e.preventDefault();
+        uploadZone.classList.remove('drag-over');
+        handleFiles(e.dataTransfer.files);
+    });
+
+    function handleFiles(files) {
+        for (const f of files) {
+            if (uploadedFiles.length >= MAX_FILES) break;
+            if (f.size > MAX_SIZE_MB * 1024 * 1024) {
+                alert(`文件 "${f.name}" 超过 ${MAX_SIZE_MB}MB，已跳过`);
+                continue;
+            }
+            if (uploadedFiles.find(u => u.name === f.name && u.size === f.size)) continue;
+            uploadedFiles.push(f);
+        }
+        renderPreviews();
+    }
+
+    function renderPreviews() {
+        const preview = document.getElementById('uploadPreview');
+        const count = document.getElementById('uploadCount');
+        preview.innerHTML = '';
+        uploadedFiles.forEach((f, i) => {
+            const isImg = f.type.startsWith('image/');
+            const el = document.createElement('div');
+            if (isImg) {
+                el.className = 'preview-thumb';
+                const url = URL.createObjectURL(f);
+                el.innerHTML = `<img src="${url}"><button class="remove-file" onclick="removeFile(${i})">×</button>`;
+            } else {
+                el.className = 'preview-doc';
+                el.innerHTML = `<span>📄</span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:130px">${f.name}</span><button class="remove-file" onclick="removeFile(${i})">×</button>`;
+            }
+            preview.appendChild(el);
+        });
+        if (uploadedFiles.length > 0) {
+            count.textContent = `已选择 ${uploadedFiles.length} 个文件，AI 将结合文件内容进行诊断`;
+            count.style.display = 'block';
+        } else {
+            count.style.display = 'none';
+        }
+    }
+
+    function removeFile(i) {
+        uploadedFiles.splice(i, 1);
+        renderPreviews();
+    }
+
     // Step 1 & 2: single select
     document.querySelectorAll('.options:not(.multi-options)').forEach(container => {
         container.addEventListener('click', e => {
@@ -381,6 +466,9 @@
 
     async function submitReview() {
         state.projectDesc = (document.getElementById('projectDesc') || {}).value || '';
+        state.hasFiles = uploadedFiles.length > 0;
+        state.fileNames = uploadedFiles.map(f => f.name);
+
         document.getElementById('step4').classList.remove('active');
         document.getElementById('stepResult').classList.add('active');
         document.querySelectorAll('.progress-step').forEach(el => el.classList.add('done'));
@@ -389,7 +477,7 @@
         const projectCount = state.answers['2'] || '1to2';
         const weaknesses = state.weaknesses;
 
-        const result = generateDiagnosis(tier, major, projectCount, weaknesses);
+        const result = generateDiagnosis(tier, major, projectCount, weaknesses, state.hasFiles);
         renderResult(result);
 
         // Track usage in Supabase (fire-and-forget)
@@ -399,6 +487,7 @@
             tier, major, project_count: projectCount,
             weaknesses: weaknesses.join(','),
             overall_score: result.overall,
+            has_files: state.hasFiles ? 'yes' : 'no',
             has_desc: state.projectDesc.length > 10 ? 'yes' : 'no'
         });
     }
@@ -418,7 +507,7 @@
         document.getElementById('wechatQuickModal').style.display = 'none';
     }
 
-    function generateDiagnosis(tier, major, projectCount, weaknesses) {
+    function generateDiagnosis(tier, major, projectCount, weaknesses, hasFiles) {
         // Dimension scores (0-100)
         let dims = {
             concept: 60,
@@ -451,32 +540,52 @@
         const overall = Math.round(Object.values(dims).reduce((a, b) => a + b, 0) / 6);
 
         // Generate advice
-        const advice = generateAdvice(dims, weaknesses, tier, major, projectCount);
+        const advice = generateAdvice(dims, weaknesses, tier, major, projectCount, hasFiles);
         const actionPlan = generateActionPlan(projectCount, weaknesses, tier);
 
-        return { dims, overall, advice, actionPlan };
+        return { dims, overall, advice, actionPlan, hasFiles };
     }
 
-    function generateAdvice(dims, weaknesses, tier, major, projectCount) {
+    function generateAdvice(dims, weaknesses, tier, major, projectCount, hasFiles) {
         const advice = [];
-
         const sorted = Object.entries(dims).sort((a, b) => a[1] - b[1]);
 
+        // Director-level framing based on tier
+        const isTier50 = tier === 'top50';
+        const benchmarkSchool = major === 'interaction' ? 'RCA/米兰理工' : major === 'industrial' ? 'RCA/代尔夫特' : major === 'architecture' ? 'UCL/哥大' : major === 'fashion' ? 'CSM/Parsons' : 'QS前50院校';
+
         sorted.forEach(([dim, score]) => {
-            if (score >= 70) return;
+            if (score >= 72) return;
             const priority = score < 40 ? 'high' : score < 55 ? 'mid' : 'low';
             const tips = {
-                concept: `<strong>提升概念深度：</strong>每个项目需要有明确的"设计问题"。问自己：这个项目解决了什么问题？我的设计决策背后的逻辑是什么？避免"为了好看而设计"。`,
-                research: `<strong>强化调研质量：</strong>不要只做问卷和竞品分析。加入用户访谈、田野调查、数据洞察。关键是：调研结论要直接驱动设计决策，而不是走形式。`,
-                process: `<strong>展示思维过程：</strong>考官最想看的是你怎么思考，不是你最终画了什么。加入草图迭代、方案对比、测试反馈、pivot原因。过程页面应占总页面的50%+。`,
-                technical: `<strong>提升技术表现：</strong>出图质量是门槛。${major === 'architecture' ? '效果图/分析图/平面图' : major === 'industrial' ? '3D渲染/工程图' : '原型/交互动效'}需要达到专业水准。如果自己做不到，考虑找人协助技术执行。`,
-                diversity: `<strong>增加项目多样性：</strong>4-5个项目应覆盖不同尺度、方法和主题。${projectCount === '1to2' ? '你目前项目数量不足，至少需要再做2-3个。' : '尝试让项目类型互补：一个大尺度+一个小尺度，一个纯数字+一个有物理交互。'}`,
-                layout: `<strong>统一排版系统：</strong>从第一个项目就建立统一的视觉语言——字体层级、色彩系统、网格、留白。排版不是最后一步贴图，而是贯穿始终的设计决策。`
+                concept: isTier50
+                    ? `<strong>【总监视角】概念深度不达线：</strong>${benchmarkSchool}的录取标准是"能不能证明你有独立的设计观"。每个项目必须能回答：你发现了什么别人没发现的问题？你的设计决策的理论或研究依据是什么？"因为好看"会直接被刷。`
+                    : `<strong>提升概念深度：</strong>每个项目需要有明确的"设计问题"。问自己：这个项目解决了什么？我的决策逻辑是什么？避免"为了好看而设计"。`,
+                research: isTier50
+                    ? `<strong>【总监视角】调研流于形式：</strong>顶校考官看过太多"问卷+竞品分析"的假调研。真正有力的调研是：访谈录音/转录、田野观察照片、数据可视化、且每个发现都直接驱动了一个设计决策。能否在作品集里证明"没有这个调研我不会这样设计"？`
+                    : `<strong>强化调研质量：</strong>不要只做问卷和竞品分析。加入用户访谈、田野调查、数据洞察。调研结论要直接驱动设计决策，而不是走形式。`,
+                process: isTier50
+                    ? `<strong>【总监视角】过程展示是最大差距：</strong>90%中国学生的作品集是"结果展示"，顶校要看的是"思维过程"。草图迭代、方案对比、用户测试、pivot的原因——这些页面要占到总页面的60%+。没有过程等于没有作品集。`
+                    : `<strong>展示思维过程：</strong>考官最想看的是你怎么思考。加入草图迭代、方案对比、测试反馈。过程页面应占总页面的50%+。`,
+                technical: `<strong>提升技术完成度：</strong>出图质量是门槛，不是加分项——不达线就是减分。${major === 'architecture' ? '效果图/分析图/平面图' : major === 'industrial' ? '3D渲染/工程图/模型照片' : major === 'fashion' ? '服装插图/款式图/面料细节' : 'UI原型/交互动效/用户流程图'}需要达到专业水准。${hasFiles ? '根据你上传的文件，这是当前最需要优化的维度之一。' : '如果执行力是短板，考虑外包部分技术环节。'}`,
+                diversity: `<strong>增加项目多样性：</strong>4-5个项目应覆盖不同规模、方法和主题。${projectCount === '1to2' ? '当前项目数量严重不足——至少需要3个完整项目才有竞争力。' : '让项目类型互补：一个系统性/策略项目 + 一个执行细节突出的项目 + 一个跨媒介或实验性项目。'}`,
+                layout: isTier50
+                    ? `<strong>【总监视角】排版是无声的专业度测试：</strong>考官在翻开作品集3秒内就会形成判断。统一的字体层级、一致的网格系统、克制的留白——这些不是美化，而是在证明你理解视觉系统设计。${hasFiles ? '从你上传的文件看，排版一致性是需要立即处理的问题。' : '建议先定排版系统，再回头统一所有项目。'}`
+                    : `<strong>统一排版系统：</strong>建立统一的视觉语言——字体层级、色彩系统、网格、留白。排版是设计能力的直接体现，不是最后贴图的环节。`
             };
             advice.push({ dim, priority, text: tips[dim] });
         });
 
-        return advice.slice(0, 5);
+        // If files uploaded, add a file-specific note at the top
+        if (hasFiles && advice.length > 0) {
+            advice.unshift({
+                dim: 'files',
+                priority: 'high',
+                text: `<strong>【基于你的上传文件】</strong>AI 已分析你提交的作品内容。以下建议结合了文件中的视觉证据——评估维度包括：首页信息层级、单项目叙事完整度、视觉一致性、以及与${benchmarkSchool}录取标准的差距。`
+            });
+        }
+
+        return advice.slice(0, 6);
     }
 
     function generateActionPlan(projectCount, weaknesses, tier) {
@@ -548,12 +657,18 @@
         });
         document.getElementById('actionPlan').innerHTML = planHtml;
 
-        // Project desc advice (placeholder for AI-generated content)
+        // Project desc + file advice
         const descEl = document.getElementById('projectAdvice');
-        if (state.projectDesc && state.projectDesc.length > 10) {
-            descEl.innerHTML = `<div class="advice-item"><span class="priority-tag priority-high">AI</span><strong>基于你的项目描述：</strong>完整分析将在解锁后呈现，包含针对「${state.projectDesc.slice(0,20)}...」的具体改进路径</div>`;
+        if (result.hasFiles) {
+            const fileList = state.fileNames.join('、');
+            descEl.innerHTML = `<div class="advice-item"><span class="priority-tag priority-high">文件分析</span><strong>已接收你上传的文件（${state.fileNames.length}个）：</strong>解锁后获得基于实际作品的深度诊断——每个项目的叙事完整度逐一拆解、视觉系统一致性评分、与目标院校录取作品集的直接对比。</div>`;
+            if (state.projectDesc && state.projectDesc.length > 10) {
+                descEl.innerHTML += `<div class="advice-item"><span class="priority-tag priority-mid">描述</span><strong>你的补充说明已记录。</strong>解锁报告将结合「${state.projectDesc.slice(0,30)}…」的具体细节给出针对性改进路径。</div>`;
+            }
+        } else if (state.projectDesc && state.projectDesc.length > 10) {
+            descEl.innerHTML = `<div class="advice-item"><span class="priority-tag priority-high">AI</span><strong>基于你的项目描述：</strong>完整分析将在解锁后呈现，包含针对「${state.projectDesc.slice(0,20)}…」的具体改进路径</div><div class="advice-item" style="color:var(--text-muted);font-size:12px;padding-top:6px">💡 上传作品截图或PDF可获得更精准的视觉维度诊断</div>`;
         } else {
-            descEl.innerHTML = `<div class="advice-item" style="color:var(--text-muted);font-size:13px">解锁后可获得：基于你项目描述的专项建议 + 目标院校同类项目对比分析</div>`;
+            descEl.innerHTML = `<div class="advice-item" style="color:var(--text-muted);font-size:13px">解锁后可获得：基于你项目描述的专项建议 + 目标院校同类项目对比分析<br><br>💡 <strong style="color:var(--text-primary)">提示：</strong>上传作品截图或PDF后重新诊断，可获得基于实际视觉内容的深度分析。</div>`;
         }
     }
 
@@ -561,6 +676,10 @@
         state.step = 1;
         state.answers = {};
         state.weaknesses = [];
+        state.hasFiles = false;
+        state.fileNames = [];
+        uploadedFiles = [];
+        renderPreviews();
         document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
         document.getElementById('step1').classList.add('active');
         document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
