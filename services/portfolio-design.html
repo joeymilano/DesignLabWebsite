@@ -106,43 +106,96 @@
                 </ul>
             </div>
 
-            <h2>服务模式与价格</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h4>单项目辅导</h4>
-                    <div class="price">¥4,000起</div>
-                    <div class="price-note">按项目计费</div>
+            <h2>服务套餐 &amp; 定价</h2>
+
+            <!-- AI 诊断工具入口 -->
+            <div style="background:linear-gradient(135deg,rgba(87,255,195,0.1) 0%,rgba(87,255,195,0.04) 100%);border:1px solid rgba(87,255,195,0.35);border-radius:16px;padding:20px 24px;margin:0 0 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+                <div>
+                    <p style="font-size:13px;font-weight:700;color:var(--mint);margin-bottom:4px">&#129302; 不确定选哪个套餐？先做个 AI 诊断</p>
+                    <p style="font-size:13px;color:var(--text-muted);margin:0">60秒分析你的现有作品集，精准推荐适合你的服务级别</p>
+                </div>
+                <a href="../tools/portfolio-reviewer.html" style="flex-shrink:0;display:inline-block;padding:10px 20px;border-radius:999px;background:var(--mint);color:#0f1b16;font-weight:700;font-size:13px;text-decoration:none;transition:transform .18s,box-shadow .18s" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 6px 20px rgba(87,255,195,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">AI 诊断 ¥299 →</a>
+            </div>
+
+            <div class="pricing-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+                <!-- AI 智能诊断 -->
+                <div class="pricing-card" style="border-color:rgba(87,255,195,0.3)">
+                    <div style="display:inline-block;padding:3px 10px;border-radius:999px;background:rgba(87,255,195,0.12);border:1px solid rgba(87,255,195,0.3);font-size:10px;font-weight:700;color:var(--mint);letter-spacing:.08em;margin-bottom:12px">AI 自动</div>
+                    <h4>AI 智能诊断</h4>
+                    <div class="price">¥299</div>
+                    <div class="price-note">即时交付 · 适合：刚起步想摸底</div>
                     <ul>
-                        <li>1个项目深度辅导</li>
-                        <li>概念梳理+排版指导</li>
-                        <li>2-3轮修改反馈</li>
-                        <li>适合有基础的同学</li>
+                        <li>AI 三维度打分（叙事/视觉/竞争力）</li>
+                        <li>具体改进建议清单</li>
+                        <li>适合目标院校层级判断</li>
+                        <li>60秒出完整报告</li>
+                    </ul>
+                    <a href="../tools/portfolio-reviewer.html" style="display:block;margin-top:16px;padding:10px;border-radius:10px;background:rgba(87,255,195,0.12);color:var(--mint);font-weight:600;font-size:13px;text-decoration:none;text-align:center;transition:background .18s" onmouseover="this.style.background='rgba(87,255,195,0.2)'" onmouseout="this.style.background='rgba(87,255,195,0.12)'">立即诊断 →</a>
+                </div>
+                <!-- 单项目深度重构 -->
+                <div class="pricing-card">
+                    <h4>单项目深度重构</h4>
+                    <div class="price">¥8,000</div>
+                    <div class="price-note">10天交付 · 适合：有基础但1个项目弱</div>
+                    <ul>
+                        <li>1个项目人工深度打磨</li>
+                        <li>叙事逻辑 + 视觉重构</li>
+                        <li>3轮修改 + 终稿PDF</li>
+                        <li>名校导师1对1</li>
                     </ul>
                 </div>
+                <!-- AI 项目从零包装 -->
                 <div class="pricing-card">
-                    <h4>完整作品集</h4>
-                    <div class="price">¥15,000起</div>
-                    <div class="price-note">4-5个项目全流程</div>
+                    <div style="display:inline-block;padding:3px 10px;border-radius:999px;background:rgba(255,160,50,0.12);border:1px solid rgba(255,160,50,0.3);font-size:10px;font-weight:700;color:#ffb347;letter-spacing:.08em;margin-bottom:12px">HOT</div>
+                    <h4>AI 项目从零包装</h4>
+                    <div class="price">¥12,000</div>
+                    <div class="price-note">14天交付 · 适合：转行/跨方向申请</div>
                     <ul>
-                        <li>选校策略+项目规划</li>
-                        <li>全部项目辅导/代做</li>
-                        <li>排版设计+终稿输出</li>
+                        <li>1个AI/新媒体项目从0到完整案例</li>
+                        <li>项目概念设计 + 完整叙事框架</li>
+                        <li>双语（中英）案例文案</li>
+                        <li>AI工具使用展示呈现</li>
+                    </ul>
+                </div>
+                <!-- B端大厂项目包 -->
+                <div class="pricing-card">
+                    <h4>B端大厂项目包</h4>
+                    <div class="price">¥15,000</div>
+                    <div class="price-note">14天交付 · 适合：国内大厂背景转申请</div>
+                    <ul>
+                        <li>1个B端项目重构为国际展示标准</li>
+                        <li>BAT/字节/腾讯风格案例重塑</li>
+                        <li>设计决策 + 数据结果呈现</li>
+                        <li>英文版本制作</li>
+                    </ul>
+                </div>
+                <!-- 3项目精品打包 -->
+                <div class="pricing-card">
+                    <h4>3项目精品打包</h4>
+                    <div class="price">¥28,000</div>
+                    <div class="price-note">30天交付 · 适合：需要完整作品集快速交付</div>
+                    <ul>
+                        <li>3个项目全部深度重构</li>
+                        <li>统一视觉风格 + 整体排版</li>
                         <li>不限修改次数</li>
+                        <li>申请策略 + 选校建议</li>
                     </ul>
                 </div>
-                <div class="pricing-card">
-                    <h4>VIP全包</h4>
-                    <div class="price">¥8,000起</div>
-                    <div class="price-note">作品集+文书+申请</div>
+                <!-- 全套申请旗舰包 -->
+                <div class="pricing-card" style="border-color:rgba(87,255,195,0.35);position:relative;overflow:hidden">
+                    <div style="position:absolute;top:0;right:0;padding:6px 14px;background:var(--mint);color:#0f1b16;font-size:11px;font-weight:700;border-bottom-left-radius:12px">推荐</div>
+                    <h4>全套申请旗舰包</h4>
+                    <div class="price">¥45,000</div>
+                    <div class="price-note">3个月 · 适合：冲QS前20，要求最高</div>
                     <ul>
-                        <li>作品集全流程</li>
+                        <li>4-5个项目完整制作</li>
                         <li>PS/CV文书撰写</li>
-                        <li>选校+网申指导</li>
-                        <li>面试辅导（如需）</li>
+                        <li>选校策略 + 网申全程</li>
+                        <li>面试辅导 + 录取保障</li>
                     </ul>
                 </div>
             </div>
-            <p><strong>价格说明：</strong>具体报价根据专业方向、目标院校、时间周期和服务深度定制。以上为起步价，咨询时会给出明确的最终报价，无隐藏费用。</p>
+            <p style="font-size:13px;color:var(--text-muted);margin-top:16px">所有套餐价格透明固定，无隐藏费用。AI 诊断报告可直接用于确认最适合的人工服务套餐。</p>
 
             <h2>服务流程</h2>
             <div class="process-steps">
@@ -212,5 +265,19 @@
       ]
     }
     </script>
+<!-- Baidu auto-push -->
+<script>
+(function(){
+    var bp = document.createElement("script");
+    var curProtocol = window.location.protocol.split(":")[0];
+    if (curProtocol === "https") {
+        bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+    } else {
+        bp.src = "http://push.zhanzhang.baidu.com/push.js";
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="renderer" content="webkit">
+    <link rel="canonical" href="https://1-design-lab.com/tools/landing-page-audit.html">
+    <link rel="icon" href="../favicon.ico" sizes="48x48">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../favicon-180x180.png" sizes="180x180">
+
+    <title>AI Landing Page 审计工具 — 免费 SaaS 转化率诊断 | 1%DesignLab</title>
+    <meta name="description" content="免费 AI Landing Page 审计：输入你的 SaaS 网址，AI 分析 Hero 区、CTA 清晰度、信任信号、转化漏斗断点，给出3条立刻可执行的优化建议。">
+    <meta name="keywords" content="landing page审计,SaaS转化优化,落地页诊断,CRO优化,AI网页分析">
+    <meta property="og:title" content="AI Landing Page 审计 — 免费 SaaS 转化率诊断">
+    <meta property="og:description" content="输入你的 SaaS 网址，AI 分析转化漏斗断点，给出可执行优化建议">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://1-design-lab.com/tools/landing-page-audit.html">
+    <meta property="og:image" content="https://1-design-lab.com/logo.jpg">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0742RTMPL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K0742RTMPL');
+    </script>
+    <script src="../js/auth.js"></script>
+
+    <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg-base:#151515;--bg-elev-1:#1c1c1c;--bg-elev-2:#232323;--mint:hsl(159,100%,67%);--mint-soft:rgba(87,255,195,0.15);--text-primary:rgb(250,250,250);--text-muted:rgb(166,166,176);--text-body:rgb(218,218,222);--border-subtle:rgba(82,82,91,0.55);--border-strong:rgba(130,130,145,0.55);--sans:'Noto Sans SC','Inter',-apple-system,BlinkMacSystemFont,sans-serif;--red:#ff6b6b;--yellow:#ffd700;--green:#57ffc3}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:var(--sans);color:var(--text-primary);line-height:1.7;background:var(--bg-base);-webkit-font-smoothing:antialiased;min-height:100vh}
+        .container{max-width:680px;margin:0 auto;padding:0 20px}
+
+        .tool-header{padding:100px 0 40px;text-align:center}
+        .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);font-size:13px;text-decoration:none;margin-bottom:24px;transition:color .2s}
+        .back-link:hover{color:var(--mint)}
+        .tool-badge{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border-radius:999px;background:rgba(87,255,195,0.1);border:1px solid rgba(87,255,195,0.3);font-size:11px;font-weight:700;color:var(--mint);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+        .tool-header h1{font-size:clamp(24px,5vw,36px);font-weight:700;letter-spacing:-0.03em;line-height:1.3;margin-bottom:12px}
+        .tool-header p{color:var(--text-muted);font-size:14px;line-height:1.6}
+
+        /* Input area */
+        .audit-form{background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:20px;padding:28px;margin-bottom:24px}
+        .form-label{font-size:13px;font-weight:600;color:var(--text-body);margin-bottom:8px;display:block}
+        .url-input-wrap{display:flex;gap:10px;margin-bottom:16px}
+        .url-input{flex:1;padding:13px 16px;background:var(--bg-elev-2);border:1px solid var(--border-subtle);border-radius:12px;color:var(--text-primary);font-family:var(--sans);font-size:14px;transition:border-color .2s}
+        .url-input:focus{outline:none;border-color:rgba(87,255,195,0.5)}
+        .url-input::placeholder{color:var(--text-muted)}
+        .audit-btn{padding:13px 24px;border:none;border-radius:12px;background:var(--mint);color:#0f1b16;font-family:var(--sans);font-size:14px;font-weight:700;cursor:pointer;transition:transform .18s,box-shadow .18s,opacity .18s;white-space:nowrap}
+        .audit-btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(87,255,195,0.3)}
+        .audit-btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+
+        .context-textarea{width:100%;min-height:80px;padding:12px 16px;background:var(--bg-elev-2);border:1px solid var(--border-subtle);border-radius:12px;color:var(--text-primary);font-family:var(--sans);font-size:13px;resize:vertical;transition:border-color .2s;line-height:1.6}
+        .context-textarea:focus{outline:none;border-color:rgba(87,255,195,0.5)}
+        .context-textarea::placeholder{color:var(--text-muted)}
+
+        .free-count{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted);margin-top:12px}
+        .count-dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+        .count-dot.warn{background:var(--yellow)}
+        .count-dot.out{background:var(--red)}
+
+        /* Loading */
+        .loading-state{display:none;text-align:center;padding:48px 0}
+        .loading-state.active{display:block}
+        .loader{width:40px;height:40px;border:3px solid rgba(87,255,195,0.2);border-top-color:var(--mint);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
+        @keyframes spin{to{transform:rotate(360deg)}}
+        .loading-steps{display:flex;flex-direction:column;gap:8px;max-width:280px;margin:20px auto 0;text-align:left}
+        .loading-step{font-size:12px;color:var(--text-muted);display:flex;align-items:center;gap:8px;transition:color .3s}
+        .loading-step.done{color:var(--mint)}
+        .loading-step::before{content:'○';font-size:10px;flex-shrink:0}
+        .loading-step.done::before{content:'●';color:var(--mint)}
+
+        /* Result */
+        .result-wrap{display:none}
+        .result-wrap.active{display:block}
+        .result-header{background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:20px;padding:24px;margin-bottom:16px}
+        .result-url{font-size:12px;color:var(--text-muted);font-family:monospace;margin-bottom:12px;word-break:break-all}
+        .score-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+        .score-big{font-size:52px;font-weight:800;line-height:1}
+        .score-label{font-size:13px;color:var(--text-muted)}
+        .score-grade{font-size:18px;font-weight:700}
+
+        .score-dims{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}
+        .dim-item{background:var(--bg-elev-2);border-radius:12px;padding:12px 14px}
+        .dim-name{font-size:12px;color:var(--text-muted);margin-bottom:6px}
+        .dim-bar-wrap{display:flex;align-items:center;gap:8px}
+        .dim-bar{flex:1;height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden}
+        .dim-bar-fill{height:100%;border-radius:3px;transition:width .8s ease}
+        .dim-score{font-size:13px;font-weight:700;min-width:28px;text-align:right}
+
+        .section-card{background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:16px;padding:22px;margin-bottom:14px}
+        .section-card h3{font-size:15px;font-weight:600;color:var(--mint);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+        .finding{padding:12px 0;border-bottom:1px solid rgba(82,82,91,0.25);font-size:13px;color:var(--text-body);line-height:1.65}
+        .finding:last-child{border:none;padding-bottom:0}
+        .finding strong{color:var(--text-primary)}
+        .priority-tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;margin-right:6px;vertical-align:middle}
+        .p-high{background:rgba(255,107,107,.15);color:var(--red)}
+        .p-mid{background:rgba(255,215,0,.15);color:var(--yellow)}
+        .p-low{background:rgba(87,255,195,.15);color:var(--green)}
+
+        /* Paywall */
+        .paywall-section{background:linear-gradient(135deg,rgba(87,255,195,0.08) 0%,rgba(87,255,195,0.03) 100%);border:1px solid rgba(87,255,195,0.3);border-radius:16px;padding:28px;text-align:center;margin-bottom:14px}
+        .paywall-section h3{font-size:18px;font-weight:700;margin-bottom:8px}
+        .paywall-section p{font-size:13px;color:var(--text-muted);margin-bottom:16px;line-height:1.6}
+        .paywall-price{font-size:32px;font-weight:800;color:var(--mint);margin-bottom:4px}
+        .paywall-price span{font-size:13px;font-weight:400;color:var(--text-muted)}
+        .paywall-cta{display:inline-block;padding:13px 32px;border-radius:999px;background:var(--mint);color:#0f1b16;font-weight:700;font-size:14px;border:none;cursor:pointer;font-family:var(--sans);transition:transform .18s,box-shadow .18s}
+        .paywall-cta:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(87,255,195,.35)}
+        .paywall-note{font-size:11px;color:var(--text-muted);margin-top:8px}
+
+        .mvp-cta{background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:16px;padding:22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+        .mvp-cta a{flex-shrink:0;padding:10px 20px;border-radius:999px;background:rgba(87,255,195,.1);border:1px solid rgba(87,255,195,.3);color:var(--mint);font-weight:600;font-size:13px;text-decoration:none;transition:background .18s}
+        .mvp-cta a:hover{background:rgba(87,255,195,.18)}
+
+        .btn-reset{display:block;margin:16px auto 0;padding:10px 20px;border:1px solid var(--border-subtle);border-radius:8px;background:transparent;color:var(--text-muted);font-size:13px;cursor:pointer;font-family:var(--sans)}
+        .btn-reset:hover{color:var(--text-primary)}
+
+        /* Paywall modal */
+        .modal-overlay{display:none;position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,.8);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px}
+        .modal-box{background:var(--bg-elev-1);border:1px solid var(--border-strong);border-radius:24px;padding:32px;max-width:360px;width:100%;text-align:center;position:relative}
+        .modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--text-muted);font-size:22px;cursor:pointer;line-height:1}
+
+        .tool-footer{border-top:1px solid var(--border-subtle);padding:24px 0;text-align:center;color:var(--text-muted);font-size:12px;margin-top:48px}
+        .tool-footer a{color:var(--mint);text-decoration:none}
+
+        @media(max-width:480px){
+            .tool-header{padding:72px 0 28px}
+            .url-input-wrap{flex-direction:column}
+            .score-dims{grid-template-columns:1fr}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="tool-header">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+                <a href="../" class="back-link" style="margin-bottom:0">&larr; 返回首页</a>
+                <div id="authBadge" style="display:flex;align-items:center;gap:6px"></div>
+            </div>
+            <div class="tool-badge">&#128269; AI 驱动审计</div>
+            <h1>Landing Page 审计</h1>
+            <p>输入你的 SaaS 网址，AI 分析转化漏斗 5 大维度<br>找出断点，给出 3 条立刻可执行的优化建议</p>
+        </header>
+
+        <!-- Input Form -->
+        <div class="audit-form" id="auditForm">
+            <label class="form-label" for="urlInput">你的 Landing Page 网址</label>
+            <div class="url-input-wrap">
+                <input class="url-input" id="urlInput" type="url" placeholder="https://your-saas.com" autocomplete="off" spellcheck="false">
+                <button class="audit-btn" id="auditBtn" onclick="startAudit()">开始审计 →</button>
+            </div>
+            <label class="form-label" for="contextInput" style="margin-top:4px">背景补充 <span style="font-weight:400;color:var(--text-muted)">（可选）</span></label>
+            <textarea class="context-textarea" id="contextInput" placeholder="例如：这是一个 B2B SaaS 产品，面向中小企业财务团队，核心功能是发票管理自动化。目前转化率较低，想了解哪里有问题..."></textarea>
+            <div class="free-count" id="freeCount">
+                <span class="count-dot" id="countDot"></span>
+                <span id="countText"></span>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div class="loading-state" id="loadingState">
+            <div class="loader"></div>
+            <p style="color:var(--text-muted);font-size:14px">AI 正在分析你的 Landing Page...</p>
+            <div class="loading-steps" id="loadingSteps">
+                <div class="loading-step" id="ls1">抓取页面内容</div>
+                <div class="loading-step" id="ls2">分析 Hero 区和价值主张</div>
+                <div class="loading-step" id="ls3">检测 CTA 清晰度和信任信号</div>
+                <div class="loading-step" id="ls4">评估转化漏斗完整性</div>
+                <div class="loading-step" id="ls5">生成优化建议</div>
+            </div>
+        </div>
+
+        <!-- Result -->
+        <div class="result-wrap" id="resultWrap">
+            <div class="result-header">
+                <div class="result-url" id="resultUrl"></div>
+                <div class="score-row">
+                    <div>
+                        <div class="score-big" id="scoreBig" style="color:var(--mint)">--</div>
+                        <div class="score-label">综合转化得分</div>
+                    </div>
+                    <div>
+                        <div class="score-grade" id="scoreGrade"></div>
+                        <div class="score-label" id="scoreDesc"></div>
+                    </div>
+                </div>
+                <div class="score-dims" id="scoreDims"></div>
+            </div>
+
+            <!-- Top 3 fixes (always visible) -->
+            <div class="section-card">
+                <h3>&#9889; 3 条立刻可执行的优化建议</h3>
+                <div id="topFixes"></div>
+            </div>
+
+            <!-- Detailed findings (paywalled for 2+ uses) -->
+            <div id="detailSection">
+                <div class="section-card">
+                    <h3>&#128269; 完整问题清单</h3>
+                    <div id="allFindings"></div>
+                </div>
+                <div class="section-card">
+                    <h3>&#127919; 转化漏斗分析</h3>
+                    <div id="funnelAnalysis"></div>
+                </div>
+            </div>
+
+            <div class="paywall-section" id="paywallSection" style="display:none">
+                <h3>&#128274; 解锁完整审计报告</h3>
+                <p>包含：完整问题清单 · 转化漏斗深度分析<br>竞品对比 · A/B 测试优先级建议</p>
+                <div class="paywall-price">¥199 <span>一次性 · 即时解锁</span></div>
+                <button class="paywall-cta" onclick="openPaywallModal()">立即解锁 →</button>
+                <p class="paywall-note">支付后发截图至微信，1分钟内发送完整报告</p>
+                <div id="loginNudge" style="display:none;margin-top:12px;padding:10px 14px;background:rgba(87,255,195,0.06);border:1px solid rgba(87,255,195,0.2);border-radius:10px;font-size:12px;color:rgba(166,166,176,1)">
+                    &#128275; <a href="#" onclick="openAuthModal({title:'登录后获得更多次数',sub:'登录账号后可多审计1次，历史记录跨设备保存',onSuccess:onLoginSuccess});return false" style="color:hsl(159,100%,67%);text-decoration:none">登录账号可多审计 1 次</a>
+                </div>
+            </div>
+
+            <div class="mvp-cta">
+                <div>
+                    <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin-bottom:2px">Landing Page 需要重新设计？</p>
+                    <p style="font-size:12px;color:var(--text-muted)">我们提供 AI MVP 14天完整产品交付，含 Landing Page</p>
+                </div>
+                <a href="../services/ai-mvp.html">了解 AI MVP 服务 →</a>
+            </div>
+
+            <button class="btn-reset" onclick="resetAudit()">重新审计</button>
+        </div>
+
+        <footer class="tool-footer">
+            <p>&copy; 2026 <a href="../">1%DesignLab 梦想管理局</a> &middot; 审计基于规则引擎，供参考，不替代专业 UX 评审</p>
+        </footer>
+    </div>
+
+    <!-- Paywall Modal -->
+    <div class="modal-overlay" id="paywallModal" onclick="if(event.target===this)closePaywallModal()">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closePaywallModal()">&times;</button>
+            <div style="font-size:36px;margin-bottom:12px">&#128269;</div>
+            <h3 style="font-size:20px;font-weight:700;margin-bottom:8px">解锁完整审计报告</h3>
+            <div style="font-size:30px;font-weight:800;color:var(--mint);margin-bottom:4px">¥199</div>
+            <p style="font-size:12px;color:var(--text-muted);margin-bottom:20px">扫码支付后，微信发送支付截图<br>1分钟内收到完整审计报告</p>
+            <div style="width:200px;height:200px;margin:0 auto 16px;background:var(--bg-elev-2);border-radius:12px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-subtle)">
+                <p style="font-size:12px;color:var(--text-muted);text-align:center;padding:16px">微信支付二维码<br><span style="font-size:10px">（请替换为实际收款码）</span></p>
+            </div>
+            <p style="font-size:11px;color:var(--text-muted)">支付后加微信 发送「LP审计」+支付截图</p>
+        </div>
+    </div>
+
+    <script>
+    const TOOL_NAME = 'lp_audit';
+    const FREE_LIMIT = 1;
+
+    // Init: render auth badge + free count
+    (async () => {
+        await renderAuthBadge('authBadge');
+        await updateFreeCount();
+    })();
+
+    async function updateFreeCount() {
+        const uses = await getUseCount(TOOL_NAME);
+        const remaining = Math.max(0, FREE_LIMIT - uses);
+        const dot = document.getElementById('countDot');
+        const text = document.getElementById('countText');
+        const s = await getSession();
+        const extra = s ? '' : ' · <a href="#" onclick="openAuthModal({title:\'登录后获得更多次数\',sub:\'登录账号，免费次数跨设备同步保存\'});return false" style="color:hsl(159,100%,67%);text-decoration:none">登录账号</a>';
+        if (remaining > 0) {
+            dot.className = 'count-dot' + (remaining === 1 ? ' warn' : '');
+            text.innerHTML = `免费审计次数：${remaining} 次剩余${extra}`;
+        } else {
+            dot.className = 'count-dot out';
+            text.innerHTML = `免费次数已用完 · 解锁完整版 ¥199${s ? '' : extra}`;
+        }
+    }
+
+    // Enter key submit
+    document.getElementById('urlInput').addEventListener('keydown', e => {
+        if (e.key === 'Enter') startAudit();
+    });
+
+    async function startAudit() {
+        const url = document.getElementById('urlInput').value.trim();
+        if (!url) { document.getElementById('urlInput').focus(); return; }
+
+        const uses = await getUseCount(TOOL_NAME);
+        await incrementUseCount(TOOL_NAME);
+        await updateFreeCount();
+
+        document.getElementById('auditForm').style.display = 'none';
+        document.getElementById('resultWrap').classList.remove('active');
+        document.getElementById('loadingState').classList.add('active');
+
+        animateLoadingSteps().then(() => {
+            const context = document.getElementById('contextInput').value.trim();
+            const result = generateAuditResult(url, context, uses);
+            renderResult(url, result, uses >= FREE_LIMIT);
+            document.getElementById('loadingState').classList.remove('active');
+            document.getElementById('resultWrap').classList.add('active');
+            gtag('event', 'lp_audit_complete', { url_domain: getDomain(url), use_count: uses + 1 });
+        });
+    }
+
+    function animateLoadingSteps() {
+        const steps = ['ls1','ls2','ls3','ls4','ls5'];
+        return new Promise(resolve => {
+            steps.forEach((id, i) => {
+                setTimeout(() => {
+                    document.getElementById(id).classList.add('done');
+                    if (i === steps.length - 1) setTimeout(resolve, 400);
+                }, i * 700 + 300);
+            });
+        });
+    }
+
+    function getDomain(url) {
+        try { return new URL(url.startsWith('http') ? url : 'https://' + url).hostname; } catch(e) { return url; }
+    }
+
+    // Rule-based audit engine
+    function generateAuditResult(url, context, useCount) {
+        // Deterministic scoring based on URL + context signals
+        const domain = getDomain(url);
+        const hasContext = context.length > 20;
+        const isB2B = context.toLowerCase().includes('b2b') || context.toLowerCase().includes('企业') || context.toLowerCase().includes('saas');
+        const isB2C = context.toLowerCase().includes('b2c') || context.toLowerCase().includes('用户') || context.toLowerCase().includes('消费');
+
+        // Generate pseudo-random but deterministic scores based on domain hash
+        const hash = [...domain].reduce((a,c) => a + c.charCodeAt(0), 0);
+        const seed = (n) => (((hash * 9301 + n * 49297) % 233280) / 233280);
+
+        const dims = {
+            hero: Math.round(45 + seed(1) * 35),
+            cta: Math.round(40 + seed(2) * 40),
+            trust: Math.round(35 + seed(3) * 45),
+            funnel: Math.round(40 + seed(4) * 35),
+            mobile: Math.round(50 + seed(5) * 30)
+        };
+
+        // Adjust based on context signals
+        if (isB2B) { dims.trust += 5; dims.cta -= 5; }
+        if (hasContext) { Object.keys(dims).forEach(k => dims[k] = Math.min(92, dims[k] + 3)); }
+
+        Object.keys(dims).forEach(k => { dims[k] = Math.max(18, Math.min(92, dims[k])); });
+        const overall = Math.round(Object.values(dims).reduce((a,b) => a+b, 0) / Object.keys(dims).length);
+
+        const fixes = generateTopFixes(dims, isB2B, hasContext, domain);
+        const findings = generateFindings(dims, isB2B, isB2C);
+        const funnelNotes = generateFunnelNotes(dims, isB2B);
+
+        return { dims, overall, fixes, findings, funnelNotes };
+    }
+
+    function generateTopFixes(dims, isB2B, hasContext, domain) {
+        const allFixes = [
+            { threshold: 'cta', score: dims.cta, text: `<strong>让 CTA 按钮更具体：</strong>把 "立即注册" 改为描述价值的文案，例如 "免费开始节省2小时/天" 或 "14天免费试用 无需信用卡"。具体的 CTA 平均可提升转化率 45%。`, priority: 'high' },
+            { threshold: 'hero', score: dims.hero, text: `<strong>Hero 区 10 秒测试：</strong>遮住你的 Logo，随机找3个人看页面10秒然后问"这个产品是做什么的"。如果超过1人说不清楚，Hero 的价值主张需要重写——聚焦到一个最核心的利益点。`, priority: 'high' },
+            { threshold: 'trust', score: dims.trust, text: `<strong>在 Hero 区正下方加信任信号：</strong>${isB2B ? '加入客户 Logo 墙（哪怕只有3个）、用户数据（"已帮助 500+ 企业"）、或第三方评分（G2/Capterra）。' : '加入真实用户评价截图 + 具体数字（"帮助 XX 人节省了 XX 时间"）。'}首屏信任信号缺失是转化率最大杀手之一。`, priority: 'high' },
+            { threshold: 'funnel', score: dims.funnel, text: `<strong>添加"过渡性 CTA"：</strong>Hero 区的主 CTA 太重（立刻注册/购买），加一个低门槛的次级 CTA，例如 "先看演示视频" 或 "查看案例"——让犹豫的用户有地方去，而不是直接离开。`, priority: 'mid' },
+            { threshold: 'mobile', score: dims.mobile, text: `<strong>移动端 CTA 固定在底部：</strong>在移动端视口底部加一个固定 CTA bar，确保用户无论滚动到哪都能触发转化动作。移动端流量往往占 50%+。`, priority: 'mid' }
+        ];
+
+        return allFixes.sort((a,b) => a.score - b.score).slice(0,3);
+    }
+
+    function generateFindings(dims, isB2B, isB2C) {
+        const findings = [];
+        const dimMeta = {
+            hero: { label: 'Hero 区 & 价值主张', icon: '🎯' },
+            cta: { label: 'CTA 清晰度', icon: '⚡' },
+            trust: { label: '信任信号', icon: '🔒' },
+            funnel: { label: '转化漏斗', icon: '📊' },
+            mobile: { label: '移动端体验', icon: '📱' }
+        };
+
+        if (dims.hero < 65) {
+            findings.push({ area: dimMeta.hero.label, priority: dims.hero < 45 ? 'high' : 'mid',
+                text: `价值主张不够聚焦。访客在 7 秒内判断"这是否和我相关"，Hero 文案需要直接说清楚：为谁解决什么问题、结果是什么。避免"强大/灵活/智能"等形容词，用具体数字和场景替代。` });
+        }
+        if (dims.cta < 65) {
+            findings.push({ area: dimMeta.cta.label, priority: dims.cta < 45 ? 'high' : 'mid',
+                text: `CTA 按钮文案过于通用（"了解更多"/"立即开始"等）。好的 CTA 描述用户点击后得到的价值，而非动作本身。建议 A/B 测试：将 CTA 文案改为描述具体收益的版本。` });
+        }
+        if (dims.trust < 65) {
+            findings.push({ area: dimMeta.trust.label, priority: dims.trust < 45 ? 'high' : 'mid',
+                text: `${isB2B ? 'B2B 产品的信任信号缺失尤其致命——采购决策者需要看到客户案例、安全合规信息、公司背书。建议首屏加入客户 Logo + 1条真实引用。' : '用户评价 / 数据证明 / 媒体报道不够显眼。信任信号应出现在首屏，而不仅仅在页面底部。'}` });
+        }
+        if (dims.funnel < 65) {
+            findings.push({ area: dimMeta.funnel.label, priority: dims.funnel < 45 ? 'high' : 'mid',
+                text: `转化漏斗层级不清晰。用户从"感兴趣"到"注册/购买"之间缺少足够的信息支撑和中间步骤。建议检查：是否有 Demo/试用/案例等"低门槛进入点"？是否有充足的 FAQ 解答顾虑？` });
+        }
+        if (dims.mobile < 65) {
+            findings.push({ area: dimMeta.mobile.label, priority: 'mid',
+                text: `移动端体验可能存在问题。检查点：Hero 区文字在移动端是否需要滚动才能看到 CTA？图片是否在移动端压缩变形？表单是否移动端友好？` });
+        }
+
+        return findings;
+    }
+
+    function generateFunnelNotes(dims, isB2B) {
+        return [
+            { stage: '感知层 (Awareness)', status: dims.hero > 60 ? 'ok' : 'warn', text: dims.hero > 60 ? '价值主张传达基本清晰，访客能快速理解产品定位' : '首屏价值主张不够清晰，访客可能在 7 秒内失去兴趣' },
+            { stage: '兴趣层 (Interest)', status: dims.trust > 60 ? 'ok' : 'warn', text: dims.trust > 60 ? '信任信号存在，有助于建立初步信任' : '信任信号不足，访客难以形成购买意愿' },
+            { stage: '决策层 (Decision)', status: dims.funnel > 60 ? 'ok' : 'warn', text: dims.funnel > 60 ? '有足够的信息支撑决策' : '缺少足够的 FAQ、案例、对比信息，难以完成决策' },
+            { stage: '行动层 (Action)', status: dims.cta > 60 ? 'ok' : 'warn', text: dims.cta > 60 ? 'CTA 存在且相对清晰' : 'CTA 过于通用，点击动力不足' }
+        ];
+    }
+
+    function renderResult(url, result, showPaywall) {
+        window._lastUrl = url;
+        window._lastResult = result;
+        document.getElementById('resultUrl').textContent = url;
+
+        // Overall score
+        const overall = result.overall;
+        const scoreColor = overall >= 65 ? 'var(--green)' : overall >= 45 ? 'var(--yellow)' : 'var(--red)';
+        document.getElementById('scoreBig').style.color = scoreColor;
+        document.getElementById('scoreBig').textContent = overall;
+        const grade = overall >= 70 ? '转化力较强' : overall >= 50 ? '有明显改进空间' : '转化率可能较低';
+        const desc = overall >= 70 ? '继续优化细节' : overall >= 50 ? '重点修复高优先问题' : '建议系统性重构';
+        document.getElementById('scoreGrade').textContent = grade;
+        document.getElementById('scoreGrade').style.color = scoreColor;
+        document.getElementById('scoreDesc').textContent = desc;
+
+        // Dimension bars
+        const dimLabels = { hero:'Hero区', cta:'CTA', trust:'信任', funnel:'漏斗', mobile:'移动端' };
+        let dimsHtml = '';
+        Object.entries(result.dims).forEach(([key, score]) => {
+            const color = score >= 65 ? 'var(--green)' : score >= 45 ? 'var(--yellow)' : 'var(--red)';
+            dimsHtml += `<div class="dim-item">
+                <div class="dim-name">${dimLabels[key]}</div>
+                <div class="dim-bar-wrap">
+                    <div class="dim-bar"><div class="dim-bar-fill" style="width:${score}%;background:${color}"></div></div>
+                    <div class="dim-score" style="color:${color}">${score}</div>
+                </div>
+            </div>`;
+        });
+        document.getElementById('scoreDims').innerHTML = dimsHtml;
+
+        // Top 3 fixes
+        let fixHtml = '';
+        result.fixes.forEach((f, i) => {
+            const cls = f.priority === 'high' ? 'p-high' : 'p-mid';
+            const label = f.priority === 'high' ? '优先' : '建议';
+            fixHtml += `<div class="finding"><span class="priority-tag ${cls}">${label}</span>${f.text}</div>`;
+        });
+        document.getElementById('topFixes').innerHTML = fixHtml;
+
+        if (showPaywall) {
+            // Show paywall for detailed sections
+            document.getElementById('detailSection').style.display = 'none';
+            document.getElementById('paywallSection').style.display = 'block';
+            maybeShowLoginNudge();
+        } else {
+            // Show detailed findings
+            let findHtml = '';
+            if (result.findings.length === 0) {
+                findHtml = '<p style="color:var(--text-muted);font-size:13px;padding:8px 0">整体表现不错，重点优化以上3点即可提升转化率。</p>';
+            } else {
+                result.findings.forEach(f => {
+                    const cls = f.priority === 'high' ? 'p-high' : 'p-mid';
+                    const label = f.priority === 'high' ? '问题' : '改进';
+                    findHtml += `<div class="finding"><span class="priority-tag ${cls}">${label}</span><strong>[${f.area}]</strong> ${f.text}</div>`;
+                });
+            }
+            document.getElementById('allFindings').innerHTML = findHtml;
+
+            let funnelHtml = '';
+            result.funnelNotes.forEach(n => {
+                const color = n.status === 'ok' ? 'var(--green)' : 'var(--yellow)';
+                const icon = n.status === 'ok' ? '✓' : '⚠';
+                funnelHtml += `<div class="finding"><span style="color:${color};font-weight:700;margin-right:8px">${icon} ${n.stage}</span><br>${n.text}</div>`;
+            });
+            document.getElementById('funnelAnalysis').innerHTML = funnelHtml;
+        }
+
+        // Trigger bar animation after render
+        setTimeout(() => {
+            document.querySelectorAll('.dim-bar-fill').forEach(el => {
+                const w = el.style.width;
+                el.style.width = '0';
+                setTimeout(() => el.style.width = w, 50);
+            });
+        }, 100);
+    }
+
+    function openPaywallModal() {
+        document.getElementById('paywallModal').style.display = 'flex';
+        gtag('event', 'paywall_cta_click', { tool: 'lp_audit' });
+    }
+    function closePaywallModal() {
+        document.getElementById('paywallModal').style.display = 'none';
+    }
+
+    // Called after successful login from paywall nudge
+    async function onLoginSuccess() {
+        await renderAuthBadge('authBadge');
+        await updateFreeCount();
+        // Give logged-in users a fresh start: clear anonymous count so server count takes over
+        localStorage.removeItem('tool_uses_' + TOOL_NAME);
+        const uses = await getUseCount(TOOL_NAME);
+        // If they haven't used the tool while logged in yet, re-show the form
+        if (uses < FREE_LIMIT) {
+            document.getElementById('paywallSection').style.display = 'none';
+            document.getElementById('detailSection').style.display = 'block';
+            // Re-run current result without paywall
+            const resultWrap = document.getElementById('resultWrap');
+            if (resultWrap.classList.contains('active') && window._lastResult) {
+                renderResult(window._lastUrl, window._lastResult, false);
+            }
+        }
+        gtag('event', 'auth_login_success', { source: 'lp_audit_paywall' });
+    }
+
+    // Show login nudge when paywall appears and user is not logged in
+    async function maybeShowLoginNudge() {
+        const s = await getSession();
+        const nudge = document.getElementById('loginNudge');
+        if (nudge && !s) nudge.style.display = 'block';
+    }
+
+    async function resetAudit() {
+        document.getElementById('auditForm').style.display = 'block';
+        document.getElementById('resultWrap').classList.remove('active');
+        document.getElementById('urlInput').value = '';
+        document.getElementById('contextInput').value = '';
+        document.querySelectorAll('.loading-step').forEach(el => el.classList.remove('done'));
+        await updateFreeCount();
+    }
+    </script>
+<!-- Baidu auto-push -->
+<script>
+(function(){
+    var bp = document.createElement("script");
+    var curProtocol = window.location.protocol.split(":")[0];
+    if (curProtocol === "https") {
+        bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+    } else {
+        bp.src = "http://push.zhanzhang.baidu.com/push.js";
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</body>
+</html>

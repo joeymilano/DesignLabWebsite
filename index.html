@@ -26,13 +26,13 @@
     <link rel="apple-touch-icon" href="favicon-180x180.png" sizes="180x180">
 
     <!-- SEO Meta (Chinese-first for Baidu, then English for Google) -->
-    <title>1%DesignLab 梦想管理局 - 作品集设计_LOGO设计_工业设计_留学申请 | Portfolio & Branding Design Studio</title>
-    <meta name="description" content="1%DesignLab梦想管理局，6年专注设计服务，QS100名校团队，6000+成功案例，100%好评率。提供作品集设计、LOGO平面设计、工业设计、留学申请、博士研究计划、3D建模等一站式专业设计服务。Professional design studio — portfolio, logo, industrial design & study abroad applications.">
-    <meta name="keywords" content="作品集设计,留学作品集,LOGO设计,工业设计,平面设计,品牌设计,VI设计,设计留学,留学申请,博士申请,3D建模,交互设计,产品设计,建筑设计,景观设计,服装设计,设计代做,上海设计公司,portfolio design,logo design,industrial design,study abroad,branding design">
+    <title>1%DesignLab 梦想管理局 - AI产品MVP_全栈开发_工业设计_品牌系统_留学作品集 | Full-Chain Product Delivery Studio</title>
+    <meta name="description" content="1%DesignLab梦想管理局——从物理概念到数字交互到部署上线的全链路交付团队。AI产品MVP 14天上线、工业设计、品牌系统、留学作品集。硅谷+米兰背景，6年6000+成功交付。Full-chain delivery: AI app MVP, industrial design, branding, study abroad portfolios.">
+    <meta name="keywords" content="AI产品开发,MVP开发,全栈开发,产品设计,AI应用,工业设计,品牌设计,作品集设计,留学作品集,LOGO设计,UI设计,交互设计,上海设计公司,产品化服务,AI MVP,full-stack development,product design,industrial design,branding,portfolio design">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="1%DesignLab — Professional Design Studio | Portfolio · Logo · Industrial Design">
-    <meta property="og:description" content="6+ years of design excellence, QS100 university team, 6000+ successful cases. Portfolio design, logo & branding, industrial design, study abroad applications.">
+    <meta property="og:title" content="1%DesignLab — Full-Chain Product Delivery | AI MVP · Industrial Design · Branding · Portfolios">
+    <meta property="og:description" content="From physical concepts to deployed code. AI App MVP in 14 days, industrial design, brand systems, study abroad portfolios. Silicon Valley + Milan team, 6000+ deliveries.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://1-design-lab.com/">
     <meta property="og:image" content="https://1-design-lab.com/logo.jpg">
@@ -395,7 +395,9 @@
             border-radius: var(--radius-pill);
             font-size: 12.5px;
             font-weight: 700;
+            font-family: inherit;
             letter-spacing: 0.01em;
+            cursor: pointer;
             transition: all 0.2s ease;
         }
         .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(87, 255, 195, 0.28); }
@@ -753,8 +755,55 @@
             line-height: 1.75;
         }
 
-        .services, .team, .portfolio, .testimonials, .process, .office, .cta {
+        .services, .team, .portfolio, .testimonials, .process, .office, .cta, .products-section {
             padding: 118px 24px;
+        }
+        .products-section {
+            max-width: 900px;
+            margin: 0 auto;
+            background: transparent;
+            position: relative;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            display: block;
+            padding: 24px;
+            background: var(--bg-elev-1);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            border-color: rgba(87, 255, 195, 0.3);
+        }
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--mint);
+            margin-bottom: 8px;
+        }
+        .product-desc {
+            font-size: 14px;
+            color: var(--text-body);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .product-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--mint);
+            background: rgba(87, 255, 195, 0.1);
+            border: 1px solid rgba(87, 255, 195, 0.25);
         }
         .services::before,
         .team::before,
@@ -831,6 +880,114 @@
             transition: all 0.22s ease;
         }
         .service-card:hover::after { opacity: 1; transform: translateX(0); }
+        .service-premium-banner {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            padding: 32px 36px;
+            margin-bottom: 28px;
+            background: var(--bg-elev-1);
+            border: 1px solid rgba(87, 255, 195, 0.3);
+            border-radius: var(--radius-card);
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .service-premium-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(87, 255, 195, 0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .service-premium-banner:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(87, 255, 195, 0.12);
+            border-color: rgba(87, 255, 195, 0.5);
+        }
+        .premium-badge {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-family: var(--mono);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: var(--mint);
+            background: rgba(87, 255, 195, 0.1);
+            border: 1px solid rgba(87, 255, 195, 0.25);
+            border-radius: 999px;
+            padding: 4px 12px;
+        }
+        .premium-content { flex: 1; }
+        .premium-content h3 {
+            font-size: clamp(20px, 2.5vw, 26px);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+        .premium-content p {
+            font-size: 14px;
+            color: var(--text-body);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .premium-deliverables {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .premium-deliverables span {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            background: var(--bg-elev-2);
+            border: 1px solid var(--border-subtle);
+            border-radius: 999px;
+            padding: 5px 12px;
+        }
+        .premium-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 16px;
+            flex-shrink: 0;
+        }
+        .premium-price {
+            font-size: clamp(24px, 3vw, 32px);
+            font-weight: 800;
+            color: var(--mint);
+            font-family: var(--mono);
+        }
+        .premium-price span {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+        .service-premium-banner .btn-primary {
+            white-space: nowrap;
+        }
+        @media (max-width: 768px) {
+            .service-premium-banner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px 20px;
+                gap: 20px;
+            }
+            .premium-right {
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                justify-content: space-between;
+            }
+            .premium-badge {
+                position: static;
+                align-self: flex-start;
+                margin-bottom: 8px;
+            }
+        }
+
         .service-card.featured { grid-column: span 2; }
         .service-image { width: 100%; height: 190px; overflow: hidden; position: relative; }
         .service-card.featured .service-image { height: 258px; }
@@ -874,12 +1031,13 @@
             justify-content: center;
             flex-shrink: 0;
         }
-        .service-card:nth-child(1) .service-content-area h3::before { content: 'PF'; }
-        .service-card:nth-child(2) .service-content-area h3::before { content: 'ID'; }
-        .service-card:nth-child(3) .service-content-area h3::before { content: 'HR'; }
-        .service-card:nth-child(4) .service-content-area h3::before { content: '3D'; }
+        .service-card:nth-child(1) .service-content-area h3::before { content: 'DEV'; font-size: 8px; }
+        .service-card:nth-child(2) .service-content-area h3::before { content: 'PF'; }
+        .service-card:nth-child(3) .service-content-area h3::before { content: '3D'; }
+        .service-card:nth-child(4) .service-content-area h3::before { content: 'ID'; }
         .service-card:nth-child(5) .service-content-area h3::before { content: 'PHD'; font-size: 8px; }
         .service-card:nth-child(6) .service-content-area h3::before { content: 'EX'; }
+        .service-card:nth-child(7) .service-content-area h3::before { content: 'HR'; }
         .service-card.featured .service-content-area h3 { font-size: 24px; }
         .service-content-area p { font-size: 13.5px; line-height: 1.7; color: var(--text-muted); margin-bottom: 14px; }
         .service-tags { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -1532,7 +1690,7 @@
             .section-header { margin-bottom: 46px; }
             .section-title { font-size: clamp(30px, 10vw, 42px); }
             .section-desc { font-size: 15px; }
-            .services, .team, .portfolio, .testimonials, .process, .office, .cta { padding: 92px 16px; }
+            .services, .team, .portfolio, .testimonials, .process, .office, .cta, .products-section { padding: 92px 16px; }
             .office-gallery { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 120px); }
             .office-gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
             .footer-content { grid-template-columns: 1fr; }
@@ -1561,6 +1719,296 @@
             }
         }
 
+
+        /* ── Tools Strip (Hero 下方快捷入口) ── */
+        .tools-strip {
+            padding: 40px 24px 0;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+        .tools-strip-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--mint);
+            margin-bottom: 16px;
+        }
+        .tools-strip-label::before,
+        .tools-strip-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(87,255,195,0.2);
+        }
+        .tools-strip-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+        .tool-entry-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px 20px 16px;
+            background: var(--bg-elev-1);
+            border: 1px solid var(--border-subtle);
+            border-radius: 18px;
+            text-decoration: none;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+            overflow: hidden;
+        }
+        .tool-entry-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 0% 0%, rgba(87,255,195,0.07) 0%, transparent 65%);
+            pointer-events: none;
+        }
+        .tool-entry-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(87,255,195,0.4);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.25), 0 0 0 1px rgba(87,255,195,0.12);
+        }
+        .tool-entry-card.featured {
+            border-color: rgba(87,255,195,0.35);
+            background: linear-gradient(145deg, rgba(87,255,195,0.08) 0%, var(--bg-elev-1) 60%);
+        }
+        .tool-entry-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 8px;
+        }
+        .tool-entry-icon {
+            font-size: 26px;
+            line-height: 1;
+        }
+        .tool-entry-badge {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            padding: 3px 8px;
+            border-radius: 999px;
+            flex-shrink: 0;
+        }
+        .badge-paid {
+            background: rgba(87,255,195,0.18);
+            color: var(--mint);
+            border: 1px solid rgba(87,255,195,0.35);
+        }
+        .badge-free {
+            background: rgba(255,255,255,0.07);
+            color: var(--text-muted);
+            border: 1px solid var(--border-subtle);
+        }
+        .badge-new {
+            background: rgba(255,160,50,0.15);
+            color: #ffb347;
+            border: 1px solid rgba(255,160,50,0.3);
+        }
+        .tool-entry-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+        .tool-entry-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0;
+        }
+        .tool-entry-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--mint);
+            margin-top: 2px;
+        }
+        .tool-entry-cta svg {
+            transition: transform 0.18s ease;
+        }
+        .tool-entry-card:hover .tool-entry-cta svg {
+            transform: translateX(3px);
+        }
+
+        /* ── Nav Mega Dropdown ── */
+        .nav-tools-wrapper {
+            position: relative;
+        }
+        .nav-tools-wrapper:hover .nav-tools-mega,
+        .nav-tools-wrapper:focus-within .nav-tools-mega {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+        .nav-tools-mega {
+            position: absolute;
+            top: calc(100% + 12px);
+            left: 50%;
+            transform: translateX(-50%) translateY(-6px);
+            width: 480px;
+            background: rgba(28,28,28,0.98);
+            border: 1px solid var(--border-strong);
+            border-radius: 18px;
+            padding: 16px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 24px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(87,255,195,0.08);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            z-index: 2000;
+        }
+        .nav-tools-mega::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 6px;
+            background: rgba(28,28,28,0.98);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            border-left: 1px solid var(--border-strong);
+            border-right: 1px solid var(--border-strong);
+        }
+        .mega-title {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            padding: 0 4px;
+        }
+        .mega-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .mega-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 13px;
+            border-radius: 12px;
+            text-decoration: none;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid transparent;
+            transition: all 0.18s ease;
+        }
+        .mega-item:hover {
+            background: rgba(87,255,195,0.07);
+            border-color: rgba(87,255,195,0.2);
+        }
+        .mega-item-icon {
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+        .mega-item-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+        .mega-item-meta {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+        .mega-item-price {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--mint);
+        }
+        .mega-divider {
+            height: 1px;
+            background: var(--border-subtle);
+            margin: 10px 0;
+        }
+        .mega-footer {
+            display: flex;
+            justify-content: center;
+        }
+        .mega-footer a {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 8px;
+            transition: color 0.15s;
+        }
+        .mega-footer a:hover { color: var(--mint); }
+
+        /* ── Mobile Floating CTA Bar ── */
+        .mobile-tools-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 900;
+            padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+            background: rgba(20,20,20,0.97);
+            border-top: 1px solid var(--border-subtle);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            gap: 10px;
+        }
+        .mobile-tools-bar.bar-hidden { display: none !important; }
+        .mobile-bar-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 11px 14px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            font-family: inherit;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.18s ease;
+            white-space: nowrap;
+        }
+        .mobile-bar-btn.primary {
+            background: var(--mint);
+            color: #0f1b16;
+        }
+        .mobile-bar-btn.secondary {
+            background: rgba(87,255,195,0.1);
+            color: var(--mint);
+            border: 1px solid rgba(87,255,195,0.3);
+        }
+        .mobile-bar-btn.primary:hover { filter: brightness(1.08); }
+        .mobile-bar-btn.secondary:hover { background: rgba(87,255,195,0.15); }
+
+        @media (max-width: 768px) {
+            .tools-strip-grid {
+                grid-template-columns: 1fr;
+            }
+            .tools-strip {
+                padding: 32px 16px 0;
+            }
+            .mobile-tools-bar {
+                display: flex;
+            }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .tools-strip-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -1570,15 +2018,54 @@
                 <img src="logo.jpg" alt="1% Design Lab">
             </div>
             <div class="nav-links">
-                <a href="#services" data-i18n="nav.services">服务</a>
+                <a href="#services" data-i18n="nav.services">产品服务</a>
                 <a href="#team" data-i18n="nav.team">团队</a>
-                <a href="#portfolio" data-i18n="nav.portfolio">作品</a>
+                <a href="#portfolio" data-i18n="nav.portfolio">案例</a>
                 <a href="#testimonials" data-i18n="nav.testimonials">好评</a>
-                <a href="tools/portfolio-calculator.html" data-i18n="nav.tools">工具</a>
+                <div class="nav-tools-wrapper">
+                    <a href="tools/portfolio-calculator.html" data-i18n="nav.tools" style="pointer-events:auto">工具</a>
+                    <div class="nav-tools-mega" role="menu">
+                        <p class="mega-title" data-i18n="nav.tools.title">免费 AI 工具</p>
+                        <div class="mega-grid">
+                            <a href="tools/portfolio-reviewer.html" class="mega-item" role="menuitem">
+                                <span class="mega-item-icon">&#129302;</span>
+                                <div>
+                                    <div class="mega-item-name" data-i18n="nav.tools.reviewer">AI 作品集诊断</div>
+                                    <div class="mega-item-meta"><span class="mega-item-price">¥299</span> · 即时出报告</div>
+                                </div>
+                            </a>
+                            <a href="tools/school-matcher.html" class="mega-item" role="menuitem">
+                                <span class="mega-item-icon">&#127891;</span>
+                                <div>
+                                    <div class="mega-item-name" data-i18n="nav.tools.matcher">选校匹配器</div>
+                                    <div class="mega-item-meta">免费 · AI 个性解读</div>
+                                </div>
+                            </a>
+                            <a href="tools/portfolio-calculator.html" class="mega-item" role="menuitem">
+                                <span class="mega-item-icon">&#128178;</span>
+                                <div>
+                                    <div class="mega-item-name" data-i18n="nav.tools.calculator">费用计算器</div>
+                                    <div class="mega-item-meta">免费 · 30秒估算预算</div>
+                                </div>
+                            </a>
+                            <a href="tools/landing-page-audit.html" class="mega-item" role="menuitem">
+                                <span class="mega-item-icon">&#128269;</span>
+                                <div>
+                                    <div class="mega-item-name" data-i18n="nav.tools.audit">Landing Page 审计</div>
+                                    <div class="mega-item-meta">免费 · SaaS 转化优化</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mega-divider"></div>
+                        <div class="mega-footer">
+                            <a href="tools/portfolio-reviewer.html" data-i18n="nav.tools.cta">立即开始 AI 作品集诊断 →</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="#contact" data-i18n="nav.contact">联系</a>
             </div>
             <div class="nav-right">
-                <a href="https://m.tb.cn/h.7JpsJZMWJLsNTwq" class="nav-cta" target="_blank" data-i18n="nav.shop">进入店铺</a>
+                <button class="nav-cta" onclick="openWechatModal()" data-i18n="nav.shop">预约咨询</button>
                 <div class="lang-switch">
                     <button id="lang-zh" class="active" onclick="switchLang('zh')">中</button>
                     <button id="lang-en" onclick="switchLang('en')">EN</button>
@@ -1598,28 +2085,28 @@
             <div class="aurora-blob"></div>
         </div>
         <div class="hero-badge">
-            <span data-i18n="hero.badge">6年专注设计 · 硅谷+米兰团队 · 设计到交付</span>
+            <span data-i18n="hero.badge">硅谷产品力 × 米兰设计力 × 全栈交付力</span>
         </div>
         <h1 class="hero-title">
             <span class="line1" data-i18n="hero.line1">梦想管理局</span>
-            <span class="line2" data-i18n="hero.line2">只做1%的设计</span>
+            <span class="line2" data-i18n="hero.line2">从概念到上线，只做1%的全链交付</span>
         </h1>
         <p class="hero-subtitle" data-i18n="hero.subtitle" data-i18n-html="true">
-            留学作品集 · AI产品开发 · 品牌设计 · 工业设计<br>
-            名校导师团队 + 全栈产品交付能力
+            AI产品MVP · 工业设计 · 品牌系统 · 留学作品集<br>
+            物理概念 → 数字交互 → 独立部署｜三位一体的跨域交付团队
         </p>
         <div class="hero-stats">
             <div class="hero-stat">
                 <div class="hero-stat-value">6000<span class="highlight">+</span></div>
-                <div class="hero-stat-label" data-i18n="hero.stat1">成功案例</div>
+                <div class="hero-stat-label" data-i18n="hero.stat1">成功交付</div>
             </div>
             <div class="hero-stat">
-                <div class="hero-stat-value">98.6<span class="highlight">%</span></div>
-                <div class="hero-stat-label" data-i18n="hero.stat2">好评率</div>
+                <div class="hero-stat-value">14<span class="highlight" data-i18n="hero.stat2.unit">天</span></div>
+                <div class="hero-stat-label" data-i18n="hero.stat2">最快MVP上线</div>
             </div>
             <div class="hero-stat">
-                <div class="hero-stat-value">10000<span class="highlight">+</span></div>
-                <div class="hero-stat-label" data-i18n="hero.stat3">年销量</div>
+                <div class="hero-stat-value">$100M<span class="highlight">+</span></div>
+                <div class="hero-stat-label" data-i18n="hero.stat3">产品操盘经验</div>
             </div>
         </div>
         <div class="hero-cta">
@@ -1628,39 +2115,111 @@
         </div>
     </section>
 
+    <!-- ── Tools Quick-Access Strip ── -->
+    <section class="tools-strip" id="tools-strip" aria-label="AI 工具快捷入口">
+        <p class="tools-strip-label" data-i18n="tools.strip.label">AI 工具 · 免费使用</p>
+        <div class="tools-strip-grid">
+            <a href="tools/portfolio-reviewer.html" class="tool-entry-card featured">
+                <div class="tool-entry-top">
+                    <span class="tool-entry-icon">&#129302;</span>
+                    <span class="tool-entry-badge badge-paid">¥299</span>
+                </div>
+                <div class="tool-entry-name" data-i18n="tools.reviewer.name">AI 作品集诊断</div>
+                <p class="tool-entry-desc" data-i18n="tools.reviewer.desc">上传项目描述，AI 从叙事逻辑、视觉呈现、竞争力三维度打分，60秒出完整诊断报告</p>
+                <span class="tool-entry-cta" data-i18n="tools.reviewer.cta">立即诊断
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+            </a>
+            <a href="tools/school-matcher.html" class="tool-entry-card">
+                <div class="tool-entry-top">
+                    <span class="tool-entry-icon">&#127891;</span>
+                    <span class="tool-entry-badge badge-free" data-i18n="badge.free">免费</span>
+                </div>
+                <div class="tool-entry-name" data-i18n="tools.matcher.name">选校匹配器</div>
+                <p class="tool-entry-desc" data-i18n="tools.matcher.desc">6 个问题定位你的最优院校，AI 给出个性化选校理由 + 作品集差距分析</p>
+                <span class="tool-entry-cta" data-i18n="tools.matcher.cta">开始匹配
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+            </a>
+            <a href="tools/landing-page-audit.html" class="tool-entry-card">
+                <div class="tool-entry-top">
+                    <span class="tool-entry-icon">&#128269;</span>
+                    <span class="tool-entry-badge badge-new">NEW</span>
+                </div>
+                <div class="tool-entry-name" data-i18n="tools.audit.name">Landing Page 审计</div>
+                <p class="tool-entry-desc" data-i18n="tools.audit.desc">输入你的 SaaS 网址，AI 分析转化漏斗断点，给出 3 条可立刻执行的优化建议</p>
+                <span class="tool-entry-cta" data-i18n="tools.audit.cta">免费审计
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+            </a>
+        </div>
+    </section>
+
     <section class="trust-section">
         <div class="trust-content">
             <div class="trust-item">
                 <div class="trust-icon">✓</div>
-                <span data-i18n="trust.1">综合体验 5.0+</span>
+                <span data-i18n="trust.1">硅谷大厂产品经验</span>
             </div>
             <div class="trust-item">
                 <div class="trust-icon">✓</div>
-                <span data-i18n="trust.2">宝贝质量 5.0+</span>
+                <span data-i18n="trust.2">3+已上线独立产品</span>
             </div>
             <div class="trust-item">
                 <div class="trust-icon">✓</div>
-                <span data-i18n="trust.3">服务保障 5.0+</span>
+                <span data-i18n="trust.3">400M+用户级产品设计</span>
             </div>
             <div class="trust-item">
                 <div class="trust-icon">✓</div>
-                <span data-i18n="trust.4">服务速度很快</span>
+                <span data-i18n="trust.4">14天MVP交付承诺</span>
             </div>
             <div class="trust-item">
                 <div class="trust-icon">✓</div>
-                <span data-i18n="trust.5">支持信用卡支付</span>
+                <span data-i18n="trust.5">6年·6000+案例</span>
             </div>
         </div>
     </section>
 
     <section class="services" id="services">
         <div class="section-header fade-in">
-            <p class="section-eyebrow">Our Services</p>
-            <h2 class="section-title" data-i18n="services.title">专业设计服务</h2>
-            <p class="section-desc" data-i18n="services.desc">从作品集到品牌设计，从留学申请到个人展览，一站式解决方案</p>
+            <p class="section-eyebrow">Our Solutions</p>
+            <h2 class="section-title" data-i18n="services.title">产品化解决方案</h2>
+            <p class="section-desc" data-i18n="services.desc">从AI应用MVP到品牌系统，从工业设计到留学作品集——全链路交付，固定价格</p>
         </div>
+        <a href="services/ai-mvp.html" class="service-premium-banner fade-in">
+            <div class="premium-badge" data-i18n="svc.mvp.badge">NEW · 产品化服务</div>
+            <div class="premium-content">
+                <h3 data-i18n="svc.mvp.title">AI应用MVP · 14天交付</h3>
+                <p data-i18n="svc.mvp.desc">从产品逻辑到UI设计到前端开发到部署上线——固定价格，确定周期，可验证的成果物。</p>
+                <div class="premium-deliverables">
+                    <span>产品逻辑梳理</span>
+                    <span>UI/UX设计</span>
+                    <span>前端开发</span>
+                    <span>API集成</span>
+                    <span>部署上线</span>
+                </div>
+            </div>
+            <div class="premium-right">
+                <div class="premium-price">¥35,000<span data-i18n="svc.mvp.price.unit"> 起</span></div>
+                <span class="btn-primary" data-i18n="svc.mvp.cta">了解详情 →</span>
+            </div>
+        </a>
         <div class="services-grid">
-            <a href="https://item.taobao.com/item.htm?id=803744173646" target="_blank" class="service-card featured fade-in">
+            <a href="https://item.taobao.com/item.htm?id=1034073567253" target="_blank" class="service-card featured fade-in">
+                <div class="service-image">
+                    <img src="网站程序设计定制.svg" alt="产品设计×全栈开发">
+                </div>
+                <div class="service-content-area">
+                    <h3 data-i18n="svc7.title">产品设计 × 全栈开发</h3>
+                    <p data-i18n="svc7.desc">AI产品 / SaaS应用 / 小程序 / 企业官网——从产品逻辑到UI设计到前端开发，端到端交付</p>
+                    <div class="service-tags">
+                        <span class="service-tag" data-i18n="svc7.tag1">AI产品</span>
+                        <span class="service-tag" data-i18n="svc7.tag2">全栈开发</span>
+                    </div>
+                </div>
+                <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
+            </a>
+            <a href="https://item.taobao.com/item.htm?id=803744173646" target="_blank" class="service-card fade-in">
                 <div class="service-image">
                     <img src="https://gw.alicdn.com/imgextra/O1CN017hrJTH1Q1ZyMOJB8h_!!1794791916.png" alt="作品集原创设计">
                 </div>
@@ -1672,34 +2231,6 @@
                         <span class="service-tag" data-i18n="svc1.tag2">国内考研</span>
                         <span class="service-tag" data-i18n="svc1.tag3">定制服务</span>
                         <span class="service-tag" data-i18n="svc1.tag4">1对1咨询</span>
-                    </div>
-                </div>
-                <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
-            </a>
-            <a href="https://item.taobao.com/item.htm?id=615300225900" target="_blank" class="service-card fade-in">
-                <div class="service-image">
-                    <img src="https://gw.alicdn.com/imgextra/O1CN01e3RDba1Q1ZYHAJtns_!!1794791916.png" alt="LOGO平面设计">
-                </div>
-                <div class="service-content-area">
-                    <h3 data-i18n="svc2.title">LOGO平面设计</h3>
-                    <p data-i18n="svc2.desc">商标设计 / 画册设计 / VI设计，企业公司原创包装平面设计</p>
-                    <div class="service-tags">
-                        <span class="service-tag" data-i18n="svc2.tag1">原创设计</span>
-                        <span class="service-tag" data-i18n="svc2.tag2">商标注册</span>
-                    </div>
-                </div>
-                <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
-            </a>
-            <a href="https://item.taobao.com/item.htm?id=641877726592" target="_blank" class="service-card fade-in">
-                <div class="service-image">
-                    <img src="https://gw.alicdn.com/imgextra/O1CN016ujpw51Q1ZYPdnXzi_!!1794791916.png" alt="设计师招聘">
-                </div>
-                <div class="service-content-area">
-                    <h3 data-i18n="svc3.title">设计师招聘</h3>
-                    <p data-i18n="svc3.desc">985/211/八大美院/QS排名前300，专业招聘一对一辅导</p>
-                    <div class="service-tags">
-                        <span class="service-tag" data-i18n="svc3.tag1">名校资源</span>
-                        <span class="service-tag" data-i18n="svc3.tag2">面试辅导</span>
                     </div>
                 </div>
                 <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
@@ -1717,6 +2248,20 @@
                     </div>
                 </div>
                 <div class="service-price">¥50<span data-i18n="price.from">起</span></div>
+            </a>
+            <a href="https://item.taobao.com/item.htm?id=615300225900" target="_blank" class="service-card fade-in">
+                <div class="service-image">
+                    <img src="https://gw.alicdn.com/imgextra/O1CN01e3RDba1Q1ZYHAJtns_!!1794791916.png" alt="LOGO平面设计">
+                </div>
+                <div class="service-content-area">
+                    <h3 data-i18n="svc2.title">LOGO平面设计</h3>
+                    <p data-i18n="svc2.desc">商标设计 / 画册设计 / VI设计，企业公司原创包装平面设计</p>
+                    <div class="service-tags">
+                        <span class="service-tag" data-i18n="svc2.tag1">原创设计</span>
+                        <span class="service-tag" data-i18n="svc2.tag2">商标注册</span>
+                    </div>
+                </div>
+                <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
             </a>
             <a href="https://item.taobao.com/item.htm?id=859327120560" target="_blank" class="service-card fade-in">
                 <div class="service-image">
@@ -1746,26 +2291,52 @@
                 </div>
                 <div class="service-price">¥99.69<span data-i18n="price.from">起</span></div>
             </a>
-            <a href="https://item.taobao.com/item.htm?id=1034073567253" target="_blank" class="service-card fade-in">
+            <a href="https://item.taobao.com/item.htm?id=641877726592" target="_blank" class="service-card fade-in">
                 <div class="service-image">
-                    <img src="网站程序设计定制.svg" alt="网站程序设计定制">
+                    <img src="https://gw.alicdn.com/imgextra/O1CN016ujpw51Q1ZYPdnXzi_!!1794791916.png" alt="设计师招聘">
                 </div>
                 <div class="service-content-area">
-                    <h3 data-i18n="svc7.title">网站程序设计定制</h3>
-                    <p data-i18n="svc7.desc">网站设计 / 小程序开发 / H5页面 / 前端开发，企业官网与应用程序定制设计开发</p>
+                    <h3 data-i18n="svc3.title">设计师招聘</h3>
+                    <p data-i18n="svc3.desc">985/211/八大美院/QS排名前300，专业招聘一对一辅导</p>
                     <div class="service-tags">
-                        <span class="service-tag" data-i18n="svc7.tag1">网站设计</span>
-                        <span class="service-tag" data-i18n="svc7.tag2">程序定制</span>
+                        <span class="service-tag" data-i18n="svc3.tag1">名校资源</span>
+                        <span class="service-tag" data-i18n="svc3.tag2">面试辅导</span>
                     </div>
                 </div>
                 <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
             </a>
         </div>
         <div class="service-detail-links">
+            <a href="services/ai-mvp.html" class="service-detail-btn">AI应用MVP <span>→</span></a>
             <a href="services/portfolio-design.html" class="service-detail-btn">作品集设计 <span>→</span></a>
             <a href="services/logo-branding.html" class="service-detail-btn">LOGO/品牌设计 <span>→</span></a>
             <a href="services/industrial-design.html" class="service-detail-btn">工业设计/3D建模 <span>→</span></a>
             <a href="services/phd-research-proposal.html" class="service-detail-btn">博士申请/RP写作 <span>→</span></a>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="section-header fade-in">
+            <p class="section-eyebrow">Our Products</p>
+            <h2 class="section-title" data-i18n="products.title">我们自己做的产品</h2>
+            <p class="section-desc" data-i18n="products.desc">不只是接单——我们自己设计、开发、上线产品。同样的全栈交付能力，也为你服务。</p>
+        </div>
+        <div class="products-grid fade-in">
+            <a href="https://billvampire.com" target="_blank" rel="noopener" class="product-card">
+                <p class="product-name">BillVampire</p>
+                <p class="product-desc" data-i18n="products.bv">AI-powered bill splitting — scan receipt, split in seconds. 从设计到开发到上线，全栈独立交付。</p>
+                <span class="product-badge">已上线 · billvampire.com</span>
+            </a>
+            <a href="https://joeyzhao.cc" target="_blank" rel="noopener" class="product-card">
+                <p class="product-name">Joey Zhao</p>
+                <p class="product-desc" data-i18n="products.joey">设计师 × 全栈开发者——个人站与项目集，记录从概念到产品的全过程。</p>
+                <span class="product-badge">joeyzhao.cc</span>
+            </a>
+            <a href="https://1-design-lab.com" target="_blank" rel="noopener" class="product-card">
+                <p class="product-name">1%DesignLab</p>
+                <p class="product-desc" data-i18n="products.site">本站——从设计系统到前端开发到SEO到部署，完全自主构建。</p>
+                <span class="product-badge">已上线 · 1-design-lab.com</span>
+            </a>
         </div>
     </section>
 
@@ -2084,29 +2655,9 @@
         </div>
     </section>
 
-    <section style="max-width:900px;margin:0 auto;padding:60px 24px 0">
-        <div style="text-align:center;margin-bottom:32px">
-            <p style="font-size:12px;font-weight:500;letter-spacing:2px;color:var(--mint);text-transform:uppercase;margin-bottom:8px">Our Products</p>
-            <h2 style="font-size:clamp(20px,3vw,26px);font-weight:700;color:var(--text-primary);margin-bottom:8px" data-i18n="products.title">产品开发实战</h2>
-            <p style="font-size:14px;color:var(--text-muted)" data-i18n="products.desc">我们自己设计、开发、上线的产品——同样的能力也为你服务</p>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
-            <a href="https://billvampire.com" target="_blank" rel="noopener" style="display:block;padding:24px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:12px;text-decoration:none;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-                <p style="font-size:16px;font-weight:600;color:var(--mint);margin-bottom:8px">BillVampire</p>
-                <p style="font-size:14px;color:var(--text-body);margin-bottom:12px;line-height:1.6" data-i18n="products.bv">AI-powered bill splitting — scan receipt, split in seconds. 从设计到开发到上线，全栈独立交付。</p>
-                <span style="display:inline-block;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:500;color:var(--mint);background:rgba(87,255,195,0.1);border:1px solid rgba(87,255,195,0.25)">已上线 · billvampire.com</span>
-            </a>
-            <a href="https://joeyzhao.cc" target="_blank" rel="noopener" style="display:block;padding:24px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:12px;text-decoration:none;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-                <p style="font-size:16px;font-weight:600;color:var(--mint);margin-bottom:8px">Joey Zhao</p>
-                <p style="font-size:14px;color:var(--text-body);margin-bottom:12px;line-height:1.6" data-i18n="products.joey">设计师 × 全栈开发者——个人站与项目集，记录从概念到产品的全过程。</p>
-                <span style="display:inline-block;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:500;color:var(--mint);background:rgba(87,255,195,0.1);border:1px solid rgba(87,255,195,0.25)">joeyzhao.cc</span>
-            </a>
-        </div>
-    </section>
-
     <section class="cta" id="contact">
-        <h2 class="cta-title fade-in" data-i18n="cta.title">让我们开始吧</h2>
-        <p class="cta-subtitle fade-in" data-i18n="cta.subtitle" data-i18n-html="true">无论是留学作品集、产品开发还是品牌设计<br>我们都将用1%的标准来管理你的梦想</p>
+        <h2 class="cta-title fade-in" data-i18n="cta.title">把想法变成产品</h2>
+        <p class="cta-subtitle fade-in" data-i18n="cta.subtitle" data-i18n-html="true">14天AI应用MVP · 全链路品牌系统 · 留学作品集<br>固定价格，确定交付——让我们聊聊你的下一个项目</p>
         <div class="cta-buttons fade-in">
             <button class="wechat-btn" onclick="openWechatModal()">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.269-.03-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg>
@@ -2234,35 +2785,64 @@
         const translations = {
             en: {
                 // Nav
-                'nav.services': 'Services',
+                'nav.services': 'Solutions',
                 'nav.team': 'Team',
-                'nav.portfolio': 'Portfolio',
+                'nav.portfolio': 'Cases',
                 'nav.process': 'Process',
                 'nav.tools': 'Tools',
+                'nav.tools.title': 'Free AI Tools',
+                'nav.tools.reviewer': 'AI Portfolio Audit',
+                'nav.tools.matcher': 'School Matcher',
+                'nav.tools.calculator': 'Budget Calculator',
+                'nav.tools.audit': 'Landing Page Audit',
+                'nav.tools.cta': 'Start AI Portfolio Audit →',
                 'nav.contact': 'Contact',
-                'nav.shop': 'Shop',
+                'nav.shop': 'Book Consultation',
+
+                // Tools Strip
+                'tools.strip.label': 'AI Tools · Free to Use',
+                'tools.reviewer.name': 'AI Portfolio Audit',
+                'tools.reviewer.desc': 'Upload your project description. AI scores narrative logic, visual presentation, and competitiveness — full report in 60 seconds.',
+                'tools.reviewer.cta': 'Audit Now',
+                'tools.matcher.name': 'School Matcher',
+                'tools.matcher.desc': '6 questions to find your ideal schools. AI explains why each fits you + portfolio gap analysis.',
+                'tools.matcher.cta': 'Start Matching',
+                'tools.audit.name': 'Landing Page Audit',
+                'tools.audit.desc': 'Enter your SaaS URL. AI maps your conversion funnel and gives 3 actionable fixes.',
+                'tools.audit.cta': 'Free Audit',
+                'badge.free': 'Free',
+                'mobile.bar.reviewer': '🤖 AI Audit ¥299',
+                'mobile.bar.matcher': '🎓 Free Matching',
 
                 // Hero
-                'hero.badge': '6 Years of Design · Silicon Valley + Milan · Design to Delivery',
+                'hero.badge': 'Silicon Valley Product × Milan Design × Full-Stack Delivery',
                 'hero.line1': 'Dream Bureau',
-                'hero.line2': 'Only the Top 1% Design',
-                'hero.subtitle': 'Study Abroad Portfolios · AI Product Dev · Branding · Industrial Design<br>Top university mentors + full-stack product delivery',
-                'hero.stat1': 'Successful Cases',
-                'hero.stat2': 'Positive Reviews',
-                'hero.stat3': 'Annual Sales',
+                'hero.line2': 'Full-Chain Delivery, Top 1% Standards',
+                'hero.subtitle': 'AI App MVP · Industrial Design · Brand Systems · Study Abroad Portfolios<br>Physical concepts → digital interaction → deployed code — a cross-domain delivery team',
+                'hero.stat1': 'Successful Deliveries',
+                'hero.stat2': 'Fastest MVP Launch',
+                'hero.stat2.unit': 'Days',
+                'hero.stat3': 'Product Experience',
                 'hero.cta1': 'Consult Now →',
-                'hero.cta2': 'Our Services',
+                'hero.cta2': 'Our Solutions',
 
                 // Trust
-                'trust.1': 'Overall Rating 5.0+',
-                'trust.2': 'Product Quality 5.0+',
-                'trust.3': 'Service Guarantee 5.0+',
-                'trust.4': 'Fast Service',
-                'trust.5': 'Credit Card Accepted',
+                'trust.1': 'Silicon Valley Product Experience',
+                'trust.2': '3+ Shipped Products Live',
+                'trust.3': 'Designed for 400M+ Users',
+                'trust.4': '14-Day MVP Delivery',
+                'trust.5': '6 Years · 6000+ Cases',
+
+                // Premium MVP Service
+                'svc.mvp.badge': 'NEW · Productized Service',
+                'svc.mvp.title': 'AI App MVP · 14-Day Delivery',
+                'svc.mvp.desc': 'From product logic to UI design to frontend dev to deployment — fixed price, fixed timeline, verifiable deliverable.',
+                'svc.mvp.price.unit': '+',
+                'svc.mvp.cta': 'Learn More →',
 
                 // Services
-                'services.title': 'Professional Design Services',
-                'services.desc': 'From portfolio to branding, from study abroad applications to personal exhibitions — one-stop solutions',
+                'services.title': 'Productized Solutions',
+                'services.desc': 'From AI app MVPs to brand systems, industrial design to study portfolios — full-chain delivery, fixed pricing',
                 'svc1.title': 'Portfolio Design',
                 'svc1.desc': 'Product Design / Interaction Design / Architecture / Landscape / Interior / Fashion Design — covering top universities worldwide',
                 'svc1.tag1': 'Overseas',
@@ -2289,10 +2869,10 @@
                 'svc6.desc': 'Shanghai offline space — professional art curation, rapid setup, portfolio showcase',
                 'svc6.tag1': 'Shanghai',
                 'svc6.tag2': 'Curation',
-                'svc7.title': 'Website & App Development',
-                'svc7.desc': 'Website design / Mini-program dev / H5 pages / Frontend — custom website and application design & development',
-                'svc7.tag1': 'Web Design',
-                'svc7.tag2': 'Custom Dev',
+                'svc7.title': 'Product Design × Full-Stack Dev',
+                'svc7.desc': 'AI products / SaaS apps / Mini-programs / Corporate sites — end-to-end delivery from product logic to UI to frontend',
+                'svc7.tag1': 'AI Products',
+                'svc7.tag2': 'Full-Stack',
                 'price.from': '+',
 
                 // Team
@@ -2385,18 +2965,19 @@
 
                 // Products
                 'products.title': 'Products We Shipped',
-                'products.desc': 'Products we designed, developed, and launched — the same capability serves you',
+                'products.desc': 'Not just client work — we design, develop, and ship our own products. The same full-stack delivery capability serves you.',
                 'products.bv': 'AI-powered bill splitting — scan receipt, split in seconds. Designed, developed, and launched end-to-end.',
                 'products.joey': 'Designer × full-stack developer — personal site and project showcase, documenting the journey from concept to product.',
+                'products.site': 'This site — from design system to frontend dev to SEO to deployment, fully self-built.',
 
                 // CTA
-                'cta.title': "Let's Get Started",
-                'cta.subtitle': 'Whether it\'s study abroad portfolios, product development, or branding<br>We manage your dreams with the standard of the top 1%',
+                'cta.title': 'Turn Ideas Into Products',
+                'cta.subtitle': '14-Day AI App MVP · Full-Chain Brand Systems · Study Abroad Portfolios<br>Fixed price, guaranteed delivery — let\'s talk about your next project',
                 'cta.wechat': 'WeChat Contact →',
                 'cta.email': 'Email Us →',
 
                 // Footer
-                'footer.brand': 'Dream Bureau — 6 years of design excellence, 6000+ clients served, 98.6% positive reviews. We believe truly outstanding design is only 1%, and we only do that 1%.',
+                'footer.brand': 'Dream Bureau — from physical concepts to deployed code. 6 years, 6000+ deliveries, full-chain product delivery. We only do the top 1%.',
                 'footer.services': 'Services',
                 'footer.svc1': 'Portfolio Design',
                 'footer.svc2': 'Logo Design',
@@ -2410,7 +2991,7 @@
                 'footer.c3': 'WeChat',
                 'footer.c4': 'Xiaohongshu',
                 'footer.copy': '© 2025 1%DesignLab Dream Bureau. All rights reserved.',
-                'footer.tagline': '6 Years of Design · Silicon Valley + Milan · Design to Delivery',
+                'footer.tagline': 'Silicon Valley Product × Milan Design × Full-Stack Delivery',
 
                 // WeChat Modal
                 'wechat.title': 'WeChat Contact',
@@ -2868,6 +3449,23 @@
         }
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+
+    <!-- ── Mobile Floating Tools Bar ── -->
+    <div class="mobile-tools-bar" id="mobileToolsBar" aria-label="工具快捷入口">
+        <a href="tools/portfolio-reviewer.html" class="mobile-bar-btn primary" data-i18n="mobile.bar.reviewer">&#129302; AI 诊断 ¥299</a>
+        <a href="tools/school-matcher.html" class="mobile-bar-btn secondary" data-i18n="mobile.bar.matcher">&#127891; 免费选校</a>
+    </div>
+    <script>
+    (function() {
+        var bar = document.getElementById('mobileToolsBar');
+        if (!bar) return;
+        // Hide bar on tool pages themselves
+        var path = window.location.pathname;
+        if (path.indexOf('/tools/') !== -1) {
+            bar.classList.add('bar-hidden');
+        }
     })();
     </script>
 </body>
