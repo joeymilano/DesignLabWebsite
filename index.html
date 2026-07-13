@@ -2059,11 +2059,13 @@
                             </a>
                         </div>
                         <div class="mega-divider"></div>
-                        <div class="mega-footer">
+                        <div class="mega-footer" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+                            <a href="tools/" data-i18n="nav.tools.all">查看全部工具 →</a>
                             <a href="tools/portfolio-reviewer.html" data-i18n="nav.tools.cta">立即开始 AI 作品集诊断 →</a>
                         </div>
                     </div>
                 </div>
+                <a href="blog/" data-i18n="nav.blog">博客</a>
                 <a href="#contact" data-i18n="nav.contact">联系</a>
             </div>
             <div class="nav-right">
@@ -2155,6 +2157,7 @@
                 </span>
             </a>
         </div>
+        <div class="tools-strip-more" style="text-align:center;margin-top:20px"><a href="tools/" style="color:var(--mint);font-size:13px;font-weight:600;text-decoration:none" data-i18n="tools.strip.all">查看全部工具 →</a></div>
     </section>
 
     <section class="trust-section">
@@ -2354,6 +2357,11 @@
                 <p class="product-desc" data-i18n="products.site">本站——从设计系统到前端开发到SEO到部署，完全自主构建。</p>
                 <span class="product-badge">已上线 · 1-design-lab.com</span>
             </a>
+            <a href="https://finfold.app" target="_blank" rel="noopener" class="product-card">
+                <p class="product-name">Finfold</p>
+                <p class="product-desc" data-i18n="products.fin">AI 营销员工——一条产品更新，自动改写成小红书、X、公众号等13个平台的地道文案。独立开发者的内容增长工作台。</p>
+                <span class="product-badge">finfold.app</span>
+            </a>
         </div>
     </section>
 
@@ -2459,19 +2467,19 @@
         </div>
         <div class="portfolio-showcase">
             <div class="portfolio-item-full fade-in">
-                <img src="portfolio-1.png" alt="WHO WE ARE - 关于我们">
+                <img src="portfolio-1.webp" alt="WHO WE ARE - 关于我们" loading="lazy" decoding="async" width="1600" height="3616">
             </div>
             <div class="portfolio-item-full fade-in">
-                <img src="portfolio-2.png" alt="SHOW WORK - 作品展示">
+                <img src="portfolio-2.webp" alt="SHOW WORK - 作品展示" loading="lazy" decoding="async" width="1600" height="5114">
             </div>
             <div class="portfolio-item-full fade-in">
-                <img src="portfolio-3.png" alt="SHOWCASE - 产品设计作品">
+                <img src="portfolio-3.webp" alt="SHOWCASE - 产品设计作品" loading="lazy" decoding="async" width="1600" height="5114">
             </div>
             <div class="portfolio-item-full fade-in">
-                <img src="portfolio-4.png" alt="UI/UX设计作品">
+                <img src="portfolio-4.webp" alt="UI/UX设计作品" loading="lazy" decoding="async" width="1600" height="5114">
             </div>
             <div class="portfolio-item-full fade-in">
-                <img src="portfolio-5.png" alt="3D设计与品牌设计">
+                <img src="portfolio-5.webp" alt="3D设计与品牌设计" loading="lazy" decoding="async" width="1600" height="5114">
             </div>
         </div>
     </section>
@@ -2727,6 +2735,13 @@
                 <p style="font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:6px">作品集要做多久？</p>
                 <p style="font-size:12px;color:var(--text-muted);margin:0">时间规划全攻略，附倒推表</p>
             </a>
+            <a href="blog/" style="display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 24px;background:var(--mint-soft);border:1px solid rgba(87,255,195,0.35);border-radius:12px;text-decoration:none;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(87,255,195,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                <div>
+                    <p style="font-size:14px;font-weight:600;color:var(--mint);margin-bottom:2px">查看全部博客文章 →</p>
+                    <p style="font-size:12px;color:var(--text-body);margin:0">设计留学选校 · 作品集规划与价格 · 持续更新</p>
+                </div>
+                <span style="font-size:18px;color:var(--mint)">→</span>
+            </a>
         </div>
     </section>
 
@@ -2752,8 +2767,8 @@
                 <ul>
                     <li><a href="https://joeyzhao.cc" target="_blank" rel="noopener">joeyzhao.cc</a></li>
                     <li><a href="https://billvampire.com" target="_blank" rel="noopener">BillVampire</a></li>
-                    <li><a href="https://github.com/joeyzhaojoey" target="_blank" rel="noopener">GitHub</a></li>
-                    <li><a href="blog/portfolio-cost-guide.html" data-i18n="footer.blog">博客</a></li>
+                    <li><a href="https://github.com/joeymilano" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://finfold.app" target="_blank" rel="noopener" data-i18n="footer.finfold">Finfold</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -2813,11 +2828,14 @@
                 'nav.tools.calculator': 'Budget Calculator',
                 'nav.tools.audit': 'Landing Page Audit',
                 'nav.tools.cta': 'Start AI Portfolio Audit →',
+                'nav.tools.all': 'View all tools →',
+                'nav.blog': 'Blog',
                 'nav.contact': 'Contact',
                 'nav.shop': 'Book Consultation',
 
                 // Tools Strip
                 'tools.strip.label': 'AI Tools · Free to Use',
+                'tools.strip.all': 'View all tools →',
                 'tools.reviewer.name': 'AI Portfolio Audit',
                 'tools.reviewer.desc': 'Upload your project description. AI scores narrative logic, visual presentation, and competitiveness — full report in 60 seconds.',
                 'tools.reviewer.cta': 'Audit Now',
@@ -2991,6 +3009,7 @@
                 'products.bv': 'AI-powered bill splitting — scan receipt, split in seconds. Designed, developed, and launched end-to-end.',
                 'products.joey': 'Designer × full-stack developer — personal site and project showcase, documenting the journey from concept to product.',
                 'products.site': 'This site — from design system to frontend dev to SEO to deployment, fully self-built.',
+                'products.fin': 'Your AI marketing employee — turn one product update into platform-native content across 13 channels. A content ops workspace for founders and solo teams.',
 
                 // CTA
                 'cta.title': 'Turn Ideas Into Products',
@@ -3006,7 +3025,7 @@
                 'footer.svc3': 'Industrial Design',
                 'footer.svc4': 'PhD Application',
                 'footer.ecosystem': 'Ecosystem',
-                'footer.blog': 'Blog',
+                'footer.finfold': 'Finfold',
                 'footer.contact': 'Contact Us',
                 'footer.c1': 'Online Shop',
                 'footer.c2': 'Customer Service',

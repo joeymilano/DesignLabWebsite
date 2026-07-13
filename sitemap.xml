@@ -2,115 +2,139 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://1-design-lab.com/</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://1-design-lab.com/cases/interaction-design-milano.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://1-design-lab.com/blog/</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://1-design-lab.com/cases/industrial-design-rca.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://1-design-lab.com/blog/design-study-abroad-guide.html</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://1-design-lab.com/cases/architecture-ucl.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://1-design-lab.com/blog/portfolio-cost-guide.html</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://1-design-lab.com/cases/phd-polyu.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://1-design-lab.com/blog/portfolio-timeline.html</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://1-design-lab.com/cases/architecture-columbia-upenn.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://1-design-lab.com/blog/design-agency-how-to-choose.html</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://1-design-lab.com/cases/branding-fashion.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://1-design-lab.com/blog/portfolio-how-to-build.html</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/services/ai-mvp.html</loc>
-    <lastmod>2026-05-21T00:00:00+08:00</lastmod>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/services/portfolio-design.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/services/logo-branding.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/services/industrial-design.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/services/phd-research-proposal.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://1-design-lab.com/blog/portfolio-cost-guide.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <loc>https://1-design-lab.com/cases/interaction-design-milano.html</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://1-design-lab.com/blog/design-study-abroad-guide.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <loc>https://1-design-lab.com/cases/industrial-design-rca.html</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://1-design-lab.com/blog/portfolio-timeline.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <loc>https://1-design-lab.com/cases/architecture-ucl.html</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://1-design-lab.com/blog/design-agency-how-to-choose.html</loc>
-    <lastmod>2026-05-15T00:00:00+08:00</lastmod>
+    <loc>https://1-design-lab.com/cases/phd-polyu.html</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/cases/architecture-columbia-upenn.html</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/cases/branding-fashion.html</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/tools/</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/tools/portfolio-calculator.html</loc>
-    <lastmod>2026-05-21T00:00:00+08:00</lastmod>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/tools/school-matcher.html</loc>
-    <lastmod>2026-05-21T00:00:00+08:00</lastmod>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/tools/portfolio-reviewer.html</loc>
-    <lastmod>2026-05-21T00:00:00+08:00</lastmod>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://1-design-lab.com/tools/landing-page-audit.html</loc>
+    <lastmod>2026-07-13T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

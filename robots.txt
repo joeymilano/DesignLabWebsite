@@ -1,10 +1,13 @@
 User-agent: *
 Allow: /
+Disallow: /_archive/
 
 User-agent: Baiduspider
 Allow: /
+Disallow: /_archive/
 
 User-agent: Baiduspider-render
 Allow: /
+Disallow: /_archive/
 
 Sitemap: https://1-design-lab.com/sitemap.xml

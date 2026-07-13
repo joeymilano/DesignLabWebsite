@@ -1,0 +1,7 @@
+# 归档的原始大图（已被 WebP 替代，无需部署到生产环境）
+/_archive/
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+*.swp
