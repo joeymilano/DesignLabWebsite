@@ -1126,6 +1126,10 @@
             filter: grayscale(15%) contrast(1.03);
         }
         .team-card:hover .team-card-image img { transform: scale(1.05); filter: grayscale(0%); }
+        /* 竖向人像原图：人脸位于画面中部，默认 center top 会把脸挤到卡片底边；
+           单独下移裁切焦点，让人脸落在卡片上 1/4 视觉重点 */
+        .team-card-image img[src="Jackie.png"] { object-position: center 59%; }
+        .team-card-image img[src="学小嵩.png"] { object-position: center 67%; }
         .team-card-content { padding: 20px 22px 22px; }
         .team-card-name { font-size: 20px; letter-spacing: -0.02em; margin-bottom: 2px; }
         .team-card-title {
