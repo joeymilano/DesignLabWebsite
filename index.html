@@ -1341,7 +1341,8 @@
         .office-info h3 { font-size: 30px; letter-spacing: -0.03em; margin-bottom: 14px; }
         .office-info .address { font-size: 16px; color: var(--text-body); line-height: 1.85; margin-bottom: 18px; }
         .office-info .address-detail { display: flex; align-items: flex-start; gap: 11px; }
-        .office-info .address-icon { color: var(--mint); font-size: 18px; margin-top: 2px; }
+        .office-info .address-icon { color: var(--mint); margin-top: 2px; display: inline-flex; }
+        .office-info .address-icon svg { width: 18px; height: 18px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
         .office-gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -1374,6 +1375,51 @@
             z-index: 0;
         }
         .office-gallery-item:hover img { transform: scale(1.04); filter: saturate(1); }
+
+        .office-caps {
+            margin-top: 22px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-subtle);
+        }
+        .office-caps-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+        .office-caps-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        .cap-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12.5px;
+            padding: 6px 11px;
+            border-radius: var(--radius-pill);
+            color: var(--mint);
+            background: var(--mint-soft);
+            border: 1px solid var(--mint-outline);
+        }
+        .cap-ico {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .office-caps-desc {
+            font-size: 13px;
+            color: var(--text-body);
+            line-height: 1.78;
+        }
 
         .cta-title {
             font-size: clamp(46px, 7vw, 76px);
@@ -1629,6 +1675,7 @@
             .footer-content { grid-template-columns: 1fr 1fr; gap: 40px; }
         }
         @media (max-width: 768px) {
+            body { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
             nav { top: 10px; }
             .nav-content {
                 width: calc(100% - 16px);
@@ -1696,7 +1743,7 @@
             .section-desc { font-size: 15px; }
             .services, .team, .portfolio, .testimonials, .process, .office, .cta, .products-section { padding: 92px 16px; }
             .office-gallery { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 120px); }
-            .office-gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
+            .office-gallery-item:first-child { grid-column: auto; grid-row: auto; }
             .footer-content { grid-template-columns: 1fr; }
             .footer-bottom {
                 flex-direction: column;
@@ -1997,6 +2044,16 @@
         }
         .mobile-bar-btn.primary:hover { filter: brightness(1.08); }
         .mobile-bar-btn.secondary:hover { background: rgba(87,255,195,0.15); }
+        .mobile-bar-btn svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
 
         @media (max-width: 768px) {
             .tools-strip-grid {
@@ -2652,7 +2709,7 @@
                 <h3 data-i18n="office.welcome">欢迎来访</h3>
                 <div class="address">
                     <div class="address-detail">
-                        <span class="address-icon">📍</span>
+                        <span class="address-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
                         <div data-i18n="office.address" data-i18n-html="true">
                             <strong>上海市黄浦区</strong><br>
                             黄浦汇数智心城<br>
@@ -2664,6 +2721,18 @@
                     位于上海市中心，毗邻外滩，交通便利<br>
                     欢迎预约到访，面对面沟通您的设计需求
                 </p>
+                <div class="office-caps">
+                    <p class="office-caps-title" data-i18n="office.caps.title">不止于设计 · 全链路落地能力</p>
+                    <div class="office-caps-tags">
+                        <span class="cap-tag"><svg class="cap-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>3D建模</span>
+                        <span class="cap-tag"><svg class="cap-ico" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>3D打印</span>
+                        <span class="cap-tag"><svg class="cap-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6"/><polyline points="12 10 12 12 13 13"/><path d="M16.13 7.66l-.81-4.05a2 2 0 0 0-2-1.61h-2.68a2 2 0 0 0-2 1.61l-.78 4.05"/><path d="M7.88 16.36l.8 4a2 2 0 0 0 2 1.61h2.72a2 2 0 0 0 2-1.61l.81-4.05"/></svg>智能穿戴设备</span>
+                        <span class="cap-tag"><svg class="cap-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>智能装置</span>
+                    </div>
+                    <p class="office-caps-desc" data-i18n="office.caps.desc" data-i18n-html="true">
+                        自有原型工坊与智能硬件能力，从数字建模、快速打样到可穿戴与互动装置，让概念真正被握在手里。
+                    </p>
+                </div>
             </div>
             <div class="office-gallery fade-in">
                 <div class="office-gallery-item">
@@ -2680,6 +2749,9 @@
                 </div>
                 <div class="office-gallery-item">
                     <img src="office-5.jpg" alt="会议室">
+                </div>
+                <div class="office-gallery-item">
+                    <img src="office-6.jpg" alt="原型工坊 · 3D打印与智能装置">
                 </div>
             </div>
         </div>
@@ -2851,8 +2923,8 @@
                 'tools.audit.desc': 'Enter your SaaS URL. AI maps your conversion funnel and gives 3 actionable fixes.',
                 'tools.audit.cta': 'Free Audit',
                 'badge.free': 'Free',
-                'mobile.bar.reviewer': '🤖 AI Audit ¥299',
-                'mobile.bar.matcher': '🎓 Free Matching',
+                'mobile.bar.reviewer': 'AI Audit ¥299',
+                'mobile.bar.matcher': 'Free Matching',
 
                 // Hero
                 'hero.badge': 'Silicon Valley Product × Milan Design × Full-Stack Delivery',
@@ -3005,6 +3077,8 @@
                 'office.welcome': 'Welcome to Visit',
                 'office.address': '<strong>Huangpu District, Shanghai</strong><br>Huangpu Hui Digital Smart City<br>No. 668 East Beijing Road',
                 'office.note': 'Located in downtown Shanghai, near the Bund, easily accessible<br>Book a visit to discuss your design needs in person',
+                'office.caps.title': 'Beyond Design · End-to-End Build Capability',
+                'office.caps.desc': 'In-house prototyping workshop and smart hardware capability — from digital modeling and rapid prototyping to wearables and interactive installations, we make ideas tangible.',
 
                 // Resources
                 'resources.title': 'Free Tools & Resources',
@@ -3501,8 +3575,8 @@
 
     <!-- ── Mobile Floating Tools Bar ── -->
     <div class="mobile-tools-bar" id="mobileToolsBar" aria-label="工具快捷入口">
-        <a href="tools/portfolio-reviewer.html" class="mobile-bar-btn primary" data-i18n="mobile.bar.reviewer">&#129302; AI 诊断 ¥299</a>
-        <a href="tools/school-matcher.html" class="mobile-bar-btn secondary" data-i18n="mobile.bar.matcher">&#127891; 免费选校</a>
+        <a href="tools/portfolio-reviewer.html" class="mobile-bar-btn primary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"/><path d="M5 3v4M3 5h4M17 19h4M19 17v4"/></svg><span data-i18n="mobile.bar.reviewer">AI 诊断 ¥299</span></a>
+        <a href="tools/school-matcher.html" class="mobile-bar-btn secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg><span data-i18n="mobile.bar.matcher">免费选校</span></a>
     </div>
     <script>
     (function() {
