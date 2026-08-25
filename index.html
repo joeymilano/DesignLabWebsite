@@ -815,6 +815,45 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 16px;
         }
+        .business-division-heading {
+            max-width: 1200px;
+            margin: 54px auto 24px;
+            padding-top: 28px;
+            border-top: 1px solid var(--border-subtle);
+            scroll-margin-top: 110px;
+        }
+        .business-division-heading.first {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: 0;
+        }
+        .business-division-heading span {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--mint);
+            font-family: var(--mono);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .08em;
+        }
+        .business-division-heading h3 {
+            margin: 0;
+            color: var(--text-primary);
+            font-size: clamp(24px, 3vw, 36px);
+            letter-spacing: -.03em;
+        }
+        .business-division-heading p {
+            margin: 8px 0 0;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        .services-grid .business-division-heading {
+            grid-column: 1 / -1;
+            width: 100%;
+            order: 2;
+        }
+        .service-card[data-business="studio"] { order: 1; }
+        .service-card[data-business="academy"] { order: 3; }
         .service-card {
             position: relative;
             overflow: hidden;
@@ -1007,13 +1046,14 @@
             justify-content: center;
             flex-shrink: 0;
         }
-        .service-card:nth-child(1) .service-content-area h3::before { content: 'DEV'; font-size: 8px; }
-        .service-card:nth-child(2) .service-content-area h3::before { content: 'PF'; }
-        .service-card:nth-child(3) .service-content-area h3::before { content: '3D'; }
-        .service-card:nth-child(4) .service-content-area h3::before { content: 'ID'; }
-        .service-card:nth-child(5) .service-content-area h3::before { content: 'PHD'; font-size: 8px; }
-        .service-card:nth-child(6) .service-content-area h3::before { content: 'EX'; }
-        .service-card:nth-child(7) .service-content-area h3::before { content: 'HR'; }
+        .service-card[data-code="dev"] .service-content-area h3::before { content: 'DEV'; font-size: 8px; }
+        .service-card[data-code="pf"] .service-content-area h3::before { content: 'PF'; }
+        .service-card[data-code="course"] .service-content-area h3::before { content: 'ST'; }
+        .service-card[data-code="id"] .service-content-area h3::before { content: 'ID'; }
+        .service-card[data-code="brand"] .service-content-area h3::before { content: 'VI'; }
+        .service-card[data-code="phd"] .service-content-area h3::before { content: 'PHD'; font-size: 8px; }
+        .service-card[data-code="ex"] .service-content-area h3::before { content: 'EX'; }
+        .service-card[data-code="hr"] .service-content-area h3::before { content: 'HR'; }
         .service-card.featured .service-content-area h3 { font-size: 24px; }
         .service-content-area p { font-size: 13.5px; line-height: 1.7; color: var(--text-muted); margin-bottom: 14px; }
         .service-tags { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -1042,7 +1082,27 @@
 
         .service-detail-links {
             display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
-            margin-top: 40px; padding: 0 24px;
+            margin-top: 14px; padding: 0 24px;
+        }
+        .service-detail-groups {
+            max-width: 1200px;
+            margin: 42px auto 0;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+        .service-detail-group {
+            padding: 24px;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-card);
+            background: var(--bg-elev-1);
+        }
+        .service-detail-group > span {
+            display: block;
+            color: var(--text-muted);
+            font-family: var(--mono);
+            font-size: 11px;
+            text-align: center;
         }
         .service-detail-btn {
             display: inline-flex; align-items: center; gap: 8px;
@@ -1064,6 +1124,10 @@
         }
         .service-detail-btn:hover span {
             transform: translateX(4px);
+        }
+        @media (max-width: 768px) {
+            .business-division-heading { margin-top: 40px; }
+            .service-detail-groups { grid-template-columns: 1fr; }
         }
 
         .team-intro { max-width: 760px; margin: 0 auto 62px; text-align: center; }
@@ -2169,10 +2233,10 @@
                 <img src="logo.jpg" alt="1% Design Lab">
             </div>
             <div class="nav-links">
-                <a href="#services" data-i18n="nav.services">产品服务</a>
+                <a href="#product-studio" data-i18n="nav.studio">AI产品开发</a>
+                <a href="#portfolio-academy" data-i18n="nav.academy">艺术留学作品集</a>
                 <a href="#team" data-i18n="nav.team">团队</a>
                 <a href="#portfolio" data-i18n="nav.portfolio">案例</a>
-                <a href="#testimonials" data-i18n="nav.testimonials">好评</a>
                 <div class="nav-tools-wrapper">
                     <a href="tools/portfolio-calculator" data-i18n="nav.tools" style="pointer-events:auto">工具</a>
                     <div class="nav-tools-mega" role="menu">
@@ -2263,8 +2327,8 @@
             </div>
         </div>
         <div class="hero-cta">
-            <button class="btn-primary" onclick="openWechatModal()" data-i18n="hero.cta1">立即咨询 →</button>
-            <a href="#services" class="btn-secondary" data-i18n="hero.cta2">了解服务</a>
+            <a href="#product-studio" class="btn-primary" data-i18n="hero.cta1">我要开发AI产品 →</a>
+            <a href="#portfolio-academy" class="btn-secondary" data-i18n="hero.cta2">我要准备作品集 →</a>
         </div>
     </section>
 
@@ -2342,7 +2406,7 @@
         </div>
         <div class="intent-pathways-grid">
             <article class="intent-card fade-in">
-                <span class="intent-card-label" data-i18n="paths.portfolio.label">DESIGN PORTFOLIO</span>
+                <span class="intent-card-label" data-i18n="paths.portfolio.label">1% 艺术设计作品集学院</span>
                 <h3 data-i18n="paths.portfolio.title">作品集怎么做，多久，多少钱</h3>
                 <p data-i18n="paths.portfolio.desc">从目标院校、项目和截止日期开始，继续查看方法、官方要求、案例、诊断工具与一对一辅导。</p>
                 <a class="intent-primary-link" href="portfolio/" data-i18n="paths.portfolio.cta">进入作品集主题页 →</a>
@@ -2354,7 +2418,7 @@
                 </div>
             </article>
             <article class="intent-card fade-in">
-                <span class="intent-card-label" data-i18n="paths.ai.label">AI PRODUCT</span>
+                <span class="intent-card-label" data-i18n="paths.ai.label">1% AI产品工作室</span>
                 <h3 data-i18n="paths.ai.title">从Agent或原型走到可上线产品</h3>
                 <p data-i18n="paths.ai.desc">先确定核心任务，再处理真实数据、权限、安全、测试与维护。已经有原型，也可以从产品化检查开始。</p>
                 <a class="intent-primary-link" href="services/ai-mvp" data-i18n="paths.ai.cta">查看AI MVP开发服务 →</a>
@@ -2372,6 +2436,11 @@
             <p class="section-eyebrow">我们的服务</p>
             <h2 class="section-title" data-i18n="services.title">我们能帮你做什么</h2>
             <p class="section-desc" data-i18n="services.desc">AI产品开发、品牌设计、工业设计、留学作品集——告诉我们你要解决什么问题，我们来给出方案</p>
+        </div>
+        <div class="business-division-heading first fade-in" id="product-studio">
+            <span data-i18n="business.studio.label">1% AI产品工作室</span>
+            <h3 data-i18n="business.studio.title">AI产品开发与商业设计</h3>
+            <p data-i18n="business.studio.desc">AI产品开发 · 工业设计 · 品牌设计</p>
         </div>
         <a href="services/ai-mvp" class="service-premium-banner fade-in">
             <div class="premium-badge" data-i18n="svc.mvp.badge">NEW · 产品化服务</div>
@@ -2392,7 +2461,7 @@
             </div>
         </a>
         <div class="services-grid">
-            <a href="https://item.taobao.com/item.htm?id=1034073567253" target="_blank" class="service-card featured fade-in">
+            <a href="https://item.taobao.com/item.htm?id=1034073567253" target="_blank" class="service-card featured fade-in" data-business="studio" data-code="dev">
                 <div class="service-image">
                     <img src="网站程序设计定制.svg" alt="产品设计×全栈开发">
                 </div>
@@ -2406,7 +2475,7 @@
                 </div>
                 <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
             </a>
-            <a href="https://item.taobao.com/item.htm?id=803744173646" target="_blank" class="service-card fade-in">
+            <a href="https://item.taobao.com/item.htm?id=803744173646" target="_blank" class="service-card fade-in" data-business="academy" data-code="pf">
                 <div class="service-image">
                     <img src="https://gw.alicdn.com/imgextra/O1CN017hrJTH1Q1ZyMOJB8h_!!1794791916.png" alt="作品集原创设计">
                 </div>
@@ -2422,7 +2491,7 @@
                 </div>
                 <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
             </a>
-            <a href="services/portfolio-design" class="service-card fade-in">
+            <a href="services/portfolio-design" class="service-card fade-in" data-business="academy" data-code="course">
                 <div class="service-image">
                     <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=500&fit=crop&q=80" alt="留学生作业辅导" loading="lazy">
                 </div>
@@ -2437,7 +2506,7 @@
                 </div>
                 <div class="service-price">¥200<span data-i18n="price.from">起</span></div>
             </a>
-            <a href="https://item.taobao.com/item.htm?id=762456555696" target="_blank" class="service-card fade-in">
+            <a href="https://item.taobao.com/item.htm?id=762456555696" target="_blank" class="service-card fade-in" data-business="studio" data-code="id">
                 <div class="service-image">
                     <img src="https://gw.alicdn.com/imgextra/O1CN01Chq9hq1Q1ZYP7SSHZ_!!1794791916.png" alt="工业设计代做">
                 </div>
@@ -2451,7 +2520,7 @@
                 </div>
                 <div class="service-price">¥50<span data-i18n="price.from">起</span></div>
             </a>
-            <a href="https://item.taobao.com/item.htm?id=615300225900" target="_blank" class="service-card fade-in">
+            <a href="https://item.taobao.com/item.htm?id=615300225900" target="_blank" class="service-card fade-in" data-business="studio" data-code="brand">
                 <div class="service-image">
                     <img src="https://gw.alicdn.com/imgextra/O1CN01e3RDba1Q1ZYHAJtns_!!1794791916.png" alt="LOGO平面设计">
                 </div>
@@ -2465,7 +2534,7 @@
                 </div>
                 <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
             </a>
-            <a href="https://item.taobao.com/item.htm?id=859327120560" target="_blank" class="service-card fade-in">
+            <a href="https://item.taobao.com/item.htm?id=859327120560" target="_blank" class="service-card fade-in" data-business="academy" data-code="phd">
                 <div class="service-image">
                     <img src="https://gw.alicdn.com/imgextra/O1CN01SkHZUd1Q1ZsUjc1w4_!!1794791916.jpg" alt="博士研究计划">
                 </div>
@@ -2479,7 +2548,7 @@
                 </div>
                 <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
             </a>
-            <a href="https://item.taobao.com/item.htm?id=999259878379" target="_blank" class="service-card fade-in">
+            <a href="https://item.taobao.com/item.htm?id=999259878379" target="_blank" class="service-card fade-in" data-business="academy" data-code="ex">
                 <div class="service-image">
                     <img src="https://gw.alicdn.com/imgextra/O1CN01Kha6BD1Q1ZyF6xGiB_!!1794791916.png" alt="线下个人艺术展">
                 </div>
@@ -2493,7 +2562,7 @@
                 </div>
                 <div class="service-price">¥99.69<span data-i18n="price.from">起</span></div>
             </a>
-            <a href="https://item.taobao.com/item.htm?id=641877726592" target="_blank" class="service-card fade-in">
+            <a href="https://item.taobao.com/item.htm?id=641877726592" target="_blank" class="service-card fade-in" data-business="academy" data-code="hr">
                 <div class="service-image">
                     <img src="https://gw.alicdn.com/imgextra/O1CN016ujpw51Q1ZYPdnXzi_!!1794791916.png" alt="设计师招聘">
                 </div>
@@ -2507,13 +2576,28 @@
                 </div>
                 <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
             </a>
+            <div class="business-division-heading fade-in" id="portfolio-academy">
+                <span data-i18n="business.academy.label">1% 艺术设计作品集学院</span>
+                <h3 data-i18n="business.academy.title">艺术留学作品集与成长支持</h3>
+                <p data-i18n="business.academy.desc">作品集 · 课程辅导 · 博士申请 · 展览与求职</p>
+            </div>
         </div>
-        <div class="service-detail-links">
-            <a href="services/ai-mvp" class="service-detail-btn">AI应用MVP <span>→</span></a>
-            <a href="services/portfolio-design" class="service-detail-btn">作品集设计 <span>→</span></a>
-            <a href="services/logo-branding" class="service-detail-btn">LOGO/品牌设计 <span>→</span></a>
-            <a href="services/industrial-design" class="service-detail-btn">工业设计/3D建模 <span>→</span></a>
-            <a href="services/phd-research-proposal" class="service-detail-btn">博士申请/RP写作 <span>→</span></a>
+        <div class="service-detail-groups">
+            <div class="service-detail-group">
+                <span data-i18n="business.studio.label">1% AI产品工作室</span>
+                <div class="service-detail-links">
+                    <a href="services/ai-mvp" class="service-detail-btn">AI应用MVP <span>→</span></a>
+                    <a href="services/logo-branding" class="service-detail-btn">LOGO/品牌设计 <span>→</span></a>
+                    <a href="services/industrial-design" class="service-detail-btn">工业设计/3D建模 <span>→</span></a>
+                </div>
+            </div>
+            <div class="service-detail-group">
+                <span data-i18n="business.academy.label">1% 艺术设计作品集学院</span>
+                <div class="service-detail-links">
+                    <a href="services/portfolio-design" class="service-detail-btn">作品集设计 <span>→</span></a>
+                    <a href="services/phd-research-proposal" class="service-detail-btn">博士申请/RP写作 <span>→</span></a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -3019,6 +3103,8 @@
             en: {
                 // Nav
                 'nav.services': 'Solutions',
+                'nav.studio': '1% Product Studio',
+                'nav.academy': '1% Portfolio Academy',
                 'nav.team': 'Team',
                 'nav.portfolio': 'Cases',
                 'nav.process': 'Process',
@@ -3047,8 +3133,8 @@
                 'tools.audit.desc': 'Enter your SaaS URL. AI maps your conversion funnel and gives 3 actionable fixes.',
                 'tools.audit.cta': 'Free Audit',
                 'badge.free': 'Free',
-                'mobile.bar.reviewer': 'AI Audit ¥299',
-                'mobile.bar.matcher': 'Free Matching',
+                'mobile.bar.reviewer': '1% Product Studio',
+                'mobile.bar.matcher': '1% Portfolio Academy',
 
                 // Hero
                 'hero.badge': 'Silicon Valley Product × Milan Design × Full-Stack Delivery',
@@ -3059,8 +3145,8 @@
                 'hero.stat2': 'Fastest MVP Launch',
                 'hero.stat2.unit': 'Days',
                 'hero.stat3': 'Product Experience',
-                'hero.cta1': 'Consult Now →',
-                'hero.cta2': 'Our Solutions',
+                'hero.cta1': '1% Product Studio →',
+                'hero.cta2': '1% Portfolio Academy →',
 
                 // Trust
                 'trust.1': 'Silicon Valley Product Experience',
@@ -3073,7 +3159,7 @@
                 'paths.kicker': 'START WITH THE PROBLEM',
                 'paths.title': 'Are you building a portfolio or turning an AI idea into a product?',
                 'paths.desc': 'Both paths begin with what you already have. Find the method and decision criteria, then move into tools, cases or a scoped service.',
-                'paths.portfolio.label': 'DESIGN PORTFOLIO',
+                'paths.portfolio.label': '1% PORTFOLIO ACADEMY',
                 'paths.portfolio.title': 'How to build it, how long it takes and what support costs',
                 'paths.portfolio.desc': 'Start with your target programme, current projects and deadline, then explore requirements, cases, portfolio review and one-to-one support.',
                 'paths.portfolio.cta': 'Open the portfolio hub →',
@@ -3081,7 +3167,7 @@
                 'paths.portfolio.time': 'Portfolio timeline',
                 'paths.portfolio.cost': 'How to compare portfolio costs',
                 'paths.portfolio.english': 'Design Portfolio English Guide',
-                'paths.ai.label': 'AI PRODUCT',
+                'paths.ai.label': '1% PRODUCT STUDIO',
                 'paths.ai.title': 'Move an agent or prototype into a launchable product',
                 'paths.ai.desc': 'Define the core task, then handle real data, permissions, security, testing and maintenance. Existing prototypes can start with a productisation review.',
                 'paths.ai.cta': 'View AI MVP development →',
@@ -3099,6 +3185,12 @@
                 // Services
                 'services.title': 'What We Can Do For You',
                 'services.desc': 'AI product development, branding, industrial design, study abroad portfolios — tell us your problem, we\'ll figure out the solution',
+                'business.studio.label': '1% Product Studio',
+                'business.studio.title': 'AI Product Development & Commercial Design',
+                'business.studio.desc': 'AI product development · Industrial design · Brand design',
+                'business.academy.label': '1% Portfolio Academy',
+                'business.academy.title': 'Art & Design Portfolios and Application Support',
+                'business.academy.desc': 'Portfolios · Coursework mentoring · PhD applications · Exhibitions and careers',
                 'svc1.title': 'Portfolio Design',
                 'svc1.desc': 'Product Design / Interaction Design / Architecture / Landscape / Interior / Fashion Design — covering top universities worldwide',
                 'svc1.tag1': 'Overseas',
@@ -3722,8 +3814,8 @@
 
     <!-- ── Mobile Floating Tools Bar ── -->
     <div class="mobile-tools-bar" id="mobileToolsBar" aria-label="工具快捷入口">
-        <a href="tools/portfolio-reviewer" class="mobile-bar-btn primary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"/><path d="M5 3v4M3 5h4M17 19h4M19 17v4"/></svg><span data-i18n="mobile.bar.reviewer">AI 诊断 ¥299</span></a>
-        <a href="tools/school-matcher" class="mobile-bar-btn secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg><span data-i18n="mobile.bar.matcher">免费选校</span></a>
+        <a href="#product-studio" class="mobile-bar-btn primary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"/><path d="M5 3v4M3 5h4M17 19h4M19 17v4"/></svg><span data-i18n="mobile.bar.reviewer">AI产品开发</span></a>
+        <a href="#portfolio-academy" class="mobile-bar-btn secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg><span data-i18n="mobile.bar.matcher">艺术留学作品集</span></a>
     </div>
     <script>
     (function() {
