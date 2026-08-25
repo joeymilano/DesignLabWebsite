@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://1-design-lab.com/blog/ai-app-builder-vs-custom-development">
+    <link rel="icon" href="../favicon.ico" sizes="48x48">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../favicon-180x180.png" sizes="180x180">
+
+    <title>AI app builder还是定制开发｜按产品阶段选择</title>
+    <meta name="description" content="客观比较AI app builder与定制开发在验证速度、真实数据、权限、安全、集成、代码所有权和维护上的差异，帮助已有开发需求的团队选择路线。">
+    <meta name="keywords" content="AI app builder,AI应用搭建器,AI应用开发,定制开发,无代码AI应用,MVP开发,AI产品开发">
+
+    <meta property="og:title" content="AI app builder还是定制开发｜按产品阶段选择">
+    <meta property="og:description" content="工具适合快速验证，定制开发适合承接更复杂的数据、权限和长期维护。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://1-design-lab.com/blog/ai-app-builder-vs-custom-development">
+    <meta property="og:image" content="https://1-design-lab.com/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "AI app builder还是定制开发，按产品阶段选择",
+          "description": "比较AI app builder与定制开发在验证、数据、权限、集成、所有权和维护上的差异。",
+          "datePublished": "2026-08-25",
+          "dateModified": "2026-08-25",
+          "inLanguage": "zh-CN",
+          "mainEntityOfPage": "https://1-design-lab.com/blog/ai-app-builder-vs-custom-development",
+          "author": { "@type": "Organization", "@id": "https://1-design-lab.com/#organization", "name": "1%DesignLab 梦想管理局" },
+          "publisher": { "@type": "Organization", "@id": "https://1-design-lab.com/#organization", "name": "1%DesignLab", "logo": { "@type": "ImageObject", "url": "https://1-design-lab.com/logo.jpg" } }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "AI app builder适合做正式产品吗",
+              "acceptedAnswer": { "@type": "Answer", "text": "取决于产品需要。流程简单、平台能力覆盖完整、数据和权限风险较低时，可以继续使用。复杂权限、深度集成或长期演进需求会提高迁移与维护成本。" }
+            },
+            {
+              "@type": "Question",
+              "name": "什么时候应该选择定制开发",
+              "acceptedAnswer": { "@type": "Answer", "text": "当产品依赖复杂业务规则、敏感数据、多角色权限、多个外部系统或长期可控的代码和部署时，定制开发通常更合适。" }
+            },
+            {
+              "@type": "Question",
+              "name": "用AI app builder做过原型以后还能定制开发吗",
+              "acceptedAnswer": { "@type": "Answer", "text": "可以。先整理已验证的用户流程、页面、数据字段和失败反馈，再判断哪些资产能复用，哪些部分需要重新实现。" }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://1-design-lab.com/" },
+            { "@type": "ListItem", "position": 2, "name": "博客", "item": "https://1-design-lab.com/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "AI app builder与定制开发", "item": "https://1-design-lab.com/blog/ai-app-builder-vs-custom-development" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0742RTMPL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K0742RTMPL');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="article-evidence.css?v=20260825">
+</head>
+<body>
+    <article class="article-shell">
+        <header class="article-header">
+            <a href="../blog/" class="back-link">← 返回博客</a>
+            <span class="article-kicker">AI APP BUILDER · 路线选择</span>
+            <h1>AI app builder还是定制开发，先看产品现在要证明什么</h1>
+            <p class="article-deck">两条路线都能做出产品。选择取决于当前阶段、数据与权限、外部集成，以及团队准备怎样维护下一版。</p>
+            <p class="article-meta">2026年8月25日 · 阅读约9分钟 · AI产品开发路线比较</p>
+        </header>
+
+        <main class="article-content">
+            <p>AI app builder把页面生成、数据库和部署放到同一个界面里，一名非开发者也能很快得到可操作的版本。对一个还在验证的想法，这种速度很有价值。用户愿不愿意用，流程是否成立，团队可以先拿到反馈。</p>
+
+            <p>产品继续往前走，选择会落到更具体的问题。不同角色能看到哪些数据，现有系统怎样接入，账单由谁承担，平台限制会不会挡住下一项功能。定制开发解决的是这些长期控制问题，也会带来更高的前期投入和维护责任。</p>
+
+            <div class="lead-note">
+                <p>把选择拆成两个阶段会更清楚。验证阶段关注能否快速得到真实反馈。运营阶段关注数据、权限、稳定性和下一次修改。一个产品可以先用工具验证，再把已确认的核心流程交给定制开发。</p>
+            </div>
+
+            <h2>适合AI app builder的情况</h2>
+            <p>需求还在变化，团队需要先看见完整流程，工具通常更省时间。内部使用的小工具、活动页、表单驱动的业务和低风险原型，也容易落在平台现有能力里。选型时要确认导出能力、数据归属和价格变化，避免验证结束以后才发现迁移困难。</p>
+
+            <p>平台已经提供的登录、数据库和组件可以直接使用。每增加一个平台没有覆盖的需求，复杂度就会上升。大量自定义代码、特殊权限和多个外部系统接入，会让原本简单的工具逐渐变成难以维护的混合项目。</p>
+
+            <h2>适合定制开发的情况</h2>
+            <p>产品有明确的长期运营计划，或核心价值依赖独特流程，定制开发能把数据结构、权限和交互按业务安排。涉及客户数据、支付、组织角色和审计记录时，团队也更容易控制每一层行为。</p>
+
+            <p>定制开发需要先把范围管住。第一版如果同时要求完整后台、复杂自动化和所有未来功能，预算与周期会很快失去边界。先交付一条核心流程，再用真实使用决定下一项开发，通常更稳。</p>
+
+            <div class="comparison">
+                <div class="comparison-row">
+                    <strong>验证速度</strong>
+                    <p>AI app builder常常更快，尤其当页面、数据和登录都能直接使用平台能力时。</p>
+                </div>
+                <div class="comparison-row">
+                    <strong>产品控制</strong>
+                    <p>定制开发能更细地安排交互、数据结构、权限和部署方式。</p>
+                </div>
+                <div class="comparison-row">
+                    <strong>外部集成</strong>
+                    <p>工具适合已有连接器。特殊接口、复杂同步和内部系统通常需要更多定制工作。</p>
+                </div>
+                <div class="comparison-row">
+                    <strong>长期维护</strong>
+                    <p>工具依赖平台能力与定价，定制产品依赖自己的代码、运行环境和维护团队。</p>
+                </div>
+            </div>
+
+            <h2>别只比较第一版价格</h2>
+            <p>工具的初期费用通常容易计算，后续成本会跟用户数量、调用量、存储和高级功能变化。定制开发前期投入更集中，后面还要计算运行环境、第三方服务和持续维护。两边都应当按未来十二个月的使用方式估算。</p>
+
+            <p>迁移成本也要提前看。确认页面和代码能否导出，数据库怎样备份，域名与账号归谁持有。即使现在不准备迁移，这些条件也会影响产品的选择空间。</p>
+
+            <h2>数据和权限决定风险</h2>
+            <p>公开内容生成器与企业内部审批工具承受的风险不同。数据包含个人信息或商业记录时，要弄清存储位置、访问控制和删除方式。多角色产品还要验证服务端是否真的阻止越权操作。</p>
+
+            <p>模型调用也要单独检查。密钥不能出现在浏览器代码里，用户输入和模型输出要按业务需要保存。会产生外部写入的动作，应在执行前让用户确认。</p>
+
+            <h2>已经做过原型怎样迁移</h2>
+            <p>先整理已经被真实使用验证的部分。保留用户流程、页面结构、文案、数据字段和失败反馈。代码是否复用，要看它能否承担权限、测试和维护。只因为原型能运行就全部照搬，可能把演示阶段的省略带进正式产品。</p>
+
+            <div class="fact-grid">
+                <div class="fact-card">
+                    <strong>可以直接复用</strong>
+                    <p>经过用户确认的任务流程、信息层级、内容和业务规则。</p>
+                </div>
+                <div class="fact-card">
+                    <strong>需要重新检查</strong>
+                    <p>账号、数据、权限、支付、模型调用、错误处理和部署方式。</p>
+                </div>
+            </div>
+
+            <h2>用五个问题做最后判断</h2>
+            <ol>
+                <li>这版产品要验证需求，还是准备长期运营。</li>
+                <li>平台现有能力能否完成核心流程。</li>
+                <li>数据、权限和外部集成有多复杂。</li>
+                <li>代码、数据、域名和部署账号由谁持有。</li>
+                <li>三个月后最可能增加什么功能，谁来维护。</li>
+            </ol>
+
+            <p>答案仍然不清楚时，可以先做一个小范围技术评估。把需求拆成平台可以直接完成、需要少量扩展和必须定制的部分。这样得到的路线比单纯比较工具名称更有用。</p>
+
+            <div class="related-links">
+                <h2>继续准备开发</h2>
+                <a href="vibe-coding-to-production">vibe coding原型的产品化检查清单 →</a>
+                <a href="ai-agent-mvp-guide">AI Agent MVP怎样确定第一版范围 →</a>
+                <a href="../services/ai-mvp">查看AI产品MVP定制开发服务 →</a>
+                <a href="../tools/landing-page-audit">检查现有AI产品落地页 →</a>
+            </div>
+        </main>
+
+        <section class="article-cta">
+            <h2>带着现有需求或原型来做路线判断</h2>
+            <p>我们会先拆开验证目标、平台能力和必须定制的部分，再给出第一版范围。</p>
+            <a href="../services/ai-mvp" class="cta-button">查看AI MVP服务</a>
+            <a href="../#contact" class="cta-button">预约技术评估</a>
+        </section>
+
+        <footer class="article-footer">
+            <p>© 2026 <a href="../">1%DesignLab 梦想管理局</a> · 工具与开发路线应按产品阶段选择</p>
+        </footer>
+    </article>
+</body>
+</html>

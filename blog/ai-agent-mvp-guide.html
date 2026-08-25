@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://1-design-lab.com/blog/ai-agent-mvp-guide">
+    <link rel="icon" href="../favicon.ico" sizes="48x48">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../favicon-180x180.png" sizes="180x180">
+
+    <title>AI Agent MVP怎么做｜从单一任务到可验证产品</title>
+    <meta name="description" content="AI Agent MVP实用指南，讲清怎样选择单一任务、连接真实工具和数据、设置人工确认、记录执行过程、设计失败路径，并自然过渡到正式产品开发。">
+    <meta name="keywords" content="AI Agent MVP,AI智能体开发,AI Agent开发,AI产品MVP,智能体产品设计,Agent工作流,AI应用开发">
+
+    <meta property="og:title" content="AI Agent MVP怎么做｜从单一任务到可验证产品">
+    <meta property="og:description" content="先验证一项完整任务，再决定是否扩成复杂智能体产品。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://1-design-lab.com/blog/ai-agent-mvp-guide">
+    <meta property="og:image" content="https://1-design-lab.com/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "AI Agent MVP怎么做，从单一任务到可验证产品",
+          "description": "AI Agent MVP的任务选择、工具连接、人工确认、执行记录、失败路径和产品化方法。",
+          "datePublished": "2026-08-25",
+          "dateModified": "2026-08-25",
+          "inLanguage": "zh-CN",
+          "mainEntityOfPage": "https://1-design-lab.com/blog/ai-agent-mvp-guide",
+          "author": { "@type": "Organization", "@id": "https://1-design-lab.com/#organization", "name": "1%DesignLab 梦想管理局" },
+          "publisher": { "@type": "Organization", "@id": "https://1-design-lab.com/#organization", "name": "1%DesignLab", "logo": { "@type": "ImageObject", "url": "https://1-design-lab.com/logo.jpg" } }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "AI Agent MVP最先验证什么",
+              "acceptedAnswer": { "@type": "Answer", "text": "最先验证一名具体用户能否把一项高频任务交给Agent完成，并且愿意接受它的执行过程、确认方式和结果。" }
+            },
+            {
+              "@type": "Question",
+              "name": "AI Agent MVP需要接真实数据吗",
+              "acceptedAnswer": { "@type": "Answer", "text": "需要。至少要接通完成核心任务所需的真实数据或工具。静态示例只能展示界面，无法验证权限、失败处理和任务结果。" }
+            },
+            {
+              "@type": "Question",
+              "name": "AI Agent什么时候需要人工确认",
+              "acceptedAnswer": { "@type": "Answer", "text": "当Agent要发送消息、修改记录、发布内容、付款或执行其他难以撤回的动作时，应在动作发生前让用户看清目标与影响并确认。" }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://1-design-lab.com/" },
+            { "@type": "ListItem", "position": 2, "name": "博客", "item": "https://1-design-lab.com/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "AI Agent MVP指南", "item": "https://1-design-lab.com/blog/ai-agent-mvp-guide" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0742RTMPL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K0742RTMPL');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="article-evidence.css?v=20260825">
+</head>
+<body>
+    <article class="article-shell">
+        <header class="article-header">
+            <a href="../blog/" class="back-link">← 返回博客</a>
+            <span class="article-kicker">AI PRODUCT · MVP</span>
+            <h1>AI Agent MVP怎么做，从一项完整任务开始</h1>
+            <p class="article-deck">先让一名具体用户把一件事交给Agent完成。任务能跑通，过程看得见，出错有退路，这个版本才有继续投入的价值。</p>
+            <p class="article-meta">2026年8月25日 · 阅读约10分钟 · 产品规划与开发指南</p>
+        </header>
+
+        <main class="article-content">
+            <p>AI Agent很容易在演示里显得聪明。用户写一句目标，屏幕上连续出现思考、搜索和调用工具，最后得到一份结果。产品真正上线以后，问题会落到更具体的地方。它拿什么数据，能改哪些东西，卡住以后怎样告诉用户，已经做过的动作能不能查到。</p>
+
+            <p>所以Agent的最小版本要围绕一项完整任务来定。选一个有明确开始和结束的场景，让用户能够判断结果是否有用。任务太宽，团队会把时间花在补能力。任务太轻，一次普通问答就能完成，Agent没有承担实际工作。</p>
+
+            <div class="lead-note">
+                <p>一个合适的MVP任务通常具备两个条件。用户现在已经在重复做它，完成后能检查结果。先让这项任务跑通，再考虑多Agent协作、长期记忆和更复杂的自动化。</p>
+            </div>
+
+            <h2>先写清谁把什么交给Agent</h2>
+            <p>用户角色要具体到工作情境。运营人员整理一周反馈，销售人员为明天的会议准备客户摘要，创始人把访谈笔记变成待验证的问题，这些任务都能看见输入和结果。写成提升效率或帮助决策，团队很难知道第一版该接什么数据。</p>
+
+            <p>接着找出用户目前怎样完成这件事。他打开哪些页面，复制哪些内容，在哪一步需要判断，最后把结果交给谁。Agent需要接住其中最费时间、也最适合检查的一段。其余步骤可以先保留人工处理。</p>
+
+            <h2>Agent与固定工作流怎样选</h2>
+            <p>步骤稳定、输入字段明确的任务，用普通工作流通常更可靠。每次都要根据材料选择下一步，或需要从多个工具里挑一个时，Agent才有更明显的价值。这个判断会影响成本、测试量和用户对结果的信任。</p>
+
+            <div class="comparison">
+                <div class="comparison-row">
+                    <strong>固定工作流</strong>
+                    <p>步骤可以提前写死，规则明确，结果容易复现，适合表单处理和标准通知。</p>
+                </div>
+                <div class="comparison-row">
+                    <strong>Agent任务</strong>
+                    <p>需要读材料、选择工具或根据中间结果调整下一步，执行路径会随任务变化。</p>
+                </div>
+                <div class="comparison-row">
+                    <strong>混合方式</strong>
+                    <p>让Agent负责理解和选择，把付款、发布、写入数据库等关键动作交给确定的流程。</p>
+                </div>
+            </div>
+
+            <h2>第一版要接真实工具和数据</h2>
+            <p>静态样例能帮助团队讨论界面，无法验证产品能不能工作。Agent要完成核心任务，至少要接通必要的数据源或工具。权限不足、字段缺失、接口超时和返回内容变化，都会影响用户体验。</p>
+
+            <p>数据接入以后，界面要把来源和时间交代清楚。用户需要知道Agent看到了哪些材料，哪些内容没有拿到。结果里如果包含推断，也要让它与已有事实分开。这样用户才能决定接下来是接受、修改，还是回到原始材料。</p>
+
+            <h2>写操作要留在人手里</h2>
+            <p>发送消息、修改客户记录、发布内容和付款都会影响外部世界。第一版可以让Agent准备动作，在执行前展示目标、内容和影响，再让用户确认。这个确认不是多余的一步，它让团队更容易发现理解偏差，也给用户保留控制。</p>
+
+            <p>确认页还应说明能否撤回。能够撤回的动作，完成后给出入口。不能撤回的动作，在确认前把范围写得更清楚。Agent若需要连续执行多个外部动作，最好拆成可以检查的阶段。</p>
+
+            <h2>失败路径要与成功路径一起设计</h2>
+            <p>工具调用失败以后，只显示请重试，用户很难判断刚才发生了什么。产品要保存已完成的步骤，说明停在哪里，并给出继续、修改输入或转人工的选择。重复执行可能造成副作用时，系统还要避免同一动作被再次提交。</p>
+
+            <div class="fact-grid">
+                <div class="fact-card">
+                    <strong>过程可见</strong>
+                    <p>显示正在读取什么、准备做什么，以及哪一步需要用户决定。</p>
+                </div>
+                <div class="fact-card">
+                    <strong>结果可查</strong>
+                    <p>保留输入、工具返回、用户确认和最终动作，方便复盘与纠错。</p>
+                </div>
+            </div>
+
+            <h2>用真实任务判断MVP是否成立</h2>
+            <p>测试时准备一组真实任务，包含正常输入、缺少信息和工具失败。记录用户在哪一步接管，哪些结果被修改，任务最后有没有完成。模型回答看起来顺畅，只能说明演示读起来不错。用户愿意把任务交给它，并且能处理失败，才说明产品开始站住。</p>
+
+            <p>验证通过以后再扩能力。下一项功能应当来自已经出现的阻塞，例如用户反复补同一种资料，或每次都在同一处人工接管。这样扩出来的路线会比功能清单更接近真实需求。</p>
+
+            <div class="related-links">
+                <h2>继续把原型做成产品</h2>
+                <a href="vibe-coding-to-production">vibe coding原型怎样变成可上线产品 →</a>
+                <a href="ai-app-builder-vs-custom-development">AI app builder与定制开发怎样选 →</a>
+                <a href="../services/ai-mvp">查看AI产品MVP开发服务 →</a>
+                <a href="../tools/landing-page-audit">先检查现有产品页的转化路径 →</a>
+            </div>
+        </main>
+
+        <section class="article-cta">
+            <h2>带着一项任务来讨论MVP</h2>
+            <p>准备好目标用户、当前流程、需要连接的工具和必须人工确认的动作，我们可以一起判断第一版范围。</p>
+            <a href="../services/ai-mvp" class="cta-button">查看AI MVP服务</a>
+            <a href="../#contact" class="cta-button">预约需求沟通</a>
+        </section>
+
+        <footer class="article-footer">
+            <p>© 2026 <a href="../">1%DesignLab 梦想管理局</a> · 产品范围应以真实任务和可验证结果为准</p>
+        </footer>
+    </article>
+</body>
+</html>

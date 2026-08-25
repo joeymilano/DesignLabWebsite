@@ -26,8 +26,8 @@
     <link rel="apple-touch-icon" href="favicon-180x180.png" sizes="180x180">
 
     <!-- SEO Meta (Chinese-first for Baidu, then English for Google) -->
-    <title>1%DesignLab 梦想管理局 - AI产品_全栈开发_工业设计_品牌系统_留学作品集 | Product Design Studio</title>
-    <meta name="description" content="1%DesignLab梦想管理局——从物理概念到数字交互到部署上线的全链路交付团队。AI产品MVP 14天上线、工业设计、品牌系统、留学作品集。硅谷+米兰背景，6年6000+成功交付。Full-chain delivery: AI app MVP, industrial design, branding, study abroad portfolios.">
+    <title>1%DesignLab 梦想管理局｜AI产品开发 · 工业设计 · 品牌与作品集</title>
+    <meta name="description" content="1%DesignLab 梦想管理局提供AI产品MVP、全栈开发、工业设计、品牌视觉与留学作品集服务。上海团队，成员拥有硅谷、米兰及QS100院校背景，提供从策略、设计到开发上线的完整交付。">
     <meta name="keywords" content="AI产品开发,MVP开发,全栈开发,产品设计,AI应用,工业设计,品牌设计,作品集设计,留学作品集,LOGO设计,UI设计,交互设计,上海设计公司,产品化服务,AI MVP,full-stack development,product design,industrial design,branding,portfolio design">
 
     <!-- Open Graph -->
@@ -53,37 +53,45 @@
       "@graph": [
         {
           "@type": "Organization",
+          "@id": "https://1-design-lab.com/#organization",
           "name": "1%DesignLab 梦想管理局",
+          "legalName": "上海阿弗洛狄德文化咨询有限公司",
+          "alternateName": ["1% Design Lab", "梦想管理局"],
           "url": "https://1-design-lab.com",
           "logo": "https://1-design-lab.com/logo.jpg",
-          "description": "Professional design studio with 6+ years experience. Portfolio design, logo & branding, industrial design, study abroad applications. 专注设计服务6年，QS100名校团队，一站式设计服务。",
+          "description": "Shanghai design and product studio working across AI product development, industrial design, brand identity, digital media and study-abroad portfolios.",
+          "founder": {
+            "@type": "Person",
+            "@id": "https://joeyzhao.cc/#person",
+            "name": "Joey Zhao",
+            "url": "https://joeyzhao.cc"
+          },
+          "knowsAbout": ["AI product design", "full-stack development", "industrial design", "brand identity", "portfolio design", "digital media design"],
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "北京东路668号裙楼 黄浦汇数智心城",
             "addressLocality": "上海市",
             "addressRegion": "黄浦区",
             "addressCountry": "CN"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "6000"
           }
         },
         {
           "@type": "WebSite",
+          "@id": "https://1-design-lab.com/#website",
           "name": "1%DesignLab",
           "url": "https://1-design-lab.com",
           "description": "Dream Bureau — Only the Top 1% Design. Professional design services for portfolios, branding, and study abroad.",
-          "inLanguage": ["zh-CN", "en"]
+          "inLanguage": ["zh-CN", "en"],
+          "publisher": { "@id": "https://1-design-lab.com/#organization" }
         },
         {
           "@type": "ProfessionalService",
+          "@id": "https://1-design-lab.com/#professional-service",
           "name": "1%DesignLab 梦想管理局",
           "url": "https://1-design-lab.com",
           "image": "https://1-design-lab.com/logo.jpg",
-          "priceRange": "¥50-¥10000",
-          "serviceType": ["作品集设计", "LOGO设计", "工业设计", "留学申请", "博士研究计划", "3D建模", "品牌设计"],
+          "provider": { "@id": "https://1-design-lab.com/#organization" },
+          "serviceType": ["AI产品开发", "全栈开发", "作品集设计", "品牌设计", "工业设计", "数字媒体设计"],
           "areaServed": "CN",
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -91,10 +99,20 @@
             "itemListElement": [
               {
                 "@type": "Offer",
+                "url": "https://1-design-lab.com/services/ai-mvp",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "作品集原创设计",
-                  "description": "产品设计、交互设计、建筑设计、景观设计、环艺设计、服装设计，覆盖海外及国内顶尖院校申请"
+                  "name": "AI产品MVP开发",
+                  "description": "产品逻辑、UI和UX、前后端开发、模型与API集成、测试和部署"
+                }
+              },
+              {
+                "@type": "Offer",
+                "url": "https://1-design-lab.com/services/portfolio-design",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "设计作品集辅导",
+                  "description": "项目规划、过程梳理、页面叙事与申请方向支持"
                 }
               },
               {
@@ -114,48 +132,6 @@
                 }
               }
             ]
-          }
-        }
-      ]
-    }
-    </script>
-
-    <!-- FAQ Structured Data for Baidu/Google rich results -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "作品集设计多少钱？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "1%DesignLab作品集设计服务价格从¥100起，根据专业方向（产品设计、交互设计、建筑设计、工业设计等）、院校目标和项目复杂度定制报价。我们提供从基础排版到全程原创设计的多种套餐，QS100名校导师团队1对1指导，6000+成功案例。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "留学作品集要做多久？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "一般留学作品集制作周期为1-3个月，具体取决于项目数量和申请院校要求。建议在申请截止前4-6个月开始准备。我们有加急通道可在1个月内完成，曾帮助多位同学在短时间内拿到米兰理工、皇艺RCA、UCL等名校offer。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "设计代做靠谱吗？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "选择正规设计工作室非常关键。1%DesignLab拥有6年设计服务经验，团队成员均来自QS100名校（米兰理工、皇艺、UCL、伯克利等），累计6000+成功案例，98.6%好评率。提供全程1对1沟通，作品原创保证，支持无限修改直到满意。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "工业设计留学哪些学校好？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "工业设计留学热门院校包括：英国皇家艺术学院(RCA)、中央圣马丁(CSM)、意大利米兰理工大学、荷兰代尔夫特理工、美国罗德岛设计学院(RISD)、艺术中心设计学院(ACCD)等。1%DesignLab已帮助学生成功申请以上所有院校，可根据你的背景推荐最合适的目标。"
           }
         }
       ]
@@ -2055,6 +2031,108 @@
             stroke-linejoin: round;
         }
 
+        .intent-pathways {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 88px 24px 22px;
+        }
+        .intent-pathways-header {
+            max-width: 720px;
+            margin-bottom: 30px;
+        }
+        .intent-pathways-kicker {
+            color: var(--mint);
+            font-family: var(--mono);
+            font-size: 12px;
+            letter-spacing: .08em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .intent-pathways-title {
+            font-size: clamp(28px, 4vw, 42px);
+            letter-spacing: -.035em;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        .intent-pathways-desc {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.75;
+        }
+        .intent-pathways-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+        .intent-card {
+            background: linear-gradient(145deg, var(--bg-elev-1), rgba(35,35,35,.72));
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            color: inherit;
+            min-height: 310px;
+            overflow: hidden;
+            padding: 30px;
+            position: relative;
+        }
+        .intent-card::after {
+            background: radial-gradient(circle, rgba(87,255,195,.13), transparent 68%);
+            content: '';
+            height: 220px;
+            pointer-events: none;
+            position: absolute;
+            right: -90px;
+            top: -90px;
+            width: 220px;
+        }
+        .intent-card-label {
+            color: var(--mint);
+            display: block;
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: .07em;
+            margin-bottom: 15px;
+        }
+        .intent-card h3 {
+            font-size: 24px;
+            letter-spacing: -.025em;
+            line-height: 1.35;
+            margin-bottom: 11px;
+            max-width: 460px;
+        }
+        .intent-card > p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.72;
+            margin-bottom: 22px;
+            max-width: 520px;
+        }
+        .intent-primary-link {
+            color: var(--mint);
+            display: inline-flex;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
+        .intent-link-list {
+            border-top: 1px solid var(--border-subtle);
+            display: grid;
+            gap: 0;
+            padding-top: 10px;
+        }
+        .intent-link-list a {
+            align-items: center;
+            color: var(--text-body);
+            display: flex;
+            font-size: 13px;
+            justify-content: space-between;
+            padding: 8px 0;
+            text-decoration: none;
+        }
+        .intent-link-list a:hover {
+            color: var(--mint);
+        }
+
         @media (max-width: 768px) {
             .tools-strip-grid {
                 grid-template-columns: 1fr;
@@ -2064,6 +2142,16 @@
             }
             .mobile-tools-bar {
                 display: flex;
+            }
+            .intent-pathways {
+                padding: 64px 16px 10px;
+            }
+            .intent-pathways-grid {
+                grid-template-columns: 1fr;
+            }
+            .intent-card {
+                min-height: 0;
+                padding: 24px;
             }
         }
         @media (min-width: 769px) and (max-width: 1024px) {
@@ -2086,32 +2174,32 @@
                 <a href="#portfolio" data-i18n="nav.portfolio">案例</a>
                 <a href="#testimonials" data-i18n="nav.testimonials">好评</a>
                 <div class="nav-tools-wrapper">
-                    <a href="tools/portfolio-calculator.html" data-i18n="nav.tools" style="pointer-events:auto">工具</a>
+                    <a href="tools/portfolio-calculator" data-i18n="nav.tools" style="pointer-events:auto">工具</a>
                     <div class="nav-tools-mega" role="menu">
                         <p class="mega-title" data-i18n="nav.tools.title">免费 AI 工具</p>
                         <div class="mega-grid">
-                            <a href="tools/portfolio-reviewer.html" class="mega-item" role="menuitem">
+                            <a href="tools/portfolio-reviewer" class="mega-item" role="menuitem">
                                 <span class="mega-item-icon">&#129302;</span>
                                 <div>
                                     <div class="mega-item-name" data-i18n="nav.tools.reviewer">AI 作品集诊断</div>
                                     <div class="mega-item-meta"><span class="mega-item-price">¥299</span> · 即时出报告</div>
                                 </div>
                             </a>
-                            <a href="tools/school-matcher.html" class="mega-item" role="menuitem">
+                            <a href="tools/school-matcher" class="mega-item" role="menuitem">
                                 <span class="mega-item-icon">&#127891;</span>
                                 <div>
                                     <div class="mega-item-name" data-i18n="nav.tools.matcher">选校匹配器</div>
                                     <div class="mega-item-meta">免费 · AI 个性解读</div>
                                 </div>
                             </a>
-                            <a href="tools/portfolio-calculator.html" class="mega-item" role="menuitem">
+                            <a href="tools/portfolio-calculator" class="mega-item" role="menuitem">
                                 <span class="mega-item-icon">&#128178;</span>
                                 <div>
                                     <div class="mega-item-name" data-i18n="nav.tools.calculator">费用计算器</div>
                                     <div class="mega-item-meta">免费 · 30秒估算预算</div>
                                 </div>
                             </a>
-                            <a href="tools/landing-page-audit.html" class="mega-item" role="menuitem">
+                            <a href="tools/landing-page-audit" class="mega-item" role="menuitem">
                                 <span class="mega-item-icon">&#128269;</span>
                                 <div>
                                     <div class="mega-item-name" data-i18n="nav.tools.audit">Landing Page 审计</div>
@@ -2122,7 +2210,7 @@
                         <div class="mega-divider"></div>
                         <div class="mega-footer" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
                             <a href="tools/" data-i18n="nav.tools.all">查看全部工具 →</a>
-                            <a href="tools/portfolio-reviewer.html" data-i18n="nav.tools.cta">立即开始 AI 作品集诊断 →</a>
+                            <a href="tools/portfolio-reviewer" data-i18n="nav.tools.cta">立即开始 AI 作品集诊断 →</a>
                         </div>
                     </div>
                 </div>
@@ -2184,7 +2272,7 @@
     <section class="tools-strip" id="tools-strip" aria-label="AI 工具快捷入口">
         <p class="tools-strip-label" data-i18n="tools.strip.label">AI 工具 · 免费使用</p>
         <div class="tools-strip-grid">
-            <a href="tools/portfolio-reviewer.html" class="tool-entry-card featured">
+            <a href="tools/portfolio-reviewer" class="tool-entry-card featured">
                 <div class="tool-entry-top">
                     <span class="tool-entry-icon">&#129302;</span>
                     <span class="tool-entry-badge badge-paid">¥299</span>
@@ -2195,7 +2283,7 @@
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
             </a>
-            <a href="tools/school-matcher.html" class="tool-entry-card">
+            <a href="tools/school-matcher" class="tool-entry-card">
                 <div class="tool-entry-top">
                     <span class="tool-entry-icon">&#127891;</span>
                     <span class="tool-entry-badge badge-free" data-i18n="badge.free">免费</span>
@@ -2206,7 +2294,7 @@
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
             </a>
-            <a href="tools/landing-page-audit.html" class="tool-entry-card">
+            <a href="tools/landing-page-audit" class="tool-entry-card">
                 <div class="tool-entry-top">
                     <span class="tool-entry-icon">&#128269;</span>
                     <span class="tool-entry-badge badge-new">NEW</span>
@@ -2246,13 +2334,46 @@
         </div>
     </section>
 
+    <section class="intent-pathways" aria-labelledby="intent-pathways-title">
+        <div class="intent-pathways-header fade-in">
+            <p class="intent-pathways-kicker" data-i18n="paths.kicker">从问题开始</p>
+            <h2 class="intent-pathways-title" id="intent-pathways-title" data-i18n="paths.title">你现在要准备作品集，还是把AI想法做成产品</h2>
+            <p class="intent-pathways-desc" data-i18n="paths.desc">两条路径都从当前材料出发。先找到方法与判断标准，再进入工具、案例或具体服务。</p>
+        </div>
+        <div class="intent-pathways-grid">
+            <article class="intent-card fade-in">
+                <span class="intent-card-label" data-i18n="paths.portfolio.label">DESIGN PORTFOLIO</span>
+                <h3 data-i18n="paths.portfolio.title">作品集怎么做，多久，多少钱</h3>
+                <p data-i18n="paths.portfolio.desc">从目标院校、项目和截止日期开始，继续查看方法、官方要求、案例、诊断工具与一对一辅导。</p>
+                <a class="intent-primary-link" href="portfolio/" data-i18n="paths.portfolio.cta">进入作品集主题页 →</a>
+                <div class="intent-link-list">
+                    <a href="blog/portfolio-how-to-build"><span data-i18n="paths.portfolio.how">作品集怎么做</span><span>→</span></a>
+                    <a href="blog/portfolio-timeline"><span data-i18n="paths.portfolio.time">作品集要做多久</span><span>→</span></a>
+                    <a href="blog/portfolio-cost-guide"><span data-i18n="paths.portfolio.cost">作品集费用怎么判断</span><span>→</span></a>
+                    <a href="en/design-portfolio/"><span data-i18n="paths.portfolio.english">Design Portfolio English Guide</span><span>→</span></a>
+                </div>
+            </article>
+            <article class="intent-card fade-in">
+                <span class="intent-card-label" data-i18n="paths.ai.label">AI PRODUCT</span>
+                <h3 data-i18n="paths.ai.title">从Agent或原型走到可上线产品</h3>
+                <p data-i18n="paths.ai.desc">先确定核心任务，再处理真实数据、权限、安全、测试与维护。已经有原型，也可以从产品化检查开始。</p>
+                <a class="intent-primary-link" href="services/ai-mvp" data-i18n="paths.ai.cta">查看AI MVP开发服务 →</a>
+                <div class="intent-link-list">
+                    <a href="blog/ai-agent-mvp-guide"><span data-i18n="paths.ai.agent">AI Agent MVP指南</span><span>→</span></a>
+                    <a href="blog/vibe-coding-to-production"><span data-i18n="paths.ai.vibe">vibe coding原型产品化</span><span>→</span></a>
+                    <a href="blog/ai-app-builder-vs-custom-development"><span data-i18n="paths.ai.builder">AI app builder与定制开发</span><span>→</span></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
     <section class="services" id="services">
         <div class="section-header fade-in">
             <p class="section-eyebrow">我们的服务</p>
             <h2 class="section-title" data-i18n="services.title">我们能帮你做什么</h2>
             <p class="section-desc" data-i18n="services.desc">AI产品开发、品牌设计、工业设计、留学作品集——告诉我们你要解决什么问题，我们来给出方案</p>
         </div>
-        <a href="services/ai-mvp.html" class="service-premium-banner fade-in">
+        <a href="services/ai-mvp" class="service-premium-banner fade-in">
             <div class="premium-badge" data-i18n="svc.mvp.badge">NEW · 产品化服务</div>
             <div class="premium-content">
                 <h3 data-i18n="svc.mvp.title">AI应用MVP · 14天交付</h3>
@@ -2301,7 +2422,7 @@
                 </div>
                 <div class="service-price">¥100<span data-i18n="price.from">起</span></div>
             </a>
-            <a href="services/portfolio-design.html" class="service-card fade-in">
+            <a href="services/portfolio-design" class="service-card fade-in">
                 <div class="service-image">
                     <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=500&fit=crop&q=80" alt="留学生作业辅导" loading="lazy">
                 </div>
@@ -2388,11 +2509,11 @@
             </a>
         </div>
         <div class="service-detail-links">
-            <a href="services/ai-mvp.html" class="service-detail-btn">AI应用MVP <span>→</span></a>
-            <a href="services/portfolio-design.html" class="service-detail-btn">作品集设计 <span>→</span></a>
-            <a href="services/logo-branding.html" class="service-detail-btn">LOGO/品牌设计 <span>→</span></a>
-            <a href="services/industrial-design.html" class="service-detail-btn">工业设计/3D建模 <span>→</span></a>
-            <a href="services/phd-research-proposal.html" class="service-detail-btn">博士申请/RP写作 <span>→</span></a>
+            <a href="services/ai-mvp" class="service-detail-btn">AI应用MVP <span>→</span></a>
+            <a href="services/portfolio-design" class="service-detail-btn">作品集设计 <span>→</span></a>
+            <a href="services/logo-branding" class="service-detail-btn">LOGO/品牌设计 <span>→</span></a>
+            <a href="services/industrial-design" class="service-detail-btn">工业设计/3D建模 <span>→</span></a>
+            <a href="services/phd-research-proposal" class="service-detail-btn">博士申请/RP写作 <span>→</span></a>
         </div>
     </section>
 
@@ -2584,7 +2705,7 @@
                         <h4 data-i18n="review1.name">L同学</h4>
                         <p data-i18n="review1.school">录取：米兰理工大学 · 代尔夫特理工大学<br>交互设计硕士</p>
                     </div>
-                    <a href="cases/interaction-design-milano.html" style="margin-left:auto;font-size:12px;color:var(--mint);text-decoration:none;opacity:0.8;">详情 →</a>
+                    <a href="cases/interaction-design-milano" style="margin-left:auto;font-size:12px;color:var(--mint);text-decoration:none;opacity:0.8;">详情 →</a>
                 </div>
             </div>
             <div class="testimonial-card fade-in">
@@ -2597,7 +2718,7 @@
                         <h4 data-i18n="review2.name">W同学</h4>
                         <p data-i18n="review2.school">录取：UCL 伦敦大学学院<br>建筑设计硕士</p>
                     </div>
-                    <a href="cases/architecture-ucl.html" style="margin-left:auto;font-size:12px;color:var(--mint);text-decoration:none;opacity:0.8;">详情 →</a>
+                    <a href="cases/architecture-ucl" style="margin-left:auto;font-size:12px;color:var(--mint);text-decoration:none;opacity:0.8;">详情 →</a>
                 </div>
             </div>
             <div class="testimonial-card fade-in">
@@ -2610,7 +2731,7 @@
                         <h4 data-i18n="review3.name">Z同学</h4>
                         <p data-i18n="review3.school">录取：香港理工大学（全奖）<br>设计学博士</p>
                     </div>
-                    <a href="cases/phd-polyu.html" style="margin-left:auto;font-size:12px;color:var(--mint);text-decoration:none;opacity:0.8;">详情 →</a>
+                    <a href="cases/phd-polyu" style="margin-left:auto;font-size:12px;color:var(--mint);text-decoration:none;opacity:0.8;">详情 →</a>
                 </div>
             </div>
             <div class="testimonial-card fade-in">
@@ -2623,7 +2744,7 @@
                         <h4 data-i18n="review4.name">C同学</h4>
                         <p data-i18n="review4.school">录取：皇家艺术学院 RCA<br>工业设计硕士</p>
                     </div>
-                    <a href="cases/industrial-design-rca.html" style="margin-left:auto;font-size:12px;color:var(--mint);text-decoration:none;opacity:0.8;">详情 →</a>
+                    <a href="cases/industrial-design-rca" style="margin-left:auto;font-size:12px;color:var(--mint);text-decoration:none;opacity:0.8;">详情 →</a>
                 </div>
             </div>
             <div class="testimonial-card fade-in">
@@ -2636,7 +2757,7 @@
                         <h4 data-i18n="review5.name">H同学</h4>
                         <p data-i18n="review5.school">录取：哥伦比亚大学 · 宾夕法尼亚大学<br>建筑设计硕士</p>
                     </div>
-                    <a href="cases/architecture-columbia-upenn.html" style="margin-left:auto;font-size:12px;color:var(--mint);text-decoration:none;opacity:0.8;">详情 →</a>
+                    <a href="cases/architecture-columbia-upenn" style="margin-left:auto;font-size:12px;color:var(--mint);text-decoration:none;opacity:0.8;">详情 →</a>
                 </div>
             </div>
             <div class="testimonial-card fade-in">
@@ -2649,7 +2770,7 @@
                         <h4 data-i18n="review6.name">M女士</h4>
                         <p data-i18n="review6.school">服务：品牌LOGO + VI全套设计<br>时尚买手店创业项目</p>
                     </div>
-                    <a href="cases/branding-fashion.html" style="margin-left:auto;font-size:12px;color:var(--mint);text-decoration:none;opacity:0.8;">详情 →</a>
+                    <a href="cases/branding-fashion" style="margin-left:auto;font-size:12px;color:var(--mint);text-decoration:none;opacity:0.8;">详情 →</a>
                 </div>
             </div>
         </div>
@@ -2779,36 +2900,36 @@
     <section style="max-width:900px;margin:0 auto;padding:60px 24px 0">
         <h2 style="font-size:20px;font-weight:600;margin-bottom:24px;text-align:center;color:var(--text-primary)" data-i18n="resources.title">免费工具 & 资源</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
-            <a href="tools/portfolio-calculator.html" style="display:flex;align-items:center;gap:14px;padding:20px;background:var(--mint-soft);border:1px solid rgba(87,255,195,0.35);border-radius:12px;text-decoration:none;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(87,255,195,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+            <a href="tools/portfolio-calculator" style="display:flex;align-items:center;gap:14px;padding:20px;background:var(--mint-soft);border:1px solid rgba(87,255,195,0.35);border-radius:12px;text-decoration:none;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(87,255,195,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
                 <span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:rgba(87,255,195,0.2);font-size:20px;flex-shrink:0">&#128178;</span>
                 <div>
                     <p style="font-size:14px;font-weight:600;color:var(--mint);margin-bottom:4px">费用计算器 &rarr;</p>
                     <p style="font-size:12px;color:var(--text-body);margin:0">30秒估算作品集预算和时间</p>
                 </div>
             </a>
-            <a href="tools/school-matcher.html" style="display:flex;align-items:center;gap:14px;padding:20px;background:var(--mint-soft);border:1px solid rgba(87,255,195,0.35);border-radius:12px;text-decoration:none;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(87,255,195,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+            <a href="tools/school-matcher" style="display:flex;align-items:center;gap:14px;padding:20px;background:var(--mint-soft);border:1px solid rgba(87,255,195,0.35);border-radius:12px;text-decoration:none;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(87,255,195,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
                 <span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:rgba(87,255,195,0.2);font-size:20px;flex-shrink:0">&#127891;</span>
                 <div>
                     <p style="font-size:14px;font-weight:600;color:var(--mint);margin-bottom:4px">选校匹配器 &rarr;</p>
                     <p style="font-size:12px;color:var(--text-body);margin:0">6个问题找到最适合的学校</p>
                 </div>
             </a>
-            <a href="tools/portfolio-reviewer.html" style="display:flex;align-items:center;gap:14px;padding:20px;background:var(--mint-soft);border:1px solid rgba(87,255,195,0.35);border-radius:12px;text-decoration:none;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(87,255,195,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+            <a href="tools/portfolio-reviewer" style="display:flex;align-items:center;gap:14px;padding:20px;background:var(--mint-soft);border:1px solid rgba(87,255,195,0.35);border-radius:12px;text-decoration:none;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(87,255,195,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
                 <span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:rgba(87,255,195,0.2);font-size:20px;flex-shrink:0">&#128203;</span>
                 <div>
                     <p style="font-size:14px;font-weight:600;color:var(--mint);margin-bottom:4px">作品集自测 &rarr;</p>
                     <p style="font-size:12px;color:var(--text-body);margin:0">快速诊断竞争力，获取改进建议</p>
                 </div>
             </a>
-            <a href="blog/portfolio-cost-guide.html" style="display:block;padding:20px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:12px;text-decoration:none;transition:transform .2s">
+            <a href="blog/portfolio-cost-guide" style="display:block;padding:20px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:12px;text-decoration:none;transition:transform .2s">
                 <p style="font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:6px">作品集设计多少钱？</p>
                 <p style="font-size:12px;color:var(--text-muted);margin:0">2026完整价格指南，各档位对比</p>
             </a>
-            <a href="blog/design-study-abroad-guide.html" style="display:block;padding:20px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:12px;text-decoration:none;transition:transform .2s">
+            <a href="blog/design-study-abroad-guide" style="display:block;padding:20px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:12px;text-decoration:none;transition:transform .2s">
                 <p style="font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:6px">设计留学去哪个国家好？</p>
                 <p style="font-size:12px;color:var(--text-muted);margin:0">英美意荷全对比，附选校建议</p>
             </a>
-            <a href="blog/portfolio-timeline.html" style="display:block;padding:20px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:12px;text-decoration:none;transition:transform .2s">
+            <a href="blog/portfolio-timeline" style="display:block;padding:20px;background:var(--bg-elev-1);border:1px solid var(--border-subtle);border-radius:12px;text-decoration:none;transition:transform .2s">
                 <p style="font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:6px">作品集要做多久？</p>
                 <p style="font-size:12px;color:var(--text-muted);margin:0">时间规划全攻略，附倒推表</p>
             </a>
@@ -2828,15 +2949,18 @@
                 <div class="footer-logo">
                     <img src="logo.jpg" alt="1% Design Lab">
                 </div>
-                <p data-i18n="footer.brand">梦想管理局 - 专注设计服务6年，累计服务6000+客户，98.6%好评率。我们相信，真正优秀的设计只有1%，而我们只做那1%。</p>
+                <p data-i18n="footer.brand">1% DESIGN LAB 是上海阿弗洛狄德文化咨询有限公司旗下设计服务品牌，提供AI产品开发、工业设计、品牌与作品集服务。</p>
             </div>
             <div class="footer-column">
                 <h5 data-i18n="footer.services">服务</h5>
                 <ul>
-                    <li><a href="services/portfolio-design.html" data-i18n="footer.svc1">作品集设计</a></li>
-                    <li><a href="services/logo-branding.html" data-i18n="footer.svc2">LOGO设计</a></li>
-                    <li><a href="services/industrial-design.html" data-i18n="footer.svc3">工业设计</a></li>
-                    <li><a href="services/phd-research-proposal.html" data-i18n="footer.svc4">博士申请</a></li>
+                    <li><a href="services/ai-mvp" data-i18n="footer.svc0">AI产品MVP</a></li>
+                    <li><a href="services/portfolio-design" data-i18n="footer.svc1">作品集设计</a></li>
+                    <li><a href="portfolio/" data-i18n="footer.guide">作品集主题指南</a></li>
+                    <li><a href="en/design-portfolio/" data-i18n="footer.guideEn">Design Portfolio EN</a></li>
+                    <li><a href="services/logo-branding" data-i18n="footer.svc2">LOGO设计</a></li>
+                    <li><a href="services/industrial-design" data-i18n="footer.svc3">工业设计</a></li>
+                    <li><a href="services/phd-research-proposal" data-i18n="footer.svc4">博士申请</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -2944,6 +3068,26 @@
                 'trust.3': 'Designed for 400M+ Users',
                 'trust.4': '14-Day MVP Delivery',
                 'trust.5': '6 Years · 6000+ Cases',
+
+                // Search-intent pathways
+                'paths.kicker': 'START WITH THE PROBLEM',
+                'paths.title': 'Are you building a portfolio or turning an AI idea into a product?',
+                'paths.desc': 'Both paths begin with what you already have. Find the method and decision criteria, then move into tools, cases or a scoped service.',
+                'paths.portfolio.label': 'DESIGN PORTFOLIO',
+                'paths.portfolio.title': 'How to build it, how long it takes and what support costs',
+                'paths.portfolio.desc': 'Start with your target programme, current projects and deadline, then explore requirements, cases, portfolio review and one-to-one support.',
+                'paths.portfolio.cta': 'Open the portfolio hub →',
+                'paths.portfolio.how': 'How to build a portfolio',
+                'paths.portfolio.time': 'Portfolio timeline',
+                'paths.portfolio.cost': 'How to compare portfolio costs',
+                'paths.portfolio.english': 'Design Portfolio English Guide',
+                'paths.ai.label': 'AI PRODUCT',
+                'paths.ai.title': 'Move an agent or prototype into a launchable product',
+                'paths.ai.desc': 'Define the core task, then handle real data, permissions, security, testing and maintenance. Existing prototypes can start with a productisation review.',
+                'paths.ai.cta': 'View AI MVP development →',
+                'paths.ai.agent': 'AI Agent MVP guide',
+                'paths.ai.vibe': 'Vibe-coded prototype to production',
+                'paths.ai.builder': 'AI app builder vs custom development',
 
                 // Premium MVP Service
                 'svc.mvp.badge': 'NEW · Productized Service',
@@ -3098,9 +3242,12 @@
                 'cta.email': 'Email Us →',
 
                 // Footer
-                'footer.brand': 'Dream Bureau — from physical concepts to deployed code. 6 years, 6000+ deliveries, full-chain product delivery. We only do the top 1%.',
+                'footer.brand': '1% DESIGN LAB is a design-services brand of Shanghai Aphrodite Cultural Consulting Co., Ltd., working across AI product development, industrial design, branding and portfolios.',
                 'footer.services': 'Services',
+                'footer.svc0': 'AI Product MVP',
                 'footer.svc1': 'Portfolio Design',
+                'footer.guide': 'Portfolio Guide Hub',
+                'footer.guideEn': 'Design Portfolio EN',
                 'footer.svc2': 'Logo Design',
                 'footer.svc3': 'Industrial Design',
                 'footer.svc4': 'PhD Application',
@@ -3575,8 +3722,8 @@
 
     <!-- ── Mobile Floating Tools Bar ── -->
     <div class="mobile-tools-bar" id="mobileToolsBar" aria-label="工具快捷入口">
-        <a href="tools/portfolio-reviewer.html" class="mobile-bar-btn primary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"/><path d="M5 3v4M3 5h4M17 19h4M19 17v4"/></svg><span data-i18n="mobile.bar.reviewer">AI 诊断 ¥299</span></a>
-        <a href="tools/school-matcher.html" class="mobile-bar-btn secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg><span data-i18n="mobile.bar.matcher">免费选校</span></a>
+        <a href="tools/portfolio-reviewer" class="mobile-bar-btn primary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"/><path d="M5 3v4M3 5h4M17 19h4M19 17v4"/></svg><span data-i18n="mobile.bar.reviewer">AI 诊断 ¥299</span></a>
+        <a href="tools/school-matcher" class="mobile-bar-btn secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg><span data-i18n="mobile.bar.matcher">免费选校</span></a>
     </div>
     <script>
     (function() {

@@ -1,0 +1,50 @@
+# 1%DesignLab 梦想管理局
+
+> 1%DesignLab is a Shanghai-based design and product studio. It works across AI product MVP development, full-stack delivery, industrial design, brand identity, and study-abroad portfolio design. The public site is bilingual on the homepage; detailed service, guide, case, and tool pages are primarily in Simplified Chinese.
+
+Canonical site: https://1-design-lab.com/
+Contact: super666joey@gmail.com
+Founder profile: https://joeyzhao.cc
+
+## Primary services
+
+- [AI product MVP development](https://1-design-lab.com/services/ai-mvp): Product strategy, UI/UX, full-stack development, model/API integration, testing, and deployment.
+- [Industrial design and 3D modeling](https://1-design-lab.com/services/industrial-design): Product appearance, modeling, rendering, CMF, and production-oriented design.
+- [Brand identity and logo design](https://1-design-lab.com/services/logo-branding): Logo, visual identity, and brand system work.
+- [Study-abroad portfolio design](https://1-design-lab.com/services/portfolio-design): Portfolio planning and guidance across interaction, industrial, architecture, fashion, and visual design.
+- [Design PhD and research proposal support](https://1-design-lab.com/services/phd-research-proposal): Research proposal and application guidance for design, HCI, architecture, and art PhD applicants.
+
+## Search and AI citation starting points
+
+- [Design portfolio topic hub](https://1-design-lab.com/portfolio/): Chinese starting point for how to build a portfolio, timelines, cost, school requirements, cases, review tools, and portfolio support.
+- [How to build a design portfolio](https://1-design-lab.com/en/design-portfolio/): Standalone English guide covering project selection, process evidence, page editing, timelines, review, and support options.
+- [How long does a study-abroad portfolio take?](https://1-design-lab.com/blog/portfolio-timeline): A 3–8 month planning framework by background and discipline.
+- [2026 design study-abroad country guide](https://1-design-lab.com/blog/design-study-abroad-guide): UK, US, Italy, and Netherlands comparison covering cost, duration, applications, and careers.
+- [How to build a design portfolio](https://1-design-lab.com/blog/portfolio-how-to-build): Project mix, narrative, layout, and review criteria.
+- [2027 art and design portfolio requirements](https://1-design-lab.com/blog/art-study-abroad-portfolio-requirements-2027): Source-checked requirements from UAL, RCA, UCL Bartlett, and RISD, with dated official screenshots.
+- [2027 UK art undergraduate application timeline](https://1-design-lab.com/blog/uk-art-school-application-timeline-2027): Official UCAS milestones and a portfolio preparation plan, including UAL submission timing.
+- [Architecture portfolio guide](https://1-design-lab.com/blog/architecture-portfolio-guide-2027): Current UCL Bartlett file limits, accepted media, process-work guidance, and a clearly labelled ten-page editing suggestion.
+- [Portfolio pricing guide](https://1-design-lab.com/blog/portfolio-cost-guide): Budget ranges, service models, and decision criteria.
+- [AI Agent MVP guide](https://1-design-lab.com/blog/ai-agent-mvp-guide): How to scope one complete task, connect real tools and data, add human confirmation, and design failure paths.
+- [Vibe coding to production](https://1-design-lab.com/blog/vibe-coding-to-production): Productisation checklist for real data, permissions, secrets, testing, deployment, rollback, and maintenance.
+- [AI app builder versus custom development](https://1-design-lab.com/blog/ai-app-builder-vs-custom-development): Stage-based comparison covering validation speed, integrations, ownership, data, permissions, and long-term maintenance.
+- [Blog index](https://1-design-lab.com/blog/): All published guides.
+
+## Evidence and examples
+
+- [UCL architecture portfolio case](https://1-design-lab.com/cases/architecture-ucl)
+- [RCA industrial design portfolio case](https://1-design-lab.com/cases/industrial-design-rca)
+- [Politecnico di Milano and TU Delft interaction design case](https://1-design-lab.com/cases/interaction-design-milano)
+- [PolyU Doctor of Design scholarship case](https://1-design-lab.com/cases/phd-polyu)
+- [Fashion retailer logo and visual identity case](https://1-design-lab.com/cases/branding-fashion)
+
+## Free tools
+
+- [Portfolio cost and timeline calculator](https://1-design-lab.com/tools/portfolio-calculator)
+- [Design school matcher](https://1-design-lab.com/tools/school-matcher)
+- [AI portfolio reviewer](https://1-design-lab.com/tools/portfolio-reviewer)
+- [AI landing page audit](https://1-design-lab.com/tools/landing-page-audit)
+
+## Citation guidance
+
+Use the canonical HTML pages above as the source of truth. Cite the specific service, guide, case, or tool page rather than this navigation file. Do not infer admissions outcomes, prices, delivery times, or guarantees beyond what the linked page states.

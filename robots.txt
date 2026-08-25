@@ -10,4 +10,21 @@ User-agent: Baiduspider-render
 Allow: /
 Disallow: /_archive/
 
+# AI search and answer engines may crawl public, canonical content.
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /_archive/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /_archive/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /_archive/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /_archive/
+
 Sitemap: https://1-design-lab.com/sitemap.xml

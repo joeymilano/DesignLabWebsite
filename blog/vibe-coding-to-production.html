@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://1-design-lab.com/blog/vibe-coding-to-production">
+    <link rel="icon" href="../favicon.ico" sizes="48x48">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../favicon-180x180.png" sizes="180x180">
+
+    <title>vibe coding原型怎么上线｜设计、数据、安全与维护清单</title>
+    <meta name="description" content="vibe coding原型产品化指南，按功能边界、界面设计、真实数据、登录权限、安全、测试、部署、回滚和维护逐项检查，帮助已经能演示的AI编程原型走到可上线产品。">
+    <meta name="keywords" content="vibe coding,vibe coding产品化,AI编程原型,原型上线,AI开发,产品开发,代码审查,MVP开发">
+
+    <meta property="og:title" content="vibe coding原型怎么上线｜设计、数据、安全与维护清单">
+    <meta property="og:description" content="从能演示的原型走到能让真实用户持续使用的产品。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://1-design-lab.com/blog/vibe-coding-to-production">
+    <meta property="og:image" content="https://1-design-lab.com/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "vibe coding原型怎么上线，设计、数据、安全与维护清单",
+          "description": "从功能边界、界面、真实数据、登录权限、安全、测试、部署和维护检查AI编程原型。",
+          "datePublished": "2026-08-25",
+          "dateModified": "2026-08-25",
+          "inLanguage": "zh-CN",
+          "mainEntityOfPage": "https://1-design-lab.com/blog/vibe-coding-to-production",
+          "author": { "@type": "Organization", "@id": "https://1-design-lab.com/#organization", "name": "1%DesignLab 梦想管理局" },
+          "publisher": { "@type": "Organization", "@id": "https://1-design-lab.com/#organization", "name": "1%DesignLab", "logo": { "@type": "ImageObject", "url": "https://1-design-lab.com/logo.jpg" } }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "vibe coding做出的原型可以直接上线吗",
+              "acceptedAnswer": { "@type": "Answer", "text": "可以先用于受控测试，但公开上线前应检查真实数据、登录权限、密钥管理、错误处理、测试覆盖、部署和后续维护。" }
+            },
+            {
+              "@type": "Question",
+              "name": "vibe coding原型最常见的产品化缺口是什么",
+              "acceptedAnswer": { "@type": "Answer", "text": "常见缺口包括示例数据仍在界面里、权限只在前端判断、密钥进入浏览器代码、失败状态缺失，以及没有可重复的部署和回滚方式。" }
+            },
+            {
+              "@type": "Question",
+              "name": "什么时候应该重构vibe coding原型",
+              "acceptedAnswer": { "@type": "Answer", "text": "当核心流程已经验证，代码结构却让权限、数据和测试难以可靠实现时，可以保留已确认的产品逻辑，重构承担长期运行的部分。" }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://1-design-lab.com/" },
+            { "@type": "ListItem", "position": 2, "name": "博客", "item": "https://1-design-lab.com/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "vibe coding产品化", "item": "https://1-design-lab.com/blog/vibe-coding-to-production" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0742RTMPL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K0742RTMPL');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="article-evidence.css?v=20260825">
+</head>
+<body>
+    <article class="article-shell">
+        <header class="article-header">
+            <a href="../blog/" class="back-link">← 返回博客</a>
+            <span class="article-kicker">VIBE CODING · 产品化</span>
+            <h1>vibe coding原型怎么变成可上线产品</h1>
+            <p class="article-deck">原型已经证明想法能被看见。上线版本还要接住真实数据、权限、失败、测试和维护。下面这套检查顺序适合已经能运行的AI编程原型。</p>
+            <p class="article-meta">2026年8月25日 · 阅读约11分钟 · 原型产品化指南</p>
+        </header>
+
+        <main class="article-content">
+            <p>vibe coding很适合把一个想法快速做出来。页面能点，核心交互可以演示，团队也更容易围着真实界面讨论。到了准备给外部用户使用的那一天，原型里的许多省略会一起出现。示例账户要换成登录系统，临时数据要进入数据库，模型调用需要保护密钥，出错以后还得知道问题发生在哪里。</p>
+
+            <p>产品化不一定要推翻原型。先保留已经被用户确认的流程，再检查哪些部分只适合演示。能继续用的界面和交互留下，涉及真实数据与长期运行的地方重新安排。</p>
+
+            <div class="lead-note">
+                <p>先复制一份可运行版本，记录当前环境和依赖。接下来的修改应当围绕一条核心用户路径进行，每完成一段就重新验证，避免在同一轮里同时换框架、改交互和迁移数据。</p>
+            </div>
+
+            <h2>先冻结第一版范围</h2>
+            <p>原型阶段很容易边做边加功能。上线前需要把核心用户、主要任务和成功结果写清。新想法先放进后续清单，第一版只处理完成这项任务必须存在的页面与状态。</p>
+
+            <p>逐页检查现有界面。按钮是否真的有动作，筛选和搜索有没有真实数据，登录后不同用户能看到什么，空状态和错误状态是否存在。演示时可以跳过的页面，上线以后会成为用户卡住的地方。</p>
+
+            <h2>把示例数据换成真实数据</h2>
+            <p>原型常用写在代码里的列表和数字。接入数据库以后，要定义每条记录属于谁，谁能读，谁能修改，删除后怎样处理。数据结构要服务当前核心流程，别因为未来可能用到，就在第一版建一大批空字段。</p>
+
+            <p>导入旧数据时先做小批量测试。检查日期、金额、语言和空值，确认重复记录怎样识别。迁移要能够停下来，也要保留回滚或重新导入的办法。</p>
+
+            <h2>权限要在服务端成立</h2>
+            <p>隐藏按钮只能改变界面，不能保护数据。每一次读取和写入都要检查当前用户是否有权限。管理员、普通成员和访客看到的内容不同，服务端规则也要跟着区分。</p>
+
+            <p>模型密钥、数据库凭证和第三方令牌不能进入浏览器代码或公开仓库。把它们放到受控的运行环境里，限制权限与使用范围。公开测试时还要考虑调用次数、费用上限和异常流量。</p>
+
+            <div class="comparison">
+                <div class="comparison-row">
+                    <strong>界面状态</strong>
+                    <p>按钮、提示和页面内容帮助用户理解自己能做什么。</p>
+                </div>
+                <div class="comparison-row">
+                    <strong>服务端权限</strong>
+                    <p>每次请求重新判断用户身份与资源归属，阻止越权读取和修改。</p>
+                </div>
+                <div class="comparison-row">
+                    <strong>运行环境</strong>
+                    <p>保存密钥和配置，限制外部服务调用，并把开发与正式环境分开。</p>
+                </div>
+            </div>
+
+            <h2>给失败状态留出页面</h2>
+            <p>模型可能超时，支付可能没有完成，上传文件可能超过限制。界面需要告诉用户发生了什么，刚才的数据有没有保存，以及下一步能做什么。只显示未知错误，用户通常会重复点击，问题可能变得更难处理。</p>
+
+            <p>后台也要留下足够的记录。一次请求经过了哪些步骤，外部服务返回什么状态，用户当时看到哪个版本，这些信息能帮助团队定位问题。日志里不要保存密码、完整令牌或没有必要的个人内容。</p>
+
+            <h2>测试一条完整路径</h2>
+            <p>先从新用户第一次进入产品开始，走到核心任务完成。然后换成信息缺失、网络慢和外部服务失败。每个关键写操作还要检查重复提交。桌面浏览器通过以后，再用真实手机检查输入、键盘、弹窗和长内容。</p>
+
+            <div class="fact-grid">
+                <div class="fact-card">
+                    <strong>用户能否完成</strong>
+                    <p>从进入产品到得到结果，中间没有依靠开发者口头提示的步骤。</p>
+                </div>
+                <div class="fact-card">
+                    <strong>团队能否修复</strong>
+                    <p>问题出现以后能找到版本、请求和失败位置，也能安全地再次验证。</p>
+                </div>
+            </div>
+
+            <h2>部署要能够重复</h2>
+            <p>正式环境应当有固定的构建和发布方式。数据库变化要记录，环境配置要有清单，发布前后都有一组基础检查。新版本出问题时，团队需要知道怎样回到上一个可用版本。</p>
+
+            <p>域名、部署账号、代码仓库和第三方服务最好归产品方持有。合作结束以后，产品仍然能够继续运行和维护。交接文档不用很厚，至少要写清怎样启动、怎样发布、配置放在哪里，以及常见故障从哪里查。</p>
+
+            <h2>上线以后再决定重构多少</h2>
+            <p>有些原型代码经过整理就能继续用，有些部分会让权限和测试很难可靠实现。判断时看它是否影响核心流程、数据安全和后续修改。视觉组件写得重复，可以排进后续。权限判断散落在前端，应该在上线前处理。</p>
+
+            <p>产品化的结果也很朴素。用户能完成任务，数据不会混到别人账户里，失败以后有办法继续，团队知道怎样发布下一版。做到这些，原型才开始成为产品。</p>
+
+            <div class="related-links">
+                <h2>继续判断开发路线</h2>
+                <a href="ai-agent-mvp-guide">AI Agent MVP怎样选择第一项任务 →</a>
+                <a href="ai-app-builder-vs-custom-development">AI app builder与定制开发怎样选 →</a>
+                <a href="../services/ai-mvp">查看AI产品设计与开发服务 →</a>
+                <a href="../tools/landing-page-audit">检查产品落地页的转化问题 →</a>
+            </div>
+        </main>
+
+        <section class="article-cta">
+            <h2>把现有原型带来做一次范围判断</h2>
+            <p>我们会先看核心流程、真实数据、权限与上线条件，再确定应该修补、重构还是分阶段交付。</p>
+            <a href="../services/ai-mvp" class="cta-button">查看AI MVP服务</a>
+            <a href="../#contact" class="cta-button">预约原型评估</a>
+        </section>
+
+        <footer class="article-footer">
+            <p>© 2026 <a href="../">1%DesignLab 梦想管理局</a> · 上线范围应由真实用户路径与风险共同决定</p>
+        </footer>
+    </article>
+</body>
+</html>
