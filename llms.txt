@@ -1,16 +1,24 @@
 # 1%DesignLab 梦想管理局
 
-> 1%DesignLab is a Shanghai-based design and product studio. It works across AI product MVP development, full-stack delivery, industrial design, brand identity, and study-abroad portfolio design. The public site is bilingual on the homepage; detailed service, guide, case, and tool pages are primarily in Simplified Chinese.
+> 1%DesignLab is a Shanghai-based parent brand with two clearly separated practices. 1% Product Studio serves founders, companies, and product teams with AI product strategy, design, full-stack development, and deployment. 1% Portfolio Academy serves art and design applicants with school planning, portfolio strategy, project mentoring, and research-application support. The root homepage routes visitors to the relevant practice instead of mixing both offers.
 
 Canonical site: https://1-design-lab.com/
 Contact: super666joey@gmail.com
 Founder profile: https://joeyzhao.cc
 
-## Primary services
+## Primary practice hubs
+
+- [1% Product Studio](https://1-design-lab.com/studio/): AI product development, MVP delivery, product design, full-stack implementation, brand systems, industrial-design support, and product insights for founders and teams.
+- [1% Portfolio Academy](https://1-design-lab.com/academy/): Art and design portfolio mentoring, school planning, discipline-specific guidance, offer cases, applicant tools, and research-application support.
+
+## Product Studio services
 
 - [AI product MVP development](https://1-design-lab.com/services/ai-mvp): Product strategy, UI/UX, full-stack development, model/API integration, testing, and deployment.
 - [Industrial design and 3D modeling](https://1-design-lab.com/services/industrial-design): Product appearance, modeling, rendering, CMF, and production-oriented design.
 - [Brand identity and logo design](https://1-design-lab.com/services/logo-branding): Logo, visual identity, and brand system work.
+
+## Portfolio Academy services
+
 - [Study-abroad portfolio design](https://1-design-lab.com/services/portfolio-design): Portfolio planning and guidance across interaction, industrial, architecture, fashion, and visual design.
 - [Design PhD and research proposal support](https://1-design-lab.com/services/phd-research-proposal): Research proposal and application guidance for design, HCI, architecture, and art PhD applicants.
 
