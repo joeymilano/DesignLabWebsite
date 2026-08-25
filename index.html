@@ -591,6 +591,11 @@
             opacity: 0;
             animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
         }
+        .hero-business-cta {
+            flex: 1 1 240px;
+            max-width: 320px;
+            justify-content: center;
+        }
         .btn-primary, .wechat-btn {
             border: 1px solid rgba(163, 255, 220, 0.5);
             background: var(--mint);
@@ -612,6 +617,25 @@
         .btn-primary:hover, .wechat-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 24px rgba(87, 255, 195, 0.28);
+        }
+        .portfolio-cta {
+            border-color: rgba(147, 197, 253, 0.9);
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 58%, #1d4ed8 100%);
+            color: #ffffff;
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.28),
+                0 10px 30px rgba(37, 99, 235, 0.36),
+                0 0 0 1px rgba(59, 130, 246, 0.16);
+        }
+        .portfolio-cta:hover {
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.32),
+                0 14px 36px rgba(37, 99, 235, 0.48),
+                0 0 0 4px rgba(59, 130, 246, 0.14);
+        }
+        .portfolio-cta:focus-visible {
+            outline: 3px solid rgba(147, 197, 253, 0.9);
+            outline-offset: 4px;
         }
         .btn-secondary, .email-btn {
             border-radius: var(--radius-pill);
@@ -2327,8 +2351,8 @@
             </div>
         </div>
         <div class="hero-cta">
-            <a href="#product-studio" class="btn-primary" data-i18n="hero.cta1">我要开发AI产品 →</a>
-            <a href="#portfolio-academy" class="btn-secondary" data-i18n="hero.cta2">我要准备作品集 →</a>
+            <a href="#portfolio-academy" class="btn-primary hero-business-cta portfolio-cta" data-i18n="hero.cta1">我要准备作品集 →</a>
+            <a href="#product-studio" class="btn-primary hero-business-cta" data-i18n="hero.cta2">我要开发产品 →</a>
         </div>
     </section>
 
@@ -3145,8 +3169,8 @@
                 'hero.stat2': 'Fastest MVP Launch',
                 'hero.stat2.unit': 'Days',
                 'hero.stat3': 'Product Experience',
-                'hero.cta1': '1% Product Studio →',
-                'hero.cta2': '1% Portfolio Academy →',
+                'hero.cta1': 'Prepare My Portfolio →',
+                'hero.cta2': 'Build a Product →',
 
                 // Trust
                 'trust.1': 'Silicon Valley Product Experience',
