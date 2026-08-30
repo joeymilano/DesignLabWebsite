@@ -1845,25 +1845,41 @@
                 gap: 6px;
                 padding: 6px 8px;
                 justify-content: space-between;
+                overflow: hidden;
             }
             .nav-right { gap: 6px; }
             .nav-cta { display: none; }
             .nav-links {
                 flex: 1;
+                min-width: 0;
                 justify-content: flex-start;
                 overflow-x: auto;
+                overflow-y: hidden;
                 flex-wrap: nowrap;
                 gap: 2px;
+                padding-inline: 2px;
+                scroll-padding-inline: 2px;
+                scroll-snap-type: x proximity;
+                overscroll-behavior-x: contain;
+                overscroll-behavior-inline: contain;
+                touch-action: pan-x;
+                -webkit-overflow-scrolling: touch;
                 -ms-overflow-style: none;
                 scrollbar-width: none;
             }
             .nav-links::-webkit-scrollbar { display: none; }
+            .nav-links > a,
+            .nav-links > .nav-tools-wrapper {
+                flex: 0 0 auto;
+                scroll-snap-align: start;
+            }
             .nav-links a {
                 font-size: 11px;
                 padding: 6px 8px;
                 white-space: nowrap;
                 flex-shrink: 0;
             }
+            .nav-tools-mega { display: none; }
             .nav-logo img { height: 28px; }
             .lang-switch button {
                 padding: 5px 8px;
