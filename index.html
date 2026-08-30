@@ -1223,6 +1223,105 @@
         }
         .team-card-desc { font-size: 13px; color: var(--text-body); line-height: 1.76; }
 
+        .careers-teaser {
+            padding: 0 24px 120px;
+            background: rgba(28, 28, 28, 0.7);
+        }
+        .careers-teaser-shell {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+            max-width: 1200px;
+            min-height: 430px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-top: 1px solid var(--border-strong);
+            border-bottom: 1px solid var(--border-strong);
+            background: #0a0a0a;
+        }
+        .careers-teaser-copy {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 56px;
+            padding: clamp(40px, 5vw, 70px);
+            border-right: 1px solid var(--border-subtle);
+        }
+        .careers-teaser-kicker {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--mint);
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .careers-teaser-kicker::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--mint);
+        }
+        .careers-teaser-title {
+            margin-bottom: 20px;
+            font-size: clamp(48px, 7vw, 88px);
+            font-weight: 500;
+            letter-spacing: -0.065em;
+            line-height: 0.96;
+        }
+        .careers-teaser-desc {
+            max-width: 620px;
+            color: var(--text-secondary);
+            font-size: clamp(16px, 1.8vw, 22px);
+            letter-spacing: -0.02em;
+            line-height: 1.5;
+        }
+        .careers-teaser-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+            width: min(100%, 320px);
+            min-height: 56px;
+            padding: 0 18px;
+            color: #0a0a0a;
+            background: var(--mint);
+            border: 1px solid var(--mint);
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s ease, background 0.2s ease;
+        }
+        .careers-teaser-link:hover {
+            color: var(--mint);
+            background: transparent;
+        }
+        .careers-teaser-mark {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 20px 28px;
+            color: transparent;
+            font-family: var(--mono);
+            font-size: clamp(150px, 20vw, 280px);
+            font-weight: 400;
+            letter-spacing: -0.14em;
+            line-height: 0.78;
+            -webkit-text-stroke: 1px rgba(87, 255, 195, 0.72);
+            user-select: none;
+        }
+        @media (max-width: 768px) {
+            .careers-teaser { padding: 0 16px 92px; }
+            .careers-teaser-shell { grid-template-columns: 1fr; }
+            .careers-teaser-copy { border-right: 0; border-bottom: 1px solid var(--border-subtle); }
+            .careers-teaser-mark { min-height: 220px; font-size: clamp(145px, 48vw, 210px); }
+            .careers-teaser-link { width: 100%; }
+        }
+
         .portfolio-showcase {
             max-width: 900px;
             margin: 0 auto;
@@ -2303,6 +2402,7 @@
                     </div>
                 </div>
                 <a href="blog/" data-i18n="nav.blog">博客</a>
+                <a href="careers/" data-careers-link data-i18n="nav.careers">加入我们</a>
                 <a href="#contact" data-i18n="nav.contact">联系</a>
             </div>
             <div class="nav-right">
@@ -2750,6 +2850,23 @@
         </div>
     </section>
 
+    <section class="careers-teaser" aria-labelledby="careers-teaser-title">
+        <div class="careers-teaser-shell">
+            <div class="careers-teaser-copy">
+                <p class="careers-teaser-kicker" data-i18n="careers.kicker">Careers / 全球人才网络</p>
+                <div>
+                    <h2 class="careers-teaser-title" id="careers-teaser-title" data-i18n="careers.title">一起做那 1%</h2>
+                    <p class="careers-teaser-desc" data-i18n="careers.desc">小团队，真项目，从概念做到上线。我们正在建立一支全球设计与工程协作网络。</p>
+                </div>
+                <a class="careers-teaser-link" href="careers/" data-careers-link>
+                    <span data-i18n="careers.cta">查看合作机会</span>
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+            <div class="careers-teaser-mark" aria-hidden="true">1%</div>
+        </div>
+    </section>
+
     <section class="portfolio" id="portfolio">
         <div class="section-header fade-in">
             <p class="section-eyebrow">Portfolio</p>
@@ -3069,6 +3186,7 @@
                     <li><a href="services/logo-branding" data-i18n="footer.svc2">LOGO设计</a></li>
                     <li><a href="services/industrial-design" data-i18n="footer.svc3">工业设计</a></li>
                     <li><a href="services/phd-research-proposal" data-i18n="footer.svc4">博士申请</a></li>
+                    <li><a href="careers/" data-careers-link data-i18n="footer.careers">加入我们</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -3141,6 +3259,7 @@
                 'nav.tools.cta': 'Start AI Portfolio Audit →',
                 'nav.tools.all': 'View all tools →',
                 'nav.blog': 'Blog',
+                'nav.careers': 'Careers',
                 'nav.contact': 'Contact',
                 'nav.shop': 'Book Consultation',
 
@@ -3283,6 +3402,12 @@
                 'jason.skill3': 'Technical Drawing',
                 'jason.desc': 'Familiar with North American and European architecture application processes. Students admitted to Cornell, Columbia, UPenn, UCLA, UCL.',
 
+                // Careers
+                'careers.kicker': 'Careers / Global talent network',
+                'careers.title': 'Build the uncommon',
+                'careers.desc': 'Small teams. Real projects. Work that ships. We are building a global network of design and engineering collaborators.',
+                'careers.cta': 'Explore opportunities',
+
                 // Nav - Testimonials
                 'nav.testimonials': 'Reviews',
 
@@ -3367,6 +3492,7 @@
                 'footer.svc2': 'Logo Design',
                 'footer.svc3': 'Industrial Design',
                 'footer.svc4': 'PhD Application',
+                'footer.careers': 'Careers',
                 'footer.ecosystem': 'Ecosystem',
                 'footer.finfold': 'Finfold',
                 'footer.contact': 'Contact Us',
@@ -3405,7 +3531,15 @@
             if (currentLang === 'en') {
                 applyLang('en');
             }
+            updateCareersLinks(currentLang);
             updateLangButtons();
+        }
+
+        function updateCareersLinks(lang) {
+            const target = lang === 'en' ? 'en/careers/' : 'careers/';
+            document.querySelectorAll('[data-careers-link]').forEach(link => {
+                link.setAttribute('href', target);
+            });
         }
 
         function applyLang(lang) {
@@ -3427,6 +3561,7 @@
                 }
             });
             document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+            updateCareersLinks(lang);
         }
 
         function updateLangButtons() {
