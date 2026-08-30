@@ -18,13 +18,15 @@ Founder profile: https://joeyzhao.cc
 
 - [Design portfolio topic hub](https://1-design-lab.com/portfolio/): Chinese starting point for how to build a portfolio, timelines, cost, school requirements, cases, review tools, and portfolio support.
 - [How to build a design portfolio](https://1-design-lab.com/en/design-portfolio/): Standalone English guide covering project selection, process evidence, page editing, timelines, review, and support options.
-- [How long does a study-abroad portfolio take?](https://1-design-lab.com/blog/portfolio-timeline): A 3–8 month planning framework by background and discipline.
-- [2026 design study-abroad country guide](https://1-design-lab.com/blog/design-study-abroad-guide): UK, US, Italy, and Netherlands comparison covering cost, duration, applications, and careers.
-- [How to build a design portfolio](https://1-design-lab.com/blog/portfolio-how-to-build): Project mix, narrative, layout, and review criteria.
+- [Published cost of studying design in the US](https://1-design-lab.com/blog/us-design-school-cost-2027): Source-checked tuition and living budgets from RISD, ArtCenter, and Carnegie Mellon.
+- [How to check a Sino-foreign design program](https://1-design-lab.com/blog/sino-foreign-design-program-guide): Ministry of Education approval, enrollment years, credentials, and study-path checks.
+- [How long does a study-abroad portfolio take?](https://1-design-lab.com/blog/portfolio-timeline): A deadline-first planning method for research, making, editing, and submission.
+- [Design study-abroad country guide](https://1-design-lab.com/blog/design-study-abroad-guide): UK, US, Italy, and Netherlands comparison using published costs, application routes, and post-study options.
+- [How to build a design portfolio](https://1-design-lab.com/blog/portfolio-how-to-build): Project selection, process evidence, narrative, and page editing.
 - [2027 art and design portfolio requirements](https://1-design-lab.com/blog/art-study-abroad-portfolio-requirements-2027): Source-checked requirements from UAL, RCA, UCL Bartlett, and RISD, with dated official screenshots.
 - [2027 UK art undergraduate application timeline](https://1-design-lab.com/blog/uk-art-school-application-timeline-2027): Official UCAS milestones and a portfolio preparation plan, including UAL submission timing.
 - [Architecture portfolio guide](https://1-design-lab.com/blog/architecture-portfolio-guide-2027): Current UCL Bartlett file limits, accepted media, process-work guidance, and a clearly labelled ten-page editing suggestion.
-- [Portfolio pricing guide](https://1-design-lab.com/blog/portfolio-cost-guide): Budget ranges, service models, and decision criteria.
+- [Portfolio guidance pricing guide](https://1-design-lab.com/blog/portfolio-cost-guide): Service scope, revision boundaries, tutor involvement, and quote-comparison criteria.
 - [AI Agent MVP guide](https://1-design-lab.com/blog/ai-agent-mvp-guide): How to scope one complete task, connect real tools and data, add human confirmation, and design failure paths.
 - [Vibe coding to production](https://1-design-lab.com/blog/vibe-coding-to-production): Productisation checklist for real data, permissions, secrets, testing, deployment, rollback, and maintenance.
 - [AI app builder versus custom development](https://1-design-lab.com/blog/ai-app-builder-vs-custom-development): Stage-based comparison covering validation speed, integrations, ownership, data, permissions, and long-term maintenance.

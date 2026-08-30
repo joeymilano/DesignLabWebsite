@@ -62,8 +62,6 @@ for (const file of await walk(root)) {
   if (!lang) errors.push(`${relative}: html lang is missing`);
   if (h1Count !== 1) errors.push(`${relative}: expected exactly one h1, found ${h1Count}`);
   if (ogUrl && ogUrl !== expectedCanonical) errors.push(`${relative}: og:url should match canonical ${expectedCanonical}`);
-  if (/\.html(?:["'<#?]|$)/i.test(source)) errors.push(`${relative}: contains a redirecting .html URL`);
-
   if (title) {
     if (titleOwners.has(title)) errors.push(`${relative}: duplicate title also used by ${titleOwners.get(title)}`);
     titleOwners.set(title, relative);
@@ -86,6 +84,7 @@ for (const file of await walk(root)) {
     if (/^(?:#|mailto:|tel:|javascript:)/i.test(href) || href.includes('${')) continue;
     const resolved = new URL(href, expectedCanonical);
     if (resolved.origin !== origin) continue;
+    if (/\.html$/i.test(resolved.pathname)) errors.push(`${relative}: contains a redirecting internal .html URL ${href}`);
     resolved.hash = '';
     resolved.search = '';
     const targetFile = localFileFor(resolved);
