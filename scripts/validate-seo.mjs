@@ -40,6 +40,12 @@ const sitemapSet = new Set(sitemapUrls);
 const inboundLinks = new Map(sitemapUrls.map((url) => [url, new Set()]));
 const titleOwners = new Map();
 const descriptionOwners = new Map();
+const ctrDescriptionTargets = new Set([
+  'index.html',
+  'tools/index.html',
+  'tools/portfolio-calculator.html',
+  'tools/portfolio-reviewer.html',
+]);
 
 if (sitemapSet.size !== sitemapUrls.length) errors.push('sitemap.xml contains duplicate URLs');
 if (sitemapUrls.some((url) => url.endsWith('.html'))) errors.push('sitemap.xml contains redirecting .html URLs');
@@ -59,6 +65,9 @@ for (const file of await walk(root)) {
   if (!sitemapSet.has(expectedCanonical)) errors.push(`${relative}: canonical is missing from sitemap.xml`);
   if (!title) errors.push(`${relative}: title is missing`);
   if (!description || Array.from(description).length < 70) errors.push(`${relative}: meta description is missing or shorter than 70 characters`);
+  if (ctrDescriptionTargets.has(relative) && Array.from(description || '').length < 110) {
+    errors.push(`${relative}: data-priority meta description is shorter than 110 characters`);
+  }
   if (!lang) errors.push(`${relative}: html lang is missing`);
   if (h1Count !== 1) errors.push(`${relative}: expected exactly one h1, found ${h1Count}`);
   if (ogUrl && ogUrl !== expectedCanonical) errors.push(`${relative}: og:url should match canonical ${expectedCanonical}`);
@@ -69,6 +78,13 @@ for (const file of await walk(root)) {
   if (description) {
     if (descriptionOwners.has(description)) errors.push(`${relative}: duplicate meta description also used by ${descriptionOwners.get(description)}`);
     descriptionOwners.set(description, relative);
+  }
+
+  if (relative === 'index.html' && /href="mailto:/i.test(source)) {
+    errors.push('index.html: hard-coded mailto link may be rewritten to /cdn-cgi/l/email-protection');
+  }
+  if (['index.html', 'tools/portfolio-reviewer.html'].includes(relative) && !source.includes("gtag('event', 'generate_lead'")) {
+    errors.push(`${relative}: generate_lead tracking is missing from the primary consultation path`);
   }
 
   for (const match of source.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {

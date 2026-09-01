@@ -10,8 +10,8 @@
     <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="../favicon-180x180.png" sizes="180x180">
 
-    <title>作品集设计费用计算器 — 30秒估算你的预算和时间 | 1%DesignLab</title>
-    <meta name="description" content="免费作品集费用与时间计算器：输入目标院校、专业方向、当前基础、项目数量与申请时间，30秒估算预算区间、准备周期和项目建议。基于1%DesignLab多年作品集服务经验，无需注册。">
+    <title>作品集制作费用怎么算｜预算与时间规划计算器｜1% Design Lab</title>
+    <meta name="description" content="免费作品集制作费用与时间规划计算器。输入目标院校层级、专业方向、现有基础、项目数量、申请时间和服务方式，30秒估算预算区间、项目数量、准备周期与每月任务，并给出可参考的同类案例。适合比较艺术留学作品集培训费用、判断多久开始准备；无需注册，结果仅作规划参考。">
     <meta name="keywords" content="作品集设计多少钱,留学作品集费用,作品集预算,作品集价格计算,艺术留学费用">
 
     <meta property="og:title" content="作品集设计费用计算器 — 30秒估算预算">
@@ -71,7 +71,9 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-K0742RTMPL');
+      if (location.hostname === '1-design-lab.com' || location.hostname === 'www.1-design-lab.com') {
+        gtag('config', 'G-K0742RTMPL');
+      }
     </script>
 
     <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
@@ -316,7 +318,7 @@
             <div class="cta-box">
                 <h3>想要更精确的方案？</h3>
                 <p>15分钟免费通话，导师本人评估你的情况——不是销售</p>
-                <a href="../" class="cta-btn">免费咨询 &rarr;</a>
+                <a href="../#contact" class="cta-btn" onclick="gtag('event','consultation_cta_click',{source:'portfolio_calculator_result'})">免费咨询 &rarr;</a>
             </div>
 
             <button class="btn-reset" onclick="resetCalculator()">重新计算</button>

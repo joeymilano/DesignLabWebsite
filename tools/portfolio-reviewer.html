@@ -10,12 +10,12 @@
     <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="../favicon-180x180.png" sizes="180x180">
 
-    <title>AI 作品集诊断 — 60秒智能评估竞争力 ¥299 | 1%DesignLab</title>
-    <meta name="description" content="AI作品集诊断工具：描述你的项目情况，AI从叙事逻辑、视觉表现、竞争力三维度打分，给出具体改进路线图。¥299即时出完整诊断报告，基于6000+录取案例经验。">
+    <title>AI作品集诊断｜60秒免费初评与修改建议｜1% Design Lab</title>
+    <meta name="description" content="AI作品集诊断工具，60秒完成免费初评：根据目标院校、专业、项目数量、研究过程、视觉呈现和排版情况，给出叙事、调研、过程、技术与竞争力评分及修改重点。可上传项目说明或文件辅助评估；基础结果免费，¥299深度报告与导师咨询按需选择。">
     <meta name="keywords" content="作品集评估,作品集诊断,作品集怎么看好不好,留学作品集自测,作品集竞争力">
 
-    <meta property="og:title" content="作品集自测评估 — 快速诊断竞争力">
-    <meta property="og:description" content="输入情况，即时获得多维度评估和改进建议">
+    <meta property="og:title" content="AI作品集诊断｜60秒免费初评与修改建议">
+    <meta property="og:description" content="根据目标院校、项目数量、研究过程和视觉呈现，获得多维度评分与修改重点。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://1-design-lab.com/tools/portfolio-reviewer">
     <meta property="og:image" content="https://1-design-lab.com/logo.jpg">
@@ -28,7 +28,7 @@
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "Web",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
-      "description": "免费作品集诊断工具，多维度评估竞争力并给出改进建议"
+      "description": "60秒免费作品集初评工具，根据目标院校、项目数量、研究过程与视觉呈现，多维度评估竞争力并给出改进建议"
     }
     </script>
     <script type="application/ld+json">
@@ -66,7 +66,9 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-K0742RTMPL');
+      if (location.hostname === '1-design-lab.com' || location.hostname === 'www.1-design-lab.com') {
+        gtag('config', 'G-K0742RTMPL');
+      }
     </script>
     <script src="../js/auth.js"></script>
 
@@ -502,6 +504,22 @@
     function openWechatLink() {
         document.getElementById('wechatQuickModal').style.display = 'flex';
         gtag('event', 'wechat_consult_click', { source: 'reviewer_result' });
+        try {
+            if (!sessionStorage.getItem('designlab-lead-reviewer-wechat')) {
+                sessionStorage.setItem('designlab-lead-reviewer-wechat', '1');
+                gtag('event', 'generate_lead', {
+                    lead_source: 'portfolio_reviewer',
+                    contact_method: 'wechat_qr',
+                    cta_location: 'reviewer_result'
+                });
+            }
+        } catch (error) {
+            gtag('event', 'generate_lead', {
+                lead_source: 'portfolio_reviewer',
+                contact_method: 'wechat_qr',
+                cta_location: 'reviewer_result'
+            });
+        }
     }
     function closeWechatQuick() {
         document.getElementById('wechatQuickModal').style.display = 'none';

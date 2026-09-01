@@ -10,12 +10,12 @@
     <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="../favicon-180x180.png" sizes="180x180">
 
-    <title>免费 AI 设计工具集 — 选校匹配 · 作品集诊断 · 转化审计 | 1%DesignLab</title>
-    <meta name="description" content="1%DesignLab 免费 AI 工具集：设计留学选校匹配器、作品集费用计算器、AI 作品集诊断、Landing Page 转化审计。基于6000+真实案例，30秒出结果，无需注册。">
+    <title>设计留学免费工具｜选校匹配、作品集费用与诊断｜1% Design Lab</title>
+    <meta name="description" content="1% Design Lab 免费工具集，提供设计留学选校匹配、作品集制作费用与时间计算、AI作品集初评、Landing Page转化审计。输入目标院校、专业、预算或产品网址，30至60秒获得可执行结果；部分基础功能无需注册，可继续连接作品集辅导或AI产品开发服务。">
     <meta name="keywords" content="免费AI设计工具,作品集诊断,作品集费用计算器,设计留学选校工具,landing page审计,SaaS转化优化,portfolio review,school matcher,design portfolio calculator,免费选校工具">
 
-    <meta property="og:title" content="免费 AI 设计工具集 | 1%DesignLab">
-    <meta property="og:description" content="选校匹配 · 作品集诊断 · 费用计算 · Landing Page 转化审计。基于6000+真实案例，30秒出结果。">
+    <meta property="og:title" content="设计留学免费工具｜1% Design Lab">
+    <meta property="og:description" content="选校匹配、作品集制作费用与时间计算、AI作品集初评和Landing Page转化审计。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://1-design-lab.com/tools/">
     <meta property="og:image" content="https://1-design-lab.com/logo.jpg">
@@ -24,8 +24,8 @@
     <meta property="og:locale:alternate" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="免费 AI 设计工具集 | 1%DesignLab">
-    <meta name="twitter:description" content="选校匹配 · 作品集诊断 · 费用计算 · Landing Page 转化审计。30秒出结果。">
+    <meta name="twitter:title" content="设计留学免费工具｜1% Design Lab">
+    <meta name="twitter:description" content="选校匹配、作品集费用与时间计算、AI作品集初评和Landing Page转化审计。">
 
     <!-- Structured Data: ItemList (SoftwareApplication) -->
     <script type="application/ld+json">
@@ -59,7 +59,9 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-K0742RTMPL');
+      if (location.hostname === '1-design-lab.com' || location.hostname === 'www.1-design-lab.com') {
+        gtag('config', 'G-K0742RTMPL');
+      }
     </script>
 
     <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
@@ -235,7 +237,7 @@
                 <p data-i18n="cta.desc">从免费工具到一对一全链路服务——选校规划、作品集辅导、AI MVP 开发，按需选择你的下一步。</p>
             </div>
             <div class="cta-btns">
-                <a href="../#contact" class="btn btn-primary" data-i18n="cta.primary">预约一对一咨询</a>
+                <a href="../#contact" class="btn btn-primary" data-i18n="cta.primary" onclick="gtag('event','consultation_cta_click',{source:'tools_hub'})">预约一对一咨询</a>
                 <a href="../services/ai-mvp" class="btn btn-ghost" data-i18n="cta.ghost">了解 AI MVP 服务</a>
             </div>
         </div>
