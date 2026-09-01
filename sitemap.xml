@@ -1,212 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/">
   <url>
     <loc>https://1-design-lab.com/</loc>
+    <mobile:mobile type="pc,mobile"/>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/careers/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/en/careers/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/portfolio/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/en/design-portfolio/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/design-study-abroad-guide</loc>
-    <lastmod>2026-08-30</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/portfolio-cost-guide</loc>
-    <lastmod>2026-08-30</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/portfolio-timeline</loc>
+    <mobile:mobile type="pc,mobile"/>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/design-agency-how-to-choose</loc>
-    <lastmod>2026-08-30</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/portfolio-how-to-build</loc>
-    <lastmod>2026-08-30</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/art-study-abroad-portfolio-requirements-2027</loc>
-    <lastmod>2026-08-30</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/uk-art-school-application-timeline-2027</loc>
-    <lastmod>2026-08-30</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/architecture-portfolio-guide-2027</loc>
-    <lastmod>2026-08-30</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/us-design-school-cost-2027</loc>
-    <lastmod>2026-08-30</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/sino-foreign-design-program-guide</loc>
-    <lastmod>2026-08-30</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/ai-agent-mvp-guide</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/vibe-coding-to-production</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/blog/ai-app-builder-vs-custom-development</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/services/ai-mvp</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/services/portfolio-design</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/services/logo-branding</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/services/industrial-design</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/services/phd-research-proposal</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/cases/interaction-design-milano</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/cases/industrial-design-rca</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/cases/architecture-ucl</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/cases/phd-polyu</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/cases/architecture-columbia-upenn</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/cases/branding-fashion</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/tools/</loc>
+    <mobile:mobile type="pc,mobile"/>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/tools/portfolio-calculator</loc>
+    <mobile:mobile type="pc,mobile"/>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/tools/school-matcher</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/tools/portfolio-reviewer</loc>
+    <mobile:mobile type="pc,mobile"/>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://1-design-lab.com/tools/landing-page-audit</loc>
-    <lastmod>2026-08-25</lastmod>
+    <mobile:mobile type="pc,mobile"/>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

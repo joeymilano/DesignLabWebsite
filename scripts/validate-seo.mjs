@@ -36,6 +36,7 @@ function localFileFor(url) {
 
 const sitemapSource = await readFile(path.join(root, 'sitemap.xml'), 'utf8');
 const sitemapUrls = [...sitemapSource.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+const sitemapEntries = [...sitemapSource.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => match[1]);
 const sitemapSet = new Set(sitemapUrls);
 const inboundLinks = new Map(sitemapUrls.map((url) => [url, new Set()]));
 const titleOwners = new Map();
@@ -49,6 +50,12 @@ const ctrDescriptionTargets = new Set([
 
 if (sitemapSet.size !== sitemapUrls.length) errors.push('sitemap.xml contains duplicate URLs');
 if (sitemapUrls.some((url) => url.endsWith('.html'))) errors.push('sitemap.xml contains redirecting .html URLs');
+if (!sitemapSource.includes('xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/"')) {
+  errors.push('sitemap.xml is missing the Baidu mobile sitemap namespace');
+}
+if (sitemapEntries.length !== sitemapUrls.length || sitemapEntries.some((entry) => !entry.includes('<mobile:mobile type="pc,mobile"/>'))) {
+  errors.push('sitemap.xml must mark every canonical URL as responsive for Baidu mobile search');
+}
 
 for (const file of await walk(root)) {
   const source = await readFile(file, 'utf8');
@@ -58,6 +65,7 @@ for (const file of await walk(root)) {
   const title = source.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim();
   const description = source.match(/<meta name="description" content="([^"]+)"/i)?.[1];
   const lang = source.match(/<html[^>]*\slang="([^"]+)"/i)?.[1];
+  const applicableDevice = source.match(/<meta name="applicable-device" content="([^"]+)"/i)?.[1];
   const h1Count = [...source.matchAll(/<h1(?:\s[^>]*)?>/gi)].length;
   const ogUrl = source.match(/<meta property="og:url" content="([^"]+)"/i)?.[1];
 
@@ -69,6 +77,7 @@ for (const file of await walk(root)) {
     errors.push(`${relative}: data-priority meta description is shorter than 110 characters`);
   }
   if (!lang) errors.push(`${relative}: html lang is missing`);
+  if (applicableDevice !== 'pc,mobile') errors.push(`${relative}: applicable-device should be pc,mobile for Baidu responsive search`);
   if (h1Count !== 1) errors.push(`${relative}: expected exactly one h1, found ${h1Count}`);
   if (ogUrl && ogUrl !== expectedCanonical) errors.push(`${relative}: og:url should match canonical ${expectedCanonical}`);
   if (title) {
@@ -82,6 +91,9 @@ for (const file of await walk(root)) {
 
   if (relative === 'index.html' && /href="mailto:/i.test(source)) {
     errors.push('index.html: hard-coded mailto link may be rewritten to /cdn-cgi/l/email-protection');
+  }
+  if (relative === 'index.html' && !/name="baidu-site-verification" content="[^"]+"/i.test(source)) {
+    errors.push('index.html: Baidu site verification meta is missing');
   }
   if (['index.html', 'tools/portfolio-reviewer.html'].includes(relative) && !source.includes("gtag('event', 'generate_lead'")) {
     errors.push(`${relative}: generate_lead tracking is missing from the primary consultation path`);
@@ -134,7 +146,9 @@ for (const sitemapUrl of sitemapUrls) {
 
 const robots = await readFile(path.join(root, 'robots.txt'), 'utf8');
 if (!robots.includes('Sitemap: https://1-design-lab.com/sitemap.xml')) errors.push('robots.txt is missing the canonical sitemap URL');
+if (!/User-agent: Baiduspider[\s\S]*?Allow: \//.test(robots)) errors.push('robots.txt must explicitly allow Baiduspider');
 if (!existsSync(path.join(root, 'llms.txt'))) errors.push('llms.txt is missing');
+if (!existsSync(path.join(root, 'scripts', 'submit-baidu.mjs'))) errors.push('Baidu API submission script is missing');
 
 if (errors.length) {
   console.error(errors.join('\n'));
