@@ -54,9 +54,17 @@
 
   // ---- UI ----
   var fab = el('agent-fab', 'button');
-  fab.setAttribute('aria-label', '打开 AI 助手小梦');
+  fab.setAttribute('aria-label', '问问小梦 AI 助手');
   fab.setAttribute('aria-expanded', 'false');
-  fab.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/><path d="M9 11h.01M13 11h.01M17 11h.01"/></svg><span class="agent-fab-dot" aria-hidden="true"></span>';
+  fab.innerHTML = '<svg class="agent-dots" viewBox="0 0 24 24" aria-hidden="true">' +
+    '<circle cx="12" cy="12" r="2.7" fill="currentColor"/>' +
+    '<circle cx="12" cy="4.4" r="1.15" fill="currentColor"/>' +
+    '<circle cx="18.5" cy="7.8" r="1.15" fill="currentColor"/>' +
+    '<circle cx="18.5" cy="16.2" r="1.15" fill="currentColor"/>' +
+    '<circle cx="12" cy="19.6" r="1.15" fill="currentColor"/>' +
+    '<circle cx="5.5" cy="16.2" r="1.15" fill="currentColor"/>' +
+    '<circle cx="5.5" cy="7.8" r="1.15" fill="currentColor"/>' +
+    '</svg><span>问问小梦</span>';
 
   var panel = el('agent-panel');
   panel.setAttribute('role', 'dialog');

@@ -1,8 +1,8 @@
 /* ---------- agent (小梦) ---------- */
-.agent-fab{position:fixed;right:clamp(16px,3vw,32px);bottom:clamp(16px,3vw,32px);z-index:120;width:56px;height:56px;border-radius:50%;background:var(--ink,#111);border:1px solid var(--line,#262624);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .35s var(--ease,cubic-bezier(.2,.7,.2,1)),background .3s;box-shadow:0 8px 32px rgba(0,0,0,.45)}
-.agent-fab:hover{transform:translateY(-3px);background:#171715}
-.agent-fab svg{width:24px;height:24px;stroke:var(--fg,#F2F2EE);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.agent-fab .agent-fab-dot{position:absolute;top:2px;right:2px;width:10px;height:10px;border-radius:50%;background:var(--academy,#C8FF3D);border:2px solid var(--ink,#111)}
+.agent-fab{position:fixed;right:clamp(16px,3vw,32px);bottom:clamp(16px,3vw,32px);z-index:120;display:inline-flex;align-items:center;gap:11px;height:52px;padding:0 24px 0 19px;border-radius:999px;background:#F0EEE9;color:#1A1A18;border:none;font-family:inherit;font-size:15px;font-weight:500;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 36px rgba(0,0,0,.5);transition:transform .35s var(--ease,cubic-bezier(.2,.7,.2,1)),box-shadow .3s}
+.agent-fab:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,.6)}
+.agent-fab .agent-dots{width:20px;height:20px;flex:none;animation:agent-pulse 3.2s ease-in-out infinite}
+@keyframes agent-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
 .agent-fab[aria-expanded="true"]{transform:scale(0);opacity:0;pointer-events:none}
 .agent-panel{position:fixed;right:clamp(16px,3vw,32px);bottom:clamp(16px,3vw,32px);z-index:121;width:min(392px,calc(100vw - 24px));height:min(600px,calc(100dvh - 48px));background:var(--ink,#0B0B0A);border:1px solid var(--line,#262624);border-radius:18px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.6);opacity:0;transform:translateY(18px) scale(.97);pointer-events:none;transition:opacity .35s var(--ease,cubic-bezier(.2,.7,.2,1)),transform .35s var(--ease,cubic-bezier(.2,.7,.2,1))}
 .agent-panel.open{opacity:1;transform:none;pointer-events:auto}
