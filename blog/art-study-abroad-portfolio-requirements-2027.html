@@ -80,8 +80,30 @@
     <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
     <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="article-evidence.css?v=20260830">
+
+    <!--dl:head--><link rel="preload" href="/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/site/chrome.css?v=20260927"><!--/dl:head-->
 </head>
-<body>
+<body data-biz="home">
+<!--dl:hdr-->
+<header class="hdr dl-c">
+  <div class="wrap hdr-in">
+    <a class="wm" href="/" >1% Design Lab<small>梦想管理局</small></a>
+    <nav class="nav" aria-label="主导航">
+      <a href="/studio/"><span class="dot s"></span>产品工作室</a><a href="/academy/"><span class="dot a"></span>作品集学院</a><a href="/#work">作品</a><a href="/#people">团队</a><a href="/blog/" aria-current="page">文章</a>
+    </nav>
+    <div class="hdr-r">
+      <span class="clock mono" data-clock>SHA 00:00 GMT+8</span>
+      <span class="lang"><span aria-current="true">中</span> / <a href="/en/" hreflang="en">EN</a></span>
+      <button class="btn btn-solid" data-consult data-from="header">聊聊 <span class="arr">↗</span></button>
+      <button class="burger" aria-label="菜单" aria-expanded="false"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<nav class="mnav dl-c" aria-label="移动导航">
+  <a href="/studio/"><span class="dot s"></span>产品工作室</a><a href="/academy/"><span class="dot a"></span>作品集学院</a><a href="/#work">作品</a><a href="/#people">团队</a><a href="/blog/">文章</a>
+  <div class="mnav-foot"><span class="lang"><span aria-current="true">中</span> / <a href="/en/" hreflang="en">EN</a></span><button class="btn btn-solid" data-consult data-from="menu">聊聊 <span class="arr">↗</span></button></div>
+</nav>
+<!--/dl:hdr-->
     <article class="article-shell">
         <header class="article-header">
             <a href="../blog/" class="back-link">← 返回博客</a>
@@ -259,9 +281,72 @@
             <a href="../services/portfolio-design" class="cta-button">了解一对一辅导</a>
         </section>
 
-        <footer class="article-footer">
-            <p>© 2026 <a href="../">1%DesignLab 梦想管理局</a> · 本文依据公开院校页面整理</p>
-        </footer>
+        <footer class="article-footer"><p>本文依据公开院校页面整理</p></footer>
     </article>
+<!--dl:ftr-->
+<footer class="ftr dl-c">
+  <div class="wrap">
+    <div class="ftr-cols">
+      <div class="ftr-intro"><h3>1% Design Lab · 梦想管理局</h3><p>上海光有序科技有限公司旗下的设计与创意技术品牌。一支团队，两种交付：为创业者把产品做上线，为申请者把作品集做出来。</p><p class="muted" style="margin-top:18px">上海市黄浦区北京东路 668 号裙楼<br>黄浦汇数智心城</p></div>
+      <div><h3><span class="dot s"></span>产品工作室</h3><ul><li><a href="/services/ai-mvp">AI 应用 MVP</a></li><li><a href="/studio/#services">产品设计 × 全栈</a></li><li><a href="/services/logo-branding">LOGO / 品牌 VI</a></li><li><a href="/services/industrial-design">工业设计 / 3D</a></li><li><a href="/tools/landing-page-audit">Landing Page 审计</a></li></ul></div><div><h3><span class="dot a"></span>作品集学院</h3><ul><li><a href="/services/portfolio-design">作品集设计</a></li><li><a href="/services/phd-research-proposal">博士研究计划</a></li><li><a href="/academy/#stories">录取故事</a></li><li><a href="/portfolio/">作品集案例</a></li><li><a href="/tools/portfolio-reviewer">AI 作品集诊断</a></li></ul></div><div><h3>资源</h3><ul><li><a href="/blog/">文章</a></li><li><a href="/tools/">免费工具</a></li><li><a href="/careers/">加入我们</a></li><li><a href="/en/">English</a></li></ul></div>
+      <div><h3>联系</h3><ul>
+      <li><button data-consult data-from="footer">微信咨询</button></li>
+      <li><a href="https://xhslink.com/m/3SgVLnRsIGw" target="_blank" rel="noopener" data-label="xiaohongshu">小红书 ↗</a></li>
+      <li><a href="https://m.tb.cn/h.7JpsJZMWJLsNTwq" target="_blank" rel="noopener" data-label="taobao-shop">淘宝店铺 ↗</a></li>
+      <li><a href="mailto:super666joey@gmail.com">Email</a></li>
+    </ul></div>
+    </div>
+    <p class="ftr-wm" aria-hidden="true">1%<span> </span>Design Lab</p>
+  </div>
+  <div class="ftr-base"><div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;width:100%">
+    <span class="label">© 2026 上海光有序科技有限公司</span>
+    <span class="label"><a class="link" href="https://joeyzhao.cc" target="_blank" rel="noopener">joeyzhao.cc</a> · <a class="link" href="https://finfold.app" target="_blank" rel="noopener">Finfold</a> · <a class="link" href="https://billvampire.com" target="_blank" rel="noopener">BillVampire</a> · <a class="link" href="https://github.com/joeymilano" target="_blank" rel="noopener">GitHub</a></span>
+    <span class="label" data-clock>SHA 00:00 GMT+8</span>
+  </div></div>
+</footer>
+<dialog id="consult" class="consult dl-c" aria-label="咨询">
+  <div class="c-top"><span class="label">1% Design Lab · 咨询</span><button class="c-x" aria-label="关闭">✕</button></div>
+  <div class="c-body" data-pane="choose">
+    <h2>你想聊哪件事？</h2>
+    <div class="c-choices">
+      <button class="pick" data-go="studio" style="--pc:var(--studio)"><span class="label"><span class="dot s"></span>产品工作室</span><strong>我要做一个产品 <span class="arr">→</span></strong></button>
+      <button class="pick" data-go="academy" style="--pc:var(--academy)"><span class="label"><span class="dot a"></span>作品集学院</span><strong>我要准备作品集 <span class="arr">→</span></strong></button>
+    </div>
+  </div>
+  <div class="c-body" data-pane="studio" hidden style="--accent:var(--studio)">
+    <p class="label" style="display:flex;gap:10px;align-items:center;margin-bottom:14px"><span class="dot s"></span>PRODUCT STUDIO</p>
+    <h2>聊聊你的产品</h2>
+    <div class="c-detail">
+      <img src="/assets/site/img/wechat-qr-code.png" width="150" height="150" alt="微信二维码" loading="lazy">
+      <div>
+        <p>微信扫码，发来一句话需求：做什么、给谁用、希望何时上线。我们会给出可行方案与报价区间。</p>
+        <div class="c-links">
+          <a href="mailto:super666joey@gmail.com?subject=[产品工作室] 项目咨询"><span>Email</span><span class="muted">super666joey@gmail.com</span></a>
+          <a href="https://xhslink.com/m/3SgVLnRsIGw" target="_blank" rel="noopener" data-label="xiaohongshu"><span>小红书</span><span>↗</span></a>
+          <a href="https://m.tb.cn/h.7JpsJZMWJLsNTwq" target="_blank" rel="noopener" data-label="taobao-shop"><span>淘宝店铺 · 旺旺客服</span><span>↗</span></a>
+        </div>
+      </div>
+    </div>
+    <button class="c-back" data-go="choose">← 换一个方向</button>
+  </div>
+  <div class="c-body" data-pane="academy" hidden style="--accent:var(--academy)">
+    <p class="label" style="display:flex;gap:10px;align-items:center;margin-bottom:14px"><span class="dot a"></span>PORTFOLIO ACADEMY</p>
+    <h2>聊聊你的作品集</h2>
+    <div class="c-detail">
+      <img src="/assets/site/img/wechat-qr-code.png" width="150" height="150" alt="微信二维码" loading="lazy">
+      <div>
+        <p>微信扫码，告诉我们你的专业方向、目标院校和截止时间。我们会先帮你评估现有素材。</p>
+        <div class="c-links">
+          <a href="mailto:super666joey@gmail.com?subject=[作品集学院] 申请咨询"><span>Email</span><span class="muted">super666joey@gmail.com</span></a>
+          <a href="https://xhslink.com/m/3SgVLnRsIGw" target="_blank" rel="noopener" data-label="xiaohongshu"><span>小红书</span><span>↗</span></a>
+          <a href="https://m.tb.cn/h.7JpsJZMWJLsNTwq" target="_blank" rel="noopener" data-label="taobao-shop"><span>淘宝店铺 · 旺旺客服</span><span>↗</span></a>
+        </div>
+      </div>
+    </div>
+    <button class="c-back" data-go="choose">← 换一个方向</button>
+  </div>
+</dialog>
+<script src="/assets/site/site.js?v=20260927" defer></script>
+<!--/dl:ftr-->
 </body>
 </html>

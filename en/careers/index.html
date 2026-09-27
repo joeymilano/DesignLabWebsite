@@ -57,33 +57,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Noto+Sans+SC:wght@400;500;600&amp;display=swap" rel="stylesheet">
     <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="../../careers/careers.css">
-    <link rel="stylesheet" href="../../subpage-nav.css">
-</head>
-<body>
-    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header class="site-header">
-        <a class="brand-link" href="../../" aria-label="Back to the 1% Design Lab homepage">
-            <img src="../../logo.jpg" alt="">
-            <span>1% DESIGN LAB</span>
-        </a>
-        <nav class="site-nav" aria-label="Primary navigation">
-            <a class="site-nav-link" href="../../#product-studio">AI Product</a>
-            <a class="site-nav-link" href="../../#portfolio-academy">Portfolio Academy</a>
-            <a class="site-nav-link" href="../../#team">Team</a>
-            <a class="site-nav-link" href="../../#portfolio">Work</a>
-            <a class="site-nav-link" href="../../tools/">Tools</a>
-            <a class="site-nav-link" href="../../blog/">Blog</a>
-            <a class="site-nav-link active" href="./" aria-current="page">Careers</a>
-        </nav>
-        <div class="header-actions">
-            <a class="header-contact" href="mailto:joey@finfold.app">Contact</a>
-            <nav class="lang-switch" aria-label="Language switcher">
-                <a class="lang-option" href="../../careers/" lang="zh-CN" hreflang="zh-CN">中</a>
-                <a class="lang-option active" href="./" lang="en" hreflang="en" aria-current="page">EN</a>
-            </nav>
-        </div>
-    </header>
+    <!--dl:head--><link rel="preload" href="/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/site/chrome.css?v=20260927"><!--/dl:head-->
+</head>
+<body data-biz="home" class="dl-pad">
+<!--dl:hdr-->
+<header class="hdr dl-c">
+  <div class="wrap hdr-in">
+    <a class="wm" href="/en/" >1% Design Lab<small>SHANGHAI</small></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/en/studio/"><span class="dot s"></span>Product Studio</a><a href="/en/academy/"><span class="dot a"></span>Portfolio Academy</a><a href="/en/#work">Work</a><a href="/en/#people">People</a><a href="/blog/">Journal</a>
+    </nav>
+    <div class="hdr-r">
+      <span class="clock mono" data-clock>SHA 00:00 GMT+8</span>
+      <span class="lang"><a href="/careers/" hreflang="zh-CN">中</a> / <span aria-current="true">EN</span></span>
+      <button class="btn btn-solid" data-consult data-from="header">Let's talk <span class="arr">↗</span></button>
+      <button class="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<nav class="mnav dl-c" aria-label="Mobile">
+  <a href="/en/studio/"><span class="dot s"></span>Product Studio</a><a href="/en/academy/"><span class="dot a"></span>Portfolio Academy</a><a href="/en/#work">Work</a><a href="/en/#people">People</a><a href="/blog/">Journal</a>
+  <div class="mnav-foot"><span class="lang"><a href="/careers/" hreflang="zh-CN">中</a> / <span aria-current="true">EN</span></span><button class="btn btn-solid" data-consult data-from="menu">Let's talk <span class="arr">↗</span></button></div>
+</nav>
+<!--/dl:hdr-->
 
     <main id="main">
         <section class="hero" aria-labelledby="careers-title">
@@ -317,15 +314,71 @@
         </section>
     </main>
 
-    <footer class="site-footer">
-        <span>© 2026 1% DESIGN LAB / SHANGHAI</span>
-        <nav class="footer-nav" aria-label="Footer navigation">
-            <a class="footer-link" href="../../">Home</a>
-            <a class="footer-link" href="../../#portfolio">Work</a>
-            <a class="footer-link" href="../../careers/" lang="zh-CN" hreflang="zh-CN">中文</a>
-        </nav>
-    </footer>
-
     <script src="../../careers/careers.js"></script>
+<!--dl:ftr-->
+<footer class="ftr dl-c">
+  <div class="wrap">
+    <div class="ftr-cols">
+      <div class="ftr-intro"><h3>1% Design Lab · Dream Bureau</h3><p>A design and creative-technology studio in Shanghai. One team, two deliverables: products that go live for founders, portfolios that get remembered for applicants.</p><p class="muted" style="margin-top:18px">668 East Beijing Rd, Huangpu<br>Shanghai, China</p></div>
+      <div><h3><span class="dot s"></span>Product Studio</h3><ul><li><a href="/services/ai-mvp">AI app MVP</a></li><li><a href="/en/studio/#services">Product × full-stack</a></li><li><a href="/services/logo-branding">Brand identity</a></li><li><a href="/services/industrial-design">Industrial / 3D</a></li><li><a href="/tools/landing-page-audit">Landing page audit</a></li></ul></div><div><h3><span class="dot a"></span>Portfolio Academy</h3><ul><li><a href="/en/design-portfolio/">Portfolio design</a></li><li><a href="/services/phd-research-proposal">PhD proposal</a></li><li><a href="/en/academy/#stories">Admission stories</a></li><li><a href="/portfolio/">Portfolio cases</a></li><li><a href="/tools/portfolio-reviewer">AI portfolio review</a></li></ul></div><div><h3>Resources</h3><ul><li><a href="/blog/">Journal</a></li><li><a href="/tools/">Free tools</a></li><li><a href="/en/careers/">Careers</a></li><li><a href="/">中文</a></li></ul></div>
+      <div><h3>Contact</h3><ul>
+      <li><button data-consult data-from="footer">WeChat</button></li>
+      <li><a href="https://xhslink.com/m/3SgVLnRsIGw" target="_blank" rel="noopener" data-label="xiaohongshu">Xiaohongshu ↗</a></li>
+      <li><a href="https://m.tb.cn/h.7JpsJZMWJLsNTwq" target="_blank" rel="noopener" data-label="taobao-shop">Taobao shop ↗</a></li>
+      <li><a href="mailto:super666joey@gmail.com">Email</a></li>
+    </ul></div>
+    </div>
+    <p class="ftr-wm" aria-hidden="true">1%<span> </span>Design Lab</p>
+  </div>
+  <div class="ftr-base"><div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;width:100%">
+    <span class="label">© 2026 Shanghai LightOrder Technology Co., Ltd.</span>
+    <span class="label"><a class="link" href="https://joeyzhao.cc" target="_blank" rel="noopener">joeyzhao.cc</a> · <a class="link" href="https://finfold.app" target="_blank" rel="noopener">Finfold</a> · <a class="link" href="https://billvampire.com" target="_blank" rel="noopener">BillVampire</a> · <a class="link" href="https://github.com/joeymilano" target="_blank" rel="noopener">GitHub</a></span>
+    <span class="label" data-clock>SHA 00:00 GMT+8</span>
+  </div></div>
+</footer>
+<dialog id="consult" class="consult dl-c" aria-label="Contact">
+  <div class="c-top"><span class="label">1% Design Lab · Contact</span><button class="c-x" aria-label="Close">✕</button></div>
+  <div class="c-body" data-pane="choose">
+    <h2>What are you working on?</h2>
+    <div class="c-choices">
+      <button class="pick" data-go="studio" style="--pc:var(--studio)"><span class="label"><span class="dot s"></span>Product Studio</span><strong>I want to build a product <span class="arr">→</span></strong></button>
+      <button class="pick" data-go="academy" style="--pc:var(--academy)"><span class="label"><span class="dot a"></span>Portfolio Academy</span><strong>I need a portfolio <span class="arr">→</span></strong></button>
+    </div>
+  </div>
+  <div class="c-body" data-pane="studio" hidden style="--accent:var(--studio)">
+    <p class="label" style="display:flex;gap:10px;align-items:center;margin-bottom:14px"><span class="dot s"></span>PRODUCT STUDIO</p>
+    <h2>Tell us about your product</h2>
+    <div class="c-detail">
+      <img src="/assets/site/img/wechat-qr-code.png" width="150" height="150" alt="WeChat QR code" loading="lazy">
+      <div>
+        <p>Scan to add us on WeChat, or email a one-line brief: what it is, who it's for, when it should launch. We'll reply with a plan and a price range.</p>
+        <div class="c-links">
+          <a href="mailto:super666joey@gmail.com?subject=[Studio] Project enquiry"><span>Email</span><span class="muted">super666joey@gmail.com</span></a>
+          <a href="https://xhslink.com/m/3SgVLnRsIGw" target="_blank" rel="noopener" data-label="xiaohongshu"><span>Xiaohongshu</span><span>↗</span></a>
+          <a href="https://m.tb.cn/h.7JpsJZMWJLsNTwq" target="_blank" rel="noopener" data-label="taobao-shop"><span>Taobao shop</span><span>↗</span></a>
+        </div>
+      </div>
+    </div>
+    <button class="c-back" data-go="choose">← Choose another</button>
+  </div>
+  <div class="c-body" data-pane="academy" hidden style="--accent:var(--academy)">
+    <p class="label" style="display:flex;gap:10px;align-items:center;margin-bottom:14px"><span class="dot a"></span>PORTFOLIO ACADEMY</p>
+    <h2>Tell us about your portfolio</h2>
+    <div class="c-detail">
+      <img src="/assets/site/img/wechat-qr-code.png" width="150" height="150" alt="WeChat QR code" loading="lazy">
+      <div>
+        <p>Scan to add us on WeChat, or email your discipline, target schools and deadline. We'll start by reviewing what you already have.</p>
+        <div class="c-links">
+          <a href="mailto:super666joey@gmail.com?subject=[Academy] Portfolio enquiry"><span>Email</span><span class="muted">super666joey@gmail.com</span></a>
+          <a href="https://xhslink.com/m/3SgVLnRsIGw" target="_blank" rel="noopener" data-label="xiaohongshu"><span>Xiaohongshu</span><span>↗</span></a>
+          <a href="https://m.tb.cn/h.7JpsJZMWJLsNTwq" target="_blank" rel="noopener" data-label="taobao-shop"><span>Taobao shop</span><span>↗</span></a>
+        </div>
+      </div>
+    </div>
+    <button class="c-back" data-go="choose">← Choose another</button>
+  </div>
+</dialog>
+<script src="/assets/site/site.js?v=20260927" defer></script>
+<!--/dl:ftr-->
 </body>
 </html>
