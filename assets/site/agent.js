@@ -142,13 +142,63 @@
   }
 
   function askAI(q, onChunk) {
+    // provider 1: 服务端代理 /api/chat (key 藏在 Cloudflare), 前端零密钥
+    // 失败 -> provider 2: Puter.js (仅已登录 Puter 的访客) -> null -> 本地知识库
+    return glmChat(q, onChunk).then(function (ans) {
+      if (ans !== null) return ans;
+      return puterChat(q, onChunk);
+    });
+  }
+
+  function glmChat(q, onChunk) {
+    var msgs = [{ role: 'system', content: SYS }].concat(state.history.slice(-8), [{ role: 'user', content: q }]);
+    var model = window.AGENT_MODEL || 'glm-4-flash';
+    var direct = !!window.AGENT_GLM_KEY; // 仅本地调试用: 前端直调 (生产勿配)
+    var url = direct ? 'https://open.bigmodel.cn/api/paas/v4/chat/completions' : '/api/chat';
+    var headers = { 'Content-Type': 'application/json' };
+    if (direct) headers['Authorization'] = 'Bearer ' + window.AGENT_GLM_KEY;
+    var payload = direct
+      ? { model: model, messages: msgs, temperature: 0.7, stream: true }
+      : { model: model, messages: msgs };
+    return fetch(url, {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(payload)
+    }).then(function (res) {
+      if (!res.ok || !res.body) throw new Error('glm http ' + res.status);
+      var reader = res.body.getReader();
+      var dec = new TextDecoder();
+      var buf = '', full = '', settled = false;
+      return new Promise(function (resolve) {
+        var finish = function () { if (!settled) { settled = true; resolve(full || null); } };
+        var timer = setTimeout(finish, 20000);
+        var pump = function () {
+          reader.read().then(function (r) {
+            if (settled) return;
+            if (r.done) { clearTimeout(timer); finish(); return; }
+            buf += dec.decode(r.value, { stream: true });
+            var lines = buf.split('\n'); buf = lines.pop();
+            for (var i = 0; i < lines.length; i++) {
+              var line = lines[i].trim();
+              if (line.indexOf('data:') !== 0) continue;
+              var payloadLine = line.slice(5).trim();
+              if (payloadLine === '[DONE]') { clearTimeout(timer); finish(); return; }
+              try {
+                var j = JSON.parse(payloadLine);
+                var t = j.choices && j.choices[0] && j.choices[0].delta && j.choices[0].delta.content || '';
+                if (t) { full += t; onChunk(full); }
+              } catch (e) {}
+            }
+            pump();
+          }).catch(function () { clearTimeout(timer); finish(); });
+        };
+        pump();
+      });
+    }).catch(function () { return null; });
+  }
+
+  function puterChat(q, onChunk) {
     return new Promise(function (resolve) {
-      // provider 1: GLM-4-Flash (配置 window.AGENT_GLM_KEY 后启用, 完全免费)
-      if (window.AGENT_GLM_KEY) {
-        glmChat(q, onChunk).then(resolve);
-        return;
-      }
-      // provider 2: Puter.js (仅对已登录 Puter 的访客启用, 未登录直接走本地知识库, 避免授权弹窗卡住)
       loadPuter(function (ok) {
         if (!ok) return resolve(null);
         var signed = false;
@@ -189,45 +239,6 @@
         }).catch(function () { clearTimeout(timer); finish(); });
       });
     });
-  }
-
-  function glmChat(q, onChunk) {
-    var msgs = [{ role: 'system', content: SYS }].concat(state.history.slice(-8), [{ role: 'user', content: q }]);
-    return fetch('https://open.bigmodel.cn/api/paas/v4/chat/completions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + window.AGENT_GLM_KEY },
-      body: JSON.stringify({ model: 'glm-4-flash', messages: msgs, temperature: 0.7, stream: true })
-    }).then(function (res) {
-      if (!res.ok || !res.body) throw new Error('glm http ' + res.status);
-      var reader = res.body.getReader();
-      var dec = new TextDecoder();
-      var buf = '', full = '', settled = false;
-      return new Promise(function (resolve) {
-        var finish = function () { if (!settled) { settled = true; resolve(full || null); } };
-        var timer = setTimeout(finish, 15000);
-        var pump = function () {
-          reader.read().then(function (r) {
-            if (settled) return;
-            if (r.done) { clearTimeout(timer); finish(); return; }
-            buf += dec.decode(r.value, { stream: true });
-            var lines = buf.split('\n'); buf = lines.pop();
-            for (var i = 0; i < lines.length; i++) {
-              var line = lines[i].trim();
-              if (line.indexOf('data:') !== 0) continue;
-              var payload = line.slice(5).trim();
-              if (payload === '[DONE]') { clearTimeout(timer); finish(); return; }
-              try {
-                var j = JSON.parse(payload);
-                var t = j.choices && j.choices[0] && j.choices[0].delta && j.choices[0].delta.content || '';
-                if (t) { full += t; onChunk(full); }
-              } catch (e) {}
-            }
-            pump();
-          }).catch(function () { clearTimeout(timer); finish(); });
-        };
-        pump();
-      });
-    }).catch(function () { return null; });
   }
 
   function ask(qRaw) {

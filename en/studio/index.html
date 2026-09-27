@@ -10,7 +10,7 @@
 <title>Product Studio — AI MVPs, Full-stack, Brand &amp; Industrial Design | 1% Design Lab</title>
 <meta name="description" content="The 1% Design Lab Product Studio turns ideas into shipped products for founders: AI MVPs in 14 days from ¥5,000, product design and full-stack builds, brand identity, industrial design and 3D. Built by the team behind Finfold and BillVampire.">
 <meta name="keywords" content="AI应用开发,MVP开发,14天MVP,全栈开发,产品设计,UI设计,小程序开发,官网开发,LOGO设计,VI设计,工业设计,3D建模渲染,上海产品工作室">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="1% Design Lab 梦想管理局">
 <meta name="theme-color" content="#0B0B0A">
 <link rel="canonical" href="https://1-design-lab.com/en/studio/">
@@ -70,12 +70,6 @@
         "addressRegion": "黄浦区",
         "addressCountry": "CN"
       },
-      "sameAs": [
-        "https://joeyzhao.cc",
-        "https://finfold.app",
-        "https://billvampire.com",
-        "https://github.com/joeymilano"
-      ],
       "knowsAbout": [
         "AI product design",
         "full-stack development",
@@ -99,7 +93,8 @@
           "name": "Product Studio",
           "item": "https://1-design-lab.com/en/studio/"
         }
-      ]
+      ],
+      "@id": "https://1-design-lab.com/en/studio/#breadcrumb"
     },
     {
       "@type": "Service",
@@ -115,45 +110,94 @@
         "itemListElement": [
           {
             "@type": "Offer",
-            "priceCurrency": "CNY",
-            "price": "5000",
             "itemOffered": {
               "@type": "Service",
               "name": "AI app MVP",
               "description": "An AI idea to a live product in 14 days"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 5000.0,
+              "priceCurrency": "CNY"
             }
           },
           {
             "@type": "Offer",
-            "priceCurrency": "CNY",
-            "price": "100",
             "itemOffered": {
               "@type": "Service",
               "name": "Product design × full-stack",
               "description": "AI products, SaaS, mini-programs, websites"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 100.0,
+              "priceCurrency": "CNY"
             }
           },
           {
             "@type": "Offer",
-            "priceCurrency": "CNY",
-            "price": "100",
             "itemOffered": {
               "@type": "Service",
               "name": "Logo & brand identity",
               "description": "Marks, identity systems, brochures, packaging"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 100.0,
+              "priceCurrency": "CNY"
             }
           },
           {
             "@type": "Offer",
-            "priceCurrency": "CNY",
-            "price": "50",
             "itemOffered": {
               "@type": "Service",
               "name": "Industrial design / 3D",
               "description": "Modelling, sketching, rendering · Blender / Rhino"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 50.0,
+              "priceCurrency": "CNY"
             }
           }
         ]
+      },
+      "url": "https://1-design-lab.com/en/studio/",
+      "mainEntityOfPage": {
+        "@id": "https://1-design-lab.com/en/studio/#webpage"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://1-design-lab.com/#website",
+      "name": "1% Design Lab",
+      "url": "https://1-design-lab.com/",
+      "inLanguage": [
+        "zh-CN",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://1-design-lab.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://1-design-lab.com/en/studio/#webpage",
+      "url": "https://1-design-lab.com/en/studio/",
+      "name": "Product Studio — AI MVPs, Full-stack, Brand & Industrial Design | 1% Design Lab",
+      "description": "The 1% Design Lab Product Studio turns ideas into shipped products for founders: AI MVPs in 14 days from ¥5,000, product design and full-stack builds, brand identity, industrial design and 3D. Built by the team behind Finfold and BillVampire.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://1-design-lab.com/#website"
+      },
+      "about": {
+        "@id": "https://1-design-lab.com/en/studio/#service"
+      },
+      "mainEntity": {
+        "@id": "https://1-design-lab.com/en/studio/#service"
+      },
+      "breadcrumb": {
+        "@id": "https://1-design-lab.com/en/studio/#breadcrumb"
       }
     }
   ]

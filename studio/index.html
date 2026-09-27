@@ -10,7 +10,7 @@
 <title>产品工作室 — AI 应用 MVP · 全栈开发 · 品牌 VI · 工业设计 | 1% Design Lab</title>
 <meta name="description" content="1% Design Lab 产品工作室为创业者与企业把想法做成上线的产品：AI 应用 MVP 14 天交付（¥5,000 起），产品设计与全栈开发、LOGO 品牌 VI、工业设计与 3D 渲染。团队拥有硅谷大厂经验，独立上线 Finfold、BillVampire 等产品。">
 <meta name="keywords" content="AI应用开发,MVP开发,14天MVP,全栈开发,产品设计,UI设计,小程序开发,官网开发,LOGO设计,VI设计,工业设计,3D建模渲染,上海产品工作室">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="1% Design Lab 梦想管理局">
 <meta name="theme-color" content="#0B0B0A">
 <link rel="canonical" href="https://1-design-lab.com/studio/">
@@ -70,12 +70,6 @@
         "addressRegion": "黄浦区",
         "addressCountry": "CN"
       },
-      "sameAs": [
-        "https://joeyzhao.cc",
-        "https://finfold.app",
-        "https://billvampire.com",
-        "https://github.com/joeymilano"
-      ],
       "knowsAbout": [
         "AI product design",
         "full-stack development",
@@ -99,7 +93,8 @@
           "name": "产品工作室",
           "item": "https://1-design-lab.com/studio/"
         }
-      ]
+      ],
+      "@id": "https://1-design-lab.com/studio/#breadcrumb"
     },
     {
       "@type": "Service",
@@ -115,45 +110,94 @@
         "itemListElement": [
           {
             "@type": "Offer",
-            "priceCurrency": "CNY",
-            "price": "5000",
             "itemOffered": {
               "@type": "Service",
               "name": "AI 应用 MVP",
               "description": "14 天把 AI 想法做成可上线的产品"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 5000.0,
+              "priceCurrency": "CNY"
             }
           },
           {
             "@type": "Offer",
-            "priceCurrency": "CNY",
-            "price": "100",
             "itemOffered": {
               "@type": "Service",
               "name": "产品设计 × 全栈开发",
               "description": "AI 产品、SaaS、小程序、企业官网"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 100.0,
+              "priceCurrency": "CNY"
             }
           },
           {
             "@type": "Offer",
-            "priceCurrency": "CNY",
-            "price": "100",
             "itemOffered": {
               "@type": "Service",
               "name": "LOGO / 品牌 VI",
               "description": "商标、VI 系统、画册、包装"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 100.0,
+              "priceCurrency": "CNY"
             }
           },
           {
             "@type": "Offer",
-            "priceCurrency": "CNY",
-            "price": "50",
             "itemOffered": {
               "@type": "Service",
               "name": "工业设计 / 3D",
               "description": "建模、手绘、渲染、排版 · Blender / Rhino"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 50.0,
+              "priceCurrency": "CNY"
             }
           }
         ]
+      },
+      "url": "https://1-design-lab.com/studio/",
+      "mainEntityOfPage": {
+        "@id": "https://1-design-lab.com/studio/#webpage"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://1-design-lab.com/#website",
+      "name": "1% Design Lab",
+      "url": "https://1-design-lab.com/",
+      "inLanguage": [
+        "zh-CN",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://1-design-lab.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://1-design-lab.com/studio/#webpage",
+      "url": "https://1-design-lab.com/studio/",
+      "name": "产品工作室 — AI 应用 MVP · 全栈开发 · 品牌 VI · 工业设计 | 1% Design Lab",
+      "description": "1% Design Lab 产品工作室为创业者与企业把想法做成上线的产品：AI 应用 MVP 14 天交付（¥5,000 起），产品设计与全栈开发、LOGO 品牌 VI、工业设计与 3D 渲染。团队拥有硅谷大厂经验，独立上线 Finfold、BillVampire 等产品。",
+      "inLanguage": "zh-CN",
+      "isPartOf": {
+        "@id": "https://1-design-lab.com/#website"
+      },
+      "about": {
+        "@id": "https://1-design-lab.com/studio/#service"
+      },
+      "mainEntity": {
+        "@id": "https://1-design-lab.com/studio/#service"
+      },
+      "breadcrumb": {
+        "@id": "https://1-design-lab.com/studio/#breadcrumb"
       }
     }
   ]
@@ -368,6 +412,6 @@
 <script src="/assets/site/site.js?v=20260927" defer></script>
 <link rel="stylesheet" href="/assets/site/agent.css?v=20260928">
 <script src="/assets/site/agent-config.js" defer></script>
-<script src="/assets/site/agent.js?v=20260928" defer></script>
+<script src="/assets/site/agent.js?v=20260928-2" defer></script>
 </body>
 </html>

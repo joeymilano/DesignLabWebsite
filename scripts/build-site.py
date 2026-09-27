@@ -6,6 +6,7 @@ Run: python3 scripts/build-site.py
 import html
 import json
 from pathlib import Path
+from seo_metadata import enrich_graph
 
 from site_content import (
     ACADEMY_RES, ACADEMY_SERVICES, ACADEMY_STATS, ACADEMY_STEPS, BRAND_REVIEW, CATS, CREDITS, EMAIL,
@@ -56,6 +57,7 @@ def num_fmt(n):
 def head(path, biz, title, desc, keywords, og, ld):
     url = ORIGIN + pre() + path
     zh_url, en_url = ORIGIN + path, ORIGIN + "/en" + path
+    ld = enrich_graph(ld, url, title, desc, 'zh-CN' if zh() else 'en')
     return f"""<!doctype html>
 <html lang="{'zh-CN' if zh() else 'en'}">
 <head>
@@ -68,7 +70,7 @@ def head(path, biz, title, desc, keywords, og, ld):
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <meta name="keywords" content="{e(keywords)}">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="1% Design Lab 梦想管理局">
 <meta name="theme-color" content="#0B0B0A">
 <link rel="canonical" href="{url}">
@@ -386,7 +388,6 @@ def org_ld():
         "founder": {"@type": "Person", "@id": "https://joeyzhao.cc/#person", "name": "Joey Zhao", "url": "https://joeyzhao.cc"},
         "address": {"@type": "PostalAddress", "streetAddress": "北京东路668号裙楼 黄浦汇数智心城",
                     "addressLocality": "上海市", "addressRegion": "黄浦区", "addressCountry": "CN"},
-        "sameAs": ["https://joeyzhao.cc", "https://finfold.app", "https://billvampire.com", "https://github.com/joeymilano"],
         "knowsAbout": ["AI product design", "full-stack development", "industrial design", "brand identity", "portfolio design"],
     }
 

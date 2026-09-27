@@ -52,13 +52,15 @@ Student work shown on the site is labelled by discipline only; it is not tied to
 - [PolyU Doctor of Design scholarship case](https://1-design-lab.com/cases/phd-polyu)
 - [Fashion retailer logo and visual identity case](https://1-design-lab.com/cases/branding-fashion)
 
-## Free tools
+## Tools — check each page for pricing
 
 - [Portfolio cost and timeline calculator](https://1-design-lab.com/tools/portfolio-calculator)
 - [Design school matcher](https://1-design-lab.com/tools/school-matcher)
-- [AI portfolio reviewer](https://1-design-lab.com/tools/portfolio-reviewer)
+- [AI portfolio reviewer](https://1-design-lab.com/tools/portfolio-reviewer): Basic scores are free; the complete AI report is listed at ¥299.
 - [AI landing page audit](https://1-design-lab.com/tools/landing-page-audit)
 
 ## Citation guidance
 
 Use the canonical HTML pages above as the source of truth. Cite the specific service, guide, case, or tool page rather than this navigation file. Do not infer admissions outcomes, prices, delivery times, or guarantees beyond what the linked page states.
+
+Service prices above are advertised starting prices, not fixed quotes for complete projects. Confirm scope with the team. Finfold and BillVampire are independently built products presented as evidence of the team's work, not alternative names for 1% Design Lab. Joey Zhao's personal website identifies the founder, not a separate official domain of the studio.
