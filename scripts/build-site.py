@@ -162,7 +162,7 @@ def footer():
     p = pre()
     cols = [
         (B("产品工作室", "Product Studio"), "s", [
-            ("/services/ai-mvp", B("AI 应用 MVP", "AI app MVP")),
+            ("/services/ai-app-development", B("AI 应用开发", "AI app development")),
             (f"{p}/studio/#services", B("产品设计 × 全栈", "Product × full-stack")),
             ("/services/logo-branding", B("LOGO / 品牌 VI", "Brand identity")),
             ("/services/industrial-design", B("工业设计 / 3D", "Industrial / 3D")),
@@ -413,9 +413,9 @@ def page_home():
     p = pre()
     title = ("1% Design Lab 梦想管理局 — 产品工作室 × 作品集学院 | 上海" if zh()
              else "1% Design Lab — Product Studio × Portfolio Academy | Shanghai")
-    desc = ("1% Design Lab 梦想管理局是上海的设计与工程团队：产品工作室为创业者交付 AI 应用 MVP、全栈开发、品牌与工业设计；作品集学院为艺术设计申请者提供留学作品集、博士研究计划、个展与求职辅导。成员来自硅谷、米兰理工、RCA 与伯克利。" if zh()
-            else "1% Design Lab is a Shanghai design and engineering team. The Product Studio ships AI MVPs, full-stack builds, brands and industrial design for founders; the Portfolio Academy builds art and design portfolios, PhD proposals and exhibitions for applicants.")
-    kw = "1% Design Lab,梦想管理局,AI产品开发,MVP开发,全栈开发,品牌设计,工业设计,作品集设计,留学作品集,博士研究计划,上海设计工作室"
+    desc = ("1% Design Lab 梦想管理局是上海的设计与工程团队：产品工作室为创业者交付 AI 应用开发、全栈开发、品牌与工业设计；作品集学院为艺术设计申请者提供留学作品集、博士研究计划、个展与求职辅导。成员来自硅谷、米兰理工、RCA 与伯克利。" if zh()
+            else "1% Design Lab is a Shanghai design and engineering team. The Product Studio ships AI apps, full-stack builds, brands and industrial design for founders; the Portfolio Academy builds art and design portfolios, PhD proposals and exhibitions for applicants.")
+    kw = "1% Design Lab,梦想管理局,AI产品开发,AI应用开发,全栈开发,品牌设计,工业设计,作品集设计,留学作品集,博士研究计划,上海设计工作室"
     ld = {"@context": "https://schema.org", "@graph": [org_ld(), {
         "@type": "WebSite", "@id": f"{ORIGIN}/#website", "name": "1% Design Lab", "url": ORIGIN,
         "inLanguage": ["zh-CN", "en"], "publisher": {"@id": f"{ORIGIN}/#organization"}}]}
@@ -448,7 +448,7 @@ def page_home():
       <div>
         <p class="door-for">{'给创业者与企业' if zh() else 'For founders and companies'}</p>
         <h2>{'产品设计与开发' if zh() else 'Product & Engineering'}<span class="arr">↗</span></h2>
-        <div class="door-tags">{tags(['AI MVP', 'Full-stack', 'Brand' if not zh() else '品牌 VI', '3D' if not zh() else '工业 / 3D'])}</div>
+        <div class="door-tags">{tags(['AI 应用' if zh() else 'AI apps', 'Full-stack', 'Brand' if not zh() else '品牌 VI', '3D' if not zh() else '工业 / 3D'])}</div>
       </div>
     </a>
     <a class="door" href="{p}/academy/" style="--accent:var(--academy)">
@@ -608,11 +608,11 @@ def sub_hero(biz, name, h1_rows, lead, stat_items, caps):
 
 
 def page_studio():
-    title = ("产品工作室 — AI 应用 MVP · 全栈开发 · 品牌 VI · 工业设计 | 1% Design Lab" if zh()
-             else "Product Studio — AI MVPs, Full-stack, Brand & Industrial Design | 1% Design Lab")
-    desc = ("1% Design Lab 产品工作室为创业者与企业把想法做成上线的产品：AI 应用 MVP 14 天交付（¥5,000 起），产品设计与全栈开发、LOGO 品牌 VI、工业设计与 3D 渲染。团队拥有硅谷大厂经验，独立上线 Finfold、BillVampire 等产品。" if zh()
-            else "The 1% Design Lab Product Studio turns ideas into shipped products for founders: AI MVPs in 14 days from ¥5,000, product design and full-stack builds, brand identity, industrial design and 3D. Built by the team behind Finfold and BillVampire.")
-    kw = "AI应用开发,MVP开发,14天MVP,全栈开发,产品设计,UI设计,小程序开发,官网开发,LOGO设计,VI设计,工业设计,3D建模渲染,上海产品工作室"
+    title = ("产品工作室 — AI 应用开发 · 全栈开发 · 品牌 VI · 工业设计 | 1% Design Lab" if zh()
+             else "Product Studio — AI apps, full-stack, Brand & Industrial Design | 1% Design Lab")
+    desc = ("1% Design Lab 产品工作室为创业者与企业把想法做成上线的产品：AI 应用开发 14 天交付（¥5,000 起），产品设计与全栈开发、LOGO 品牌 VI、工业设计与 3D 渲染。团队拥有硅谷大厂经验，独立上线 Finfold、BillVampire 等产品。" if zh()
+            else "The 1% Design Lab Product Studio turns ideas into shipped products for founders: AI apps in 14 days from ¥5,000, product design and full-stack builds, brand identity, industrial design and 3D. Built by the team behind Finfold and BillVampire.")
+    kw = "AI应用开发,AI产品开发,14天上线,全栈开发,产品设计,UI设计,小程序开发,官网开发,LOGO设计,VI设计,工业设计,3D建模渲染,上海产品工作室"
     name = "产品工作室" if zh() else "Product Studio"
     ld = {"@context": "https://schema.org", "@graph": [org_ld(), crumbs_ld("/studio/", name), service_ld("/studio/", name, STUDIO_SERVICES)]}
 
@@ -632,12 +632,12 @@ def page_studio():
     <div class="feature" data-reveal>
       <div class="feature-l">
         <p class="label" style="display:flex;gap:10px;align-items:center"><span class="dot"></span>[01] {'主打服务' if zh() else 'Flagship'}</p>
-        <h2 class="h2">{'AI 应用 MVP，<br>14 天上线。' if zh() else 'AI app MVP,<br>live in 14 days.'}</h2>
+        <h2 class="h2">{'AI 应用开发，<br>14 天上线。' if zh() else 'AI app development,<br>live in 14 days.'}</h2>
         <p class="lead" style="font-size:17px">{'为验证想法的创业者设计：先把最小可用的产品做出来，放到真实用户面前。产品逻辑、设计、前端、API 集成与部署一次交付。' if zh() else 'Built for founders validating an idea: get the smallest useful product in front of real users. Logic, design, frontend, API integration and deployment in one delivery.'}</p>
       </div>
       <div class="feature-r">
         <div><p class="label">{'起步价' if zh() else 'From'}</p><p class="price" style="margin-top:14px">¥5,000{'<small>起</small>' if zh() else ''}</p></div>
-        <div class="p-acts"><a class="btn btn-solid" href="/services/ai-mvp">{'查看详情' if zh() else 'Details'} <span class="arr">→</span></a><button class="btn btn-line" data-consult="studio" data-from="mvp">{'预约咨询' if zh() else 'Book a call'}</button></div>
+        <div class="p-acts"><a class="btn btn-solid" href="/services/ai-app-development">{'查看详情' if zh() else 'Details'} <span class="arr">→</span></a><button class="btn btn-line" data-consult="studio" data-from="mvp">{'预约咨询' if zh() else 'Book a call'}</button></div>
       </div>
       <div class="timeline">{timeline}</div>
     </div>

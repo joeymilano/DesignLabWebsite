@@ -12,7 +12,7 @@ Studio address: 668 East Beijing Road, Huangpu District, Shanghai
 
 Overview: [Product Studio](https://1-design-lab.com/studio/) ([English](https://1-design-lab.com/en/studio/))
 
-- [AI app MVP](https://1-design-lab.com/services/ai-mvp): Product logic, UI/UX, frontend, API integration and deployment, delivered in about 14 days; listed from ¥5,000.
+- [AI app development](https://1-design-lab.com/services/ai-app-development): Product logic, UI/UX, frontend, API integration and deployment, delivered in about 14 days; listed from ¥5,000.
 - Product design and full-stack development: AI products, SaaS, mini-programs and websites; listed on Taobao from ¥100.
 - [Logo and brand identity](https://1-design-lab.com/services/logo-branding): Marks, identity systems, print and packaging; from ¥100.
 - [Industrial design and 3D](https://1-design-lab.com/services/industrial-design): Modelling, sketching, rendering and CMF in Rhino, Blender and KeyShot; from ¥50.

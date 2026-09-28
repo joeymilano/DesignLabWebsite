@@ -14,7 +14,7 @@ spec = importlib.util.spec_from_file_location("build_site", ROOT / "scripts" / "
 bs = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(bs)
 
-STUDIO = {"services/ai-mvp.html", "services/logo-branding.html", "services/industrial-design.html",
+STUDIO = {"services/ai-app-development.html", "services/logo-branding.html", "services/industrial-design.html",
           "tools/landing-page-audit.html", "cases/branding-fashion.html"}
 STUDIO_TOPICS = {"blog/ai-agent-mvp-guide.html", "blog/ai-app-builder-vs-custom-development.html",
                  "blog/vibe-coding-to-production.html"}

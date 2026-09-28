@@ -38,7 +38,7 @@ SCHOOLS = [
 STUDIO_STATS = [
     ("$", 100, "M+", B("业务操盘经验", "Business impact")),
     ("", B(4, 400), B("亿+", "M+"), B("用户级产品经验", "Users on products we've shaped")),
-    ("", 14, B("天", " days"), B("AI MVP 上线", "AI MVP to launch")),
+    ("", 14, B("天", " days"), B("AI 应用上线", "AI app to launch")),
     ("", 20, "+", B("已交付数字产品", "Digital products shipped")),
 ]
 ACADEMY_STATS = [
@@ -158,10 +158,10 @@ CREDITS = [
 # ---------------------------------------------------------------- services
 
 STUDIO_SERVICES = [
-    dict(name=B("AI 应用 MVP", "AI app MVP"), price="5,000",
+    dict(name=B("AI 应用开发", "AI app development"), price="5,000",
          desc=B("14 天把 AI 想法做成可上线的产品", "An AI idea to a live product in 14 days"),
          tags=[B("产品逻辑", "Product logic"), "UI/UX", "Frontend", "API", "Deploy"],
-         detail="/services/ai-mvp", tb=None),
+         detail="/services/ai-app-development", tb=None),
     dict(name=B("产品设计 × 全栈开发", "Product design × full-stack"), price="100",
          desc=B("AI 产品、SaaS、小程序、企业官网", "AI products, SaaS, mini-programs, websites"),
          tags=["AI", "SaaS", B("小程序", "Mini-program"), B("官网", "Website")],
