@@ -4,6 +4,8 @@ Content lives in scripts/site_content.py; styles and behaviour in assets/site/.
 Run: python3 scripts/build-site.py
 """
 import html
+import sys
+import industrial_cases
 import json
 from pathlib import Path
 from seo_metadata import enrich_graph
@@ -517,6 +519,9 @@ def page_home():
         tile("p", "billvampire", "w6"), tile("a", "e-motorcycle", "w6 push"),
     ])
 
+    rows.append(industrial_cases.index_rows(sys.modules[__name__]))
+    mosaic += industrial_cases.cards(sys.modules[__name__], home=True)
+
     tabs = (f'<div class="tabs" data-filter="#work-index" role="group" aria-label="{"筛选" if zh() else "Filter"}">'
             f'<button data-f="all" aria-pressed="true">{"全部" if zh() else "All"}</button>'
             f'<button data-f="s" aria-pressed="false"><span class="dot s"></span>{"产品工作室" if zh() else "Studio"}</button>'
@@ -526,7 +531,7 @@ def page_home():
 <section class="sec" id="work">
   <div class="wrap">
     {sec_head('01', 'Selected work', [B('两条业务，', 'Two practices,'), B('同一套标准。', 'one standard.')],
-              B('左边是我们自己设计、开发、上线的产品；右边是学员在导师带领下完成的作品集项目。', 'Products we designed, built and shipped ourselves — alongside portfolio projects our students made with their mentors.'))}
+              B('工作室的数字产品与工业设计，以及学员在导师带领下完成的作品集项目。', 'Digital products and industrial design from the studio, alongside portfolio projects our students made with their mentors.'))}
     {tabs}
     <div class="index" id="work-index">{''.join(rows)}</div>
     <div class="mosaic">{mosaic}</div>
@@ -664,6 +669,7 @@ def page_studio():
       {credit_rows}
     </div>
     <p class="credits-note">{'以上为团队成员在任职或独立期间主导的项目，并非工作室客户案例。' if zh() else 'Projects led by team members in previous roles or independently — not studio client work.'}</p>
+    {industrial_cases.studio_block(sys.modules[__name__])}
   </div>
 </section>"""
 
@@ -829,7 +835,15 @@ def build():
         for rel, fn in pages:
             out = ROOT / ("en/" + rel if lang == "en" else rel)
             out.parent.mkdir(parents=True, exist_ok=True)
-            out.write_text(fn(), encoding="utf-8")
+            markup = fn()
+            if fn in (page_home, page_studio):
+                markup = industrial_cases.assets(markup)
+            out.write_text(markup, encoding="utf-8")
+            print("wrote", out.relative_to(ROOT))
+        for case in industrial_cases.CASES:
+            out = ROOT / (("en/" if lang == "en" else "") + "studio/" + case["slug"] + "/index.html")
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(industrial_cases.page(sys.modules[__name__], case["slug"]), encoding="utf-8")
             print("wrote", out.relative_to(ROOT))
 
 

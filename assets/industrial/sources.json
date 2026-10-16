@@ -1,0 +1,26 @@
+{
+  "portfolio": {
+    "file": "赵越-上海阿弗洛狄德.pdf",
+    "pages": {
+      "honghu-mark1": [
+        2,
+        8
+      ],
+      "scango": [
+        9,
+        15
+      ]
+    },
+    "processing": "Original embedded artwork extracted; process pages rendered to WebP. No generated replacement imagery.",
+    "scango_public_display": "User explicitly approved sketches and renders for public website display on 2026-10-16."
+  },
+  "film": {
+    "publisher": "华羽先翔 / TransFuture Aviation",
+    "page": "https://www.transfutureaviation.com",
+    "source": "https://32068705.s21v.faiusr.com/58/ABUIABA6GAAg19Xa1AYogLizpwc.mp4",
+    "retrieved": "2026-10-16",
+    "original_bytes": 322176077,
+    "duration_seconds": 58.966667,
+    "processing": "Full film, downscaled from 3840x2160 to 1280x720; H.264 CRF 24, AAC 96k, faststart. Poster at 27 seconds. Displayed as official Honghu-series footage, not studio-authored footage."
+  }
+}

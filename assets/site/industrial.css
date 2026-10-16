@@ -1,0 +1,45 @@
+/* Industrial work: uses the existing studio typography and colours. */
+.industrial-work{padding-top:100px;margin-top:80px;border-top:1px solid var(--line);scroll-margin-top:100px}
+.industrial-heading{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:36px}
+.industrial-heading .label{margin-bottom:20px}
+.industrial-heading .lead{max-width:25em;font-size:17px}
+.industrial-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+.industrial-cover{overflow:hidden;background:#171c22;aspect-ratio:16/10}
+.industrial-cover img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.industrial-card:hover .industrial-cover img,.tile:hover .industrial-cover img{transform:scale(1.025)}
+.industrial-caption{padding-top:22px}
+.industrial-caption h3{display:flex;justify-content:space-between;gap:18px;font-size:clamp(23px,2.5vw,36px);font-weight:500;letter-spacing:-.03em;line-height:1.25;margin:12px 0}
+.industrial-caption h3 span{font-size:22px;font-weight:400}
+.industrial-caption>p:last-child{max-width:38em;color:var(--fg-2);font-size:15px;line-height:1.8}
+.case-hero{padding-top:120px}
+.case-back{font-size:13px;color:var(--fg-2);margin-bottom:64px}
+.case-hero h1{font-size:clamp(40px,6.6vw,104px);font-weight:500;letter-spacing:-.04em;line-height:1.1;margin:22px 0 36px}
+.case-intro{display:grid;grid-template-columns:1.3fr 1fr;gap:8vw;margin-bottom:56px}
+.case-intro .lead{max-width:33em;font-size:clamp(17px,1.55vw,23px)}
+.case-intro dl{display:grid;grid-template-columns:1fr 1fr;gap:24px;font-size:13px}
+.case-intro dt{color:var(--fg-3);font-size:11px;margin-bottom:10px}
+.case-hero-image{width:100%;max-height:78vh;object-fit:contain;background:#11151b}
+.case-section{padding-top:100px}
+.case-section-heading{max-width:750px;margin-bottom:36px}
+.case-section-heading h2,.case-film h2{font-size:clamp(26px,3vw,44px);font-weight:500;letter-spacing:-.025em;line-height:1.25;margin:18px 0}
+.case-section-heading>p:last-child:not(.label),.case-film p:not(.label){font-size:16px;line-height:1.9;color:var(--fg-2);max-width:42em}
+.case-figure{margin-bottom:32px}
+.case-figure img{width:100%;height:auto;background:#171c22}
+.case-figure figcaption,.case-film figcaption{font-size:12px;color:var(--fg-2);line-height:1.6;margin-top:12px}
+.case-pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);align-items:start}
+.case-pair .case-figure img{aspect-ratio:8/5;object-fit:contain;background:#151515}
+.case-film{border-top:1px solid var(--line);padding-top:42px;display:grid;grid-template-columns:1fr 1.55fr;gap:56px;align-items:center}
+.case-film .link{font-size:13px;margin-top:24px;color:var(--fg-2)}
+.case-film video{width:100%;height:auto;aspect-ratio:16/9;background:#141413}
+.case-end{margin-top:100px;padding-top:32px;padding-bottom:100px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:28px;align-items:center}
+@media(max-width:760px){
+ .industrial-work{padding-top:56px;margin-top:56px}
+ .industrial-heading{display:block;margin-bottom:26px}.industrial-heading .lead{margin-top:18px}
+ .industrial-grid,.case-intro,.case-pair,.case-film{grid-template-columns:1fr;gap:30px}
+ .industrial-grid{row-gap:44px}.industrial-caption{padding-top:18px}
+ .case-hero{padding-top:96px}.case-back{margin-bottom:40px}.case-hero h1{margin-bottom:28px;overflow-wrap:anywhere}
+ .case-intro{margin-bottom:32px}.case-intro dl{gap:20px}.case-hero-image{max-height:none}
+ .case-section{padding-top:60px}.case-section-heading{margin-bottom:26px}.case-figure{margin-bottom:24px}
+ .case-film{gap:24px;padding-top:30px}.case-end{margin-top:60px;padding-bottom:60px;align-items:start;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){.industrial-cover img{transition:none}}
