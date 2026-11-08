@@ -615,8 +615,8 @@ def sub_hero(biz, name, h1_rows, lead, stat_items, caps):
 def page_studio():
     title = ("产品工作室 — AI 应用开发 · 全栈开发 · 品牌 VI · 工业设计 | 1% Design Lab" if zh()
              else "Product Studio — AI apps, full-stack, Brand & Industrial Design | 1% Design Lab")
-    desc = ("1% Design Lab 产品工作室为创业者与企业把想法做成上线的产品：AI 应用开发 14 天交付（¥5,000 起），产品设计与全栈开发、LOGO 品牌 VI、工业设计与 3D 渲染。团队拥有硅谷大厂经验，独立上线 Finfold、BillVampire 等产品。" if zh()
-            else "The 1% Design Lab Product Studio turns ideas into shipped products for founders: AI apps in 14 days from ¥5,000, product design and full-stack builds, brand identity, industrial design and 3D. Built by the team behind Finfold and BillVampire.")
+    desc = ("1% Design Lab 产品工作室为创业者与企业把想法做成上线的产品：单核心 AI 应用 ¥18,000，标准周期 14 天，产品设计与全栈开发、LOGO 品牌 VI、工业设计与 3D 渲染。团队拥有硅谷大厂经验，独立上线 Finfold、BillVampire 等产品。" if zh()
+            else "The 1% Design Lab Product Studio turns ideas into shipped products for founders: single-feature AI apps at ¥18,000, typically in 14 days, product design and full-stack builds, brand identity, industrial design and 3D. Built by the team behind Finfold and BillVampire.")
     kw = "AI应用开发,AI产品开发,14天上线,全栈开发,产品设计,UI设计,小程序开发,官网开发,LOGO设计,VI设计,工业设计,3D建模渲染,上海产品工作室"
     name = "产品工作室" if zh() else "Product Studio"
     ld = {"@context": "https://schema.org", "@graph": [org_ld(), crumbs_ld("/studio/", name), service_ld("/studio/", name, STUDIO_SERVICES)]}
@@ -637,11 +637,11 @@ def page_studio():
     <div class="feature" data-reveal>
       <div class="feature-l">
         <p class="label" style="display:flex;gap:10px;align-items:center"><span class="dot"></span>[01] {'主打服务' if zh() else 'Flagship'}</p>
-        <h2 class="h2">{'AI 应用开发，<br>14 天上线。' if zh() else 'AI app development,<br>live in 14 days.'}</h2>
+        <h2 class="h2">{'单核心 AI 应用，<br>标准周期 14 天。' if zh() else 'Single-feature AI apps,<br>typically in 14 days.'}</h2>
         <p class="lead" style="font-size:17px">{'为验证想法的创业者设计：先把最小可用的产品做出来，放到真实用户面前。产品逻辑、设计、前端、API 集成与部署一次交付。' if zh() else 'Built for founders validating an idea: get the smallest useful product in front of real users. Logic, design, frontend, API integration and deployment in one delivery.'}</p>
       </div>
       <div class="feature-r">
-        <div><p class="label">{'起步价' if zh() else 'From'}</p><p class="price" style="margin-top:14px">¥5,000{'<small>起</small>' if zh() else ''}</p></div>
+        <div><p class="label">{'单核心功能套餐' if zh() else 'Single-feature package'}</p><p class="price" style="margin-top:14px">¥{STUDIO_SERVICES[0]['price']}</p><p class="muted">{'¥5,000 对应 7 天展示型官网。' if zh() else 'A brochure website is ¥5,000 with a 7-day schedule.'}</p></div>
         <div class="p-acts"><a class="btn btn-solid" href="/services/ai-app-development">{'查看详情' if zh() else 'Details'} <span class="arr">→</span></a><button class="btn btn-line" data-consult="studio" data-from="mvp">{'预约咨询' if zh() else 'Book a call'}</button></div>
       </div>
       <div class="timeline">{timeline}</div>

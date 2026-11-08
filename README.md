@@ -4,7 +4,7 @@ Source of **[1-design-lab.com](https://1-design-lab.com)** — the official bili
 
 ## Two businesses, one brand
 
-- **Product Studio** — for founders and companies: [AI app development](https://1-design-lab.com/services/ai-app-development)（约 14 天交付，¥5,000 起）, full-stack product design & development (AI products, SaaS, mini-programs, websites), logo & brand identity, and industrial design / 3D.
+- **Product Studio** — for founders and companies: [AI app development](https://1-design-lab.com/services/ai-app-development)（单核心功能套餐 ¥18,000，标准周期 14 天）, full-stack product design & development (AI products, SaaS, mini-programs, websites), logo & brand identity, and industrial design / 3D.
 - **Portfolio Academy** — for art and design applicants: portfolio mentoring for study-abroad and domestic postgraduate applications, exhibitions, and job hunting.
 
 ## Links

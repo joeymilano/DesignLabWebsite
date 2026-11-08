@@ -194,17 +194,32 @@
     const panes = $$('[data-pane]', dlg);
     const go = pane => panes.forEach(p => { p.hidden = p.dataset.pane !== pane; });
     const pageBiz = document.body.dataset.biz;
+    const contactContext = biz => ({
+      biz,
+      page_path: location.pathname,
+      locale: document.documentElement.lang
+    });
+    const trackConsult = (biz, from) => {
+      track('consult_open', { ...contactContext(biz || 'choose'), from });
+    };
     $$('[data-consult]').forEach(b => b.addEventListener('click', e => {
       e.preventDefault();
       const biz = b.dataset.consult || (pageBiz !== 'home' ? pageBiz : '');
       go(biz || 'choose');
       typeof dlg.showModal === 'function' ? dlg.showModal() : dlg.setAttribute('open', '');
-      track('consult_open', { biz: biz || 'choose', from: b.dataset.from || 'cta' });
+      trackConsult(biz, b.dataset.from || 'cta');
     }));
     $$('[data-go]', dlg).forEach(b => b.addEventListener('click', () => {
       go(b.dataset.go);
-      if (b.dataset.go !== 'choose') track('consult_open', { biz: b.dataset.go, from: 'dialog' });
+      if (b.dataset.go !== 'choose') trackConsult(b.dataset.go, 'dialog');
     }));
+    dlg.addEventListener('click', event => {
+      const link = event.target.closest('.c-links a');
+      const biz = link?.closest('[data-pane]')?.dataset.pane;
+      if (biz !== 'academy' && biz !== 'studio') return;
+      const channel = link.protocol === 'mailto:' ? 'email' : link.dataset.label;
+      if (channel) track('consult_channel_clicked', { ...contactContext(biz), contact_channel: channel });
+    });
     $$('.c-x', dlg).forEach(b => b.addEventListener('click', () => dlg.close()));
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
   }

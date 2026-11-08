@@ -158,8 +158,8 @@ CREDITS = [
 # ---------------------------------------------------------------- services
 
 STUDIO_SERVICES = [
-    dict(name=B("AI 应用开发", "AI app development"), price="5,000",
-         desc=B("14 天把 AI 想法做成可上线的产品", "An AI idea to a live product in 14 days"),
+    dict(name=B("AI 应用开发", "AI app development"), price="18,000",
+         desc=B("单一核心 AI 功能，标准周期 14 天", "One core AI feature, typically 14 days"),
          tags=[B("产品逻辑", "Product logic"), "UI/UX", "Frontend", "API", "Deploy"],
          detail="/services/ai-app-development", tb=None),
     dict(name=B("产品设计 × 全栈开发", "Product design × full-stack"), price="100",
