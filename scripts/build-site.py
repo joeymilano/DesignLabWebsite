@@ -688,6 +688,8 @@ def page_studio():
     {sec_head('04', 'Process', [B('五步，从一句话到上线。', 'Five steps, from one line to launch.')])}
     <h3>{e(B("首版产品怎样写验收条件？", "How do I define acceptance criteria for a first release?"))}</h3>
     <p class="lead">{e(B("选一条核心流程，把“什么算完成”写成可检查的动作：用户提供什么输入，经过哪几步，最后看到或拿到什么。再补上空输入、加载失败和重复操作时应发生什么。例如表单提交后，按钮响应、资料成功保存、负责人实际收到咨询，是三件需要分别检查的事。把必需项和后续优化分开，并写清第三方账号由谁提供，方便在开工前确认交付范围。", "Choose one core flow and describe completion in observable terms: what the user supplies, which steps they take, and what they see or receive at the end. Include empty input, loading failures, and repeated actions. For a contact form, a button response, a saved submission, and an inquiry actually reaching its recipient are three separate checks. Separate launch requirements from later improvements and identify who provides third-party accounts, so the delivery scope can be agreed before work begins."))}</p>
+    <h3>{e(B('产品交接前需要整理哪些资料？', 'What should a product handoff include?'))}</h3>
+    <p class="lead">{e(B('交接清单应对应实际交付范围：页面与关键状态、可编辑设计源文件、代码及运行说明、所需账号的归属，以及已知限制和未完成事项。把“文件已提供”和“接手的人能打开、运行、修改”分开验收。账号授权通过平台完成，不把密码写进公开文档；对第三方服务注明负责人和续费主体，便于后续维护。', 'Match the handoff checklist to the agreed scope: screens and key states, editable design files, code and setup notes, account ownership, known limitations, and unfinished work. Check file delivery separately from whether the next person can open, run, and edit it. Transfer account access through the service rather than placing passwords in shared documents, and identify who owns and pays for third-party services so maintenance responsibilities are clear.'))}</p>
     {steps(STUDIO_STEPS)}
   </div>
 </section>
@@ -823,6 +825,8 @@ def page_academy():
     {sec_head('07', 'Process', [B('五步，从第一次聊天到网申提交。', 'Five steps, from first chat to submission.')])}
     <h3>{e(B("怎样判断一个项目值得放进作品集？", "Which projects belong in a design portfolio?"))}</h3>
     <p class="lead">{e(B("先用四句话检查：我观察到什么问题，哪条材料支持这个判断，我因此改变了哪个设计决定，又怎样检查修改是否有效。能讲清这条过程的项目，才有内容可展开；如果只剩效果图，先补找草图、访谈记录或测试笔记。团队项目单独标明自己的决策与产出，尚未验证的假设也如实保留，便于咨询时讨论该补过程、缩短篇幅，还是换一个项目。", "Try four sentences: what problem did I observe, what evidence supports it, which design decision changed because of it, and how did I check the change? A project that answers these has a process worth developing. If only final renders remain, look for sketches, interview notes, or test records first. Mark your own decisions and outputs in team projects, and keep untested assumptions visible. This gives us a concrete basis for deciding whether to develop the process, shorten the story, or choose another project."))}</p>
+    <h3>{e(B('怎样说明团队项目中的个人贡献？', 'How do I explain my contribution to a team portfolio project?'))}</h3>
+    <p class="lead">{e(B('整理一份贡献清单：团队共同决定了什么，你提出了哪些方案，哪些画面或原型由你完成，以及测试反馈怎样改变了你的设计。每项尽量对应一张过程图或一条记录。共同完成的部分写明合作对象与分工，不能公开的客户资料先匿名处理。这样评审能沿着证据理解你的判断，而不只是看到最终成品。', 'Make a contribution list: what the team decided together, which options you proposed, which screens or prototypes you made, and how feedback changed your design. Connect each item to a process image or record where possible. Name collaborators and responsibilities for shared work, and anonymize confidential client material. This lets a reviewer follow your decisions through evidence as well as the final result.'))}</p>
     {steps(ACADEMY_STEPS)}
   </div>
 </section>"""
