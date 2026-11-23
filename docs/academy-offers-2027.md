@@ -12,3 +12,7 @@ Added 2026-11-23. User confirmed all supplied cases are Academy students.
 - Latest origin/main was used in isolated worktree to preserve seven newer upstream commits. Existing unrelated local build-site.py edits were not included.
 
 Validation: all 500 records compared with source spreadsheet; 97 default/500 all/2 UO; school selection, Chinese programme search, reset, load more; English display; desktop 1440 and mobile 390 with no horizontal overflow; all five local SVGs load; no browser page errors.
+
+## Visual revision — 2026-11-23
+
+User rejected the cream/green palette, serif typography, slogan and explanatory copy. Reworked the section into the existing ink/vermilion/sans system: plain 案例库 title, a continuous university logo strip, border-separated offer rows, compact filters and expandable conditions. Removed public source/readme prose and row identifiers while retaining provenance in the data and this document. Removed Chinese full stops in Academy headings. Mobile university strip scrolls independently; dataset and filtering behaviour unchanged.
