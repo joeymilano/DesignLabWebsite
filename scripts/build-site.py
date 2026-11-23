@@ -7,6 +7,7 @@ import html
 import sys
 import industrial_cases
 import admission_library
+import university_guide
 import json
 from pathlib import Path
 from seo_metadata import enrich_graph
@@ -837,7 +838,7 @@ def page_academy():
 </section>"""
 
     body = hero + schools + gallery + mentors_sec + services + stories + cta("academy", "08")
-    return admission_library.inject(head("/academy/", "academy", title, desc, kw, "og-academy", ld) + header("/academy/", "academy") + body + footer(), en=not zh())
+    return university_guide.inject(admission_library.inject(head("/academy/", "academy", title, desc, kw, "og-academy", ld) + header("/academy/", "academy") + body + footer(), en=not zh()), en=not zh())
 
 
 def build():
