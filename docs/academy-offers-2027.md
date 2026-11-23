@@ -1,4 +1,19 @@
-# 2027 Academy offer library
+# Academy offer library
+
+## Current library — 2026-11-23
+
+- User supplied an additional workbook and explicitly requested publication. Added all 900 distinct 2026 autumn CO records from its numbered rows (Excel rows 3–902). The original workbook is not part of the site.
+- Combined data: 1,400 offer records, 11 institutions, 2026 and 2027 entry. This is a record count, not a count of distinct students. Existing aggregate marketing statistics are unchanged.
+- All 500 existing records remain byte-for-byte equivalent after JSON parsing. The 2026 source has no duplicate full profiles; new IDs include year, school and source sequence.
+- Existing 97 creative-related records plus 193 new records are included in the default filter (290 total). New categories: design 33, media 111, fashion 4, culture 42, architecture/urban 3; 707 other-subject records remain available under All subjects.
+- Percentage cells are formatted as percentages; numeric point grades and text offer conditions retain their source meaning. Graduation dates are retained in structured data; missing undergraduate degree labels are not invented.
+- Additional official institution logos: Manchester, Southampton, Birmingham, Nottingham, Durham and King’s College London. Source URLs are recorded with each school in cases.json.
+- Current UI reads assets/site/admissions/cases.json. Import via scripts/import_offers_2026.py with the supplied workbook path, then run scripts/admission_library.py to update only the two Academy sections. Original 2027.json remains the unchanged initial dataset.
+- Year filters update school counts and per-card year labels. Schools with no records in a selected year are hidden, and an unavailable selected school resets. The logo rail supports touch/trackpad scrolling and previous/next controls.
+
+Validation of the combined library: all 900 imported rows independently reconciled against workbook values; original 500 records unchanged; 1,400 unique record IDs; 900/500 year totals; 1,398 CO and 2 UO. Both languages tested at 320, 390, 600, 768, 1000, 1024 and 1440 px, including filters, school reset on year changes, search, empty state, load more, condition expansion, 11 local logos, rail navigation and page overflow.
+
+## Initial 2027 import
 
 Added 2026-11-23. User confirmed all supplied cases are Academy students.
 
