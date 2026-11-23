@@ -22,3 +22,5 @@ Source of **[1-design-lab.com](https://1-design-lab.com)** — the official bili
 ## Tech
 
 Pure static site — HTML/CSS/JS with `_redirects` / `_headers` rules and a few edge functions, served behind Cloudflare.
+
+The committed HTML is the source of truth and is deployed as is; Cloudflare Pages runs no build step, so pages are edited directly. The earlier page generator scripts (`scripts/build-site.py` and its post-processing modules) were removed on 2026-11-23: they had fallen behind the committed pages, and regenerating from them would have reverted live copy. Notes under `docs/` that mention those scripts are historical.
