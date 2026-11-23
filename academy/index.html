@@ -247,7 +247,7 @@
     <div class="sub-hero-g">
       <p class="lead">不套模板，导师从你自己的经历里提炼叙事，<strong>把每个项目讲成一个值得被记住的故事</strong>——然后在排版的每一个像素上较真</p>
       <div></div>
-      <div class="acts" data-reveal><button class="btn btn-solid" data-consult="academy" data-from="hero">聊聊你的作品集 <span class="arr">↗</span></button><a class="btn btn-line" href="#gallery">看学员作品 <span class="arr">↓</span></a></div>
+      <div class="acts" data-reveal><button class="btn btn-solid" data-consult="academy" data-from="hero">聊聊你的作品集 <span class="arr">↗</span></button><a class="btn btn-line" href="#gallery">看学员作品 <span class="arr">↓</span></a><a class="btn btn-line" href="#admissions">查看 500 条录取案例 <span class="arr">↓</span></a></div>
       <div class="caps" style="grid-column:1/-1"><span class="tag">产品 / 工业</span><span class="tag">交互</span><span class="tag">建筑 / 景观</span><span class="tag">服装</span><span class="tag">视觉 / 媒体</span><span class="tag">博士 RP</span></div>
       <div class="stat-row"><div data-reveal><p class="stat-n"><span data-count="6" data-dec="0">6</span><em>年</em></p><p class="stat-l">专注作品集辅导</p></div><div data-reveal><p class="stat-n"><span data-count="6000" data-dec="0">6,000</span><em>+</em></p><p class="stat-l">服务案例</p></div><div data-reveal><p class="stat-n"><span data-count="600" data-dec="0">600</span><em>+</em></p><p class="stat-l">名校 Offer</p></div><div data-reveal><p class="stat-n"><span data-count="98.6" data-dec="1">98.6</span><em>%</em></p><p class="stat-l">学员好评率</p></div></div>
     </div>
@@ -411,6 +411,18 @@
       </details></div><p class="plist-note">起步价对应最小规模的需求，最终报价取决于范围与周期；淘宝下单与微信咨询享受同样的服务</p>
   </div>
 </section>
+<!-- admission-library:start -->
+<link rel="stylesheet" href="/assets/site/admissions/library.css?v=20261123">
+<section class="sec sec-t ad-library" id="admissions" data-lang="zh"><div class="wrap">
+<div class="ad-heading"><div><p class="label mono">2027 / STUDENT OFFERS</p><h2>从背景，到下一站。</h2><p>五所英国大学，500 条申请记录。先找到与你相近的起点，再看清每一份 Offer 的条件。</p></div><div class="ad-edition"><b>2027</b><span>秋季入学 · 学员录取案例</span></div></div>
+<div class="ad-schools"><button type="button" class="ad-school" data-school="bristol" aria-pressed="false"><span class="ad-logo ad-logo-bristol"><img src="/assets/site/admissions/bristol.svg" alt="University of Bristol" loading="lazy" width="190" height="62"></span><strong>布里斯托大学</strong><span>100 条申请记录 <b>↗</b></span></button><button type="button" class="ad-school" data-school="warwick" aria-pressed="false"><span class="ad-logo ad-logo-warwick"><img src="/assets/site/admissions/warwick.svg" alt="University of Warwick" loading="lazy" width="190" height="62"></span><strong>华威大学</strong><span>100 条申请记录 <b>↗</b></span></button><button type="button" class="ad-school" data-school="leeds" aria-pressed="false"><span class="ad-logo ad-logo-leeds"><img src="/assets/site/admissions/leeds.svg" alt="University of Leeds" loading="lazy" width="190" height="62"></span><strong>利兹大学</strong><span>100 条申请记录 <b>↗</b></span></button><button type="button" class="ad-school" data-school="glasgow" aria-pressed="false"><span class="ad-logo ad-logo-glasgow"><img src="/assets/site/admissions/glasgow.svg" alt="University of Glasgow" loading="lazy" width="190" height="62"></span><strong>格拉斯哥大学</strong><span>100 条申请记录 <b>↗</b></span></button><button type="button" class="ad-school" data-school="sheffield" aria-pressed="false"><span class="ad-logo ad-logo-sheffield"><img src="/assets/site/admissions/sheffield.svg" alt="University of Sheffield" loading="lazy" width="190" height="62"></span><strong>谢菲尔德大学</strong><span>100 条申请记录 <b>↗</b></span></button></div>
+<div class="ad-tools"><label>搜索背景与专业<input id="ad-search" type="search" placeholder="试试 Animation、游戏、数字媒体…"></label><label>专业方向<select id="ad-category"><option value="focused">设计与创意相关 · 97</option><option value="all">全部方向 · 500</option><option value="design">设计 / 游戏 / 沉浸艺术</option><option value="media">媒体与传播</option><option value="fashion">时尚与纺织</option><option value="culture">文化创意与音乐</option><option value="urban">城市与空间</option><option value="other">其他方向</option></select></label><label>录取类型<select id="ad-result"><option value="all">全部类型</option><option value="CO">CO · 有条件录取</option><option value="UO">UO · 无条件录取</option></select></label></div>
+<div class="ad-results-bar"><p id="ad-count" role="status" aria-live="polite">正在加载案例…</p><button type="button" id="ad-reset">重置筛选 ↺</button></div>
+<div class="ad-grid" id="ad-grid"></div><div class="ad-more"><button type="button" id="ad-more" class="btn btn-line" hidden>查看更多案例 ↓</button></div>
+<noscript><p>请启用 JavaScript 以搜索和查看申请记录。</p></noscript>
+<details class="ad-source"><summary>数据来源与阅读说明</summary><p>来源：用户提供的《布大+华威+利兹+格大+谢大2027学年500个录取案例》，版本日期 2026.11.10。共 500 条记录（非去重人数），498 条 CO、2 条 UO。案例归属已由学院确认；本次依据汇总表整理，未逐份核验原始 Offer。</p><p>成绩与条件保留表格原值，数值型比例统一显示为百分比；未提供的字段不作推断。CO 为有条件录取，UO 为无条件录取，均不代表已经入学。方向分类用于浏览，不代表该专业必须提交作品集。个案条件不等于统一录取门槛。院校标识仅用于识别学校，不表示合作或背书。</p><p><a href="https://www.bristol.ac.uk" target="_blank" rel="noopener">布里斯托大学 ↗</a> · <a href="https://warwick.ac.uk" target="_blank" rel="noopener">华威大学 ↗</a> · <a href="https://www.leeds.ac.uk" target="_blank" rel="noopener">利兹大学 ↗</a> · <a href="https://www.gla.ac.uk" target="_blank" rel="noopener">格拉斯哥大学 ↗</a> · <a href="https://sheffield.ac.uk" target="_blank" rel="noopener">谢菲尔德大学 ↗</a></p></details>
+</div></section><script src="/assets/site/admissions/library.js?v=20261123" defer></script>
+<!-- admission-library:end -->
 <section class="sec sec-t" id="stories">
   <div class="wrap">
     <div class="sec-head">
