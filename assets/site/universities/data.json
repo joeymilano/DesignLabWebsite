@@ -33,6 +33,7 @@
       "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/royal-college-of-art_1642_large.jpg",
       "profileUrl": "https://www.qs-topuniversities.cn/en/universities/royal-college-art",
       "countryZh": "英国",
+      "logo": "/assets/site/universities/logos/rca.jpg",
       "admissions": {
         "ug": {
           "program": "RCA × Norwich 联合授予本科 · Norwich 校区",
@@ -111,8 +112,7 @@
           ],
           "checked": "2026-11-23"
         }
-      },
-      "logo": "/assets/site/universities/logos/rca.jpg"
+      }
     },
     {
       "id": "ual",
@@ -128,6 +128,7 @@
       "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/university-of-the-arts-london_1646_large.jpg",
       "profileUrl": "https://www.qs-topuniversities.cn/en/universities/university-arts-london",
       "countryZh": "英国",
+      "logo": "/assets/site/universities/logos/ual.jpg",
       "admissions": {
         "ug": {
           "program": "示例专业 · LCC BA (Hons) Games Design · 2027 入学",
@@ -202,8 +203,7 @@
           ],
           "checked": "2026-11-23"
         }
-      },
-      "logo": "/assets/site/universities/logos/ual.jpg"
+      }
     },
     {
       "id": "parsons",
@@ -219,6 +219,7 @@
       "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/the-new-school_1814_large.jpg",
       "profileUrl": "https://www.qs-topuniversities.cn/en/universities/new-school",
       "countryZh": "美国",
+      "logo": "/assets/site/universities/logos/parsons.jpg",
       "admissions": {
         "ug": {
           "program": "Parsons BFA / BBA · 纽约校区",
@@ -278,8 +279,7 @@
           ],
           "checked": "2026-11-23"
         }
-      },
-      "logo": "/assets/site/universities/logos/parsons.jpg"
+      }
     },
     {
       "id": "risd",
@@ -295,6 +295,7 @@
       "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/rhode-island-school-of-design-risd_592560de9988f300e2320736_large.jpg",
       "profileUrl": "https://www.qs-topuniversities.cn/en/universities/rhode-island-school-design-risd",
       "countryZh": "美国",
+      "logo": "/assets/site/universities/logos/risd.jpg",
       "admissions": {
         "ug": {
           "program": "本科新生 · 2027 入学",
@@ -355,99 +356,7 @@
           ],
           "checked": "2026-11-23"
         }
-      },
-      "logo": "/assets/site/universities/logos/risd.jpg"
-    },
-    {
-      "id": "mit",
-      "qsId": "410",
-      "name": "Massachusetts Institute of Technology (MIT)",
-      "nameZh": "麻省理工学院",
-      "country": "United States",
-      "ranks": {
-        "2024": "5",
-        "2025": "5",
-        "2026": "6"
-      },
-      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/massachusetts-institute-of-technology-mit_410_large.jpg",
-      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/massachusetts-institute-technology-mit",
-      "countryZh": "美国",
-      "admissions": {
-        "ug": {
-          "program": "MIT 本科统一招生 · 非艺术设计专业单独录取",
-          "timeline": [
-            {
-              "date": "2026-11-01",
-              "label": "Early Action 截止",
-              "status": "closed"
-            },
-            {
-              "date": "2027-01-04",
-              "label": "Regular Action 截止",
-              "status": "confirmed"
-            },
-            {
-              "date": "2027-05-01",
-              "label": "录取回复截止",
-              "status": "confirmed"
-            }
-          ],
-          "requirements": [
-            "MIT 自有申请、学校报告与成绩单、2 封教师推荐信",
-            "必须提交 SAT 或 ACT；部分非英语母语申请人强烈建议提供英语成绩",
-            "艺术 / 创客作品集为可选补充材料，不能替代学术申请"
-          ],
-          "sources": [
-            {
-              "title": "官网申请指南",
-              "url": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/"
-            },
-            {
-              "title": "2027 申请开放确认",
-              "url": "https://apply.mitadmissions.org/portal/apply"
-            }
-          ],
-          "checked": "2026-11-23"
-        },
-        "pg": {
-          "program": "MIT Architecture · MArch / SMArchS / SMACT",
-          "timeline": [
-            {
-              "date": "2026-09-15",
-              "label": "开放申请",
-              "status": "confirmed"
-            },
-            {
-              "date": "2027-01-07 23:59 ET",
-              "label": "所有项目申请截止",
-              "status": "confirmed"
-            },
-            {
-              "date": "2027-03",
-              "label": "公布录取结果",
-              "status": "confirmed"
-            },
-            {
-              "date": "2027-04-15 17:00 ET",
-              "label": "录取回复截止",
-              "status": "confirmed"
-            }
-          ],
-          "requirements": [
-            "按具体学位提交成绩单、个人陈述、推荐信及英语材料",
-            "MArch 与 SMArchS 作品集上限 30 页 PDF；SMACT 上限 10 页",
-            "MArch 不要求已有建筑学背景；SMArchS 为研究型路径，须查具体方向资格"
-          ],
-          "sources": [
-            {
-              "title": "官网申请指南",
-              "url": "https://architecture.mit.edu/graduate-admissions"
-            }
-          ],
-          "checked": "2026-11-23"
-        }
-      },
-      "logo": "/assets/site/universities/logos/mit.jpg"
+      }
     },
     {
       "id": "pratt",
@@ -463,6 +372,7 @@
       "logoSource": "https://www.pratt.edu/",
       "profileUrl": "https://www.qs-topuniversities.cn/en/universities/pratt-institute",
       "countryZh": "美国",
+      "logo": "/assets/site/universities/logos/pratt.svg",
       "admissions": {
         "ug": {
           "program": "本科新生 · 艺术设计专业",
@@ -541,8 +451,98 @@
           ],
           "checked": "2026-11-23"
         }
+      }
+    },
+    {
+      "id": "mit",
+      "qsId": "410",
+      "name": "Massachusetts Institute of Technology (MIT)",
+      "nameZh": "麻省理工学院",
+      "country": "United States",
+      "ranks": {
+        "2024": "5",
+        "2025": "5",
+        "2026": "6"
       },
-      "logo": "/assets/site/universities/logos/pratt.svg"
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/massachusetts-institute-of-technology-mit_410_large.jpg",
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/massachusetts-institute-technology-mit",
+      "countryZh": "美国",
+      "logo": "/assets/site/universities/logos/mit.jpg",
+      "admissions": {
+        "ug": {
+          "program": "MIT 本科统一招生 · 非艺术设计专业单独录取",
+          "timeline": [
+            {
+              "date": "2026-11-01",
+              "label": "Early Action 截止",
+              "status": "closed"
+            },
+            {
+              "date": "2027-01-04",
+              "label": "Regular Action 截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-05-01",
+              "label": "录取回复截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "MIT 自有申请、学校报告与成绩单、2 封教师推荐信",
+            "必须提交 SAT 或 ACT；部分非英语母语申请人强烈建议提供英语成绩",
+            "艺术 / 创客作品集为可选补充材料，不能替代学术申请"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/"
+            },
+            {
+              "title": "2027 申请开放确认",
+              "url": "https://apply.mitadmissions.org/portal/apply"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "MIT Architecture · MArch / SMArchS / SMACT",
+          "timeline": [
+            {
+              "date": "2026-09-15",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-07 23:59 ET",
+              "label": "所有项目申请截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-03",
+              "label": "公布录取结果",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-04-15 17:00 ET",
+              "label": "录取回复截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "按具体学位提交成绩单、个人陈述、推荐信及英语材料",
+            "MArch 与 SMArchS 作品集上限 30 页 PDF；SMACT 上限 10 页",
+            "MArch 不要求已有建筑学背景；SMArchS 为研究型路径，须查具体方向资格"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://architecture.mit.edu/graduate-admissions"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
     },
     {
       "id": "polimi",
@@ -558,6 +558,7 @@
       "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/politecnico-di-milano_592560cf2aeae70239af4c1c_large.jpg",
       "profileUrl": "https://www.qs-topuniversities.cn/en/universities/politecnico-di-milano",
       "countryZh": "意大利",
+      "logo": "/assets/site/universities/logos/polimi.jpg",
       "admissions": {
         "ug": {
           "program": "设计本科 · 国际学历申请",
@@ -624,8 +625,89 @@
             }
           ]
         }
+      }
+    },
+    {
+      "id": "gsa",
+      "qsId": "14794",
+      "name": "The Glasgow School of Art",
+      "nameZh": "格拉斯哥艺术学院",
+      "country": "United Kingdom",
+      "ranks": {
+        "2024": "13",
+        "2025": "12",
+        "2026": "8"
       },
-      "logo": "/assets/site/universities/logos/polimi.jpg"
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/the-glasgow-school-of-art_14794_large.jpg",
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/glasgow-school-art",
+      "countryZh": "英国",
+      "logo": "/assets/site/universities/logos/gsa.jpg",
+      "admissions": {
+        "ug": {
+          "program": "本科艺术设计 · Product Design Engineering 除外",
+          "timeline": [
+            {
+              "date": "2027-01-13 18:00 UK",
+              "label": "UCAS 申请截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-20 13:00 UK",
+              "label": "数字作品集截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "至 2027-04",
+              "label": "评审及面试",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "UCAS 申请、个人陈述及 1 封推荐信",
+            "数字作品集 PDF 最多 15 页，另附最多 500 词作品集陈述",
+            "学历与英语要求见专业页；Product Design Engineering 不适用上述作品集流程"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.gsa.ac.uk/study-at-the-gsa/undergraduate-degrees/how-to-apply"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "授课型硕士 · 2027 秋季",
+          "timeline": [
+            {
+              "date": "滚动申请",
+              "label": "无固定申请轮次，专业满额即止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-02-28 前",
+              "label": "拟申请奖学金者建议完成申请及作品集",
+              "status": "confirmed"
+            },
+            {
+              "date": "作品集提交后",
+              "label": "通常 30 日内获第一阶段结果",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "申请表、最多 500 词个人陈述、学历与成绩单、1 封学术推荐信及身份证明",
+            "作品集 PDF 最多 15 页，另附最多 500 词作品集陈述",
+            "需要签证且无豁免资格者提交英语证明；部分项目另有面试"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.gsa.ac.uk/study-at-the-gsa/postgraduate-degrees/how-to-apply"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
     },
     {
       "id": "aalto",
@@ -641,6 +723,7 @@
       "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/aalto-university_261_large.jpg",
       "profileUrl": "https://www.qs-topuniversities.cn/en/universities/aalto-university",
       "countryZh": "芬兰",
+      "logo": "/assets/site/universities/logos/aalto.jpg",
       "admissions": {
         "ug": {
           "program": "Design and Media · 英语本科",
@@ -708,8 +791,7 @@
             }
           ]
         }
-      },
-      "logo": "/assets/site/universities/logos/aalto.jpg"
+      }
     },
     {
       "id": "dae",
@@ -725,6 +807,7 @@
       "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/design-academy-eindhoven_1452_large.jpg",
       "profileUrl": "https://www.qs-topuniversities.cn/en/universities/design-academy-eindhoven",
       "countryZh": "荷兰",
+      "logo": "/assets/site/universities/logos/dae.jpg",
       "admissions": {
         "ug": {
           "program": "设计本科 · 国际申请",
@@ -796,8 +879,7 @@
             }
           ]
         }
-      },
-      "logo": "/assets/site/universities/logos/dae.jpg"
+      }
     },
     {
       "id": "saic",
@@ -813,6 +895,7 @@
       "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/school-of-the-art-institute-of-chicago-saic_592560de9988f300e2320741_large.jpg",
       "profileUrl": "https://www.qs-topuniversities.cn/en/universities/school-art-institute-chicago",
       "countryZh": "美国",
+      "logo": "/assets/site/universities/logos/saic.jpg",
       "admissions": {
         "ug": {
           "program": "本科新生 · 秋季申请",
@@ -873,249 +956,7 @@
           ],
           "checked": "2026-11-23"
         }
-      },
-      "logo": "/assets/site/universities/logos/saic.jpg"
-    },
-    {
-      "id": "tongji",
-      "qsId": "617",
-      "name": "Tongji University",
-      "nameZh": "同济大学",
-      "country": "China (Mainland)",
-      "ranks": {
-        "2024": "11",
-        "2025": "18",
-        "2026": "16"
-      },
-      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/tongji-university_617_large.jpg",
-      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/tongji-university",
-      "countryZh": "中国内地",
-      "admissions": {
-        "ug": {
-          "program": "设计学类本科 · 中国内地艺术高考通道",
-          "timeline": [
-            {
-              "date": "待公布",
-              "label": "2027 艺术类本科招生简章及日程",
-              "status": "pending"
-            },
-            {
-              "date": "2026 参考",
-              "label": "2026 年美术类简章已公布，不作为 2027 日期",
-              "status": "historical"
-            }
-          ],
-          "requirements": [
-            "按年度美术类招生简章参加省统考及高考",
-            "报考专业、选科及投档规则以生源省与学校年度公告为准"
-          ],
-          "sources": [
-            {
-              "title": "本科招生章程目录",
-              "url": "https://xxgk.tongji.edu.cn/index.php?classid=3138"
-            },
-            {
-              "title": "本科招生网",
-              "url": "https://bkzs.tongji.edu.cn/"
-            }
-          ]
-        },
-        "pg": {
-          "program": "设计创意学院硕士 · 中国内地推免 / 统考",
-          "timeline": [
-            {
-              "date": "2026-08-17",
-              "label": "设计创意学院推免预报名截止 · 12:00",
-              "status": "closed"
-            },
-            {
-              "date": "2026-10-02",
-              "label": "公布 2027 统考招生章程",
-              "status": "confirmed"
-            },
-            {
-              "date": "按研招网通知",
-              "label": "统考报名、初试及学院复试",
-              "status": "process"
-            }
-          ],
-          "requirements": [
-            "推免申请须获本科院校推荐免试资格",
-            "统考申请须满足招生章程的学历资格及专业目录条件",
-            "按研究方向准备专业考核材料；考试科目以 2027 目录为准"
-          ],
-          "sources": [
-            {
-              "title": "2027 推免时间汇总",
-              "url": "https://yz.tongji.edu.cn/info/1010/4220.htm"
-            },
-            {
-              "title": "2027 硕士招生章程",
-              "url": "https://yz.tongji.edu.cn/info/1018/4243.htm"
-            },
-            {
-              "title": "2027 专业目录",
-              "url": "https://yzbm.tongji.edu.cn/zsml/sszsml/index/2027"
-            }
-          ]
-        }
-      },
-      "logo": "/assets/site/universities/logos/tongji.jpg"
-    },
-    {
-      "id": "tudelft",
-      "qsId": "155",
-      "name": "Delft University of Technology",
-      "nameZh": "代尔夫特理工大学",
-      "country": "Netherlands",
-      "ranks": {
-        "2024": "12",
-        "2025": "11",
-        "2026": "13"
-      },
-      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/delft-university-of-technology_155_large.jpg",
-      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/delft-university-technology",
-      "countryZh": "荷兰",
-      "admissions": {
-        "ug": {
-          "program": "BSc Industrial Design Engineering · 荷兰语授课",
-          "timeline": [
-            {
-              "date": "4 月 1 日",
-              "label": "国际学历截止 · 官网常设日程，未标入学年份",
-              "status": "recurring"
-            }
-          ],
-          "requirements": [
-            "学历须达到荷兰 VWO 等值水平",
-            "要求数学及物理背景，并满足荷兰语要求",
-            "专业当前不设 Numerus Fixus 名额限制"
-          ],
-          "sources": [
-            {
-              "title": "本科申请流程",
-              "url": "https://www.tudelft.nl/onderwijs/opleidingen/bachelors/industrieel-ontwerpen/bsc-industrieel-ontwerpen/van-aanmelding-tot-inschrijving"
-            },
-            {
-              "title": "专业入学要求",
-              "url": "https://www.tudelft.nl/onderwijs/opleidingen/bachelors/industrieel-ontwerpen/bsc-industrieel-ontwerpen/van-aanmelding-tot-inschrijving/toelatingseisen"
-            }
-          ]
-        },
-        "pg": {
-          "program": "MSc Design for Interaction · 国际本科学历",
-          "timeline": [
-            {
-              "date": "1 月 15 日",
-              "label": "非 EU/EFTA 截止 · 官网常设日程，未标年份",
-              "status": "recurring"
-            },
-            {
-              "date": "4 月 1 日",
-              "label": "EU/EFTA 截止 · 官网常设日程",
-              "status": "recurring"
-            }
-          ],
-          "requirements": [
-            "工业设计或密切相关本科学历；具备实体产品设计及设计研究经验",
-            "作品集 PDF 不超过 20 MB、30 页、A4 尺寸；标明合作项目个人贡献",
-            "附最多 600 词 Cover Letter；满足 TU Delft 国际硕士英语及学历要求"
-          ],
-          "sources": [
-            {
-              "title": "录取与时间",
-              "url": "https://www.tudelft.nl/en/ide/education/ide-masters-programmes/design-for-interaction/admission-application-finances/non-dutch-bsc-degree"
-            },
-            {
-              "title": "作品集要求",
-              "url": "https://www.tudelft.nl/en/ide/education/ide-masters-programmes/design-for-interaction/admission-application-finances/non-dutch-bsc-degree/portfolio-requirements"
-            }
-          ]
-        }
-      },
-      "logo": "/assets/site/universities/logos/tudelft.jpg"
-    },
-    {
-      "id": "gsa",
-      "qsId": "14794",
-      "name": "The Glasgow School of Art",
-      "nameZh": "格拉斯哥艺术学院",
-      "country": "United Kingdom",
-      "ranks": {
-        "2024": "13",
-        "2025": "12",
-        "2026": "8"
-      },
-      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/the-glasgow-school-of-art_14794_large.jpg",
-      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/glasgow-school-art",
-      "countryZh": "英国",
-      "admissions": {
-        "ug": {
-          "program": "本科艺术设计 · Product Design Engineering 除外",
-          "timeline": [
-            {
-              "date": "2027-01-13 18:00 UK",
-              "label": "UCAS 申请截止",
-              "status": "confirmed"
-            },
-            {
-              "date": "2027-01-20 13:00 UK",
-              "label": "数字作品集截止",
-              "status": "confirmed"
-            },
-            {
-              "date": "至 2027-04",
-              "label": "评审及面试",
-              "status": "confirmed"
-            }
-          ],
-          "requirements": [
-            "UCAS 申请、个人陈述及 1 封推荐信",
-            "数字作品集 PDF 最多 15 页，另附最多 500 词作品集陈述",
-            "学历与英语要求见专业页；Product Design Engineering 不适用上述作品集流程"
-          ],
-          "sources": [
-            {
-              "title": "官网申请指南",
-              "url": "https://www.gsa.ac.uk/study-at-the-gsa/undergraduate-degrees/how-to-apply"
-            }
-          ],
-          "checked": "2026-11-23"
-        },
-        "pg": {
-          "program": "授课型硕士 · 2027 秋季",
-          "timeline": [
-            {
-              "date": "滚动申请",
-              "label": "无固定申请轮次，专业满额即止",
-              "status": "confirmed"
-            },
-            {
-              "date": "2027-02-28 前",
-              "label": "拟申请奖学金者建议完成申请及作品集",
-              "status": "confirmed"
-            },
-            {
-              "date": "作品集提交后",
-              "label": "通常 30 日内获第一阶段结果",
-              "status": "confirmed"
-            }
-          ],
-          "requirements": [
-            "申请表、最多 500 词个人陈述、学历与成绩单、1 封学术推荐信及身份证明",
-            "作品集 PDF 最多 15 页，另附最多 500 词作品集陈述",
-            "需要签证且无豁免资格者提交英语证明；部分项目另有面试"
-          ],
-          "sources": [
-            {
-              "title": "官网申请指南",
-              "url": "https://www.gsa.ac.uk/study-at-the-gsa/postgraduate-degrees/how-to-apply"
-            }
-          ],
-          "checked": "2026-11-23"
-        }
-      },
-      "logo": "/assets/site/universities/logos/gsa.jpg"
+      }
     },
     {
       "id": "artcenter",
@@ -1131,6 +972,7 @@
       "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/art-center-college-of-design_592560de9988f300e2320743_large.jpg",
       "profileUrl": "https://www.qs-topuniversities.cn/en/universities/art-center-college-design",
       "countryZh": "美国",
+      "logo": "/assets/site/universities/logos/artcenter.jpg",
       "admissions": {
         "ug": {
           "program": "本科 · 2027 秋季",
@@ -1194,8 +1036,163 @@
           ],
           "checked": "2026-11-23"
         }
+      }
+    },
+    {
+      "id": "tudelft",
+      "qsId": "155",
+      "name": "Delft University of Technology",
+      "nameZh": "代尔夫特理工大学",
+      "country": "Netherlands",
+      "ranks": {
+        "2024": "12",
+        "2025": "11",
+        "2026": "13"
       },
-      "logo": "/assets/site/universities/logos/artcenter.jpg"
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/delft-university-of-technology_155_large.jpg",
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/delft-university-technology",
+      "countryZh": "荷兰",
+      "logo": "/assets/site/universities/logos/tudelft.jpg",
+      "admissions": {
+        "ug": {
+          "program": "BSc Industrial Design Engineering · 荷兰语授课",
+          "timeline": [
+            {
+              "date": "4 月 1 日",
+              "label": "国际学历截止 · 官网常设日程，未标入学年份",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "学历须达到荷兰 VWO 等值水平",
+            "要求数学及物理背景，并满足荷兰语要求",
+            "专业当前不设 Numerus Fixus 名额限制"
+          ],
+          "sources": [
+            {
+              "title": "本科申请流程",
+              "url": "https://www.tudelft.nl/onderwijs/opleidingen/bachelors/industrieel-ontwerpen/bsc-industrieel-ontwerpen/van-aanmelding-tot-inschrijving"
+            },
+            {
+              "title": "专业入学要求",
+              "url": "https://www.tudelft.nl/onderwijs/opleidingen/bachelors/industrieel-ontwerpen/bsc-industrieel-ontwerpen/van-aanmelding-tot-inschrijving/toelatingseisen"
+            }
+          ]
+        },
+        "pg": {
+          "program": "MSc Design for Interaction · 国际本科学历",
+          "timeline": [
+            {
+              "date": "1 月 15 日",
+              "label": "非 EU/EFTA 截止 · 官网常设日程，未标年份",
+              "status": "recurring"
+            },
+            {
+              "date": "4 月 1 日",
+              "label": "EU/EFTA 截止 · 官网常设日程",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "工业设计或密切相关本科学历；具备实体产品设计及设计研究经验",
+            "作品集 PDF 不超过 20 MB、30 页、A4 尺寸；标明合作项目个人贡献",
+            "附最多 600 词 Cover Letter；满足 TU Delft 国际硕士英语及学历要求"
+          ],
+          "sources": [
+            {
+              "title": "录取与时间",
+              "url": "https://www.tudelft.nl/en/ide/education/ide-masters-programmes/design-for-interaction/admission-application-finances/non-dutch-bsc-degree"
+            },
+            {
+              "title": "作品集要求",
+              "url": "https://www.tudelft.nl/en/ide/education/ide-masters-programmes/design-for-interaction/admission-application-finances/non-dutch-bsc-degree/portfolio-requirements"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cafa",
+      "qsId": "14910",
+      "name": "Central Academy of Fine Arts (CAFA)",
+      "nameZh": "中央美术学院",
+      "country": "China (Mainland)",
+      "ranks": {
+        "2024": "17",
+        "2025": "21",
+        "2026": "14"
+      },
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/central-academy-of-fine-arts_592560de9988f300e2320824_large.jpg",
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/central-academy-fine-arts-cafa",
+      "countryZh": "中国内地",
+      "logo": "/assets/site/universities/logos/cafa.jpg",
+      "admissions": {
+        "ug": {
+          "program": "艺术类本科 · 中国内地高考通道",
+          "timeline": [
+            {
+              "date": "2026-09-30",
+              "label": "公布 2027 校考方案",
+              "status": "confirmed"
+            },
+            {
+              "date": "待公布",
+              "label": "2027 报名与考试具体日期",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "按拟报专业满足省级艺术统考科类要求",
+            "参加对应专业的校考及高考",
+            "艺术设计与城市艺术设计包含专业不同，须核对招生方向"
+          ],
+          "sources": [
+            {
+              "title": "2027 本科考试公告",
+              "url": "https://www.cafa.edu.cn/st/2026/80233747.htm"
+            },
+            {
+              "title": "省统考对应要求",
+              "url": "https://www.cafa.edu.cn/st/2026/80233748.htm"
+            }
+          ]
+        },
+        "pg": {
+          "program": "设计学 / 设计硕士 · 中国内地统考通道",
+          "timeline": [
+            {
+              "date": "2026-10-09—10-12",
+              "label": "研考预报名",
+              "status": "confirmed"
+            },
+            {
+              "date": "2026-10-15—10-24",
+              "label": "研考正式报名",
+              "status": "confirmed"
+            },
+            {
+              "date": "待通知",
+              "label": "专业审核及复试安排",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "国家承认的本科毕业或符合简章规定的同等学力资格",
+            "按专业目录参加初试、专业考核及复试",
+            "作品与研究材料按报考院系及专业目录提交"
+          ],
+          "sources": [
+            {
+              "title": "2027 硕士简章",
+              "url": "https://www.cafa.edu.cn/st/2026/80333750.htm"
+            },
+            {
+              "title": "2027 硕士简章 PDF",
+              "url": "https://www.cafa.edu.cn/library/dynamic.images/info/202610913206156.pdf"
+            }
+          ]
+        }
+      }
     },
     {
       "id": "scad",
@@ -1211,6 +1208,7 @@
       "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/savannah-college-of-art-and-design_592560cf2aeae70239af5390_large.jpg",
       "profileUrl": "https://www.qs-topuniversities.cn/en/universities/savannah-college-art-design",
       "countryZh": "美国",
+      "logo": "/assets/site/universities/logos/scad.jpg",
       "admissions": {
         "ug": {
           "program": "本科新生 · 按学季入学",
@@ -1280,325 +1278,170 @@
           ],
           "checked": "2026-11-23"
         }
-      },
-      "logo": "/assets/site/universities/logos/scad.jpg"
+      }
     },
     {
-      "id": "cmu",
-      "qsId": "101",
-      "name": "Carnegie Mellon University",
-      "nameZh": "卡内基梅隆大学",
-      "country": "United States",
-      "ranks": {
-        "2024": "16",
-        "2025": "20",
-        "2026": "=19"
-      },
-      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/carnegie-mellon-university_101_large.jpg",
-      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/carnegie-mellon-university",
-      "countryZh": "美国",
-      "admissions": {
-        "ug": {
-          "program": "BDes / BXA Design · 本科",
-          "timeline": [
-            {
-              "date": "11 月 2 日",
-              "label": "BDes Early Decision · 当前页面未单独标年份",
-              "status": "recurring"
-            },
-            {
-              "date": "1 月 4 日",
-              "label": "Regular Decision 申请截止",
-              "status": "recurring"
-            },
-            {
-              "date": "1 月 11 日",
-              "label": "Regular Decision 作品集截止",
-              "status": "recurring"
-            }
-          ],
-          "requirements": [
-            "Common Application、校方补充文书及设计专属短文",
-            "10–18 张作品展示页，至少一页体现创作过程；另交最多 90 秒自我介绍",
-            "BDes 可 ED，BXA 仅 RD；设计专业 SAT/ACT 为可选"
-          ],
-          "sources": [
-            {
-              "title": "本科要求与日程",
-              "url": "https://www.design.cmu.edu/admissions/undergraduate-admissions"
-            }
-          ]
-        },
-        "pg": {
-          "program": "MDes Design for Interactions / MA Design · 2027/28",
-          "timeline": [
-            {
-              "date": "2026-10-01",
-              "label": "GradCAS 开放",
-              "status": "confirmed"
-            },
-            {
-              "date": "2027-01-15",
-              "label": "全部材料截止",
-              "status": "confirmed"
-            },
-            {
-              "date": "2027-03-15",
-              "label": "结果通知",
-              "status": "confirmed"
-            }
-          ],
-          "requirements": [
-            "MDes：设计或相关背景，毕业后至少 1 年全职经历，作品集 5–9 项",
-            "MA：适合转专业，无须工作经历，不接收作品集",
-            "共同材料含个人陈述、CV、成绩、3 封推荐信及 1 分钟视频；IELTS 建议总分 7.5、单项至少 7"
-          ],
-          "sources": [
-            {
-              "title": "2027/28 硕士要求",
-              "url": "https://www.design.cmu.edu/admissions/masters-program-admissions"
-            }
-          ]
-        }
-      },
-      "logo": "/assets/site/universities/logos/cmu.jpg"
-    },
-    {
-      "id": "cafa",
-      "qsId": "14910",
-      "name": "Central Academy of Fine Arts (CAFA)",
-      "nameZh": "中央美术学院",
+      "id": "tongji",
+      "qsId": "617",
+      "name": "Tongji University",
+      "nameZh": "同济大学",
       "country": "China (Mainland)",
       "ranks": {
-        "2024": "17",
-        "2025": "21",
-        "2026": "14"
+        "2024": "11",
+        "2025": "18",
+        "2026": "16"
       },
-      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/central-academy-of-fine-arts_592560de9988f300e2320824_large.jpg",
-      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/central-academy-fine-arts-cafa",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/tongji-university_617_large.jpg",
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/tongji-university",
       "countryZh": "中国内地",
+      "logo": "/assets/site/universities/logos/tongji.jpg",
       "admissions": {
         "ug": {
-          "program": "艺术类本科 · 中国内地高考通道",
+          "program": "设计学类本科 · 中国内地艺术高考通道",
           "timeline": [
-            {
-              "date": "2026-09-30",
-              "label": "公布 2027 校考方案",
-              "status": "confirmed"
-            },
             {
               "date": "待公布",
-              "label": "2027 报名与考试具体日期",
+              "label": "2027 艺术类本科招生简章及日程",
               "status": "pending"
+            },
+            {
+              "date": "2026 参考",
+              "label": "2026 年美术类简章已公布，不作为 2027 日期",
+              "status": "historical"
             }
           ],
           "requirements": [
-            "按拟报专业满足省级艺术统考科类要求",
-            "参加对应专业的校考及高考",
-            "艺术设计与城市艺术设计包含专业不同，须核对招生方向"
+            "按年度美术类招生简章参加省统考及高考",
+            "报考专业、选科及投档规则以生源省与学校年度公告为准"
           ],
           "sources": [
             {
-              "title": "2027 本科考试公告",
-              "url": "https://www.cafa.edu.cn/st/2026/80233747.htm"
+              "title": "本科招生章程目录",
+              "url": "https://xxgk.tongji.edu.cn/index.php?classid=3138"
             },
             {
-              "title": "省统考对应要求",
-              "url": "https://www.cafa.edu.cn/st/2026/80233748.htm"
+              "title": "本科招生网",
+              "url": "https://bkzs.tongji.edu.cn/"
             }
           ]
         },
         "pg": {
-          "program": "设计学 / 设计硕士 · 中国内地统考通道",
+          "program": "设计创意学院硕士 · 中国内地推免 / 统考",
           "timeline": [
             {
-              "date": "2026-10-09—10-12",
-              "label": "研考预报名",
+              "date": "2026-08-17",
+              "label": "设计创意学院推免预报名截止 · 12:00",
+              "status": "closed"
+            },
+            {
+              "date": "2026-10-02",
+              "label": "公布 2027 统考招生章程",
               "status": "confirmed"
             },
             {
-              "date": "2026-10-15—10-24",
-              "label": "研考正式报名",
+              "date": "按研招网通知",
+              "label": "统考报名、初试及学院复试",
+              "status": "process"
+            }
+          ],
+          "requirements": [
+            "推免申请须获本科院校推荐免试资格",
+            "统考申请须满足招生章程的学历资格及专业目录条件",
+            "按研究方向准备专业考核材料；考试科目以 2027 目录为准"
+          ],
+          "sources": [
+            {
+              "title": "2027 推免时间汇总",
+              "url": "https://yz.tongji.edu.cn/info/1010/4220.htm"
+            },
+            {
+              "title": "2027 硕士招生章程",
+              "url": "https://yz.tongji.edu.cn/info/1018/4243.htm"
+            },
+            {
+              "title": "2027 专业目录",
+              "url": "https://yzbm.tongji.edu.cn/zsml/sszsml/index/2027"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "oxford",
+      "qsId": "478",
+      "name": "University of Oxford",
+      "nameZh": "牛津大学",
+      "country": "United Kingdom",
+      "ranks": {
+        "2024": "=25",
+        "2025": "27",
+        "2026": "17"
+      },
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/university-of-oxford_478_large.jpg",
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/university-oxford",
+      "countryZh": "英国",
+      "logo": "/assets/site/universities/logos/oxford.jpg",
+      "admissions": {
+        "ug": {
+          "program": "Ruskin · BFA Fine Art · 2027 入学",
+          "timeline": [
+            {
+              "date": "2026-10-15 18:00 UK",
+              "label": "UCAS 截止，已结束",
+              "status": "closed"
+            },
+            {
+              "date": "2026-11-05",
+              "label": "作品集截止，已结束",
+              "status": "closed"
+            },
+            {
+              "date": "2026-12",
+              "label": "入围者线上面试",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "A-level AAA；部分完成艺术预科者可按 AAB 路径；IB 38，HL 666",
+            "通过 SlideRoom 提交数字作品集，不要求书面入学考试",
+            "入围面试者可能需另交近期作品；国际学历与英语要求另查官网"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/fine-art"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "Ruskin · MFA Fine Art · 2027–28",
+          "timeline": [
+            {
+              "date": "2027-01-05 12:00 UK",
+              "label": "最终申请截止",
               "status": "confirmed"
             },
             {
-              "date": "待通知",
-              "label": "专业审核及复试安排",
-              "status": "pending"
+              "date": "2027-10-10",
+              "label": "预计开学",
+              "status": "confirmed"
             }
           ],
           "requirements": [
-            "国家承认的本科毕业或符合简章规定的同等学力资格",
-            "按专业目录参加初试、专业考核及复试",
-            "作品与研究材料按报考院系及专业目录提交"
+            "美术或相关专业一等或较强二等一本科学位；其他专业持强美术作品集亦可考虑",
+            "提交在线作品集、最多 1,000 词个人陈述、简历、成绩单及 3 位推荐人；至少 2 位宜为学术推荐人",
+            "英语 IELTS Academic 7.5、单项 7.0，或官网认可的同等证明；不要求 GRE / GMAT"
           ],
           "sources": [
             {
-              "title": "2027 硕士简章",
-              "url": "https://www.cafa.edu.cn/st/2026/80333750.htm"
-            },
-            {
-              "title": "2027 硕士简章 PDF",
-              "url": "https://www.cafa.edu.cn/library/dynamic.images/info/202610913206156.pdf"
+              "title": "官网申请指南",
+              "url": "https://www.ox.ac.uk/admissions/graduate/courses/mfa-fine-art"
             }
-          ]
+          ],
+          "checked": "2026-11-23"
         }
-      },
-      "logo": "/assets/site/universities/logos/cafa.jpg"
-    },
-    {
-      "id": "rmit",
-      "qsId": "528",
-      "name": "RMIT University",
-      "nameZh": "皇家墨尔本理工大学",
-      "country": "Australia",
-      "ranks": {
-        "2024": "18",
-        "2025": "26",
-        "2026": "=19"
-      },
-      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/rmit-university_592560cf2aeae70239af4c95_large.jpg",
-      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/rmit-university",
-      "countryZh": "澳大利亚",
-      "admissions": {
-        "ug": {
-          "program": "Bachelor of Graphic Design（BP115）· 国际申请",
-          "timeline": [
-            {
-              "date": "2 月 / 7 月",
-              "label": "官网列出的入学季，具体开放与选拔任务截止按批次",
-              "status": "recurring"
-            },
-            {
-              "date": "待确认",
-              "label": "2027 国际申请及作品任务截止",
-              "status": "pending"
-            }
-          ],
-          "requirements": [
-            "高中学历须获 RMIT 认可为 VCE 等值，达到对应国家学历换算门槛（课程基准均分 65%）",
-            "国际申请者随申请提交指定 Selection task；澳洲 Year 12 / VTAC 通道另有轮次",
-            "IELTS Academic 总分至少 6.5、单项不低于 6.0"
-          ],
-          "sources": [
-            {
-              "title": "BP115 国际申请要求",
-              "url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/bachelor-degrees/bachelor-of-graphic-design-bp115"
-            }
-          ]
-        },
-        "pg": {
-          "program": "Master of Design Innovation and Technology · MC231",
-          "timeline": [
-            {
-              "date": "2 月 / 7 月",
-              "label": "入学季 · 具体截止依申请批次",
-              "status": "recurring"
-            }
-          ],
-          "requirements": [
-            "认可的本科学历，或至少 3 年相关工作 / 专业实践",
-            "以工作经验申请者提交 CV 与经历陈述",
-            "IELTS Academic 总分至少 6.5、单项不低于 6.0；该项目不要求统一作品集选拔任务"
-          ],
-          "sources": [
-            {
-              "title": "MC231 要求",
-              "url": "https://www.rmit.edu.au/study-with-us/levels-of-study/postgraduate-study/masters-by-coursework/mc231"
-            }
-          ]
-        }
-      },
-      "logo": "/assets/site/universities/logos/rmit.jpg"
-    },
-    {
-      "id": "polyu",
-      "qsId": "267",
-      "name": "The Hong Kong Polytechnic University",
-      "nameZh": "香港理工大学",
-      "country": "Hong Kong SAR",
-      "ranks": {
-        "2024": "19",
-        "2025": "=22",
-        "2026": "24"
-      },
-      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/the-hong-kong-polytechnic-university_267_large.jpg",
-      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/hong-kong-polytechnic-university",
-      "countryZh": "中国香港",
-      "admissions": {
-        "ug": {
-          "program": "BA (Hons) Scheme in Design · 内地高考申请",
-          "timeline": [
-            {
-              "date": "2026.10–2027.06",
-              "label": "eAdmission 申请",
-              "status": "已公布"
-            },
-            {
-              "date": "2026.11–2027.06",
-              "label": "网上提交作品集",
-              "status": "已公布"
-            },
-            {
-              "date": "2027.06",
-              "label": "面试与录取",
-              "status": "已公布"
-            },
-            {
-              "date": "2027.08.30",
-              "label": "开课",
-              "status": "已公布"
-            }
-          ],
-          "requirements": [
-            "内地应届高考申请通道；国际学历与 JUPAS 使用不同时间表",
-            "按大学入学条件审核高考及英语成绩",
-            "作品集须提交至设计学院指定平台；按通知参加面试"
-          ],
-          "sources": [
-            {
-              "title": "2027/28 本科简章",
-              "url": "https://www.polyu.edu.hk/sd/-/media/department/sd/download/prospectus/ug_prospectus_27-28_online_spread.pdf?hash=B0C0AE57AEC032654FEFE234C8FD4E74&rev=ed0bf22e3ac1419394139e31df3a6ca7"
-            },
-            {
-              "title": "本科申请分类",
-              "url": "https://www.polyu.edu.hk/sd/study/admissions/ba-scheme-admissions-information/"
-            }
-          ]
-        },
-        "pg": {
-          "program": "MDes Smart Service Design",
-          "timeline": [
-            {
-              "date": "2026.07.02",
-              "label": "开放申请",
-              "status": "已公布"
-            },
-            {
-              "date": "2026.10.20",
-              "label": "早轮截止",
-              "status": "已结束"
-            },
-            {
-              "date": "2027.02.25",
-              "label": "主轮截止",
-              "status": "已公布"
-            }
-          ],
-          "requirements": [
-            "设计、商科、人文或科技领域学士学位或同等资格",
-            "个人陈述、两封推荐、学历成绩、作品集及英语证明",
-            "入围者参加线下或线上面试；英语门槛按 PolyU 当期要求"
-          ],
-          "sources": [
-            {
-              "title": "Smart Service Design 申请",
-              "url": "https://www.polyu.edu.hk/sd/study/tpg/smart-service-design/application/"
-            }
-          ]
-        }
-      },
-      "logo": "/assets/site/universities/logos/polyu.jpg"
+      }
     },
     {
       "id": "sva",
@@ -1614,6 +1457,7 @@
       "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/school-of-visual-arts-sva_592560de9988f300e2320749_large.jpg",
       "profileUrl": "https://www.qs-topuniversities.cn/en/universities/school-visual-arts-sva",
       "countryZh": "美国",
+      "logo": "/assets/site/universities/logos/sva.jpg",
       "admissions": {
         "ug": {
           "program": "BFA · 国际新生 / 2027 秋季",
@@ -1677,450 +1521,7 @@
             }
           ]
         }
-      },
-      "logo": "/assets/site/universities/logos/sva.jpg"
-    },
-    {
-      "id": "tsinghua",
-      "qsId": "626",
-      "name": "Tsinghua University",
-      "nameZh": "清华大学",
-      "country": "China (Mainland)",
-      "ranks": {
-        "2024": "24",
-        "2025": "=14",
-        "2026": "25"
-      },
-      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/tsinghua-university_626_large.jpg",
-      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/tsinghua-university",
-      "countryZh": "中国内地",
-      "admissions": {
-        "ug": {
-          "program": "美术学院 · 中国内地艺术类本科",
-          "timeline": [
-            {
-              "date": "2027",
-              "label": "招生简章与校考日程待公布",
-              "status": "待公布"
-            },
-            {
-              "date": "2026.01.30–02.14",
-              "label": "上一届网上报名",
-              "status": "2026 参考"
-            },
-            {
-              "date": "2026.03",
-              "label": "上一届文化素养及艺术能力测试",
-              "status": "2026 参考"
-            }
-          ],
-          "requirements": [
-            "以下为 2026 简章参考，2027 要求待公布",
-            "高中毕业或同等学力；美术与设计类省统考合格",
-            "通过初选后参加文化素养及艺术能力测试，再结合高考成绩录取",
-            "艺术史论通道另行招生，不与校考艺术类混用"
-          ],
-          "sources": [
-            {
-              "title": "本科招生更新",
-              "url": "https://www.ad.tsinghua.edu.cn/zs/bkszs/bkzs.htm"
-            },
-            {
-              "title": "2026 本科简章",
-              "url": "https://www.join-tsinghua.edu.cn/info/1009/2146.htm"
-            }
-          ]
-        },
-        "pg": {
-          "program": "美术学院 · 2027 硕士推免（中国内地）",
-          "timeline": [
-            {
-              "date": "2026.09.06",
-              "label": "现场资格审查",
-              "status": "已结束"
-            },
-            {
-              "date": "2026.09.07–09.08",
-              "label": "分方向现场面试",
-              "status": "已结束"
-            },
-            {
-              "date": "2026.11.02",
-              "label": "拟录取名单公示",
-              "status": "已公布"
-            }
-          ],
-          "requirements": [
-            "须具备推免资格，先经申请材料审查，再参加综合考核",
-            "携带身份证、学生证及外语成绩证明原件",
-            "面试含自述、外语测试和问答；未达 60 分不予录取",
-            "统考与非全日制项目另设招生通道"
-          ],
-          "sources": [
-            {
-              "title": "2027 推免考核",
-              "url": "https://yzbm.tsinghua.edu.cn/publish/s01/s0101/detail/68014c26-d4dc-4b9f-93a0-878e7913323b?yxsdm=080"
-            },
-            {
-              "title": "其他硕士路线",
-              "url": "https://yz.tsinghua.edu.cn/zsxx/sszs/jzml.htm"
-            },
-            {
-              "title": "美院硕士招生公示",
-              "url": "https://www.ad.tsinghua.edu.cn/zs/yjszs/yjszs.htm"
-            }
-          ]
-        }
-      },
-      "logo": "/assets/site/universities/logos/tsinghua.jpg"
-    },
-    {
-      "id": "yale",
-      "qsId": "684",
-      "name": "Yale University",
-      "nameZh": "耶鲁大学",
-      "country": "United States",
-      "ranks": {
-        "2024": "=27",
-        "2025": "16",
-        "2026": "33"
-      },
-      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/yale-university_684_large.jpg",
-      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/yale-university",
-      "countryZh": "美国",
-      "admissions": {
-        "ug": {
-          "program": "Yale College · 艺术方向（统一本科申请）",
-          "timeline": [
-            {
-              "date": "11.01",
-              "label": "早申请截止",
-              "status": "官网常规日程"
-            },
-            {
-              "date": "01.02",
-              "label": "常规申请截止",
-              "status": "官网常规日程"
-            },
-            {
-              "date": "01.09",
-              "label": "常规轮艺术补充材料截止",
-              "status": "官网常规日程"
-            }
-          ],
-          "requirements": [
-            "高中成绩、学校报告、推荐信及 ACT / SAT",
-            "视觉艺术作品集为选交，5–8 件原创作品；不等于单独申请 School of Art",
-            "英文能力按国际申请者要求审核"
-          ],
-          "sources": [
-            {
-              "title": "本科申请",
-              "url": "https://admissions.yale.edu/apply"
-            },
-            {
-              "title": "申请时间",
-              "url": "https://admissions.yale.edu/timelines"
-            },
-            {
-              "title": "艺术补充材料",
-              "url": "https://admissions.yale.edu/supplementary"
-            }
-          ]
-        },
-        "pg": {
-          "program": "MFA · Graphic Design（其他方向作品数量不同）",
-          "timeline": [
-            {
-              "date": "2026.10",
-              "label": "开放申请",
-              "status": "已公布"
-            },
-            {
-              "date": "2027.01.10",
-              "label": "申请截止 23:59",
-              "status": "已公布"
-            },
-            {
-              "date": "2027.04.15",
-              "label": "确认入读",
-              "status": "已公布"
-            }
-          ],
-          "requirements": [
-            "认可的学士学位或四年制艺术学院文凭",
-            "最多 20 张图像／视频，突出近期自主项目；合作项目注明贡献",
-            "一页陈述、CV、三封推荐信；免 GRE",
-            "建议 IELTS 7 / TOEFL 100 / DET 120；英文授课学位可豁免"
-          ],
-          "sources": [
-            {
-              "title": "MFA 申请",
-              "url": "https://art.yale.edu/apply/how-to-apply"
-            }
-          ]
-        }
-      },
-      "logo": "/assets/site/universities/logos/yale.jpg"
-    },
-    {
-      "id": "stanford",
-      "qsId": "573",
-      "name": "Stanford University",
-      "nameZh": "斯坦福大学",
-      "country": "United States",
-      "ranks": {
-        "2024": "=25",
-        "2025": "17",
-        "2026": "31"
-      },
-      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/stanford-university_573_large.jpg",
-      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/stanford-university",
-      "countryZh": "美国",
-      "admissions": {
-        "ug": {
-          "program": "Stanford 本科 · 可选 Arts Portfolio",
-          "timeline": [
-            {
-              "date": "10.15 / 10.20",
-              "label": "早申请 / 艺术作品集截止",
-              "status": "官网常规日程"
-            },
-            {
-              "date": "12.05 / 12.10",
-              "label": "常规申请 / 艺术作品集截止",
-              "status": "官网常规日程"
-            },
-            {
-              "date": "01.05",
-              "label": "常规申请其余材料截止",
-              "status": "官网常规日程"
-            }
-          ],
-          "requirements": [
-            "统一本科申请，需 ACT / SAT、成绩单、学校报告及两封教师推荐",
-            "艺术作品集可选，不提交也可就读艺术专业",
-            "不强制提交英语考试成绩，但须具备流利英语"
-          ],
-          "sources": [
-            {
-              "title": "艺术作品集与时间",
-              "url": "https://admission.stanford.edu/apply/first-year/arts.html"
-            },
-            {
-              "title": "本科要求",
-              "url": "https://admission.stanford.edu/apply/first-year/index.html"
-            },
-            {
-              "title": "国际申请",
-              "url": "https://admission.stanford.edu/apply/international/"
-            }
-          ]
-        },
-        "pg": {
-          "program": "MFA Art Practice",
-          "timeline": [
-            {
-              "date": "09 月下旬",
-              "label": "开放申请",
-              "status": "官网常规日程"
-            },
-            {
-              "date": "12.01",
-              "label": "全部材料截止 21:00 PST",
-              "status": "官网常规日程"
-            },
-            {
-              "date": "02–03 月",
-              "label": "面试与结果",
-              "status": "官网常规日程"
-            }
-          ],
-          "requirements": [
-            "认可的本科学位；成绩单、两页以内 SOP、三封推荐信",
-            "SlideRoom 作品集：最多 20 张静态图像；时基媒体总长不超过 10 分钟",
-            "不要求 GRE；英语证明须同时核对研究生院与项目要求"
-          ],
-          "sources": [
-            {
-              "title": "MFA Art Practice",
-              "url": "https://art.stanford.edu/academics/graduate-programs/mfa-art-practice/mfa-art-practice-admission"
-            },
-            {
-              "title": "英语要求",
-              "url": "https://gradadmissions.stanford.edu/apply/test-scores"
-            }
-          ]
-        }
-      },
-      "logo": "/assets/site/universities/logos/stanford.jpg"
-    },
-    {
-      "id": "ntu",
-      "qsId": "431",
-      "name": "Nanyang Technological University, Singapore (NTU)",
-      "nameZh": "南洋理工大学",
-      "country": "Singapore",
-      "ranks": {
-        "2024": "=33",
-        "2025": "19",
-        "2026": "32"
-      },
-      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/nanyang-technological-university-singapore-ntu_592560cf2aeae70239af4c32_large.jpg",
-      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/nanyang-technological-university-singapore-ntu",
-      "countryZh": "新加坡",
-      "admissions": {
-        "ug": {
-          "program": "ADM Bachelor of Fine Arts · 中国高考路线",
-          "timeline": [
-            {
-              "date": "2026.10.15",
-              "label": "开放申请",
-              "status": "已公布"
-            },
-            {
-              "date": "2027.03.19",
-              "label": "高考通道网申截止",
-              "status": "已公布"
-            },
-            {
-              "date": "高考出分后 3 天内",
-              "label": "补交实际高考成绩",
-              "status": "已公布"
-            }
-          ],
-          "requirements": [
-            "满足高考资格通道，提交高中成绩及认可的英语／标准化考试成绩",
-            "提交作品集、自我介绍视频、创意作业、观察绘画；作品集 PDF 15–20 页，须为未使用 AI 辅助的原创作品",
-            "先取得 NTU 申请编号，再进入 ADM 上传系统；ADM 材料截止须按本人学历类别及申请门户确认"
-          ],
-          "sources": [
-            {
-              "title": "高考通道申请窗口",
-              "url": "https://www.ntu.edu.sg/admissions/undergraduate/admissions/general-admission-requirements"
-            },
-            {
-              "title": "ADM 2027 要求",
-              "url": "https://www.ntu.edu.sg/adm/programmes/undergraduate-admissions/adm-admission-requirements"
-            },
-            {
-              "title": "中国普高 2027 官方说明",
-              "url": "https://www.ntu.edu.sg/docs/default-source/undergraduate-admissions/international/app_chinese.pdf"
-            }
-          ],
-          "auditNote": "2026-11-23 核验：General Admission Requirements 与 app_chinese.pdf 均为 2027-03-19；emsr_intnl.pdf 仍列 2027-01-20，存在官方文件不一致。本记录采用当前申请分类网页及高考专用文件，并未将网申日期推定为 ADM 材料截止。"
-        },
-        "pg": {
-          "program": "MSc Game Design, Art and Technology",
-          "timeline": [
-            {
-              "date": "2026.10.01",
-              "label": "开放申请",
-              "status": "已公布"
-            },
-            {
-              "date": "2027.03.31",
-              "label": "申请截止",
-              "status": "已公布"
-            },
-            {
-              "date": "2027.08",
-              "label": "入学",
-              "status": "已公布"
-            }
-          ],
-          "requirements": [
-            "接受计算机、艺术、设计、媒体、工程等背景，按项目审核学术资格",
-            "个人陈述（最多 2 页）、自我介绍视频（最多 3 分钟）、CV 为必交",
-            "作品集可选：PDF 最多 20 页，须披露生成式 AI 使用及个人贡献",
-            "IELTS ≥6.5 / TOEFL ≥90（新版 ≥4.5）；英语授课本科可豁免"
-          ],
-          "sources": [
-            {
-              "title": "GDAT 官方申请",
-              "url": "https://www.ntu.edu.sg/ncpa/programmes/graduate-programmes/detail/master-of-science-in-game-design--art-and-technology"
-            }
-          ]
-        }
-      },
-      "logo": "/assets/site/universities/logos/ntu.jpg"
-    },
-    {
-      "id": "oxford",
-      "qsId": "478",
-      "name": "University of Oxford",
-      "nameZh": "牛津大学",
-      "country": "United Kingdom",
-      "ranks": {
-        "2024": "=25",
-        "2025": "27",
-        "2026": "17"
-      },
-      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/university-of-oxford_478_large.jpg",
-      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/university-oxford",
-      "countryZh": "英国",
-      "admissions": {
-        "ug": {
-          "program": "Ruskin · BFA Fine Art · 2027 入学",
-          "timeline": [
-            {
-              "date": "2026-10-15 18:00 UK",
-              "label": "UCAS 截止，已结束",
-              "status": "closed"
-            },
-            {
-              "date": "2026-11-05",
-              "label": "作品集截止，已结束",
-              "status": "closed"
-            },
-            {
-              "date": "2026-12",
-              "label": "入围者线上面试",
-              "status": "confirmed"
-            }
-          ],
-          "requirements": [
-            "A-level AAA；部分完成艺术预科者可按 AAB 路径；IB 38，HL 666",
-            "通过 SlideRoom 提交数字作品集，不要求书面入学考试",
-            "入围面试者可能需另交近期作品；国际学历与英语要求另查官网"
-          ],
-          "sources": [
-            {
-              "title": "官网申请指南",
-              "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/fine-art"
-            }
-          ],
-          "checked": "2026-11-23"
-        },
-        "pg": {
-          "program": "Ruskin · MFA Fine Art · 2027–28",
-          "timeline": [
-            {
-              "date": "2027-01-05 12:00 UK",
-              "label": "最终申请截止",
-              "status": "confirmed"
-            },
-            {
-              "date": "2027-10-10",
-              "label": "预计开学",
-              "status": "confirmed"
-            }
-          ],
-          "requirements": [
-            "美术或相关专业一等或较强二等一本科学位；其他专业持强美术作品集亦可考虑",
-            "提交在线作品集、最多 1,000 词个人陈述、简历、成绩单及 3 位推荐人；至少 2 位宜为学术推荐人",
-            "英语 IELTS Academic 7.5、单项 7.0，或官网认可的同等证明；不要求 GRE / GMAT"
-          ],
-          "sources": [
-            {
-              "title": "官网申请指南",
-              "url": "https://www.ox.ac.uk/admissions/graduate/courses/mfa-fine-art"
-            }
-          ],
-          "checked": "2026-11-23"
-        }
-      },
-      "logo": "/assets/site/universities/logos/oxford.jpg"
+      }
     },
     {
       "id": "nus",
@@ -2136,6 +1537,7 @@
       "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/national-university-of-singapore-nus_443_large.jpg",
       "profileUrl": "https://www.qs-topuniversities.cn/en/universities/national-university-singapore-nus",
       "countryZh": "新加坡",
+      "logo": "/assets/site/universities/logos/nus.jpg",
       "admissions": {
         "ug": {
           "program": "BA Industrial Design · 国际学历申请",
@@ -2216,8 +1618,3494 @@
             }
           ]
         }
+      }
+    },
+    {
+      "id": "cmu",
+      "qsId": "101",
+      "name": "Carnegie Mellon University",
+      "nameZh": "卡内基梅隆大学",
+      "country": "United States",
+      "ranks": {
+        "2024": "16",
+        "2025": "20",
+        "2026": "=19"
       },
-      "logo": "/assets/site/universities/logos/nus.jpg"
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/carnegie-mellon-university_101_large.jpg",
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/carnegie-mellon-university",
+      "countryZh": "美国",
+      "logo": "/assets/site/universities/logos/cmu.jpg",
+      "admissions": {
+        "ug": {
+          "program": "BDes / BXA Design · 本科",
+          "timeline": [
+            {
+              "date": "11 月 2 日",
+              "label": "BDes Early Decision · 当前页面未单独标年份",
+              "status": "recurring"
+            },
+            {
+              "date": "1 月 4 日",
+              "label": "Regular Decision 申请截止",
+              "status": "recurring"
+            },
+            {
+              "date": "1 月 11 日",
+              "label": "Regular Decision 作品集截止",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "Common Application、校方补充文书及设计专属短文",
+            "10–18 张作品展示页，至少一页体现创作过程；另交最多 90 秒自我介绍",
+            "BDes 可 ED，BXA 仅 RD；设计专业 SAT/ACT 为可选"
+          ],
+          "sources": [
+            {
+              "title": "本科要求与日程",
+              "url": "https://www.design.cmu.edu/admissions/undergraduate-admissions"
+            }
+          ]
+        },
+        "pg": {
+          "program": "MDes Design for Interactions / MA Design · 2027/28",
+          "timeline": [
+            {
+              "date": "2026-10-01",
+              "label": "GradCAS 开放",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-15",
+              "label": "全部材料截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-03-15",
+              "label": "结果通知",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "MDes：设计或相关背景，毕业后至少 1 年全职经历，作品集 5–9 项",
+            "MA：适合转专业，无须工作经历，不接收作品集",
+            "共同材料含个人陈述、CV、成绩、3 封推荐信及 1 分钟视频；IELTS 建议总分 7.5、单项至少 7"
+          ],
+          "sources": [
+            {
+              "title": "2027/28 硕士要求",
+              "url": "https://www.design.cmu.edu/admissions/masters-program-admissions"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "rmit",
+      "qsId": "528",
+      "name": "RMIT University",
+      "nameZh": "皇家墨尔本理工大学",
+      "country": "Australia",
+      "ranks": {
+        "2024": "18",
+        "2025": "26",
+        "2026": "=19"
+      },
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/rmit-university_592560cf2aeae70239af4c95_large.jpg",
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/rmit-university",
+      "countryZh": "澳大利亚",
+      "logo": "/assets/site/universities/logos/rmit.jpg",
+      "admissions": {
+        "ug": {
+          "program": "Bachelor of Graphic Design（BP115）· 国际申请",
+          "timeline": [
+            {
+              "date": "2 月 / 7 月",
+              "label": "官网列出的入学季，具体开放与选拔任务截止按批次",
+              "status": "recurring"
+            },
+            {
+              "date": "待确认",
+              "label": "2027 国际申请及作品任务截止",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "高中学历须获 RMIT 认可为 VCE 等值，达到对应国家学历换算门槛（课程基准均分 65%）",
+            "国际申请者随申请提交指定 Selection task；澳洲 Year 12 / VTAC 通道另有轮次",
+            "IELTS Academic 总分至少 6.5、单项不低于 6.0"
+          ],
+          "sources": [
+            {
+              "title": "BP115 国际申请要求",
+              "url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/bachelor-degrees/bachelor-of-graphic-design-bp115"
+            }
+          ]
+        },
+        "pg": {
+          "program": "Master of Design Innovation and Technology · MC231",
+          "timeline": [
+            {
+              "date": "2 月 / 7 月",
+              "label": "入学季 · 具体截止依申请批次",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "认可的本科学历，或至少 3 年相关工作 / 专业实践",
+            "以工作经验申请者提交 CV 与经历陈述",
+            "IELTS Academic 总分至少 6.5、单项不低于 6.0；该项目不要求统一作品集选拔任务"
+          ],
+          "sources": [
+            {
+              "title": "MC231 要求",
+              "url": "https://www.rmit.edu.au/study-with-us/levels-of-study/postgraduate-study/masters-by-coursework/mc231"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "royal-danish",
+      "qsId": "14818",
+      "nameZh": "丹麦皇家艺术学院（KADK）",
+      "logo": "/assets/site/universities/logos/royal-danish.jpg",
+      "name": "The Royal Danish Academy of Fine Arts (KADK)",
+      "country": "Denmark",
+      "countryZh": "丹麦",
+      "ranks": {
+        "2024": "22",
+        "2025": "=34",
+        "2026": "22"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/royal-danish-academy-fine-arts-kadk",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/the-royal-danish-academy-of-fine-arts-kadk_14818_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "英语授课示例 · Crafts in Glass and Ceramics 专业学士",
+          "timeline": [
+            {
+              "date": "每年 02-01",
+              "label": "申请开放",
+              "status": "recurring"
+            },
+            {
+              "date": "每年 03-15 12:00 CET",
+              "label": "申请截止",
+              "status": "recurring"
+            },
+            {
+              "date": "初审后",
+              "label": "在线测试，入围后参加现场测试",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "高中毕业或获认可同等学历",
+            "测试前准备最多 3 页、10MB 的迷你作品集，参加设计任务",
+            "IELTS 6.5，各单项至少 6.0；其他本科课程多为丹麦语授课"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://royaldanishacademy.com/en/crafts-admission-process"
+            },
+            {
+              "title": "学历与语言要求",
+              "url": "https://royaldanishacademy.com/en/crafts-requirements-rules"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例方向 · MA Design 英语课程",
+          "timeline": [
+            {
+              "date": "每年 01-15",
+              "label": "开放申请",
+              "status": "recurring"
+            },
+            {
+              "date": "每年 03-01 23:59",
+              "label": "申请及语言材料截止",
+              "status": "recurring"
+            },
+            {
+              "date": "每年 05-01",
+              "label": "最晚公布录取结果",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "设计或相关专业学士；同一轮最多申请一个设计专业",
+            "作品集单文件不超过 10MB，展示设计过程与个人贡献；附成绩单、学位证明和 CV",
+            "IELTS 6.5，各单项至少 6.0；语言证明须在截止前提交"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://royaldanishacademy.com/en/procedure-ma-design"
+            },
+            {
+              "title": "语言要求",
+              "url": "https://royaldanishacademy.com/en/languagerequirements"
+            },
+            {
+              "title": "申请时间",
+              "url": "https://royaldanishacademy.com/en/procedure-deadline"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "calarts",
+      "qsId": "14786",
+      "nameZh": "加州艺术学院",
+      "logo": "/assets/site/universities/logos/calarts.jpg",
+      "name": "California Institute of the Arts",
+      "country": "United States",
+      "countryZh": "美国",
+      "ranks": {
+        "2024": "23",
+        "2025": "33",
+        "2026": "23"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/california-institute-arts",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/california-institute-of-the-arts_592560de9988f300e232073d_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "示例专业 · BFA Art",
+          "timeline": [
+            {
+              "date": "2026-12-01 23:59 PST",
+              "label": "优先截止，非提前录取",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-05 23:59 PST",
+              "label": "常规截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "高中毕业或同等学历；提交全部在读／已读成绩单",
+            "约 20 张独立作品图像／视频；视频合计不超过 7 分钟",
+            "500–1000 词艺术家陈述、30–90 秒自我介绍视频、2 封推荐信",
+            "IELTS 6.5 或认可同等成绩；符合英语授课经历者可申请豁免"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://calarts.edu/apply/bfa-art"
+            },
+            {
+              "title": "2027 申请日期",
+              "url": "https://calarts.edu/admissions-aid/admissions/application-process/application-deadlines-and-fees"
+            },
+            {
+              "title": "国际申请要求",
+              "url": "https://calarts.edu/admissions-aid/admissions/international-applicants"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · MFA Art",
+          "timeline": [
+            {
+              "date": "2026-12-01 23:59 PST",
+              "label": "优先截止，非提前录取",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-05 23:59 PST",
+              "label": "常规截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "通常 02–03 月",
+              "label": "初审后邀请面试",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "本科学历及成绩单；美国以外学历需逐课程认证",
+            "约 20 张独立图像／视频，视频合计不超过 7 分钟",
+            "500–1000 词陈述、30–90 秒介绍视频、2 封推荐信；入围者须面试",
+            "IELTS 7.0 或认可同等成绩"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://calarts.edu/apply/mfa-art"
+            },
+            {
+              "title": "2027 申请日期",
+              "url": "https://calarts.edu/admissions-aid/admissions/application-process/application-deadlines-and-fees"
+            },
+            {
+              "title": "国际申请要求",
+              "url": "https://calarts.edu/admissions-aid/admissions/international-applicants"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "polyu",
+      "qsId": "267",
+      "name": "The Hong Kong Polytechnic University",
+      "nameZh": "香港理工大学",
+      "country": "Hong Kong SAR",
+      "ranks": {
+        "2024": "19",
+        "2025": "=22",
+        "2026": "24"
+      },
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/the-hong-kong-polytechnic-university_267_large.jpg",
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/hong-kong-polytechnic-university",
+      "countryZh": "中国香港",
+      "logo": "/assets/site/universities/logos/polyu.jpg",
+      "admissions": {
+        "ug": {
+          "program": "BA (Hons) Scheme in Design · 内地高考申请",
+          "timeline": [
+            {
+              "date": "2026.10–2027.06",
+              "label": "eAdmission 申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2026.11–2027.06",
+              "label": "网上提交作品集",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.06",
+              "label": "面试与录取",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.08.30",
+              "label": "开课",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "内地应届高考申请通道；国际学历与 JUPAS 使用不同时间表",
+            "按大学入学条件审核高考及英语成绩",
+            "作品集须提交至设计学院指定平台；按通知参加面试"
+          ],
+          "sources": [
+            {
+              "title": "2027/28 本科简章",
+              "url": "https://www.polyu.edu.hk/sd/-/media/department/sd/download/prospectus/ug_prospectus_27-28_online_spread.pdf?hash=B0C0AE57AEC032654FEFE234C8FD4E74&rev=ed0bf22e3ac1419394139e31df3a6ca7"
+            },
+            {
+              "title": "本科申请分类",
+              "url": "https://www.polyu.edu.hk/sd/study/admissions/ba-scheme-admissions-information/"
+            }
+          ]
+        },
+        "pg": {
+          "program": "MDes Smart Service Design",
+          "timeline": [
+            {
+              "date": "2026.07.02",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2026.10.20",
+              "label": "早轮截止",
+              "status": "closed"
+            },
+            {
+              "date": "2027.02.25",
+              "label": "主轮截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "设计、商科、人文或科技领域学士学位或同等资格",
+            "个人陈述、两封推荐、学历成绩、作品集及英语证明",
+            "入围者参加线下或线上面试；英语门槛按 PolyU 当期要求"
+          ],
+          "sources": [
+            {
+              "title": "Smart Service Design 申请",
+              "url": "https://www.polyu.edu.hk/sd/study/tpg/smart-service-design/application/"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "tsinghua",
+      "qsId": "626",
+      "name": "Tsinghua University",
+      "nameZh": "清华大学",
+      "country": "China (Mainland)",
+      "ranks": {
+        "2024": "24",
+        "2025": "=14",
+        "2026": "25"
+      },
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/tsinghua-university_626_large.jpg",
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/tsinghua-university",
+      "countryZh": "中国内地",
+      "logo": "/assets/site/universities/logos/tsinghua.jpg",
+      "admissions": {
+        "ug": {
+          "program": "美术学院 · 中国内地艺术类本科",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "招生简章与校考日程待公布",
+              "status": "pending"
+            },
+            {
+              "date": "2026.01.30–02.14",
+              "label": "上一届网上报名",
+              "status": "historical"
+            },
+            {
+              "date": "2026.03",
+              "label": "上一届文化素养及艺术能力测试",
+              "status": "historical"
+            }
+          ],
+          "requirements": [
+            "以下为 2026 简章参考，2027 要求待公布",
+            "高中毕业或同等学力；美术与设计类省统考合格",
+            "通过初选后参加文化素养及艺术能力测试，再结合高考成绩录取",
+            "艺术史论通道另行招生，不与校考艺术类混用"
+          ],
+          "sources": [
+            {
+              "title": "本科招生更新",
+              "url": "https://www.ad.tsinghua.edu.cn/zs/bkszs/bkzs.htm"
+            },
+            {
+              "title": "2026 本科简章",
+              "url": "https://www.join-tsinghua.edu.cn/info/1009/2146.htm"
+            }
+          ]
+        },
+        "pg": {
+          "program": "美术学院 · 2027 硕士推免（中国内地）",
+          "timeline": [
+            {
+              "date": "2026.09.06",
+              "label": "现场资格审查",
+              "status": "closed"
+            },
+            {
+              "date": "2026.09.07–09.08",
+              "label": "分方向现场面试",
+              "status": "closed"
+            },
+            {
+              "date": "2026.11.02",
+              "label": "拟录取名单公示",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "须具备推免资格，先经申请材料审查，再参加综合考核",
+            "携带身份证、学生证及外语成绩证明原件",
+            "面试含自述、外语测试和问答；未达 60 分不予录取",
+            "统考与非全日制项目另设招生通道"
+          ],
+          "sources": [
+            {
+              "title": "2027 推免考核",
+              "url": "https://yzbm.tsinghua.edu.cn/publish/s01/s0101/detail/68014c26-d4dc-4b9f-93a0-878e7913323b?yxsdm=080"
+            },
+            {
+              "title": "其他硕士路线",
+              "url": "https://yz.tsinghua.edu.cn/zsxx/sszs/jzml.htm"
+            },
+            {
+              "title": "美院硕士招生公示",
+              "url": "https://www.ad.tsinghua.edu.cn/zs/yjszs/yjszs.htm"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "finearts-vienna",
+      "qsId": "1886",
+      "nameZh": "维也纳美术学院",
+      "logo": "/assets/site/universities/logos/finearts-vienna.jpg",
+      "name": "Academy of Fine Arts Vienna",
+      "country": "Austria",
+      "countryZh": "奥地利",
+      "ranks": {
+        "2024": "101-150",
+        "2025": "51-100",
+        "2026": "=26"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/academy-fine-arts-vienna",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/academy-of-fine-arts-vienna_1886_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "Fine Arts Diploma · 本硕贯通，非独立 BA",
+          "timeline": [
+            {
+              "date": "2027-01-20 10:00",
+              "label": "2027/28 入学考试报名开放",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-02-10 12:00",
+              "label": "报名及作品上传截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "通过 Fine Arts 入学考试，第一阶段在线提交作品材料",
+            "Diploma 为贯通制艺术学位，完成后等同硕士层次",
+            "入学第三学期注册前须提供至少德语 B1"
+          ],
+          "sources": [
+            {
+              "title": "2027 入学考试",
+              "url": "https://calls.akbild.ac.at/calls/index.php?lang=EN"
+            },
+            {
+              "title": "各课程资格要求",
+              "url": "https://www.akbild.ac.at/en/studies/general-study-information/admission/admission-to-study/requirement-study-program.pdf/@@download/file/Requirement%20Study%20Program.pdf"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · MA Critical Studies",
+          "timeline": [
+            {
+              "date": "2027 待公布",
+              "label": "官网当前仅有 2026/27 轮次；2027/28 日期待更新",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "相关本科学位或同等资格；入学前至少德语 B2",
+            "按最近公布规则：4000–10000 字符的艺术学术项目计划、半页摘要、CV、作品／文本样本",
+            "通过入学口试；可用德语或英语陈述，2027 任务以新公告为准"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.akbild.ac.at/en/studies/admission-examinations/master-in-critical-studies?set_language=en"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "goldsmiths",
+      "qsId": "355",
+      "nameZh": "伦敦大学金史密斯学院",
+      "logo": "/assets/site/universities/logos/goldsmiths.jpg",
+      "name": "Goldsmiths, University of London",
+      "country": "United Kingdom",
+      "countryZh": "英国",
+      "ranks": {
+        "2024": "21",
+        "2025": "37",
+        "2026": "=26"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/goldsmiths-university-london",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/goldsmiths-university-of-london_355_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "示例专业 · BA (Hons) Fine Art",
+          "timeline": [
+            {
+              "date": "2027-01-13",
+              "label": "UCAS 同等考虑截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "提交 UCAS 后",
+              "label": "按邮件提交作品集，入围后面试",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "需艺术设计 Foundation、BTEC 或指定 UAL 文凭；仅凭 A-Level 不符合该课程要求",
+            "作品集最多 12 项，并提交 Foundation／A-Level 阶段论文",
+            "IELTS 6.0，写作 6.0，其余单项不低于 5.5"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.gold.ac.uk/ug/ba-fine-art/"
+            },
+            {
+              "title": "作品集要求",
+              "url": "https://www.gold.ac.uk/ug/apply/advice/portfolios/"
+            },
+            {
+              "title": "2027 申请日期",
+              "url": "https://www.gold.ac.uk/study/your-offer/"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · MFA Fine Art",
+          "timeline": [
+            {
+              "date": "2027 待公布",
+              "label": "申请日程以新一轮官方公告为准",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "通常需二等本科或国际同等学历，并有艺术实践经验；相关经验可个案评估",
+            "数字作品集最多 20 张图像，可附影片／作品链接；个人陈述、成绩单、推荐人",
+            "IELTS 6.5，写作 6.5，其余单项不低于 6.0"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.gold.ac.uk/pg/mfa-fine-art/"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "konstfack",
+      "qsId": "1552",
+      "nameZh": "瑞典国立艺术与设计大学",
+      "logo": "/assets/site/universities/logos/konstfack.jpg",
+      "name": "Konstfack University of Arts , Crafts and Design",
+      "country": "Sweden",
+      "countryZh": "瑞典",
+      "ranks": {
+        "2024": "30",
+        "2025": "41",
+        "2026": "28"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/konstfack-university-arts-crafts-design",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/konstfack-university-of-arts-crafts-and-design_592560cf2aeae70239af5094_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "本科 · 艺术、设计及工艺课程（瑞典语授课）",
+          "timeline": [
+            {
+              "date": "2027-01-20 13:00",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-03-01 24:00",
+              "label": "网申及作品提交截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "符合瑞典高等教育一般入学资格",
+            "瑞典语达到 Swedish 3；国外高中申请者可用 TISUS 证明",
+            "按专业提交作品任务；按艺术能力评审，可能面试"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.konstfack.se/en/Education/Bachelors-Degree-Programmes/"
+            },
+            {
+              "title": "2027 申请日期",
+              "url": "https://www.konstfack.se/sv/Utbildning/Ansokan-och-antagning/"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · MFA Visual Communication",
+          "timeline": [
+            {
+              "date": "2026-12-01",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-15",
+              "label": "网申及作品集截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-02-01",
+              "label": "学历与语言等资格材料截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-04-01",
+              "label": "公布结果",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "艺术学士或同等学历，至少 180 ECTS；英语达到瑞典 English 6／Level 2",
+            "英文作品集 PDF 最多 10 页：目录 1 页、作品 8 页、意向说明 1 页",
+            "作品最多 20 图像／影片；综合评估作品集、项目意向和面试"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.konstfack.se/en/Education/Masters-Degree-Programmes/Visual-Communication/"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "ucsi",
+      "qsId": "22084",
+      "nameZh": "思特雅大学",
+      "logo": "/assets/site/universities/logos/ucsi.jpg",
+      "name": "UCSI University",
+      "country": "Malaysia",
+      "countryZh": "马来西亚",
+      "ranks": {
+        "2024": "51-100",
+        "2025": "101-150",
+        "2026": "29"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/ucsi-university",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/ucsi-university_592560e09988f300e2320ce5_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "BA (Hons) Graphic Design · 吉隆坡",
+          "timeline": [
+            {
+              "date": "1 / 5 / 9 月",
+              "label": "课程常规入学季",
+              "status": "recurring"
+            },
+            {
+              "date": "2027",
+              "label": "具体申请截止待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "A-Level 至少 2 科 D，或认可等值学历；IB 至少 26/42",
+            "作品审核至少 6 件作品",
+            "英语按国际申请者对应要求审核"
+          ],
+          "sources": [
+            {
+              "title": "平面设计本科招生",
+              "url": "https://www.ucsiuniversity.edu.my/programmes/ba-hons-graphic-design"
+            }
+          ]
+        },
+        "pg": {
+          "program": "Master of Art and Design · 吉隆坡",
+          "timeline": [
+            {
+              "date": "1 / 5 / 9 月",
+              "label": "课程常规入学季",
+              "status": "recurring"
+            },
+            {
+              "date": "2027",
+              "label": "具体申请截止待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "相关本科 CGPA ≥2.75；2.50–2.74 需严格内部评估",
+            "低于 2.50 的相关本科申请者需至少 5 年相关工作经历",
+            "通过面试或按要求提交作品集；国际生 IELTS Academic 5.5 或认可同等成绩"
+          ],
+          "sources": [
+            {
+              "title": "艺术设计硕士招生",
+              "url": "https://www.ucsiuniversity.edu.my/programmes/master-arts-and-design/"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "emily-carr",
+      "qsId": "14799",
+      "nameZh": "艾米丽卡尔艺术与设计大学",
+      "logo": "/assets/site/universities/logos/emily-carr.jpg",
+      "name": "Emily Carr University of Art + Design",
+      "country": "Canada",
+      "countryZh": "加拿大",
+      "ranks": {
+        "2024": "29",
+        "2025": "36",
+        "2026": "30"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/emily-carr-university-art-design",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/emily-carr-university-of-art-design_592560cf2aeae70239af57e4_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "本科新生 · BFA／BDes／BMA，经 Foundation Year 入学",
+          "timeline": [
+            {
+              "date": "2026-10-01",
+              "label": "秋季入学申请开放",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-15",
+              "label": "网申及学历材料截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-31",
+              "label": "秋季作品集截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "按所在教育体系提交高中学历、成绩单与英语能力证明",
+            "作品集可选 10–20 张近两年作品，或不超过 10 分钟影音，或两者组合",
+            "Foundation 作品集包含创作、过程等四部分；按官方当年任务逐项提交",
+            "IELTS 6.5，各单项至少 6.0，或认可的同等英语成绩"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://ecuad.ca/degree-programs/undergraduate/apply/"
+            },
+            {
+              "title": "本科申请材料",
+              "url": "https://ecuad.ca/degree-programs/undergraduate/apply/application-requirements/"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "研究生 · MDes／MFA",
+          "timeline": [
+            {
+              "date": "2026-10-01",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-25",
+              "label": "网申、作品集及材料截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-02–03",
+              "label": "入围者面试",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "认可本科学位，最低 GPA 3.0（B）；非艺术设计背景须证明工作室实践能力",
+            "提交作品集、创作／研究意向及所选课程规定的申请材料",
+            "IELTS 总分 7.0；口语、阅读、写作 7.0，听力 6.5"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://ecuad.ca/degree-programs/graduate-programs/how-to-apply-graduate/"
+            },
+            {
+              "title": "研究生材料与语言要求",
+              "url": "https://ecuad.ca/degree-programs/graduate-programs/how-to-apply-graduate/gs-application-requirements/"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "stanford",
+      "qsId": "573",
+      "name": "Stanford University",
+      "nameZh": "斯坦福大学",
+      "country": "United States",
+      "ranks": {
+        "2024": "=25",
+        "2025": "17",
+        "2026": "31"
+      },
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/stanford-university_573_large.jpg",
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/stanford-university",
+      "countryZh": "美国",
+      "logo": "/assets/site/universities/logos/stanford.jpg",
+      "admissions": {
+        "ug": {
+          "program": "Stanford 本科 · 可选 Arts Portfolio",
+          "timeline": [
+            {
+              "date": "10.15 / 10.20",
+              "label": "早申请 / 艺术作品集截止",
+              "status": "recurring"
+            },
+            {
+              "date": "12.05 / 12.10",
+              "label": "常规申请 / 艺术作品集截止",
+              "status": "recurring"
+            },
+            {
+              "date": "01.05",
+              "label": "常规申请其余材料截止",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "统一本科申请，需 ACT / SAT、成绩单、学校报告及两封教师推荐",
+            "艺术作品集可选，不提交也可就读艺术专业",
+            "不强制提交英语考试成绩，但须具备流利英语"
+          ],
+          "sources": [
+            {
+              "title": "艺术作品集与时间",
+              "url": "https://admission.stanford.edu/apply/first-year/arts.html"
+            },
+            {
+              "title": "本科要求",
+              "url": "https://admission.stanford.edu/apply/first-year/index.html"
+            },
+            {
+              "title": "国际申请",
+              "url": "https://admission.stanford.edu/apply/international/"
+            }
+          ]
+        },
+        "pg": {
+          "program": "MFA Art Practice",
+          "timeline": [
+            {
+              "date": "09 月下旬",
+              "label": "开放申请",
+              "status": "recurring"
+            },
+            {
+              "date": "12.01",
+              "label": "全部材料截止 21:00 PST",
+              "status": "recurring"
+            },
+            {
+              "date": "02–03 月",
+              "label": "面试与结果",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "认可的本科学位；成绩单、两页以内 SOP、三封推荐信",
+            "SlideRoom 作品集：最多 20 张静态图像；时基媒体总长不超过 10 分钟",
+            "不要求 GRE；英语证明须同时核对研究生院与项目要求"
+          ],
+          "sources": [
+            {
+              "title": "MFA Art Practice",
+              "url": "https://art.stanford.edu/academics/graduate-programs/mfa-art-practice/mfa-art-practice-admission"
+            },
+            {
+              "title": "英语要求",
+              "url": "https://gradadmissions.stanford.edu/apply/test-scores"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ntu",
+      "qsId": "431",
+      "name": "Nanyang Technological University, Singapore (NTU)",
+      "nameZh": "南洋理工大学",
+      "country": "Singapore",
+      "ranks": {
+        "2024": "=33",
+        "2025": "19",
+        "2026": "32"
+      },
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/nanyang-technological-university-singapore-ntu_592560cf2aeae70239af4c32_large.jpg",
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/nanyang-technological-university-singapore-ntu",
+      "countryZh": "新加坡",
+      "logo": "/assets/site/universities/logos/ntu.jpg",
+      "admissions": {
+        "ug": {
+          "program": "ADM Bachelor of Fine Arts · 中国高考路线",
+          "timeline": [
+            {
+              "date": "2026.10.15",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.03.19",
+              "label": "高考通道网申截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "高考出分后 3 天内",
+              "label": "补交实际高考成绩",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "满足高考资格通道，提交高中成绩及认可的英语／标准化考试成绩",
+            "提交作品集、自我介绍视频、创意作业、观察绘画；作品集 PDF 15–20 页，须为未使用 AI 辅助的原创作品",
+            "先取得 NTU 申请编号，再进入 ADM 上传系统；ADM 材料截止须按本人学历类别及申请门户确认"
+          ],
+          "sources": [
+            {
+              "title": "高考通道申请窗口",
+              "url": "https://www.ntu.edu.sg/admissions/undergraduate/admissions/general-admission-requirements"
+            },
+            {
+              "title": "ADM 2027 要求",
+              "url": "https://www.ntu.edu.sg/adm/programmes/undergraduate-admissions/adm-admission-requirements"
+            },
+            {
+              "title": "中国普高 2027 官方说明",
+              "url": "https://www.ntu.edu.sg/docs/default-source/undergraduate-admissions/international/app_chinese.pdf"
+            }
+          ],
+          "auditNote": "2026-11-23 核验：General Admission Requirements 与 app_chinese.pdf 均为 2027-03-19；emsr_intnl.pdf 仍列 2027-01-20，存在官方文件不一致。本记录采用当前申请分类网页及高考专用文件，并未将网申日期推定为 ADM 材料截止。"
+        },
+        "pg": {
+          "program": "MSc Game Design, Art and Technology",
+          "timeline": [
+            {
+              "date": "2026.10.01",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.03.31",
+              "label": "申请截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.08",
+              "label": "入学",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "接受计算机、艺术、设计、媒体、工程等背景，按项目审核学术资格",
+            "个人陈述（最多 2 页）、自我介绍视频（最多 3 分钟）、CV 为必交",
+            "作品集可选：PDF 最多 20 页，须披露生成式 AI 使用及个人贡献",
+            "IELTS ≥6.5 / TOEFL ≥90（新版 ≥4.5）；英语授课本科可豁免"
+          ],
+          "sources": [
+            {
+              "title": "GDAT 官方申请",
+              "url": "https://www.ntu.edu.sg/ncpa/programmes/graduate-programmes/detail/master-of-science-in-game-design--art-and-technology"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "yale",
+      "qsId": "684",
+      "name": "Yale University",
+      "nameZh": "耶鲁大学",
+      "country": "United States",
+      "ranks": {
+        "2024": "=27",
+        "2025": "16",
+        "2026": "33"
+      },
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/yale-university_684_large.jpg",
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/yale-university",
+      "countryZh": "美国",
+      "logo": "/assets/site/universities/logos/yale.jpg",
+      "admissions": {
+        "ug": {
+          "program": "Yale College · 艺术方向（统一本科申请）",
+          "timeline": [
+            {
+              "date": "11.01",
+              "label": "早申请截止",
+              "status": "recurring"
+            },
+            {
+              "date": "01.02",
+              "label": "常规申请截止",
+              "status": "recurring"
+            },
+            {
+              "date": "01.09",
+              "label": "常规轮艺术补充材料截止",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "高中成绩、学校报告、推荐信及 ACT / SAT",
+            "视觉艺术作品集为选交，5–8 件原创作品；不等于单独申请 School of Art",
+            "英文能力按国际申请者要求审核"
+          ],
+          "sources": [
+            {
+              "title": "本科申请",
+              "url": "https://admissions.yale.edu/apply"
+            },
+            {
+              "title": "申请时间",
+              "url": "https://admissions.yale.edu/timelines"
+            },
+            {
+              "title": "艺术补充材料",
+              "url": "https://admissions.yale.edu/supplementary"
+            }
+          ]
+        },
+        "pg": {
+          "program": "MFA · Graphic Design（其他方向作品数量不同）",
+          "timeline": [
+            {
+              "date": "2026.10",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.01.10",
+              "label": "申请截止 23:59",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.04.15",
+              "label": "确认入读",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "认可的学士学位或四年制艺术学院文凭",
+            "最多 20 张图像／视频，突出近期自主项目；合作项目注明贡献",
+            "一页陈述、CV、三封推荐信；免 GRE",
+            "建议 IELTS 7 / TOEFL 100 / DET 120；英文授课学位可豁免"
+          ],
+          "sources": [
+            {
+              "title": "MFA 申请",
+              "url": "https://art.yale.edu/apply/how-to-apply"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ensad",
+      "qsId": "14796",
+      "nameZh": "巴黎国立高等装饰艺术学院",
+      "logo": "/assets/site/universities/logos/ensad.jpg",
+      "name": "Ecole Nationale Superieure des Arts Decoratifs (ENSAD)",
+      "country": "France",
+      "countryZh": "法国",
+      "ranks": {
+        "2024": "41",
+        "2025": "49",
+        "2026": "34"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/ecole-nationale-superieure-des-arts-decoratifs-ensad",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/ecole-nationale-superieure-des-arts-decoratifs-ensad_592560de9988f300e2320753_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "本科 · Licence 一年级入学考试",
+          "timeline": [
+            {
+              "date": "2027 待公布",
+              "label": "官网当前列出 2026 轮次；2027 日程待更新",
+              "status": "pending"
+            },
+            {
+              "date": "申请 → 初选 → 复试",
+              "label": "Parcoursup 报名，线上作品审核后进行现场创作及面试",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "需法国高中会考或同等学历，特殊情况须预先获豁免",
+            "提交个人作品及当年网上发布的居家创作任务",
+            "通过现场艺术创作考试与评委面试"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.ensad.fr/fr/en-premiere-annee"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "硕士 · Master 一年级插班选拔",
+          "timeline": [
+            {
+              "date": "2027 待公布",
+              "label": "官网当前为 2026：03-17–04-30 报名；不可当作 2027 日期",
+              "status": "pending"
+            },
+            {
+              "date": "材料初选后",
+              "label": "入围者参加专业评委面试",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "至少 180 ECTS 或经学校认可的海外同等学历／学分",
+            "已有艺术实践，提交对应专业的作品与动机材料",
+            "在 10 个专业方向中申请；按作品、面试和专业余位录取"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.ensad.fr/fr/en-1ere-annee-de-master"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "harvard",
+      "qsId": "253",
+      "nameZh": "哈佛大学",
+      "logo": "/assets/site/universities/logos/harvard.jpg",
+      "name": "Harvard University",
+      "country": "United States",
+      "countryZh": "美国",
+      "ranks": {
+        "2024": null,
+        "2025": null,
+        "2026": "35"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/harvard-university",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/harvard-university_253_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "Harvard College 本科统招 · Art, Film, and Visual Studies 方向",
+          "timeline": [
+            {
+              "date": "每年 11-01",
+              "label": "Restrictive Early Action 截止",
+              "status": "recurring"
+            },
+            {
+              "date": "每年 01-01",
+              "label": "Regular Decision 截止",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "经 Harvard College 统一本科申请，提交高中成绩、学校报告、教师评价和补充短文",
+            "须提交 SAT 或 ACT；无法参加者仅在规定例外条件下使用替代考试",
+            "可附艺术作品补充材料；申请时不按独立艺术学院方式招生"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://college.harvard.edu/admissions/apply/first-year-applicants"
+            },
+            {
+              "title": "艺术补充材料",
+              "url": "https://college.harvard.edu/guides/application-tips"
+            },
+            {
+              "title": "艺术主修路径",
+              "url": "https://afvs.fas.harvard.edu/how-to-concentrate"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · Master in Design Studies（MDes）",
+          "timeline": [
+            {
+              "date": "2027-01-05 17:00 ET",
+              "label": "所有材料及申请费截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "提交高等教育成绩单、CV、3 封推荐信，建议至少 2 封来自大学教师",
+            "四个 Domain 中选一；提交研究／学术／专业作品集与规定短文，Narratives 另需写作样本",
+            "GRE 可选；国际申请人须提交 TOEFL，或符合指定英语国家本科学习豁免条件"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.gsd.harvard.edu/offices-and-facilities/advanced-studies-programs/programs/design-studies/mdes-application-requirements/"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "nyu",
+      "qsId": "448",
+      "nameZh": "纽约大学",
+      "logo": "/assets/site/universities/logos/nyu.jpg",
+      "name": "New York University (NYU)",
+      "country": "United States",
+      "countryZh": "美国",
+      "ranks": {
+        "2024": "40",
+        "2025": "=22",
+        "2026": "36"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/new-york-university-nyu",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/new-york-university-nyu_448_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "示例专业 · BFA Studio Art · Steinhardt",
+          "timeline": [
+            {
+              "date": "2026-11-01",
+              "label": "ED I 网申已截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-01",
+              "label": "ED II 网申；作品集 01-11 截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-05",
+              "label": "RD 网申；作品集 01-18 截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "先完成 NYU Common Application，再通过申请门户完成艺术审核",
+            "12–15 张近期作品图像；如附视频，总时长不超过 5 分钟",
+            "提交 1 页学习目的陈述；按 NYU 本科规则提交学历与语言材料"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://steinhardt.nyu.edu/degree/bfa-studio-art/how-apply"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · MFA Studio Art · Steinhardt",
+          "timeline": [
+            {
+              "date": "每年 01-15",
+              "label": "秋季入学截止",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "提交本科学历／成绩单；美加以外学历须按要求完成 WES、ECE 或 TEC 评估",
+            "SlideRoom 提交 20 张近期作品 JPEG 图像，每张不超过 4MB",
+            "不要求 GRE；非豁免者须提供英语能力证明"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://steinhardt.nyu.edu/degree/mfa-studio-art/how-apply"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "head-geneva",
+      "qsId": "14810",
+      "nameZh": "日内瓦艺术与设计学院",
+      "logo": "/assets/site/universities/logos/head-geneva.jpg",
+      "name": "Haute Ecole d'art et de design de Genève (HEAD)",
+      "country": "Switzerland",
+      "countryZh": "瑞士",
+      "ranks": {
+        "2024": "51-100",
+        "2025": "51-100",
+        "2026": "37"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/haute-ecole-dart-et-de-design-de-geneve-head",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/haute-ecole-dart-et-de-design-de-genve-head_592560de9988f300e232076d_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "设计类 Bachelor · 法语授课",
+          "timeline": [
+            {
+              "date": "2026.11.17",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.03.01 17:00",
+              "label": "申请截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.04.12–04.16",
+              "label": "第二轮面试",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "认可的高中学历；设计相关专业背景或 1 年预备课程 / 至少 9 个月全职实习",
+            "按专业提交个人材料、创意作业并通过两轮选拔",
+            "非符合豁免条件者于 8 月 31 日前提交法语 B2"
+          ],
+          "sources": [
+            {
+              "title": "本科要求",
+              "url": "https://head.hesge.ch/en/admissions/bachelor/conditions"
+            },
+            {
+              "title": "2027 本科时间表",
+              "url": "https://head.hesge.ch/en/admissions/bachelor/admissions-calendar"
+            }
+          ]
+        },
+        "pg": {
+          "program": "Master in Media Design · 英语授课",
+          "timeline": [
+            {
+              "date": "2026.11.17",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.03.22 17:00",
+              "label": "申请截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.04.28–05.07",
+              "label": "第二轮面试",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "认可的本科或等值学历，最迟入学年 9 月 1 日取得",
+            "提交 CV、成绩与学历及专业个人申请材料，通过两轮选拔",
+            "非英语授课学历等豁免情形者需英语 B2 证明"
+          ],
+          "sources": [
+            {
+              "title": "硕士资格与语言",
+              "url": "https://head.hesge.ch/en/admissions/master/conditions-admissions"
+            },
+            {
+              "title": "硕士材料",
+              "url": "https://head.hesge.ch/en/admissions/master/admission-procedure"
+            },
+            {
+              "title": "2027 选拔日历",
+              "url": "https://head.hesge.ch/en/vie-etudiante/informations-pratiques/calendrier-academique-2026-27"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ensci",
+      "qsId": "2387",
+      "nameZh": "法国国立高等工业设计学院",
+      "logo": "/assets/site/universities/logos/ensci.jpg",
+      "name": "École Nationale Supérieure de Création Industrielle, ENSCI Les Ateliers",
+      "country": "France",
+      "countryZh": "法国",
+      "ranks": {
+        "2024": "51-100",
+        "2025": "51-100",
+        "2026": "38"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/ecole-nationale-superieure-de-creation-industrielle-ensci-les-ateliers",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/cole-nationale-suprieure-de-cration-industrielle-ensci-les-ateliers_2387_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "Créateur industriel · 高中入口 / 5 年一贯制 Master 等级",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "申请日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "高中毕业或等值资格，通过竞争性入学选拔",
+            "具备良好法语能力、创作表达及观察分析能力",
+            "按申请身份使用 Parcoursup 或 ENSCI 报名平台"
+          ],
+          "sources": [
+            {
+              "title": "工业设计招生与学位",
+              "url": "https://www.ensci.com/formations/createur-industriel/sinscrire-en-creation-industrielle"
+            }
+          ]
+        },
+        "pg": {
+          "program": "Créateur industriel · 本科后入口 / 至少 3 年 / Master 等级",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "申请日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "Category III 接受 Bachelor / Licence 及以上学历；原专业不限",
+            "参加同一竞争性选拔并提交要求材料，具备良好法语能力",
+            "标准学程至少 3 年，评审可依原专业背景延长"
+          ],
+          "sources": [
+            {
+              "title": "工业设计招生与学位",
+              "url": "https://www.ensci.com/formations/createur-industriel/sinscrire-en-creation-industrielle"
+            },
+            {
+              "title": "最新候选人指南（2026）",
+              "url": "https://www.ensci.com/fileadmin/content_uploads/admission/guide_candidat_2026.pdf"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "snu",
+      "qsId": "553",
+      "nameZh": "首尔大学",
+      "logo": "/assets/site/universities/logos/snu.jpg",
+      "name": "Seoul National University",
+      "country": "South Korea",
+      "countryZh": "韩国",
+      "ranks": {
+        "2024": "37",
+        "2025": "=34",
+        "2026": "39"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/seoul-national-university",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/seoul-national-university_553_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "美术学院本科 · 国际申请 / 2027 春季",
+          "timeline": [
+            {
+              "date": "2026.07.06–07.09",
+              "label": "网申",
+              "status": "closed"
+            },
+            {
+              "date": "2026.07.10",
+              "label": "作品集邮寄截止",
+              "status": "closed"
+            },
+            {
+              "date": "2026.09.03",
+              "label": "入围者现场实作与面试",
+              "status": "closed"
+            }
+          ],
+          "requirements": [
+            "高中毕业资格及国际申请身份材料",
+            "相同作品集存入 2 个 USB，附亲笔签署的誓约书邮寄",
+            "入围者须赴首尔参加现场实作考试及面试"
+          ],
+          "sources": [
+            {
+              "title": "2027 春季本科申请",
+              "url": "https://en.snu.ac.kr/admission/overview/notice?bbsidx=170606&md=v"
+            },
+            {
+              "title": "美术学院选拔要求",
+              "url": "https://art.snu.ac.kr/en/notice/notice-for-international-admissionsundergraduate-graduate-spring-2027portfolio-submission-performance-test-interview-etc/?cate=college-of-fine-arts-en&catemenu=Notice&type=major"
+            }
+          ]
+        },
+        "pg": {
+          "program": "美术学院设计硕士 · 国际申请 / 2027 春季",
+          "timeline": [
+            {
+              "date": "2026.07.06–07.09",
+              "label": "作品集提交",
+              "status": "closed"
+            },
+            {
+              "date": "2026.08 中下旬",
+              "label": "入围者面试",
+              "status": "closed"
+            },
+            {
+              "date": "2027 秋季",
+              "label": "下一轮日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "本科毕业资格及国际申请材料",
+            "2 个 USB 存放相同作品集，附签名誓约书",
+            "入围者参加院系安排的线下或线上面试"
+          ],
+          "sources": [
+            {
+              "title": "研究生申请指南",
+              "url": "https://en.snu.ac.kr/admission/graduate/application"
+            },
+            {
+              "title": "美术学院选拔要求",
+              "url": "https://art.snu.ac.kr/en/notice/notice-for-international-admissionsundergraduate-graduate-spring-2027portfolio-submission-performance-test-interview-etc/?cate=college-of-fine-arts-en&catemenu=Notice&type=major"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "beauxarts-paris",
+      "qsId": "2397",
+      "nameZh": "巴黎国立高等美术学院",
+      "logo": "/assets/site/universities/logos/beauxarts-paris.jpg",
+      "name": "École Nationale Supérieure des Beaux-Arts, Paris",
+      "country": "France",
+      "countryZh": "法国",
+      "ranks": {
+        "2024": "101-150",
+        "2025": "51-100",
+        "2026": "40"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/ecole-nationale-superieure-des-beaux-arts-paris",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/cole-nationale-suprieure-des-beaux-arts-paris_592560cf2aeae70239af53e0_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "艺术第一周期 · 一年级入学",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "申请日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "高中毕业或应届，境外文件附官方法语翻译",
+            "提交个人艺术材料并参加入学选拔",
+            "法语授课；校方 FAQ 强烈建议达到 B2"
+          ],
+          "sources": [
+            {
+              "title": "本科入学 FAQ",
+              "url": "https://beauxartsparis.fr/fr/faq"
+            }
+          ]
+        },
+        "pg": {
+          "program": "第二周期 / DNSAP · 申请进入四年级",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "申请日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "本科阶段学习成果及学历须通过等值审核，入读年级由评审确定",
+            "现行转入标准：艺术作品集 PDF ≤20 MB、CV、约 2,000 字符意向信及面试",
+            "外国申请者须具备法语 B2；2027 细则待公布"
+          ],
+          "sources": [
+            {
+              "title": "转入高年级招生",
+              "url": "https://beauxartsparis.fr/fr/admission/entree-encours-etude"
+            },
+            {
+              "title": "四年级与第二周期资格",
+              "url": "https://beauxartsparis.fr/sites/default/files/2025-09/BA_LIVRET_2526_web.pdf"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "zhdk",
+      "qsId": "14809",
+      "nameZh": "苏黎世艺术大学",
+      "logo": "/assets/site/universities/logos/zhdk.jpg",
+      "name": "Zurich University of the Arts",
+      "country": "Switzerland",
+      "countryZh": "瑞士",
+      "ranks": {
+        "2024": "31",
+        "2025": "=46",
+        "2026": "=41"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/zurich-university-arts",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/zurich-university-of-the-arts-zhdk_592560de9988f300e2320769_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "本科 · BA Design，按 Major 申请",
+          "timeline": [
+            {
+              "date": "2026-11-16",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-20",
+              "label": "在线申请截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-02-09",
+              "label": "作品集与指定任务截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-03-15–03-31",
+              "label": "各方向入学考试",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "提交符合入学资格的学历、简历和所选 Major 规定的语言证明",
+            "作品集与指定 homework 必须同时完成",
+            "通过艺术／设计能力考试；各方向测试形式及语言要求不同"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.zhdk.ch/en/degree-programmes/design/bachelordesign/registration-and-admissions-process-2088"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "硕士 · MA Design，按 Major 申请",
+          "timeline": [
+            {
+              "date": "2026-11-17",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-03-01",
+              "label": "含作品集的完整申请截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-04-12–04-23",
+              "label": "能力面试",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-05-03",
+              "label": "公布录取／候补结果",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "通常需认可本科或同等学历；语言证明按所选 Major 审核",
+            "动机信最多 1 页，研究导向项目构想最多 2 页；非设计背景补充经历说明",
+            "作品集／项目清单 PDF 不超过 10MB，1 封推荐信、CV；面试最长 45 分钟"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.zhdk.ch/en/degree-programmes/design/masters-programme-in-design/registration-design-ma-2857"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "naba",
+      "qsId": "24596",
+      "nameZh": "米兰新美术学院",
+      "logo": "/assets/site/universities/logos/naba.jpg",
+      "name": "NABA - Nuova Accademia di Belle Arti",
+      "country": "Italy",
+      "countryZh": "意大利",
+      "ranks": {
+        "2024": "51-100",
+        "2025": "51-100",
+        "2026": "=41"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/naba-nuova-accademia-di-belle-arti",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/naba-nuova-accademia-di-belle-arti_24596_large_7.jpg",
+      "admissions": {
+        "ug": {
+          "program": "设计类 BA · 意大利 AFAM 一级文凭",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "2027 入学批次与截止按专业公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "高中学历须允许升读本科，通常完成至少 12 年教育",
+            "须满足原教育体系必需的大学入学考试条件；中国学历按高考 / 艺考规定",
+            "经课程负责人技术能力评估与国际招生学历审核；满足授课语言要求"
+          ],
+          "sources": [
+            {
+              "title": "国际学历入学资格",
+              "url": "https://www.naba.it/en/international-students-admission"
+            },
+            {
+              "title": "国际申请流程",
+              "url": "https://www.naba.it/en/international-students"
+            }
+          ]
+        },
+        "pg": {
+          "program": "设计类 MA · 意大利 AFAM 二级文凭",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "2027 入学批次与截止按专业公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "认可的第一周期大学或艺术学位，具备进入第二周期课程资格",
+            "按专业提交项目能力材料并接受课程负责人评估",
+            "提供授课语言证明；意大利语授课要求完整 B1"
+          ],
+          "sources": [
+            {
+              "title": "国际学历入学资格",
+              "url": "https://www.naba.it/en/international-students-admission"
+            },
+            {
+              "title": "国际申请流程",
+              "url": "https://www.naba.it/en/international-students"
+            },
+            {
+              "title": "硕士语言与专业背景",
+              "url": "https://www.naba.it/en/faq/admissions/master-admission-requirements-naba"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cambridge",
+      "qsId": "95",
+      "nameZh": "剑桥大学",
+      "logo": "/assets/site/universities/logos/cambridge.jpg",
+      "name": "University of Cambridge",
+      "country": "United Kingdom",
+      "countryZh": "英国",
+      "ranks": {
+        "2024": null,
+        "2025": "32",
+        "2026": "=43"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/university-cambridge",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/university-of-cambridge_95_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "示例专业 · Design BA (Hons)／MDes 本硕贯通",
+          "timeline": [
+            {
+              "date": "2026-10-15",
+              "label": "2027 入学 UCAS 主申请已截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "面试前",
+              "label": "提交作品；受邀参加学院测试及面试",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "最低 A-Level A*AA，数学 A*；IB 41–42、HL 776，数学 AA HL 7",
+            "面试前作品 PDF 最多 6 页 A4、不超过 15MB；面试携完整近期作品集",
+            "各学院均有入学测试，个别学院另要求批改过的写作样本"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.undergraduate.study.cam.ac.uk/courses/design-ba-hons-mdes"
+            },
+            {
+              "title": "申请日期",
+              "url": "https://www.undergraduate.study.cam.ac.uk/apply/application-dates-deadlines"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · MPhil Architecture and Urban Studies（研究导向）",
+          "timeline": [
+            {
+              "date": "2026-12-08",
+              "label": "申请资助者截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-03-04",
+              "label": "自费申请截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-10-01",
+              "label": "入学",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "本科成绩达到英国较高 2:1 或国际同等资格",
+            "1000–1500 词研究计划、最多 5000 词写作样本、CV、2 位推荐人",
+            "IELTS 总分 7.5，单项均不低于 7.0"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.postgraduate.study.cam.ac.uk/courses/directory/aharmpaus/apply"
+            },
+            {
+              "title": "学历与语言要求",
+              "url": "https://www.postgraduate.study.cam.ac.uk/courses/directory/aharmpaus/requirements"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "ucla",
+      "qsId": "87",
+      "nameZh": "加州大学洛杉矶分校",
+      "logo": "/assets/site/universities/logos/ucla.jpg",
+      "name": "University of California, Los Angeles (UCLA)",
+      "country": "United States",
+      "countryZh": "美国",
+      "ranks": {
+        "2024": "51-100",
+        "2025": "24",
+        "2026": "=43"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/university-california-los-angeles-ucla",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/university-of-california-los-angeles-ucla_87_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "示例专业 · BA Art",
+          "timeline": [
+            {
+              "date": "每年 10-01–11-30",
+              "label": "UC 主申请提交窗口",
+              "status": "recurring"
+            },
+            {
+              "date": "补充材料待确认",
+              "label": "系网页列 01-20，但该段仍标 2025 更新；请核对 2027 SlideRoom",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "UC 主申请必须将 Art 列为第一志愿",
+            "补充申请包含 8–10 张作品图像及书面陈述",
+            "同时满足 UC 本科的学科、学业与英语要求"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.art.ucla.edu/undergraduate-admissions/"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · MFA Art",
+          "timeline": [
+            {
+              "date": "2027-01-09 23:59 PST",
+              "label": "完整申请截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "认可本科学位，最低 GPA 3.0",
+            "提交对应拟研究媒介的创作作品集、学习目的及作品说明",
+            "提供 3 位推荐人联系方式；该专业不要求推荐信或 GRE"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://grad.ucla.edu/programs/school-of-arts-and-architecture/art/"
+            },
+            {
+              "title": "学院录取要求",
+              "url": "https://prod.art.ucla.edu/graduate-admissions/"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "marangoni",
+      "qsId": "734",
+      "nameZh": "马兰戈尼学院",
+      "logo": "/assets/site/universities/logos/marangoni.jpg",
+      "name": "Istituto Marangoni. Milano, Paris, London.",
+      "country": "United Kingdom",
+      "countryZh": "英国",
+      "ranks": {
+        "2024": "51-100",
+        "2025": "51-100",
+        "2026": "45"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/istituto-marangoni-milano-paris-london",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/istituto-marangoni.-milano-paris-london._734_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "创意设计本科 · 米兰 / 佛罗伦萨 AFAM 一级文凭",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "2027 入学批次与截止按校区专业公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "认可的高中毕业资格，通常需 12 年教育",
+            "多数创意课程提交 6 个创意构想及个人陈述，参与招生筛选",
+            "按课程授课语言提交英语或意大利语证明"
+          ],
+          "sources": [
+            {
+              "title": "米兰与佛罗伦萨入学要求",
+              "url": "https://www.istitutomarangoni.com/en/admission/entry-requirements-milano-firenze"
+            },
+            {
+              "title": "官方申请 FAQ",
+              "url": "https://www.istitutomarangoni.com/en/admission/faq"
+            }
+          ]
+        },
+        "pg": {
+          "program": "创意设计 Academic Master · 米兰 / 佛罗伦萨 · AFAM 一级学术硕士 / 60 ECTS",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "2027 入学批次与截止按校区专业公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "认可的本科或同等学历，提交 CV、个人陈述、2 封推荐信及学业文件",
+            "创意作品集通常 10–12 幅图像 / 照片 / 展示页，并附项目发展说明",
+            "非对应母语者提交授课语言 B2 证明；具体选拔由课程招生组审核"
+          ],
+          "sources": [
+            {
+              "title": "米兰与佛罗伦萨入学要求",
+              "url": "https://www.istitutomarangoni.com/en/admission/entry-requirements-milano-firenze"
+            },
+            {
+              "title": "官方申请 FAQ",
+              "url": "https://www.istitutomarangoni.com/en/admission/faq"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "udk-berlin",
+      "qsId": "1326",
+      "nameZh": "柏林艺术大学",
+      "logo": "/assets/site/universities/logos/udk-berlin.jpg",
+      "name": "Universität der Künste Berlin",
+      "country": "Germany",
+      "countryZh": "德国",
+      "ranks": {
+        "2024": "35",
+        "2025": "42",
+        "2026": "46"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/universitat-der-kunste-berlin",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/universitt-der-knste-berlin_1326_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "示例专业 · BA Visual Communication",
+          "timeline": [
+            {
+              "date": "每年 01-15–02-15",
+              "label": "冬季入学网申窗口",
+              "status": "recurring"
+            },
+            {
+              "date": "每年 02-01–03-15",
+              "label": "作品上传窗口",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "具大学入学资格；特殊艺术才能可申请学历例外",
+            "德语 C1；申请时可先提供 B2",
+            "最多 20 件原创作品及指定任务，参加入学考试"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.udk-berlin.de/en/application/applicationguide/bachelor-visual-communication/"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · MA Visual Communication",
+          "timeline": [
+            {
+              "date": "每年 01-15–02-15",
+              "label": "冬季入学网申窗口",
+              "status": "recurring"
+            },
+            {
+              "date": "每年 02-01–03-15",
+              "label": "作品上传窗口",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "视觉传达或同等专业本科 240 ECTS；180／210 ECTS 需补修适应课程",
+            "德语 C1；申请时可先提供 B2",
+            "作品集及 1 页 A4 硕士设计项目计划；入围后展示作品并参加考试"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.udk-berlin.de/en/application/applicationguide/visual-communication-master/"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "cca",
+      "qsId": "14789",
+      "nameZh": "加州艺术大学",
+      "logo": "/assets/site/universities/logos/cca.jpg",
+      "name": "California College of the Arts",
+      "country": "United States",
+      "countryZh": "美国",
+      "ranks": {
+        "2024": "51-100",
+        "2025": "51-100",
+        "2026": "47"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/california-college-arts",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/california-college-of-the-arts_592560de9988f300e2320745_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "本科 · 已停止新生招生",
+          "timeline": [
+            {
+              "date": "2026–27 学年末",
+              "label": "学校结束现有办学",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "学校已不再接收、审理申请，也不再招收新一届学生"
+          ],
+          "sources": [
+            {
+              "title": "CCA 官方停招公告",
+              "url": "https://www.cca.edu/admissions/"
+            }
+          ]
+        },
+        "pg": {
+          "program": "硕士 · 已停止新生招生",
+          "timeline": [
+            {
+              "date": "2026–27 学年末",
+              "label": "学校结束现有办学",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "学校已不再接收、审理申请，也不再招收新一届学生"
+          ],
+          "sources": [
+            {
+              "title": "CCA 官方停招公告",
+              "url": "https://www.cca.edu/admissions/"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "loughborough",
+      "qsId": "368",
+      "nameZh": "拉夫堡大学",
+      "logo": "/assets/site/universities/logos/loughborough.jpg",
+      "name": "Loughborough University",
+      "country": "United Kingdom",
+      "countryZh": "英国",
+      "ranks": {
+        "2024": "32",
+        "2025": "39",
+        "2026": "=48"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/loughborough-university",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/loughborough-university_592560cf2aeae70239af4bf3_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "示例专业 · BA Graphic Design",
+          "timeline": [
+            {
+              "date": "2027-01-13",
+              "label": "UCAS 同等考虑截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-09",
+              "label": "入学",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "A-Level ABB 或国际同等资格；具体学科要求见课程页",
+            "提交电子作品集，并完成设计任务",
+            "按本科英语要求提供语言证明"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.lboro.ac.uk/study/undergraduate/courses/graphic-design/"
+            },
+            {
+              "title": "UCAS 2027 同等考虑日期",
+              "url": "https://www.ucas.com/corporate/news-and-key-documents/news/ucas-releases-undergraduate-application-data-from-15-october-deadline"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · MA Graphic Design and Visual Communication",
+          "timeline": [
+            {
+              "date": "2027-09",
+              "label": "课程入学",
+              "status": "confirmed"
+            },
+            {
+              "date": "截止待确认",
+              "label": "2027 最终截止日以申请系统为准",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "艺术设计或密切相关专业本科，英国 2:1 或国际同等资格",
+            "提交展示实践能力的作品集及申请材料",
+            "IELTS 6.5，各单项至少 6.0，或认可同等英语资格"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.lboro.ac.uk/study/postgraduate/masters-degrees/graphic-design-visual-communication/"
+            },
+            {
+              "title": "作品集要求",
+              "url": "https://www.lboro.ac.uk/schools/design-creative-arts/study/masters-degrees/application-process/"
+            },
+            {
+              "title": "英语要求",
+              "url": "https://www.lboro.ac.uk/study/apply/english-language-requirements/"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "hongik",
+      "qsId": "1059",
+      "nameZh": "弘益大学",
+      "logo": "/assets/site/universities/logos/hongik.jpg",
+      "name": "Hongik University",
+      "country": "South Korea",
+      "countryZh": "韩国",
+      "ranks": {
+        "2024": "51-100",
+        "2025": "=44",
+        "2026": "=48"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/hongik-university",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/hongik-university_1059_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "首尔美术学院设计本科 · 国际学生 / 2027 春季",
+          "timeline": [
+            {
+              "date": "2026.07.16–07.23",
+              "label": "网申",
+              "status": "closed"
+            },
+            {
+              "date": "2026.07.24",
+              "label": "申请材料邮戳截止",
+              "status": "closed"
+            },
+            {
+              "date": "2026.12.18",
+              "label": "录取公布",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027 秋季",
+              "label": "下一轮日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "正规高中毕业资格；申请人及父母须符合外国国籍条件",
+            "提交作品集、推荐信及誓约书",
+            "最低 TOPIK 1 或校方语言院同等级；1–2 级须先休学修读至少 6 个月韩语，3 级首学期只修指定韩语课"
+          ],
+          "sources": [
+            {
+              "title": "2027 春季本科中文简章",
+              "url": "https://www.hongik.ac.kr/kr/admission/recruitment-is.do?articleNo=153270&attachNo=89408&mode=download"
+            },
+            {
+              "title": "本科招生更新",
+              "url": "https://www.hongik.ac.kr/kr/admission/recruitment-is.do"
+            }
+          ]
+        },
+        "pg": {
+          "program": "设计类硕士 · 外国人特别选拔 / 2027 春季",
+          "timeline": [
+            {
+              "date": "2026.09.28–10.12",
+              "label": "网申",
+              "status": "closed"
+            },
+            {
+              "date": "2026.10.13 16:00",
+              "label": "纸质材料送达截止",
+              "status": "closed"
+            }
+          ],
+          "requirements": [
+            "本科学历及符合外国人 / 海外全学程申请身份资格",
+            "提交院系要求的学业、语言证明及作品集",
+            "本轮通过材料审核录取，不另设面试"
+          ],
+          "sources": [
+            {
+              "title": "2027 春季研究生公告",
+              "url": "https://www.hongik.ac.kr/en/admissions/announcement.do?article.offset=0&articleLimit=10&articleNo=157373&mode=view&srCategoryId=96"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "tec-monterrey",
+      "qsId": "594",
+      "nameZh": "蒙特雷科技大学",
+      "logo": "/assets/site/universities/logos/tec-monterrey.jpg",
+      "name": "Tecnológico de Monterrey",
+      "country": "Mexico",
+      "countryZh": "墨西哥",
+      "ranks": {
+        "2024": "50",
+        "2025": "40",
+        "2026": "50"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/tecnologico-de-monterrey",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/instituto-tecnolgico-y-de-estudios-superiores-de-monterrey_592560cf2aeae70239af4cd6_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "Licenciatura en Diseño · 设计本科",
+          "timeline": [
+            {
+              "date": "2027.08",
+              "label": "课程入学批次",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027",
+              "label": "各校区轮次与名额分别公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "提交高中学业及身份材料，完成 Solicitud Tec 申请",
+            "按个人申请清单完成文书及入学评估；SAT / ACT 可按学校规则提交",
+            "西班牙语或英语授课选择取决于校区"
+          ],
+          "sources": [
+            {
+              "title": "设计本科与 2027 名额",
+              "url": "https://tec.mx/es/arquitectura-arte-y-diseno/licenciatura-en-diseno"
+            },
+            {
+              "title": "本科申请流程",
+              "url": "https://tec.mx/es/profesional"
+            }
+          ]
+        },
+        "pg": {
+          "program": "Maestría en Arquitectura y Diseño Urbano · 混合制",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "申请日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "认可的本科学历及成绩单；适合建筑、城市规划、可持续发展等背景",
+            "建筑、设计或艺术成果作品集；无相关成果者由项目主任指定替代材料",
+            "参加招生面试与综合评估"
+          ],
+          "sources": [
+            {
+              "title": "建筑与城市设计硕士",
+              "url": "https://maestriasydiplomados.tec.mx/posgrados/maestria-en-arquitectura-y-diseno-urbano?locale=es-MX"
+            },
+            {
+              "title": "官方项目招生手册",
+              "url": "https://learn.maestriasydiplomados.tec.mx/hubfs/VEC/Posgrados/P_folleto-MDU.pdf"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "tue",
+      "qsId": "182",
+      "nameZh": "埃因霍温理工大学",
+      "logo": "/assets/site/universities/logos/tue.jpg",
+      "name": "Eindhoven University of Technology",
+      "country": "Netherlands",
+      "countryZh": "荷兰",
+      "ranks": {
+        "2024": "42",
+        "2025": "=46",
+        "2026": "51"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/eindhoven-university-technology",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/eindhoven-university-of-technology_592560cf2aeae70239af4b3c_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "示例专业 · BSc Industrial Design · 中国高中学历路径",
+          "timeline": [
+            {
+              "date": "2026-10-01",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-05-01 23:59 CET",
+              "label": "9 月入学完整申请截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "中国普通高中毕业证及高考成绩；高考总分、课程要求的必考科目均至少达到满分 75%",
+            "按 Industrial Design 要求核验数学与物理背景；录取后必须完成 study-choice check",
+            "IELTS 6.5、单项 6.0；不接受 IELTS Online 或 One Skill Retake"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.tue.nl/en/education/become-a-tue-student/admission-and-enrollment/programtype/bachelor-1/program/industrial-design-2/country/china"
+            },
+            {
+              "title": "语言要求",
+              "url": "https://www.tue.nl/en/education/become-a-tue-student/admission-and-enrollment/language-proficiency-requirements"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · MSc Industrial Design · 中国本科学历路径",
+          "timeline": [
+            {
+              "date": "2027-05-01",
+              "label": "9 月入学完整申请截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "中国“双一流”高校本科；2021 年 9 月前授予的 211 高校学位亦可；申请时 CGPA 至少为满分 75%",
+            "工业设计或同等相关本科；作品集须含过程、个人贡献，另附课程说明、毕业项目和能力概览",
+            "评估五大能力领域，至少三项发展充分；可能要求 pre-master 或补修",
+            "IELTS 6.5、单项 6.0；不接受 IELTS Online 或 One Skill Retake"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.tue.nl/en/education/become-a-tue-student/admission-and-enrollment/programtype/master-program/program/industrial-design/country/china"
+            },
+            {
+              "title": "学院资格评估",
+              "url": "https://www.tue.nl/en/education/graduate-school/master-industrial-design/adm"
+            },
+            {
+              "title": "语言要求",
+              "url": "https://www.tue.nl/en/education/become-a-tue-student/admission-and-enrollment/language-proficiency-requirements"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "unam",
+      "qsId": "425",
+      "nameZh": "墨西哥国立自治大学",
+      "logo": "/assets/site/universities/logos/unam.jpg",
+      "name": "Universidad Nacional Autónoma de México  (UNAM)",
+      "country": "Mexico",
+      "countryZh": "墨西哥",
+      "ranks": {
+        "2024": "=27",
+        "2025": "43",
+        "2026": "54"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/universidad-nacional-autonoma-de-mexico-unam",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/universidad-nacional-autnoma-de-mxico-unam_425_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "Arte y Diseño 本科 · 墨西哥统招 / 国际学历",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "申请日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "完成高中教育；既有统招要求均分至少 7/10 或等值",
+            "参加 UNAM 选拔考试；海外高中学历须办理认可手续"
+          ],
+          "sources": [
+            {
+              "title": "FAD 艺术与设计本科",
+              "url": "https://fad.unam.mx/oferta-academica/licenciaturas/arte-y-diseno/"
+            },
+            {
+              "title": "2026 本科招生要求参考",
+              "url": "https://repositorio.dgae.unam.mx/Licenciatura2026/instructivo_licenciatura2026.pdf"
+            }
+          ]
+        },
+        "pg": {
+          "program": "Maestría en Diseño y Comunicación Visual",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "2028-1 批次详细申请日程待公布",
+              "status": "pending"
+            },
+            {
+              "date": "2027.08.09",
+              "label": "2028-1 学期入学",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "持本科学历并提交成绩单；海外学历按 UNAM 要求认证",
+            "按招生批次提交研究方向材料及参加选拔；须具备西班牙语及外语阅读能力"
+          ],
+          "sources": [
+            {
+              "title": "艺术设计研究生招生",
+              "url": "https://www.posgrado.unam.mx/artesydiseno/paginas/82/convocatoria"
+            },
+            {
+              "title": "上一届专业材料参考",
+              "url": "https://www.posgrado.unam.mx/artesydiseno/uploads_public/archivos/instructivo-maestrias-2027_1227611402.pdf"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "peking",
+      "qsId": "50",
+      "nameZh": "北京大学",
+      "logo": "/assets/site/universities/logos/peking.jpg",
+      "name": "Peking University",
+      "country": "China (Mainland)",
+      "countryZh": "中国内地",
+      "ranks": {
+        "2024": "51-100",
+        "2025": "29",
+        "2026": "55"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/peking-university",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/peking-university_50_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "艺术学院本科 · 中国内地普通高考通道",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "招生计划与分省要求待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "按北京大学本科招生章程及生源省计划报考",
+            "培养方向包括艺术史论与计算艺术，专业录取按本科招生规则"
+          ],
+          "sources": [
+            {
+              "title": "艺术学院本科招生介绍",
+              "url": "https://bkzs.pku.edu.cn/xkzy/xy/rwxb/sxkxxy_25/index.htm"
+            },
+            {
+              "title": "北京大学本科招生",
+              "url": "https://bkzs.pku.edu.cn/"
+            }
+          ]
+        },
+        "pg": {
+          "program": "戏剧与影视硕士 · 艺术创意与制作 / 中国内地推免",
+          "timeline": [
+            {
+              "date": "2026.09.01–09.08",
+              "label": "推免网申",
+              "status": "closed"
+            },
+            {
+              "date": "2026.09.09 12:00",
+              "label": "纸质材料送达截止",
+              "status": "closed"
+            }
+          ],
+          "requirements": [
+            "取得本科院校推荐免试资格",
+            "申请表、个人陈述、2 封相关领域副教授及以上专家推荐信、盖章成绩单",
+            "材料初审后择优复试，并完成教育部推免系统确认"
+          ],
+          "sources": [
+            {
+              "title": "2027 艺术学院推免说明",
+              "url": "https://art.pku.edu.cn/rcpyjxxm/MFA/mfa_tzgg/2b988bc877774af280369f3a8610bbb0.htm"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "mica",
+      "qsId": "14785",
+      "nameZh": "马里兰艺术学院",
+      "logo": "/assets/site/universities/logos/mica.jpg",
+      "name": "Maryland Institute College of Art",
+      "country": "United States",
+      "countryZh": "美国",
+      "ranks": {
+        "2024": "36",
+        "2025": "51-100",
+        "2026": "57"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/maryland-institute-college-art",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/maryland-institute-college-of-art_592560de9988f300e232073b_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "本科新生 · BFA",
+          "timeline": [
+            {
+              "date": "2027-02-01",
+              "label": "秋季首选提交日",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "提交高中阶段成绩单，外文材料附英文翻译",
+            "10–15 件近期原创作品，展示想法、技能与个人兴趣",
+            "国际申请人按规定提供英语能力证明"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.mica.edu/admissions/undergraduate-admission/?dlv-mlid=9532167"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · MFA Graphic Design",
+          "timeline": [
+            {
+              "date": "每年 01-19",
+              "label": "第一轮截止",
+              "status": "recurring"
+            },
+            {
+              "date": "每年 03-19",
+              "label": "第二轮截止，视余位评审",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "提交学位或同等资格证明、成绩单、CV、2 封推荐信",
+            "18–20 张图像或时基作品；可包括设计或其他领域视觉作品",
+            "设计／学习目的陈述少于 500 词；非英语母语者须提供英语能力证明"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.mica.edu/academics/graduate-programs/graphic-design-mfa/application-procedures/"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "ucl",
+      "qsId": "365",
+      "nameZh": "伦敦大学学院",
+      "logo": "/assets/site/universities/logos/ucl.jpg",
+      "name": "UCL",
+      "country": "United Kingdom",
+      "countryZh": "英国",
+      "ranks": {
+        "2024": "43",
+        "2025": "=44",
+        "2026": "58"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/ucl",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/ucl_592560cf2aeae70239af4bf1_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "示例专业 · Slade Fine Art BFA",
+          "timeline": [
+            {
+              "date": "2027-01-13 18:00 UK",
+              "label": "UCAS 同等考虑截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-02–03",
+              "label": "入围者面试",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "A-Level ABB 或 IB 34（HL 合计 16，单科不低于 5）；GCSE 英语、数学 4／C 或同等",
+            "近期作品 PDF 最多 20 页；可附不超过 5 分钟时基作品和速写本视频",
+            "提交 UCAS 后按邮件指引上传作品集"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/courses/fine-art-bfa"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · Slade Fine Art MFA",
+          "timeline": [
+            {
+              "date": "2026-10-19",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-04 17:00 UK",
+              "label": "完整申请截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "提交学历材料并满足课程资格审核；课程页标示学术要求为 Pass",
+            "作品集必需，1 位推荐人；入围后面试",
+            "英语 Level 2：IELTS 7.0，各单项至少 6.5，或认可同等资格"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://www.ucl.ac.uk/study/prospective-students/graduate/courses/fine-art-mfa"
+            },
+            {
+              "title": "英语要求",
+              "url": "https://www.ucl.ac.uk/study/prospective-students/graduate/how-apply/english-language-requirements"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "tokyo",
+      "qsId": "615",
+      "nameZh": "东京大学",
+      "logo": "/assets/site/universities/logos/tokyo.jpg",
+      "name": "The University of Tokyo",
+      "country": "Japan",
+      "countryZh": "日本",
+      "ranks": {
+        "2024": "49",
+        "2025": "=30",
+        "2026": "72"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/university-tokyo",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/the-university-of-tokyo_615_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "UTokyo College of Design · 5 年本硕贯通 / Route B",
+          "timeline": [
+            {
+              "date": "2026.10.15–11.05",
+              "label": "网申",
+              "status": "closed"
+            },
+            {
+              "date": "2026.11.13–11.16",
+              "label": "视频作业提交",
+              "status": "closed"
+            },
+            {
+              "date": "2027.01.13–01.22",
+              "label": "线上面试",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.02.20",
+              "label": "结果公布",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "高中毕业或认可等值资格；提交指定标准化考试或资格成绩",
+            "成绩单、学校评价、2 篇英语短文及现场录制的视频作业",
+            "英语测试按官方清单；高中最后 4 年中至少 3 年英语授课可申请豁免"
+          ],
+          "sources": [
+            {
+              "title": "2027 Route B 申请指南",
+              "url": "https://design.adm.u-tokyo.ac.jp/admissions/application-guidelines-2027/route-b/"
+            },
+            {
+              "title": "本硕贯通项目",
+              "url": "https://welcome.adm.u-tokyo.ac.jp/admissions"
+            }
+          ]
+        },
+        "pg": {
+          "program": "建筑学硕士 · 工学系研究科 / 2027 年 4 月",
+          "timeline": [
+            {
+              "date": "2026.08.05",
+              "label": "英语成绩提交截止",
+              "status": "closed"
+            },
+            {
+              "date": "2027.04",
+              "label": "入学",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "满足工学系硕士学历资格；不限原本科专业",
+            "提交研究计划并选择最多 3 位意向导师",
+            "参加专业笔试与口试；英语使用 TOEFL，符合条件者可用 TOEIC L&R"
+          ],
+          "sources": [
+            {
+              "title": "2027 建筑硕士招生简章",
+              "url": "https://www.t.u-tokyo.ac.jp/hubfs/admission/2026/0403/ar_guide_m_e.pdf"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "columbia",
+      "qsId": "138",
+      "nameZh": "哥伦比亚大学",
+      "logo": "/assets/site/universities/logos/columbia.jpg",
+      "name": "Columbia University",
+      "country": "United States",
+      "countryZh": "美国",
+      "ranks": {
+        "2024": "=44",
+        "2025": "48",
+        "2026": "73"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/columbia-university",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/columbia-university_138_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "BA Visual Arts · 通过 Columbia College 等本科院校入学",
+          "timeline": [
+            {
+              "date": "按本科院校确认",
+              "label": "Columbia College、GS 与 Barnard 申请日程不同",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "先申请并获 Columbia College、General Studies 或 Barnard 的本科录取",
+            "可通过 SlideRoom 提交艺术作品集作为录取参考",
+            "入学后于二年级申报 Visual Arts 主修；不同本科院校的学历、语言和申请日期各自适用"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://arts.columbia.edu/undergraduate-visual-arts-program"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · MFA Visual Arts",
+          "timeline": [
+            {
+              "date": "2027-01-20 23:59 ET",
+              "label": "申请截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "本科成绩单、3 封推荐信及在线申请",
+            "选择绘画、摄影、版画、动态影像或扩展实践／雕塑方向，提交 SlideRoom 作品集",
+            "1–2 页申请意向说明；作品与陈述应对应所选方向；不要求 GRE"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://arts.columbia.edu/visual-arts-sound-art/application-requirements"
+            },
+            {
+              "title": "研究生要求",
+              "url": "https://arts.columbia.edu/admissions/graduate"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "palermo",
+      "qsId": "2646",
+      "nameZh": "巴勒莫大学（阿根廷）",
+      "logo": "/assets/site/universities/logos/palermo.jpg",
+      "name": "Universidad de Palermo (UP)",
+      "country": "Argentina",
+      "countryZh": "阿根廷",
+      "ranks": {
+        "2024": "=44",
+        "2025": "51-100",
+        "2026": "=74"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/universidad-de-palermo",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/universidad-de-palermo-up_592560cf2aeae70239af54de_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "设计与传播学院本科 · 国际高中学历",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "申请日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "高中毕业证及成绩单；境外文件按规定认证或加注 Apostille",
+            "境外高中学历须在阿根廷办理认可；通过学校系统完成注册"
+          ],
+          "sources": [
+            {
+              "title": "本科注册与国际学历",
+              "url": "https://www.palermo.edu/ingresantes/carreras_grado.html"
+            }
+          ]
+        },
+        "pg": {
+          "program": "Maestría en Gestión del Diseño",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "申请日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "设计、建筑、艺术、广告、视听传播或相近领域至少 4 年制本科学历",
+            "提交 CV 并参加招生面试，审核学术能力、动机及英语能力",
+            "工作经验以 3 年以上为优先，并非统一硬性门槛"
+          ],
+          "sources": [
+            {
+              "title": "设计管理硕士招生规定",
+              "url": "https://www.palermo.edu/dyc/maestria_diseno/reglamento.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "uba",
+      "qsId": "78",
+      "nameZh": "布宜诺斯艾利斯大学",
+      "logo": "/assets/site/universities/logos/uba.jpg",
+      "name": "Universidad de Buenos Aires (UBA)",
+      "country": "Argentina",
+      "countryZh": "阿根廷",
+      "ranks": {
+        "2024": "=46",
+        "2025": "51-100",
+        "2026": "=74"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/universidad-de-buenos-aires-uba",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/universidad-de-buenos-aires-uba_78_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "Diseño Gráfico 本科 · CBC 入学路径",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "申请日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "完成高中学历及 UBA 入学登记",
+            "修完并通过对应 CBC 基础课程后，办理 FADU 学籍与选课"
+          ],
+          "sources": [
+            {
+              "title": "UBA 本科入学",
+              "url": "https://www.uba.ar/ingresouba"
+            },
+            {
+              "title": "FADU 入学流程",
+              "url": "https://www.fadu.uba.ar/ingresantes/"
+            },
+            {
+              "title": "平面设计课程",
+              "url": "https://www.fadu.uba.ar/diseno-grafico/"
+            }
+          ]
+        },
+        "pg": {
+          "program": "Open Design 硕士 · UBA × Humboldt 联合项目",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "申请日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "4 年制本科、至少 2,600 学时；较短学制须补至少 1 年相关工作或研究经历",
+            "CV、最多 2 页英语动机信、作品集或其他专业成果 PDF ≤10 MB",
+            "英语须满足项目高级水平要求（所列 IELTS 7.5+）；非西语母语者需西语 A2"
+          ],
+          "sources": [
+            {
+              "title": "FADU 硕士项目",
+              "url": "https://www.fadu.uba.ar/maestrias/"
+            },
+            {
+              "title": "联合项目官方申请要求",
+              "url": "https://www.master-open-design.org/assets/MOD-Application-Enrolment-Requirements.pdf"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "uc-chile",
+      "qsId": "107",
+      "nameZh": "智利天主教大学",
+      "logo": "/assets/site/universities/logos/uc-chile.jpg",
+      "name": "Pontificia Universidad Católica de Chile (UC)",
+      "country": "Chile",
+      "countryZh": "智利",
+      "ranks": {
+        "2024": "=38",
+        "2025": "51-100",
+        "2026": "=76"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/pontificia-universidad-catolica-de-chile-uc",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/pontificia-universidad-catlica-de-chile-uc_107_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "Diseño 本科 · 海外高中学历通道",
+          "timeline": [
+            {
+              "date": "2026.08.24–09.24",
+              "label": "第一轮申请",
+              "status": "closed"
+            },
+            {
+              "date": "2026.09.28–10.28",
+              "label": "第二轮申请",
+              "status": "closed"
+            },
+            {
+              "date": "2026.11.16–12.04",
+              "label": "专业评估",
+              "status": "confirmed"
+            },
+            {
+              "date": "2026.12.28",
+              "label": "录取结果",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "至少高中最后两年在智利以外就读，未修读大学课程；毕业距申请不超过 3 年",
+            "提交高中成绩、排名或无排名证明、学历及个人动机问卷",
+            "艺术与设计申请者在专业评估时提交作品集"
+          ],
+          "sources": [
+            {
+              "title": "海外高中学历通道",
+              "url": "https://admision.uc.cl/vias-de-admision/admision-especial-y-complementaria/ensenanza-media-en-el-extranjero/"
+            },
+            {
+              "title": "2027 申请日程",
+              "url": "https://admision.uc.cl/vias-de-admision/admision-especial-y-complementaria/calendario/"
+            }
+          ]
+        },
+        "pg": {
+          "program": "MADA · Magíster en Diseño Avanzado",
+          "timeline": [
+            {
+              "date": "2026.11.16",
+              "label": "2027 入学网申与材料截止",
+              "status": "closed"
+            }
+          ],
+          "requirements": [
+            "认可的本科学位或等值专业学历，成绩单、CV、动机信",
+            "2 封学术或工作推荐信",
+            "设计、建筑及相近背景申请者提交最多 5 页代表作品"
+          ],
+          "sources": [
+            {
+              "title": "MADA 2027 申请",
+              "url": "https://magisterdiseno.uc.cl/postulacion/proceso-de-postulacion/"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "uts",
+      "qsId": "587",
+      "nameZh": "悉尼科技大学",
+      "logo": "/assets/site/universities/logos/uts.jpg",
+      "name": "University of Technology Sydney",
+      "country": "Australia",
+      "countryZh": "澳大利亚",
+      "ranks": {
+        "2024": "=46",
+        "2025": "51-100",
+        "2026": "85"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/university-technology-sydney",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/university-of-technology-sydney_592560cf2aeae70239af58ee_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "Bachelor of Design in Visual Communication · 国际学历",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "Autumn / Spring 入学季",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027",
+              "label": "申请截止按入学季公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "澳大利亚 Year 12、AQF Diploma 或达到规定水平的海外等值学历",
+            "非应届申请者按学业或符合资格的作品集与面试通道评估",
+            "设计技术及视觉艺术为推荐知识背景"
+          ],
+          "sources": [
+            {
+              "title": "视觉传达设计本科",
+              "url": "https://www.uts.edu.au/courses/bachelor-of-design-in-visual-communication"
+            }
+          ]
+        },
+        "pg": {
+          "program": "Master of Design · UX / 产品创新 / 时尚策略",
+          "timeline": [
+            {
+              "date": "2027 Spring",
+              "label": "课程入学季",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027",
+              "label": "申请截止待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "认可的本科或更高学历",
+            "最多 250 词说明并反思一个本人参与的相关项目；可选附 1–3 张图片",
+            "IELTS Academic 总分 6.5、写作 6.0 或认可同等成绩"
+          ],
+          "sources": [
+            {
+              "title": "Master of Design 招生",
+              "url": "https://www.uts.edu.au/courses/master-of-design"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cornell",
+      "qsId": "143",
+      "nameZh": "康奈尔大学",
+      "logo": "/assets/site/universities/logos/cornell.jpg",
+      "name": "Cornell University",
+      "country": "United States",
+      "countryZh": "美国",
+      "ranks": {
+        "2024": "51-100",
+        "2025": "50",
+        "2026": "=99"
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/cornell-university",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/cornell-university_143_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "示例专业 · BFA Fine Arts",
+          "timeline": [
+            {
+              "date": "每年 11-01",
+              "label": "ED 作品集截止",
+              "status": "recurring"
+            },
+            {
+              "date": "每年 01-02",
+              "label": "RD 作品集截止",
+              "status": "recurring"
+            }
+          ],
+          "requirements": [
+            "完成 Cornell 本科通用申请及艺术专业补充材料",
+            "SlideRoom 至少 10 件作品；可使用官方可选创作题目，至少 4 件为已有自主／课堂作品",
+            "3–5 分钟录制面试、艺术家陈述；全部作品须按时提交"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://aap.cornell.edu/undergraduate-admissions/undergraduate-admissions-art/"
+            }
+          ],
+          "checked": "2026-11-23"
+        },
+        "pg": {
+          "program": "示例专业 · MFA Creative Visual Arts",
+          "timeline": [
+            {
+              "date": "2026-09-15",
+              "label": "开放申请",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027-01-18",
+              "label": "网申及作品集截止",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "须有本科学位，专业不限定艺术",
+            "作品集最多 20 个电子文件，可含图像、视频、声音及网页作品",
+            "2 封推荐信、全部大学成绩单、学术目的与个人陈述，并满足英语要求"
+          ],
+          "sources": [
+            {
+              "title": "官网申请指南",
+              "url": "https://aap.cornell.edu/graduate-admissions/graduate-admissions-art/"
+            }
+          ],
+          "checked": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "kau",
+      "qsId": "1172",
+      "nameZh": "阿卜杜勒阿齐兹国王大学",
+      "logo": "/assets/site/universities/logos/kau.jpg",
+      "name": "King Abdulaziz University (KAU)",
+      "country": "Saudi Arabia",
+      "countryZh": "沙特阿拉伯",
+      "ranks": {
+        "2024": "=38",
+        "2025": "38",
+        "2026": null
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/king-abdulaziz-university-kau",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/king-abdulaziz-university-kau_1172_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "Interior Design and Furniture BSc · 阿拉伯语授课",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "国际生项目开放与申请日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "完成受认可的高中教育，满足当批项目与学历资格要求",
+            "国际申请通过校方公布的非沙特学生通道；项目开放对象以当批招生目录为准"
+          ],
+          "sources": [
+            {
+              "title": "室内与家具设计本科",
+              "url": "https://www.kau.edu.sa/en/programs/bacheior-interior-design-and-furniture"
+            },
+            {
+              "title": "国际生招生公告",
+              "url": "https://www.kau.edu.sa/faculty/en/kau_website/announcement/the-date-for-opening-admission-applications-for-non-saudi-students-residing-both-inside-and-outside-the-kingdom-for-undergraduate-and-postgraduate-programs"
+            },
+            {
+              "title": "本科招生简章",
+              "url": "https://kau.edu.sa/web/static/0412f4dc-d471-44d8-b954-532a0638fc9a"
+            }
+          ]
+        },
+        "pg": {
+          "program": "Interior Design & Spatial Design 硕士 · 国际奖学金 / 女生",
+          "timeline": [
+            {
+              "date": "2027",
+              "label": "申请日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "国际项目目录限女生，阿拉伯语与英语双语教学",
+            "认可的前置学历，成绩至少 Very Good；硕士奖学金申请年龄不超过 30 岁",
+            "2 封学术推荐；英语基准 IELTS 5 或官方认可同等成绩"
+          ],
+          "sources": [
+            {
+              "title": "国际硕士项目目录",
+              "url": "https://kau.edu.sa/en/page-legacy/graduate-programs-for-international-students"
+            },
+            {
+              "title": "国际奖学金要求",
+              "url": "https://kau.edu.sa/en/page-legacy/international-student-scholarships"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "kaist",
+      "qsId": "324",
+      "nameZh": "韩国科学技术院",
+      "logo": "/assets/site/universities/logos/kaist.jpg",
+      "name": "KAIST - Korea Advanced Institute of Science & Technology",
+      "country": "South Korea",
+      "countryZh": "韩国",
+      "ranks": {
+        "2024": "=46",
+        "2025": "28",
+        "2026": null
+      },
+      "profileUrl": "https://www.qs-topuniversities.cn/en/universities/kaist-korea-advanced-institute-science-technology",
+      "logoSource": "https://www.qs-topuniversities.cn/sites/default/files/profiles/logos/kaist-korea-advanced-institute-of-science-technology_324_large.jpg",
+      "admissions": {
+        "ug": {
+          "program": "本科统一招生 · 入学后选择 Industrial Design",
+          "timeline": [
+            {
+              "date": "2026.11.10–2027.01.14",
+              "label": "2027 秋季常规轮网申与材料",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.01.21",
+              "label": "推荐信截止",
+              "status": "confirmed"
+            },
+            {
+              "date": "2027.03.25",
+              "label": "常规轮结果",
+              "status": "confirmed"
+            }
+          ],
+          "requirements": [
+            "满足国际本科身份要求并在入学前完成高中教育",
+            "统一招生审核学业、申请材料与推荐信，按通知参加线上面试",
+            "工业设计本科经 KAIST 统一招生，专业选择按校内规则"
+          ],
+          "sources": [
+            {
+              "title": "2027 本科时间表",
+              "url": "https://admission.kaist.ac.kr/intl-undergraduate/application/ApplicationGuide/ApplicationTimeline"
+            },
+            {
+              "title": "国际本科资格",
+              "url": "https://admission.kaist.ac.kr/intl-undergraduate/before/sub02"
+            },
+            {
+              "title": "工业设计招生",
+              "url": "https://id.kaist.ac.kr/education/Master"
+            }
+          ]
+        },
+        "pg": {
+          "program": "Industrial Design 硕士 · 国际申请",
+          "timeline": [
+            {
+              "date": "2026.08.18–09.01",
+              "label": "2027 春季网申",
+              "status": "closed"
+            },
+            {
+              "date": "2027 秋季",
+              "label": "申请日程待公布",
+              "status": "pending"
+            }
+          ],
+          "requirements": [
+            "认可的本科学历，提交个人陈述及学校规定的学业与语言材料",
+            "作品集展示既有项目、实践与能力，可使用个人网站链接",
+            "列出希望合作的导师，并说明研究兴趣与实验室匹配"
+          ],
+          "sources": [
+            {
+              "title": "国际研究生时间表",
+              "url": "https://admission.kaist.ac.kr/intl-graduate/Admission/YearlyTimelines"
+            },
+            {
+              "title": "工业设计硕士材料",
+              "url": "https://id.kaist.ac.kr/education/Master"
+            }
+          ]
+        }
+      }
     }
-  ]
+  ],
+  "topLimit": 50
 }
